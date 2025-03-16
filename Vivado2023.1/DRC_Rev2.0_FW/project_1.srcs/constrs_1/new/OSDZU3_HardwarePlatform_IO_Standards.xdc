@@ -4,6 +4,10 @@ set_property IOSTANDARD LVCMOS18 [get_ports {leds_4bits_tri_o[*]}]
 #I2C IO Standard
 set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SCL_0}]
 set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SDA_0}]
+set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SCL_1}]
+set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SDA_1}]
+set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SCL_2}]
+set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SDA_2}]
  
 #AFE7222 SPI IO Standard
 set_property IOSTANDARD LVCMOS18 [get_ports {MISO_0}]
@@ -32,7 +36,7 @@ set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_CLKP}]
 set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_CLKN}]
  
 #MISC Control Signal IO Standards
-set_property IOSTANDARD LVCMOS18 [get_ports {ctrl_4bits_tri_o[*]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {ctrl_8bits_tri_o[*]}]
  
 #SPDT Path Control IO Standards
 set_property IOSTANDARD LVCMOS18 [get_ports {spdt_10bits_tri_o[*]}]

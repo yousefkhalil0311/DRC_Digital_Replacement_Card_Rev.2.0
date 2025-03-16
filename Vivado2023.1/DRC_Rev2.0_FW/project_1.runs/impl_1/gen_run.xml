@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1738736996">
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1742161747">
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
@@ -220,4 +220,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_MinMax_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_MinMax_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_MinMax_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_1_0"/>
 </GenRun>

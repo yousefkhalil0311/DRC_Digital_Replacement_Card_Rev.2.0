@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Nov  4 10:52:30 2024
-# Process ID: 28516
-# Current directory: C:/Users/NYorr/Downloads/project_1/project_1/project_1.runs/design_1_axi_gpio_0_2_synth_1
+# Start of session at: Sun Mar 16 17:49:11 2025
+# Process ID: 15800
+# Current directory: C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/design_1_axi_gpio_0_2_synth_1
 # Command line: vivado.exe -log design_1_axi_gpio_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_gpio_0_2.tcl
-# Log file: C:/Users/NYorr/Downloads/project_1/project_1/project_1.runs/design_1_axi_gpio_0_2_synth_1/design_1_axi_gpio_0_2.vds
-# Journal file: C:/Users/NYorr/Downloads/project_1/project_1/project_1.runs/design_1_axi_gpio_0_2_synth_1\vivado.jou
-# Running On: DESKTOP-JTT5U02, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34093 MB
+# Log file: C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/design_1_axi_gpio_0_2_synth_1/design_1_axi_gpio_0_2.vds
+# Journal file: C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/design_1_axi_gpio_0_2_synth_1\vivado.jou
+# Running On: OCP001, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 24, Host memory: 34029 MB
 #-----------------------------------------------------------
 source design_1_axi_gpio_0_2.tcl -notrace

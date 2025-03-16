@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.runs/synth_1/design_1_wrapper.tcl"
+  variable script "C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu3eg-sfvc784-1-e
 
@@ -78,100 +77,112 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.cache/wt [current_project]
-set_property parent.project_path C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.cache/wt [current_project]
+set_property parent.project_path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_1_0/design_1_tier2_xbar_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_2_0/design_1_tier2_xbar_2_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_1/design_1_axi_iic_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_1/design_1_axi_iic_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_2/design_1_util_ds_buf_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_2/design_1_util_ds_buf_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_0/design_1_util_ds_buf_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_2/design_1_axi_iic_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_2/design_1_axi_iic_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_3/design_1_util_ds_buf_0_3_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_3/design_1_util_ds_buf_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_1_0/design_1_tier2_xbar_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_2_0/design_1_tier2_xbar_2_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -182,20 +193,20 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc
-set_property used_in_implementation false [get_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc]
+read_xdc C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc
+set_property used_in_implementation false [get_files C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc]
 
-read_xdc -unmanaged C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/imports/new/osdzu3_helper.tcl
-set_property used_in_implementation false [get_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/imports/new/osdzu3_helper.tcl]
+read_xdc -unmanaged C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/imports/new/osdzu3_helper.tcl
+set_property used_in_implementation false [get_files C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/imports/new/osdzu3_helper.tcl]
 
-read_xdc -unmanaged C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/imports/new/osdzu3_package_pins.tcl
-set_property used_in_implementation false [get_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/constrs_1/imports/new/osdzu3_package_pins.tcl]
+read_xdc -unmanaged C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/imports/new/osdzu3_package_pins.tcl
+set_property used_in_implementation false [get_files C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/imports/new/osdzu3_package_pins.tcl]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

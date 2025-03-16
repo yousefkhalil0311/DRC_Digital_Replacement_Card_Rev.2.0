@@ -7,6 +7,10 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin E19 [get_ports {leds_4bits_tri_o[
 #I2C IO pin location constraints
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y13 [get_ports {IOBUF_SCL_0}]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y12 [get_ports {IOBUF_SDA_0}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin B10 [get_ports {IOBUF_SCL_1}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin A10 [get_ports {IOBUF_SDA_1}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin H6  [get_ports {IOBUF_SCL_2}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin F5  [get_ports {IOBUF_SDA_2}]
 
 #AFE7222 SPI IO pin location constraints
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y3  [get_ports {MISO_0}]
@@ -83,10 +87,14 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin R13 [get_ports {IOBUF_CLKP}]; #sa
 tclapp::octavo::osdzu3::set_osdzu3_package_pin R14 [get_ports {IOBUF_CLKN}]
 
 #MISC Control Signal IO pin location constraints
-tclapp::octavo::osdzu3::set_osdzu3_package_pin T15 [get_ports {ctrl_4bits_tri_o[0]}]; #!INT
-tclapp::octavo::osdzu3::set_osdzu3_package_pin Y14 [get_ports {ctrl_4bits_tri_o[1]}]; #EXP_RST
-tclapp::octavo::osdzu3::set_osdzu3_package_pin C15 [get_ports {ctrl_4bits_tri_o[2]}]; #!CLR
-tclapp::octavo::osdzu3::set_osdzu3_package_pin W2  [get_ports {ctrl_4bits_tri_o[3]}]; #RESET
+tclapp::octavo::osdzu3::set_osdzu3_package_pin T15 [get_ports {ctrl_8bits_tri_o[0]}]; #!INT
+tclapp::octavo::osdzu3::set_osdzu3_package_pin Y14 [get_ports {ctrl_8bits_tri_o[1]}]; #EXP_RST
+tclapp::octavo::osdzu3::set_osdzu3_package_pin C15 [get_ports {ctrl_8bits_tri_o[2]}]; #!CLR
+tclapp::octavo::osdzu3::set_osdzu3_package_pin W2  [get_ports {ctrl_8bits_tri_o[3]}]; #RESET
+tclapp::octavo::osdzu3::set_osdzu3_package_pin T17 [get_ports {ctrl_8bits_tri_o[4]}]; #VC0
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R7  [get_ports {ctrl_8bits_tri_o[5]}]; #VC1
+tclapp::octavo::osdzu3::set_osdzu3_package_pin E5  [get_ports {ctrl_8bits_tri_o[6]}]; #VC2
+tclapp::octavo::osdzu3::set_osdzu3_package_pin C10 [get_ports {ctrl_8bits_tri_o[7]}]; #VC3
 
 #SPDT Path Control IO pin location constraints
 tclapp::octavo::osdzu3::set_osdzu3_package_pin F10 [get_ports {spdt_10bits_tri_o[0]}]; #SPDT_P3
