@@ -1,0 +1,10 @@
+14:53:00 **** Incremental Build of configuration Debug for project DRCApplication_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 61277 C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/DRCPlatform.xpfm standalone_domain C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication_system/Debug/system.bif
+sdcard_gen --xpfm C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/DRCPlatform.xpfm --sys_config DRCPlatform --bif C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication_system/Debug/system.bif --bitstream C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication/_ide/bitstream/REV1D.bit --elf C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication/Debug/DRCApplication.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication/_ide/bitstream/REV1D.bit
+Running C:/Xilinx/Vitis/2023.1/bin/bootgen -arch zynqmp -image C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCApplication_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:53:06 Build Finished (took 6s.209ms)
+

@@ -1,0 +1,175 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Feb  4 22:29:14 2025
+# Process ID: 30432
+# Current directory: C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32084 C:\Xilinx\Vivado\2023.1\Projects\PL_ADC_Control\project_1.xpr
+# Log file: C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/vivado.log
+# Journal file: C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control\vivado.jou
+# Running On: OCP001, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 24, Host memory: 34029 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+close [ open C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/new/ADC_MinMax.vhd w ]
+add_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/new/ADC_MinMax.vhd
+update_compile_order -fileset sources_1
+file mkdir C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sim_1/new/ADC_CTRL_TESTB.vhd w ]
+add_files -fileset sim_1 C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sim_1/new/ADC_CTRL_TESTB.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ADC_CTRL_TESTB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+create_bd_cell -type module -reference ADC_MinMax ADC_MinMax_0
+set_property location {4 1588 3466} [get_bd_cells ADC_MinMax_0]
+update_module_reference design_1_ADC_MinMax_0_0
+update_module_reference design_1_ADC_MinMax_0_0
+update_compile_order -fileset sources_1
+copy_bd_objs /  [get_bd_cells {axi_gpio_1}]
+set_property -dict [list \
+  CONFIG.C_ALL_INPUTS {1} \
+  CONFIG.C_ALL_INPUTS_2 {1} \
+  CONFIG.C_GPIO2_WIDTH {24} \
+  CONFIG.C_GPIO_WIDTH {24} \
+  CONFIG.C_IS_DUAL {1} \
+] [get_bd_cells axi_gpio_2]
+update_module_reference design_1_ADC_MinMax_0_0
+update_module_reference design_1_ADC_MinMax_0_0
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out2]
+set_property -dict [list \
+  CONFIG.C_GPIO2_WIDTH {12} \
+  CONFIG.C_GPIO_WIDTH {12} \
+] [get_bd_cells axi_gpio_2]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2}]
+connect_bd_net [get_bd_pins axi_gpio_2/gpio_io_i] [get_bd_pins ADC_MinMax_0/CHAMAX_OUT]
+connect_bd_net [get_bd_pins axi_gpio_2/gpio2_io_i] [get_bd_pins ADC_MinMax_0/CHAMIN_OUT]
+connect_bd_net [get_bd_pins axi_gpio_3/gpio_io_i] [get_bd_pins ADC_MinMax_0/CHBMAX_OUT]
+connect_bd_net [get_bd_pins axi_gpio_3/gpio2_io_i] [get_bd_pins ADC_MinMax_0/CHBMIN_OUT]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2 axi_gpio_3 ADC_MinMax_0}] [get_bd_nets {ADC_MinMax_0_CHBMAX_OUT ADC_MinMax_0_CHBMIN_OUT ADC_MinMax_0_CHAMIN_OUT ADC_MinMax_0_CHAMAX_OUT}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2 axi_gpio_3 ADC_MinMax_0}] [get_bd_nets {ADC_MinMax_0_CHBMAX_OUT ADC_MinMax_0_CHBMIN_OUT ADC_MinMax_0_CHAMIN_OUT ADC_MinMax_0_CHAMAX_OUT}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2 axi_gpio_3 ADC_MinMax_0}] [get_bd_nets {ADC_MinMax_0_CHBMAX_OUT ADC_MinMax_0_CHBMIN_OUT ADC_MinMax_0_CHAMIN_OUT ADC_MinMax_0_CHAMAX_OUT}]
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_0/DCKIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_1/DCKIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells ADC_MinMax_2]
+make_bd_intf_pins_external  [get_bd_cells ADC_MinMax_2]
+endgroup
+undo
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_2/DCKIN]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_3/DCKIN]
+endgroup
+delete_bd_objs [get_bd_nets DAC_CTRL_0_DACDATA3]
+delete_bd_objs [get_bd_nets DAC_CTRL_0_DACDATA2]
+delete_bd_objs [get_bd_nets DAC_CTRL_0_DACDATA1]
+delete_bd_objs [get_bd_nets DAC_CTRL_0_DACDATA]
+connect_bd_net [get_bd_ports IOBUF_DATA0] [get_bd_ports DCKIN_0]
+undo
+startgroup
+make_bd_pins_external  [get_bd_cells ADC_MinMax_0]
+make_bd_intf_pins_external  [get_bd_cells ADC_MinMax_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_1/ADCDATA]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ADC_MinMax_2/ADCDATA]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells ADC_MinMax_3]
+make_bd_intf_pins_external  [get_bd_cells ADC_MinMax_3]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_2/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_2/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_3/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_3/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_4/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_4/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_5/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_5/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_6/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_6/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_11/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_11/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_12/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_12/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_13/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_13/S_AXI]
+endgroup
+set_property location {-50 160} [get_bd_ports IOBUF_CLK0]
+set_property location {-146 134} [get_bd_ports IOBUF_CLK1]
+set_property location {-160 90} [get_bd_ports IOBUF_CLK2]
+set_property location {-113 203} [get_bd_ports IOBUF_CLK3]
+set_property location {-47 327} [get_bd_ports IOBUF_DATA0]
+set_property location {-30 651} [get_bd_ports IOBUF_DATA1]
+set_property location {-22 1146} [get_bd_ports IOBUF_DATA2]
+set_property location {-41 1638} [get_bd_ports IOBUF_DATA3]
+set_property location {-39 616} [get_bd_ports IOBUF_CLK1]
+set_property location {-176 1289} [get_bd_ports IOBUF_CLK2]
+set_property location {-130 1753} [get_bd_ports IOBUF_CLK3]
+set_property name IOBUF_DATA0_EX [get_bd_ports IOBUF_DATA0]
+set_property name IOBUF_CLK0_EX [get_bd_ports IOBUF_CLK0]
+set_property location {-412 160} [get_bd_ports IOBUF_CLK0_EX]
+set_property name IOBUF_DATA0 [get_bd_ports ADCDATA_0]
+set_property name IOBUF_CLK0 [get_bd_ports DCKIN_0]
+set_property name IOBUF_DATA1_EX [get_bd_ports IOBUF_DATA1]
+set_property name IOBUF_CLK1_EX [get_bd_ports IOBUF_CLK1]
+set_property location {-244 607} [get_bd_ports IOBUF_CLK1_EX]
+set_property name IOBUF_DATA1 [get_bd_ports ADCDATA_1]
+set_property name IOBUF_CLK1 [get_bd_ports DCKIN_1]
+set_property name IOBUF_DATA2_EX [get_bd_ports IOBUF_DATA2]
+set_property name IOBUF_CLK2_EX [get_bd_ports IOBUF_CLK2]
+set_property name IOBUF_DATA2 [get_bd_ports ADCDATA_2]
+set_property name IOBUF_CLK2 [get_bd_ports DCKIN_2]
+delete_bd_objs [get_bd_ports IOBUF_DATA3]
+delete_bd_objs [get_bd_ports IOBUF_CLK3]
+set_property name IOBUF_DATA3 [get_bd_ports ADCDATA_3]
+set_property name IOBUF_CLK3 [get_bd_ports DCKIN_3]
+delete_bd_objs [get_bd_ports IOBUF_DATA2_EX]
+delete_bd_objs [get_bd_ports IOBUF_DATA1_EX]
+delete_bd_objs [get_bd_ports IOBUF_CLK1_EX]
+delete_bd_objs [get_bd_ports IOBUF_DATA0_EX]
+delete_bd_objs [get_bd_ports IOBUF_CLK0_EX]
+delete_bd_objs [get_bd_ports IOBUF_CLK2_EX]
+save_bd_design
+validate_bd_design
+regenerate_bd_layout
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {247.433} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {65} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {16.000} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+validate_bd_design
+make_wrapper -files [get_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+reset_run design_1_clk_wiz_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+wait_on_run impl_1
+update_module_reference {design_1_ADC_MinMax_0_0 design_1_ADC_MinMax_0_1 design_1_ADC_MinMax_0_2 design_1_ADC_MinMax_0_3}
+connect_bd_net [get_bd_pins ADC_MinMax_0/CLKIN] [get_bd_pins clk_wiz_0/clk_out3]
+connect_bd_net [get_bd_pins ADC_MinMax_2/CLKIN] [get_bd_pins clk_wiz_0/clk_out3]
+connect_bd_net [get_bd_pins ADC_MinMax_3/CLKIN] [get_bd_pins clk_wiz_0/clk_out3]
+connect_bd_net [get_bd_pins ADC_MinMax_1/CLKIN] [get_bd_pins clk_wiz_0/clk_out3]
+validate_bd_design
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+wait_on_run impl_1
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/PL_ADC_Control_wrapper.xsa
+open_bd_design {C:/Xilinx/Vivado/2023.1/Projects/PL_ADC_Control/project_1.srcs/sources_1/bd/design_1/design_1.bd}
