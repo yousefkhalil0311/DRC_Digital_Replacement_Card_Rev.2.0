@@ -95,7 +95,9 @@ XGpio GPIO12_DATA3A;
 XGpio GPIO13_DATA3B;
 
 //IIC bus XIic instances
-XIic IIC0_IOEXP;
+XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
+XIic IIC1_IOEXP; //(U18:0x22)
+XIic IIC2_IOEXP; //(U20:0x22, U21:0x23)
 
 //SPI bus XSpi instances
 XSpi SPI0_AFE;
@@ -106,14 +108,14 @@ const LSDAC_t LSDAC0 = {&SPI1_LSDAC, 0x01};
 const LSDAC_t LSDAC1 = {&SPI1_LSDAC, 0x02};
 
 //SP4T switch structs. Maps SP4T switch control pins to IO expander pins
-const SP4T_t SP4T0 = {	   0  , 0x010000, 0x000100};
-const SP4T_t SP4T1 = {	   0  , 0x020000, 0x000200};
-const SP4T_t SP4T2 = {	   0  , 0x040000, 0x000400};
-const SP4T_t SP4T3 = {0x000001, 0x080000, 0x000800};
-const SP4T_t SP4T4 = {	   0  , 0x100000, 0x001000};
-const SP4T_t SP4T5 = {	   0  , 0x200000, 0x002000};
-const SP4T_t SP4T6 = {	   0  , 0x400000, 0x004000};
-const SP4T_t SP4T7 = {	   0  , 0x800000, 0x008000};
+const SP4T_t SP4T0 = {0x000080, 0x010000, 0x000100};
+const SP4T_t SP4T1 = {0x000040, 0x020000, 0x000200};
+const SP4T_t SP4T2 = {0x000020, 0x040000, 0x000400};
+const SP4T_t SP4T3 = {0x000010, 0x080000, 0x000800};
+const SP4T_t SP4T4 = {0x000008, 0x100000, 0x001000};
+const SP4T_t SP4T5 = {0x000004, 0x200000, 0x002000};
+const SP4T_t SP4T6 = {0x000002, 0x400000, 0x004000};
+const SP4T_t SP4T7 = {0x000001, 0x800000, 0x008000};
 const SP4T_t NOT_SP4T = {	   0, 0, 0};
 
 //LED XGpio pins
@@ -127,6 +129,10 @@ const net_t INT_n   = {&GPIO8_CTRL, 0, 1, 1, 0};
 const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
+const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the DAC FE
+const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -141,91 +147,94 @@ const net_t SPDT55_CTRL = {&GPIO7_SPDT, 8, 1, 0, 1};
 const net_t SPDT74_CTRL = {&GPIO7_SPDT, 9, 1, 0, 1};
 const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 
+XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
+XIic IIC1_IOEXP; //(U18:0x22)
+XIic IIC2_IOEXP; //(U20:0x22, U21:0x23)
 //SE XGpio pins
-const net_t SE2  = {&GPIO9_SE, 0, 1, 2, 1, 2};
-const net_t SE14 = {&GPIO9_SE, 1, 1, 2, 1, 14};
-const net_t SE17 = {&GPIO9_SE, 2, 1, 2, 1, 17};
-const net_t SE20 = {&GPIO9_SE, 3, 1, 2, 1, 20};
-const net_t SE21 = {&GPIO9_SE, 4, 1, 2, 1, 21};
-const net_t SE22 = {&GPIO9_SE, 5, 1, 2, 1, 22};
-const net_t SE23 = {&GPIO9_SE, 6, 1, 2, 1, 23};
-const net_t SE24 = {&GPIO9_SE, 7, 1, 2, 1, 24};
-const net_t SE25 = {&GPIO9_SE, 8, 1, 2, 1, 25};
-const net_t SE26 = {&GPIO9_SE, 9, 1, 2, 1, 26};
-const net_t SE27 = {&GPIO9_SE, 10, 1, 2, 1, 27};
-const net_t SE28 = {&GPIO9_SE, 11, 1, 2, 1, 28};
-const net_t SE29 = {&GPIO9_SE, 12, 1, 2, 1, 29};
-const net_t SE32 = {&GPIO9_SE, 13, 1, 2, 1, 32};
-const net_t SE33 = {&GPIO9_SE, 14, 1, 2, 1, 33};
-const net_t SE36 = {&GPIO9_SE, 15, 1, 2, 1, 36};
-const net_t SE37 = {&GPIO9_SE, 16, 1, 2, 1, 37};
-const net_t SE38 = {&GPIO9_SE, 17, 1, 2, 1, 38};
-const net_t SE39 = {&GPIO9_SE, 18, 1, 2, 1, 39};
-const net_t SE40 = {&GPIO9_SE, 19, 1, 2, 1, 40};
-const net_t SE41 = {&GPIO9_SE, 20, 1, 2, 1, 41};
-const net_t SE42 = {&GPIO9_SE, 21, 1, 2, 1, 42};
-const net_t SE43 = {&GPIO9_SE, 22, 1, 2, 1, 43};
-const net_t SE44 = {&GPIO9_SE, 23, 1, 2, 1, 44};
-const net_t SE46 = {&GPIO9_SE, 24, 1, 2, 1, 46};
-const net_t SE48 = {&GPIO9_SE, 25, 1, 2, 1, 48};
-const net_t SE49 = {&GPIO9_SE, 26, 1, 2, 1, 49};
-const net_t SE50 = {&GPIO9_SE, 27, 1, 2, 1, 50};
-const net_t SE51 = {&GPIO9_SE, 28, 1, 2, 1, 51};
-const net_t SE52 = {&GPIO9_SE, 29, 1, 2, 1, 52};
-const net_t SE55 = {&GPIO9_SE, 30, 1, 2, 1, 55};
-const net_t SE56 = {&GPIO9_SE, 31, 1, 2, 1, 56};
-const net_t SE57 = {&GPIO9_SE, 0, 2, 2, 1, 57};
-const net_t SE58 = {&GPIO9_SE, 1, 2, 2, 1, 58};
-const net_t SE59 = {&GPIO9_SE, 2, 2, 2, 1, 59};
-const net_t SE74 = {&GPIO9_SE, 3, 2, 2, 1, 74};
-const net_t SE81 = {&GPIO9_SE, 4, 2, 2, 1, 81};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 2, 1, 89};
+const net_t SE2  = {&GPIO9_SE, 0, 1, 2, 1, 2, &IIC0_IOEXP, 0x23, 0x008000};
+const net_t SE14 = {&GPIO9_SE, 1, 1, 2, 1, 14, &IIC2_IOEXP, 0x23, 0x040000};
+const net_t SE17 = {&GPIO9_SE, 2, 1, 2, 1, 17, &IIC0_IOEXP, 0x23, 0x000800};
+const net_t SE20 = {&GPIO9_SE, 3, 1, 2, 1, 20, &IIC2_IOEXP, 0x22, 0x000100};
+const net_t SE21 = {&GPIO9_SE, 4, 1, 2, 1, 21, &IIC0_IOEXP, 0x23, 0x000200};
+const net_t SE22 = {&GPIO9_SE, 5, 1, 2, 1, 22, &IIC2_IOEXP, 0x22, 0x080000};
+const net_t SE23 = {&GPIO9_SE, 6, 1, 2, 1, 23, &IIC2_IOEXP, 0x22, 0x008000};
+const net_t SE24 = {&GPIO9_SE, 7, 1, 2, 1, 24, &IIC2_IOEXP, 0x22, 0x000002};
+const net_t SE25 = {&GPIO9_SE, 8, 1, 2, 1, 25, &IIC2_IOEXP, 0x22, 0x000008};
+const net_t SE26 = {&GPIO9_SE, 9, 1, 2, 1, 26, &IIC2_IOEXP, 0x22, 0x000001};
+const net_t SE27 = {&GPIO9_SE, 10, 1, 2, 1, 27, &IIC2_IOEXP, 0x22, 0x000800};
+const net_t SE28 = {&GPIO9_SE, 11, 1, 2, 1, 28, &IIC2_IOEXP, 0x22, 0x010000};
+const net_t SE29 = {&GPIO9_SE, 12, 1, 2, 1, 29, &IIC2_IOEXP, 0x22, 0x020000};
+const net_t SE32 = {&GPIO9_SE, 13, 1, 2, 1, 32, &IIC0_IOEXP, 0x23, 0x004000};
+const net_t SE33 = {&GPIO9_SE, 14, 1, 2, 1, 33, &IIC0_IOEXP, 0x23, 0x002000};
+const net_t SE36 = {&GPIO9_SE, 15, 1, 2, 1, 36, &IIC1_IOEXP, 0x22, 0x000800};
+const net_t SE37 = {&GPIO9_SE, 16, 1, 2, 1, 37, &IIC2_IOEXP, 0x23, 0x000020};
+const net_t SE38 = {&GPIO9_SE, 17, 1, 2, 1, 38, &IIC2_IOEXP, 0x23, 0x000008};
+const net_t SE39 = {&GPIO9_SE, 18, 1, 2, 1, 39, &IIC1_IOEXP, 0x22, 0x000400};
+const net_t SE40 = {&GPIO9_SE, 19, 1, 2, 1, 40, &IIC1_IOEXP, 0x22, 0x000004};
+const net_t SE41 = {&GPIO9_SE, 20, 1, 2, 1, 41, &IIC2_IOEXP, 0x23, 0x000010};
+const net_t SE42 = {&GPIO9_SE, 21, 1, 2, 1, 42, &IIC2_IOEXP, 0x23, 0x000080};
+const net_t SE43 = {&GPIO9_SE, 22, 1, 2, 1, 43, &IIC2_IOEXP, 0x23, 0x000200};
+const net_t SE44 = {&GPIO9_SE, 23, 1, 2, 1, 44, &IIC2_IOEXP, 0x23, 0x080000};
+const net_t SE46 = {&GPIO9_SE, 24, 1, 2, 1, 46, &IIC0_IOEXP, 0x23, 0x001000};
+const net_t SE48 = {&GPIO9_SE, 25, 1, 2, 1, 48, &IIC0_IOEXP, 0x23, 0x000400};
+const net_t SE49 = {&GPIO9_SE, 26, 1, 2, 1, 49, &IIC2_IOEXP, 0x23, 0x800000};
+const net_t SE50 = {&GPIO9_SE, 27, 1, 2, 1, 50, &IIC1_IOEXP, 0x22, 0x000020};
+const net_t SE51 = {&GPIO9_SE, 28, 1, 2, 1, 51, &IIC0_IOEXP, 0x23, 0x000100};
+const net_t SE52 = {&GPIO9_SE, 29, 1, 2, 1, 52, &IIC2_IOEXP, 0x22, 0x002000};
+const net_t SE55 = {&GPIO9_SE, 30, 1, 2, 1, 55, &IIC1_IOEXP, 0x22, 0x000010};
+const net_t SE56 = {&GPIO9_SE, 31, 1, 2, 1, 56, &IIC2_IOEXP, 0x22, 0x000004};
+const net_t SE57 = {&GPIO9_SE, 0, 2, 2, 1, 57, &IIC2_IOEXP, 0x22, 0x001000};
+const net_t SE58 = {&GPIO9_SE, 1, 2, 2, 1, 58, &IIC2_IOEXP, 0x22, 0x000400};
+const net_t SE59 = {&GPIO9_SE, 2, 2, 2, 1, 59, &IIC2_IOEXP, 0x22, 0x800000};
+const net_t SE74 = {&GPIO9_SE, 3, 2, 2, 1, 74, &IIC1_IOEXP, 0x22, 0x000008};
+const net_t SE81 = {&GPIO9_SE, 4, 2, 2, 1, 81, &IIC2_IOEXP, 0x22, 0x000200};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 2, 1, 89, &IIC2_IOEXP, 0x22, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
-const net_t SE4  = {&GPIO10_DS, 0, 1, 2, 1, 4};
-const net_t SE3  = {&GPIO10_DS, 0, 2, 2, 1, 3};
-const net_t SE6  = {&GPIO10_DS, 1, 1, 2, 1, 6};
-const net_t SE5  = {&GPIO10_DS, 1, 2, 2, 1, 5};
-const net_t SE8  = {&GPIO10_DS, 2, 1, 2, 1, 8};
-const net_t SE7  = {&GPIO10_DS, 2, 2, 2, 1, 7};
-const net_t SE10 = {&GPIO10_DS, 3, 1, 2, 1, 10};
-const net_t SE9  = {&GPIO10_DS, 3, 2, 2, 1, 9};
-const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12};
-const net_t SE11 = {&GPIO10_DS, 4, 2, 2, 1, 11};
-const net_t SE18 = {&GPIO10_DS, 5, 1, 2, 1, 18};
-const net_t SE16 = {&GPIO10_DS, 5, 2, 2, 1, 16};
-const net_t SE34 = {&GPIO10_DS, 6, 1, 2, 1, 34};
-const net_t SE19 = {&GPIO10_DS, 6, 2, 2, 1, 19};
-const net_t SE45 = {&GPIO10_DS, 7, 1, 2, 1, 45};
-const net_t SE35 = {&GPIO10_DS, 7, 2, 2, 1, 35};
-const net_t SE53 = {&GPIO10_DS, 8, 1, 2, 1, 53};
-const net_t SE47 = {&GPIO10_DS, 8, 2, 2, 1, 47};
-const net_t SE62 = {&GPIO10_DS, 9, 1, 2, 1, 62};
-const net_t SE54 = {&GPIO10_DS, 9, 2, 2, 1, 54};
-const net_t SE64 = {&GPIO10_DS, 10, 1, 2, 1, 64};
-const net_t SE63 = {&GPIO10_DS, 10, 2, 2, 1, 63};
-const net_t SE66 = {&GPIO10_DS, 11, 1, 2, 1, 66};
-const net_t SE65 = {&GPIO10_DS, 11, 2, 2, 1, 65};
-const net_t SE68 = {&GPIO10_DS, 12, 1, 2, 1, 68};
-const net_t SE67 = {&GPIO10_DS, 12, 2, 2, 1, 67};
-const net_t SE70 = {&GPIO10_DS, 13, 1, 2, 1, 70};
-const net_t SE69 = {&GPIO10_DS, 13, 2, 2, 1, 69};
-const net_t SE72 = {&GPIO10_DS, 14, 1, 2, 1, 72};
-const net_t SE71 = {&GPIO10_DS, 14, 2, 2, 1, 71};
-const net_t SE75 = {&GPIO10_DS, 15, 1, 2, 1, 75};
-const net_t SE73 = {&GPIO10_DS, 15, 2, 2, 1, 73};
-const net_t SE77 = {&GPIO10_DS, 16, 1, 2, 1, 77};
-const net_t SE76 = {&GPIO10_DS, 16, 2, 2, 1, 76};
-const net_t SE79 = {&GPIO10_DS, 17, 1, 2, 1, 79};
-const net_t SE78 = {&GPIO10_DS, 17, 2, 2, 1, 78};
-const net_t SE82 = {&GPIO10_DS, 18, 1, 2, 1, 82};
-const net_t SE80 = {&GPIO10_DS, 18, 2, 2, 1, 80};
-const net_t SE84 = {&GPIO10_DS, 19, 1, 2, 1, 84};
-const net_t SE83 = {&GPIO10_DS, 19, 2, 2, 1, 83};
-const net_t SE86 = {&GPIO10_DS, 20, 1, 2, 1, 86};
-const net_t SE85 = {&GPIO10_DS, 20, 2, 2, 1, 85};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 2, 1, 88};
-const net_t SE87 = {&GPIO10_DS, 21, 2, 2, 1, 87};
+const net_t SE4  = {&GPIO10_DS, 0, 1, 2, 1, 4, &IIC1_IOEXP, 0x22, 0x000040};
+const net_t SE3  = {&GPIO10_DS, 0, 2, 2, 1, 3, &IIC1_IOEXP, 0x22, 0x008000};
+const net_t SE6  = {&GPIO10_DS, 1, 1, 2, 1, 6, &IIC1_IOEXP, 0x22, 0x000080};
+const net_t SE5  = {&GPIO10_DS, 1, 2, 2, 1, 5, &IIC1_IOEXP, 0x22, 0x002000};
+const net_t SE8  = {&GPIO10_DS, 2, 1, 2, 1, 8, &IIC2_IOEXP, 0x23, 0x000001};
+const net_t SE7  = {&GPIO10_DS, 2, 2, 2, 1, 7, &IIC2_IOEXP, 0x23, 0x008000};
+const net_t SE10 = {&GPIO10_DS, 3, 1, 2, 1, 10, &IIC1_IOEXP, 0x22, 0x000002};
+const net_t SE9  = {&GPIO10_DS, 3, 2, 2, 1, 9, &IIC1_IOEXP, 0x22, 0x000001};
+const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12, &IIC2_IOEXP, 0x23, 0x000800};
+const net_t SE11 = {&GPIO10_DS, 4, 2, 2, 1, 11, &IIC2_IOEXP, 0x23, 0x001000};
+const net_t SE18 = {&GPIO10_DS, 5, 1, 2, 1, 18, &IIC2_IOEXP, 0x23, 0x000100};
+const net_t SE16 = {&GPIO10_DS, 5, 2, 2, 1, 16, &IIC0_IOEXP, 0x23, 0x000008};
+const net_t SE34 = {&GPIO10_DS, 6, 1, 2, 1, 34, &IIC1_IOEXP, 0x22, 0x004000};
+const net_t SE19 = {&GPIO10_DS, 6, 2, 2, 1, 19, &IIC2_IOEXP, 0x23, 0x400000};
+const net_t SE45 = {&GPIO10_DS, 7, 1, 2, 1, 45, &IIC2_IOEXP, 0x23, 0x100000};
+const net_t SE35 = {&GPIO10_DS, 7, 2, 2, 1, 35, &IIC1_IOEXP, 0x22, 0x001000};
+const net_t SE53 = {&GPIO10_DS, 8, 1, 2, 1, 53, &IIC2_IOEXP, 0x22, 0x000080};
+const net_t SE47 = {&GPIO10_DS, 8, 2, 2, 1, 47, &IIC2_IOEXP, 0x23, 0x000400};
+const net_t SE62 = {&GPIO10_DS, 9, 1, 2, 1, 62, &IIC1_IOEXP, 0x22, 0x000200};
+const net_t SE54 = {&GPIO10_DS, 9, 2, 2, 1, 54, &IIC2_IOEXP, 0x22, 0x000020};
+const net_t SE64 = {&GPIO10_DS, 10, 1, 2, 1, 64, &IIC1_IOEXP, 0x22, 0x800000};
+const net_t SE63 = {&GPIO10_DS, 10, 2, 2, 1, 63, &IIC1_IOEXP, 0x22, 0x000100};
+const net_t SE66 = {&GPIO10_DS, 11, 1, 2, 1, 66, &IIC1_IOEXP, 0x22, 0x200000};
+const net_t SE65 = {&GPIO10_DS, 11, 2, 2, 1, 65, &IIC1_IOEXP, 0x22, 0x400000};
+const net_t SE68 = {&GPIO10_DS, 12, 1, 2, 1, 68, &IIC2_IOEXP, 0x23, 0x000002};
+const net_t SE67 = {&GPIO10_DS, 12, 2, 2, 1, 67, &IIC2_IOEXP, 0x23, 0x004000};
+const net_t SE70 = {&GPIO10_DS, 13, 1, 2, 1, 70, &IIC2_IOEXP, 0x23, 0x000040};
+const net_t SE69 = {&GPIO10_DS, 13, 2, 2, 1, 69, &IIC2_IOEXP, 0x23, 0x000004};
+const net_t SE72 = {&GPIO10_DS, 14, 1, 2, 1, 72, &IIC2_IOEXP, 0x23, 0x010000};
+const net_t SE71 = {&GPIO10_DS, 14, 2, 2, 1, 71, &IIC2_IOEXP, 0x23, 0x002000};
+const net_t SE75 = {&GPIO10_DS, 15, 1, 2, 1, 75, &IIC2_IOEXP, 0x23, 0x200000};
+const net_t SE73 = {&GPIO10_DS, 15, 2, 2, 1, 73, &IIC2_IOEXP, 0x23, 0x020000};
+const net_t SE77 = {&GPIO10_DS, 16, 1, 2, 1, 77, &IIC0_IOEXP, 0x23, 0x010000};
+const net_t SE76 = {&GPIO10_DS, 16, 2, 2, 1, 76, &IIC0_IOEXP, 0x23, 0x000002};
+const net_t SE79 = {&GPIO10_DS, 17, 1, 2, 1, 79, &IIC2_IOEXP, 0x22, 0x100000};
+const net_t SE78 = {&GPIO10_DS, 17, 2, 2, 1, 78, &IIC0_IOEXP, 0x23, 0x000010};
+const net_t SE82 = {&GPIO10_DS, 18, 1, 2, 1, 82, &IIC2_IOEXP, 0x22, 0x040000};
+const net_t SE80 = {&GPIO10_DS, 18, 2, 2, 1, 80, &IIC2_IOEXP, 0x22, 0x400000};
+const net_t SE84 = {&GPIO10_DS, 19, 1, 2, 1, 84, &IIC2_IOEXP, 0x22, 0x000040};
+const net_t SE83 = {&GPIO10_DS, 19, 2, 2, 1, 83, &IIC2_IOEXP, 0x22, 0x004000};
+const net_t SE86 = {&GPIO10_DS, 20, 1, 2, 1, 86, &IIC0_IOEXP, 0x23, 0x000001};
+const net_t SE85 = {&GPIO10_DS, 20, 2, 2, 1, 85, &IIC2_IOEXP, 0x22, 0x000010};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 2, 1, 88, &IIC0_IOEXP, 0x23, 0x000004};
+const net_t SE87 = {&GPIO10_DS, 21, 2, 2, 1, 87, &IIC0_IOEXP, 0x23, 0x000080};
 
 ////DATA0/CLK0 XGpio pins
 //const net_t DATA0_0   = {&GPIO3_DATA0,  0, 1, 2, 0};
