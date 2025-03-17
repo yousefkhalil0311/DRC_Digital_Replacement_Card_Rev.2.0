@@ -113,3 +113,4 @@ domain active {zynqmp_pmufw}
 bsp reload
 bsp reload
 platform generate -domains 
+platform generate

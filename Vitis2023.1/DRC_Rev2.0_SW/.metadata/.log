@@ -779,3 +779,69 @@ java.io.FileNotFoundException:
 
 !ENTRY org.eclipse.launchbar.core 2 0 2025-03-16 19:51:31.894
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:52.594
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.976
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa], Result: [null, ]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.981
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss ], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.985
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.986
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.988
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/hw/REV1D.xsa C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-16 23:50:57.990
+!MESSAGE Generating MD5 hash for file: C:\Xilinx\Vitis\2023.1\Projects\DRCDeliverableSoftware\DRCPlatform\export\DRCPlatform\sw\DRCPlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.994
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-16 23:50:57.997
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Xilinx/Vitis/2023.1/Projects/DRCDeliverableSoftware/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-03-16 23:50:59.288
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:52.149
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.058
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa], Result: [null, ]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.058
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss ], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.061
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.062
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.063
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/PL_ADC_Control_wrapper.xsa C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-17 00:07:57.066
+!MESSAGE Generating MD5 hash for file: C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRCPlatform\export\DRCPlatform\sw\DRCPlatform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.067
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-17 00:07:57.068
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-03-17 00:07:58.123
+!MESSAGE Build step failed, canceling full build chain.

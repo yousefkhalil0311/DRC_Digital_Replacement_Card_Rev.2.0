@@ -21,6 +21,8 @@
 
 //define IIC IDs for IO expander's IIC bus
 #define IIC0_IOEXP_ID	XPAR_IIC_0_DEVICE_ID
+#define IIC1_IOEXP_ID	XPAR_IIC_1_DEVICE_ID
+#define IIC2_IOEXP_ID	XPAR_IIC_2_DEVICE_ID
 
 //define SPI IDs for the AFE SPI bus and LSDAC SPI bus
 #define SPI0_AFE_ID 	XPAR_SPI_0_DEVICE_ID	//SPI0 - 4 SS pins

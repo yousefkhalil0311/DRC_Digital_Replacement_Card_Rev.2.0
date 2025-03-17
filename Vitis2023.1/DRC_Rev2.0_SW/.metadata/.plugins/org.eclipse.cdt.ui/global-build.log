@@ -1,5 +1,477 @@
 Nothing to build in platform 'DRCPlatform'
 
-15:19:08 **** Incremental Build of configuration Debug for project PL_ADC_Control ****
+00:07:57 **** Build of configuration Debug for project PL_ADC_Control ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/BB_test.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BB_test.o" -IC:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/BB_test.d" -MT"src/BB_test.o" -o "src/BB_test.o" "../src/BB_test.c"
+In file included from ../src/BB_test.c:64:
+../src/StructDefinitions.h:23:9: error: unknown type name 'DIRCTRL_IOEXP'
+   23 |         DIRCTRL_IOEXP *IOEXP;
+      |         ^~~~~~~~~~~~~
+../src/StructDefinitions.h:42:9: error: unknown type name 'XIIC'
+   42 |         XIIC *instance;
+      |         ^~~~
+../src/BB_test.c:107:28: warning: initialization of 'int *' from incompatible pointer type 'XIic *' [-Wincompatible-pointer-types]
+  107 | DIRCTRL_IOEXP IOEXP_U18 = {&IIC1_IOEXP, 0x22, 0x00000000};
+      |                            ^
+../src/BB_test.c:107:28: note: (near initialization for 'IOEXP_U18.instance')
+../src/BB_test.c:108:28: warning: initialization of 'int *' from incompatible pointer type 'XIic *' [-Wincompatible-pointer-types]
+  108 | DIRCTRL_IOEXP IOEXP_U19 = {&IIC0_IOEXP, 0x23, 0x00000000};
+      |                            ^
+../src/BB_test.c:108:28: note: (near initialization for 'IOEXP_U19.instance')
+../src/BB_test.c:109:28: warning: initialization of 'int *' from incompatible pointer type 'XIic *' [-Wincompatible-pointer-types]
+  109 | DIRCTRL_IOEXP IOEXP_U20 = {&IIC2_IOEXP, 0x22, 0x00000000};
+      |                            ^
+../src/BB_test.c:109:28: note: (near initialization for 'IOEXP_U20.instance')
+../src/BB_test.c:110:28: warning: initialization of 'int *' from incompatible pointer type 'XIic *' [-Wincompatible-pointer-types]
+  110 | DIRCTRL_IOEXP IOEXP_U21 = {&IIC2_IOEXP, 0x23, 0x00000000};
+      |                            ^
+../src/BB_test.c:110:28: note: (near initialization for 'IOEXP_U21.instance')
+../src/BB_test.c:157:47: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  157 | const net_t SE2  = {&GPIO9_SE, 0, 1, 2, 1, 2, &IOEXP_U19, 0x008000};
+      |                                               ^
+../src/BB_test.c:157:47: note: (near initialization for 'SE2.IOEXP')
+../src/BB_test.c:158:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  158 | const net_t SE14 = {&GPIO9_SE, 1, 1, 2, 1, 14, &IOEXP_U21, 0x040000};
+      |                                                ^
+../src/BB_test.c:158:48: note: (near initialization for 'SE14.IOEXP')
+../src/BB_test.c:159:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  159 | const net_t SE17 = {&GPIO9_SE, 2, 1, 2, 1, 17, &IOEXP_U19, 0x000800};
+      |                                                ^
+../src/BB_test.c:159:48: note: (near initialization for 'SE17.IOEXP')
+../src/BB_test.c:160:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  160 | const net_t SE20 = {&GPIO9_SE, 3, 1, 2, 1, 20, &IOEXP_U20, 0x000100};
+      |                                                ^
+../src/BB_test.c:160:48: note: (near initialization for 'SE20.IOEXP')
+../src/BB_test.c:161:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  161 | const net_t SE21 = {&GPIO9_SE, 4, 1, 2, 1, 21, &IOEXP_U19, 0x000200};
+      |                                                ^
+../src/BB_test.c:161:48: note: (near initialization for 'SE21.IOEXP')
+../src/BB_test.c:162:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  162 | const net_t SE22 = {&GPIO9_SE, 5, 1, 2, 1, 22, &IOEXP_U20, 0x080000};
+      |                                                ^
+../src/BB_test.c:162:48: note: (near initialization for 'SE22.IOEXP')
+../src/BB_test.c:163:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  163 | const net_t SE23 = {&GPIO9_SE, 6, 1, 2, 1, 23, &IOEXP_U20, 0x008000};
+      |                                                ^
+../src/BB_test.c:163:48: note: (near initialization for 'SE23.IOEXP')
+../src/BB_test.c:164:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  164 | const net_t SE24 = {&GPIO9_SE, 7, 1, 2, 1, 24, &IOEXP_U20, 0x000002};
+      |                                                ^
+../src/BB_test.c:164:48: note: (near initialization for 'SE24.IOEXP')
+../src/BB_test.c:165:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  165 | const net_t SE25 = {&GPIO9_SE, 8, 1, 2, 1, 25, &IOEXP_U20, 0x000008};
+      |                                                ^
+../src/BB_test.c:165:48: note: (near initialization for 'SE25.IOEXP')
+../src/BB_test.c:166:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  166 | const net_t SE26 = {&GPIO9_SE, 9, 1, 2, 1, 26, &IOEXP_U20, 0x000001};
+      |                                                ^
+../src/BB_test.c:166:48: note: (near initialization for 'SE26.IOEXP')
+../src/BB_test.c:167:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  167 | const net_t SE27 = {&GPIO9_SE, 10, 1, 2, 1, 27, &IOEXP_U20, 0x000800};
+      |                                                 ^
+../src/BB_test.c:167:49: note: (near initialization for 'SE27.IOEXP')
+../src/BB_test.c:168:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  168 | const net_t SE28 = {&GPIO9_SE, 11, 1, 2, 1, 28, &IOEXP_U20, 0x010000};
+      |                                                 ^
+../src/BB_test.c:168:49: note: (near initialization for 'SE28.IOEXP')
+../src/BB_test.c:169:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  169 | const net_t SE29 = {&GPIO9_SE, 12, 1, 2, 1, 29, &IOEXP_U20, 0x020000};
+      |                                                 ^
+../src/BB_test.c:169:49: note: (near initialization for 'SE29.IOEXP')
+../src/BB_test.c:170:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  170 | const net_t SE32 = {&GPIO9_SE, 13, 1, 2, 1, 32, &IOEXP_U19, 0x004000};
+      |                                                 ^
+../src/BB_test.c:170:49: note: (near initialization for 'SE32.IOEXP')
+../src/BB_test.c:171:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  171 | const net_t SE33 = {&GPIO9_SE, 14, 1, 2, 1, 33, &IOEXP_U19, 0x002000};
+      |                                                 ^
+../src/BB_test.c:171:49: note: (near initialization for 'SE33.IOEXP')
+../src/BB_test.c:172:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  172 | const net_t SE36 = {&GPIO9_SE, 15, 1, 2, 1, 36, &IOEXP_U18, 0x000800};
+      |                                                 ^
+../src/BB_test.c:172:49: note: (near initialization for 'SE36.IOEXP')
+../src/BB_test.c:173:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  173 | const net_t SE37 = {&GPIO9_SE, 16, 1, 2, 1, 37, &IOEXP_U21, 0x000020};
+      |                                                 ^
+../src/BB_test.c:173:49: note: (near initialization for 'SE37.IOEXP')
+../src/BB_test.c:174:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  174 | const net_t SE38 = {&GPIO9_SE, 17, 1, 2, 1, 38, &IOEXP_U21, 0x000008};
+      |                                                 ^
+../src/BB_test.c:174:49: note: (near initialization for 'SE38.IOEXP')
+../src/BB_test.c:175:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  175 | const net_t SE39 = {&GPIO9_SE, 18, 1, 2, 1, 39, &IOEXP_U18, 0x000400};
+      |                                                 ^
+../src/BB_test.c:175:49: note: (near initialization for 'SE39.IOEXP')
+../src/BB_test.c:176:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  176 | const net_t SE40 = {&GPIO9_SE, 19, 1, 2, 1, 40, &IOEXP_U18, 0x000004};
+      |                                                 ^
+../src/BB_test.c:176:49: note: (near initialization for 'SE40.IOEXP')
+../src/BB_test.c:177:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  177 | const net_t SE41 = {&GPIO9_SE, 20, 1, 2, 1, 41, &IOEXP_U21, 0x000010};
+      |                                                 ^
+../src/BB_test.c:177:49: note: (near initialization for 'SE41.IOEXP')
+../src/BB_test.c:178:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  178 | const net_t SE42 = {&GPIO9_SE, 21, 1, 2, 1, 42, &IOEXP_U21, 0x000080};
+      |                                                 ^
+../src/BB_test.c:178:49: note: (near initialization for 'SE42.IOEXP')
+../src/BB_test.c:179:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  179 | const net_t SE43 = {&GPIO9_SE, 22, 1, 2, 1, 43, &IOEXP_U21, 0x000200};
+      |                                                 ^
+../src/BB_test.c:179:49: note: (near initialization for 'SE43.IOEXP')
+../src/BB_test.c:180:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  180 | const net_t SE44 = {&GPIO9_SE, 23, 1, 2, 1, 44, &IOEXP_U21, 0x080000};
+      |                                                 ^
+../src/BB_test.c:180:49: note: (near initialization for 'SE44.IOEXP')
+../src/BB_test.c:181:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  181 | const net_t SE46 = {&GPIO9_SE, 24, 1, 2, 1, 46, &IOEXP_U19, 0x001000};
+      |                                                 ^
+../src/BB_test.c:181:49: note: (near initialization for 'SE46.IOEXP')
+../src/BB_test.c:182:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  182 | const net_t SE48 = {&GPIO9_SE, 25, 1, 2, 1, 48, &IOEXP_U19, 0x000400};
+      |                                                 ^
+../src/BB_test.c:182:49: note: (near initialization for 'SE48.IOEXP')
+../src/BB_test.c:183:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  183 | const net_t SE49 = {&GPIO9_SE, 26, 1, 2, 1, 49, &IOEXP_U21, 0x800000};
+      |                                                 ^
+../src/BB_test.c:183:49: note: (near initialization for 'SE49.IOEXP')
+../src/BB_test.c:184:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  184 | const net_t SE50 = {&GPIO9_SE, 27, 1, 2, 1, 50, &IOEXP_U18, 0x000020};
+      |                                                 ^
+../src/BB_test.c:184:49: note: (near initialization for 'SE50.IOEXP')
+../src/BB_test.c:185:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  185 | const net_t SE51 = {&GPIO9_SE, 28, 1, 2, 1, 51, &IOEXP_U19, 0x000100};
+      |                                                 ^
+../src/BB_test.c:185:49: note: (near initialization for 'SE51.IOEXP')
+../src/BB_test.c:186:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  186 | const net_t SE52 = {&GPIO9_SE, 29, 1, 2, 1, 52, &IOEXP_U20, 0x002000};
+      |                                                 ^
+../src/BB_test.c:186:49: note: (near initialization for 'SE52.IOEXP')
+../src/BB_test.c:187:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  187 | const net_t SE55 = {&GPIO9_SE, 30, 1, 2, 1, 55, &IOEXP_U18, 0x000010};
+      |                                                 ^
+../src/BB_test.c:187:49: note: (near initialization for 'SE55.IOEXP')
+../src/BB_test.c:188:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  188 | const net_t SE56 = {&GPIO9_SE, 31, 1, 2, 1, 56, &IOEXP_U20, 0x000004};
+      |                                                 ^
+../src/BB_test.c:188:49: note: (near initialization for 'SE56.IOEXP')
+../src/BB_test.c:189:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  189 | const net_t SE57 = {&GPIO9_SE, 0, 2, 2, 1, 57, &IOEXP_U20, 0x001000};
+      |                                                ^
+../src/BB_test.c:189:48: note: (near initialization for 'SE57.IOEXP')
+../src/BB_test.c:190:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  190 | const net_t SE58 = {&GPIO9_SE, 1, 2, 2, 1, 58, &IOEXP_U20, 0x000400};
+      |                                                ^
+../src/BB_test.c:190:48: note: (near initialization for 'SE58.IOEXP')
+../src/BB_test.c:191:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  191 | const net_t SE59 = {&GPIO9_SE, 2, 2, 2, 1, 59, &IOEXP_U20, 0x800000};
+      |                                                ^
+../src/BB_test.c:191:48: note: (near initialization for 'SE59.IOEXP')
+../src/BB_test.c:192:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  192 | const net_t SE74 = {&GPIO9_SE, 3, 2, 2, 1, 74, &IOEXP_U18, 0x000008};
+      |                                                ^
+../src/BB_test.c:192:48: note: (near initialization for 'SE74.IOEXP')
+../src/BB_test.c:193:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  193 | const net_t SE81 = {&GPIO9_SE, 4, 2, 2, 1, 81, &IOEXP_U20, 0x000200};
+      |                                                ^
+../src/BB_test.c:193:48: note: (near initialization for 'SE81.IOEXP')
+../src/BB_test.c:194:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  194 | const net_t SE89 = {&GPIO9_SE, 5, 2, 2, 1, 89, &IOEXP_U20, 0x200000};
+      |                                                ^
+../src/BB_test.c:194:48: note: (near initialization for 'SE89.IOEXP')
+../src/BB_test.c:197:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  197 | const net_t SE4  = {&GPIO10_DS, 0, 1, 2, 1, 4, &IOEXP_U18, 0x000040};
+      |                                                ^
+../src/BB_test.c:197:48: note: (near initialization for 'SE4.IOEXP')
+../src/BB_test.c:198:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  198 | const net_t SE3  = {&GPIO10_DS, 0, 2, 2, 1, 3, &IOEXP_U18, 0x008000};
+      |                                                ^
+../src/BB_test.c:198:48: note: (near initialization for 'SE3.IOEXP')
+../src/BB_test.c:199:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  199 | const net_t SE6  = {&GPIO10_DS, 1, 1, 2, 1, 6, &IOEXP_U18, 0x000080};
+      |                                                ^
+../src/BB_test.c:199:48: note: (near initialization for 'SE6.IOEXP')
+../src/BB_test.c:200:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  200 | const net_t SE5  = {&GPIO10_DS, 1, 2, 2, 1, 5, &IOEXP_U18, 0x002000};
+      |                                                ^
+../src/BB_test.c:200:48: note: (near initialization for 'SE5.IOEXP')
+../src/BB_test.c:201:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  201 | const net_t SE8  = {&GPIO10_DS, 2, 1, 2, 1, 8, &IOEXP_U21, 0x000001};
+      |                                                ^
+../src/BB_test.c:201:48: note: (near initialization for 'SE8.IOEXP')
+../src/BB_test.c:202:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  202 | const net_t SE7  = {&GPIO10_DS, 2, 2, 2, 1, 7, &IOEXP_U21, 0x008000};
+      |                                                ^
+../src/BB_test.c:202:48: note: (near initialization for 'SE7.IOEXP')
+../src/BB_test.c:203:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  203 | const net_t SE10 = {&GPIO10_DS, 3, 1, 2, 1, 10, &IOEXP_U18, 0x000002};
+      |                                                 ^
+../src/BB_test.c:203:49: note: (near initialization for 'SE10.IOEXP')
+../src/BB_test.c:204:48: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  204 | const net_t SE9  = {&GPIO10_DS, 3, 2, 2, 1, 9, &IOEXP_U18, 0x000001};
+      |                                                ^
+../src/BB_test.c:204:48: note: (near initialization for 'SE9.IOEXP')
+../src/BB_test.c:205:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  205 | const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12, &IOEXP_U21, 0x000800};
+      |                                                 ^
+../src/BB_test.c:205:49: note: (near initialization for 'SE12.IOEXP')
+../src/BB_test.c:206:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  206 | const net_t SE11 = {&GPIO10_DS, 4, 2, 2, 1, 11, &IOEXP_U21, 0x001000};
+      |                                                 ^
+../src/BB_test.c:206:49: note: (near initialization for 'SE11.IOEXP')
+../src/BB_test.c:207:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  207 | const net_t SE18 = {&GPIO10_DS, 5, 1, 2, 1, 18, &IOEXP_U21, 0x000100};
+      |                                                 ^
+../src/BB_test.c:207:49: note: (near initialization for 'SE18.IOEXP')
+../src/BB_test.c:208:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  208 | const net_t SE16 = {&GPIO10_DS, 5, 2, 2, 1, 16, &IOEXP_U19, 0x000008};
+      |                                                 ^
+../src/BB_test.c:208:49: note: (near initialization for 'SE16.IOEXP')
+../src/BB_test.c:209:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  209 | const net_t SE34 = {&GPIO10_DS, 6, 1, 2, 1, 34, &IOEXP_U18, 0x004000};
+      |                                                 ^
+../src/BB_test.c:209:49: note: (near initialization for 'SE34.IOEXP')
+../src/BB_test.c:210:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  210 | const net_t SE19 = {&GPIO10_DS, 6, 2, 2, 1, 19, &IOEXP_U21, 0x400000};
+      |                                                 ^
+../src/BB_test.c:210:49: note: (near initialization for 'SE19.IOEXP')
+../src/BB_test.c:211:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  211 | const net_t SE45 = {&GPIO10_DS, 7, 1, 2, 1, 45, &IOEXP_U21, 0x100000};
+      |                                                 ^
+../src/BB_test.c:211:49: note: (near initialization for 'SE45.IOEXP')
+../src/BB_test.c:212:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  212 | const net_t SE35 = {&GPIO10_DS, 7, 2, 2, 1, 35, &IOEXP_U18, 0x001000};
+      |                                                 ^
+../src/BB_test.c:212:49: note: (near initialization for 'SE35.IOEXP')
+../src/BB_test.c:213:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  213 | const net_t SE53 = {&GPIO10_DS, 8, 1, 2, 1, 53, &IOEXP_U20, 0x000080};
+      |                                                 ^
+../src/BB_test.c:213:49: note: (near initialization for 'SE53.IOEXP')
+../src/BB_test.c:214:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  214 | const net_t SE47 = {&GPIO10_DS, 8, 2, 2, 1, 47, &IOEXP_U21, 0x000400};
+      |                                                 ^
+../src/BB_test.c:214:49: note: (near initialization for 'SE47.IOEXP')
+../src/BB_test.c:215:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  215 | const net_t SE62 = {&GPIO10_DS, 9, 1, 2, 1, 62, &IOEXP_U18, 0x000200};
+      |                                                 ^
+../src/BB_test.c:215:49: note: (near initialization for 'SE62.IOEXP')
+../src/BB_test.c:216:49: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  216 | const net_t SE54 = {&GPIO10_DS, 9, 2, 2, 1, 54, &IOEXP_U20, 0x000020};
+      |                                                 ^
+../src/BB_test.c:216:49: note: (near initialization for 'SE54.IOEXP')
+../src/BB_test.c:217:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  217 | const net_t SE64 = {&GPIO10_DS, 10, 1, 2, 1, 64, &IOEXP_U18, 0x800000};
+      |                                                  ^
+../src/BB_test.c:217:50: note: (near initialization for 'SE64.IOEXP')
+../src/BB_test.c:218:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  218 | const net_t SE63 = {&GPIO10_DS, 10, 2, 2, 1, 63, &IOEXP_U18, 0x000100};
+      |                                                  ^
+../src/BB_test.c:218:50: note: (near initialization for 'SE63.IOEXP')
+../src/BB_test.c:219:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  219 | const net_t SE66 = {&GPIO10_DS, 11, 1, 2, 1, 66, &IOEXP_U18, 0x200000};
+      |                                                  ^
+../src/BB_test.c:219:50: note: (near initialization for 'SE66.IOEXP')
+../src/BB_test.c:220:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  220 | const net_t SE65 = {&GPIO10_DS, 11, 2, 2, 1, 65, &IOEXP_U18, 0x400000};
+      |                                                  ^
+../src/BB_test.c:220:50: note: (near initialization for 'SE65.IOEXP')
+../src/BB_test.c:221:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  221 | const net_t SE68 = {&GPIO10_DS, 12, 1, 2, 1, 68, &IOEXP_U21, 0x000002};
+      |                                                  ^
+../src/BB_test.c:221:50: note: (near initialization for 'SE68.IOEXP')
+../src/BB_test.c:222:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  222 | const net_t SE67 = {&GPIO10_DS, 12, 2, 2, 1, 67, &IOEXP_U21, 0x004000};
+      |                                                  ^
+../src/BB_test.c:222:50: note: (near initialization for 'SE67.IOEXP')
+../src/BB_test.c:223:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  223 | const net_t SE70 = {&GPIO10_DS, 13, 1, 2, 1, 70, &IOEXP_U21, 0x000040};
+      |                                                  ^
+../src/BB_test.c:223:50: note: (near initialization for 'SE70.IOEXP')
+../src/BB_test.c:224:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  224 | const net_t SE69 = {&GPIO10_DS, 13, 2, 2, 1, 69, &IOEXP_U21, 0x000004};
+      |                                                  ^
+../src/BB_test.c:224:50: note: (near initialization for 'SE69.IOEXP')
+../src/BB_test.c:225:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  225 | const net_t SE72 = {&GPIO10_DS, 14, 1, 2, 1, 72, &IOEXP_U21, 0x010000};
+      |                                                  ^
+../src/BB_test.c:225:50: note: (near initialization for 'SE72.IOEXP')
+../src/BB_test.c:226:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  226 | const net_t SE71 = {&GPIO10_DS, 14, 2, 2, 1, 71, &IOEXP_U21, 0x002000};
+      |                                                  ^
+../src/BB_test.c:226:50: note: (near initialization for 'SE71.IOEXP')
+../src/BB_test.c:227:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  227 | const net_t SE75 = {&GPIO10_DS, 15, 1, 2, 1, 75, &IOEXP_U21, 0x200000};
+      |                                                  ^
+../src/BB_test.c:227:50: note: (near initialization for 'SE75.IOEXP')
+../src/BB_test.c:228:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  228 | const net_t SE73 = {&GPIO10_DS, 15, 2, 2, 1, 73, &IOEXP_U21, 0x020000};
+      |                                                  ^
+../src/BB_test.c:228:50: note: (near initialization for 'SE73.IOEXP')
+../src/BB_test.c:229:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  229 | const net_t SE77 = {&GPIO10_DS, 16, 1, 2, 1, 77, &IOEXP_U19, 0x010000};
+      |                                                  ^
+../src/BB_test.c:229:50: note: (near initialization for 'SE77.IOEXP')
+../src/BB_test.c:230:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  230 | const net_t SE76 = {&GPIO10_DS, 16, 2, 2, 1, 76, &IOEXP_U19, 0x000002};
+      |                                                  ^
+../src/BB_test.c:230:50: note: (near initialization for 'SE76.IOEXP')
+../src/BB_test.c:231:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  231 | const net_t SE79 = {&GPIO10_DS, 17, 1, 2, 1, 79, &IOEXP_U20, 0x100000};
+      |                                                  ^
+../src/BB_test.c:231:50: note: (near initialization for 'SE79.IOEXP')
+../src/BB_test.c:232:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  232 | const net_t SE78 = {&GPIO10_DS, 17, 2, 2, 1, 78, &IOEXP_U19, 0x000010};
+      |                                                  ^
+../src/BB_test.c:232:50: note: (near initialization for 'SE78.IOEXP')
+../src/BB_test.c:233:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  233 | const net_t SE82 = {&GPIO10_DS, 18, 1, 2, 1, 82, &IOEXP_U20, 0x040000};
+      |                                                  ^
+../src/BB_test.c:233:50: note: (near initialization for 'SE82.IOEXP')
+../src/BB_test.c:234:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  234 | const net_t SE80 = {&GPIO10_DS, 18, 2, 2, 1, 80, &IOEXP_U20, 0x400000};
+      |                                                  ^
+../src/BB_test.c:234:50: note: (near initialization for 'SE80.IOEXP')
+../src/BB_test.c:235:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  235 | const net_t SE84 = {&GPIO10_DS, 19, 1, 2, 1, 84, &IOEXP_U20, 0x000040};
+      |                                                  ^
+../src/BB_test.c:235:50: note: (near initialization for 'SE84.IOEXP')
+../src/BB_test.c:236:22: error: 'GPIO10_' undeclared here (not in a function); did you mean 'GPIO10_DS'?
+  236 | const net_t SE83 = {&GPIO10_ &IOEXP_U193, &IOEXP_U20, 0x004000};
+      |                      ^~~~~~~
+      |                      GPIO10_DS
+../src/BB_test.c:236:31: error: 'IOEXP_U193' undeclared here (not in a function); did you mean 'IOEXP_U19'?
+  236 | const net_t SE83 = {&GPIO10_ &IOEXP_U193, &IOEXP_U20, 0x004000};
+      |                               ^~~~~~~~~~
+      |                               IOEXP_U19
+../src/BB_test.c:236:43: warning: initialization of 'unsigned int' from 'DIRCTRL_IOEXP *' makes integer from pointer without a cast [-Wint-conversion]
+  236 | const net_t SE83 = {&GPIO10_ &IOEXP_U193, &IOEXP_U20, 0x004000};
+      |                                           ^
+../src/BB_test.c:236:43: note: (near initialization for 'SE83.bit_num')
+../src/BB_test.c:236:43: error: initializer element is not computable at load time
+../src/BB_test.c:236:43: note: (near initialization for 'SE83.bit_num')
+../src/BB_test.c:237:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  237 | const net_t SE86 = {&GPIO10_DS, 20, 1, 2, 1, 86, &IOEXP_U19, 0x000001};
+      |                                                  ^
+../src/BB_test.c:237:50: note: (near initialization for 'SE86.IOEXP')
+../src/BB_test.c:238:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  238 | const net_t SE85 = {&GPIO10_DS, 20, 2, 2, 1, 85, &IOEXP_U20, 0x000010};
+      |                                                  ^
+../src/BB_test.c:238:50: note: (near initialization for 'SE85.IOEXP')
+../src/BB_test.c:239:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  239 | const net_t SE88 = {&GPIO10_DS, 21, 1, 2, 1, 88, &IOEXP_U19, 0x000004};
+      |                                                  ^
+../src/BB_test.c:239:50: note: (near initialization for 'SE88.IOEXP')
+../src/BB_test.c:240:50: warning: initialization of 'int *' from incompatible pointer type 'DIRCTRL_IOEXP *' [-Wincompatible-pointer-types]
+  240 | const net_t SE87 = {&GPIO10_DS, 21, 2, 2, 1, 87, &IOEXP_U19, 0x000080};
+      |                                                  ^
+../src/BB_test.c:240:50: note: (near initialization for 'SE87.IOEXP')
+../src/BB_test.c: In function 'main':
+../src/BB_test.c:711:33: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  711 |     Status = IIC_Init (IOEXP_U19->instance, IIC0_IOEXP_ID, IOEXP_U19->address);
+      |                                 ^~
+../src/BB_test.c:711:69: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  711 |     Status = IIC_Init (IOEXP_U19->instance, IIC0_IOEXP_ID, IOEXP_U19->address);
+      |                                                                     ^~
+../src/BB_test.c:716:34: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  716 |     Status = IOEXP_Init(IOEXP_U19->instance, IOEXP_U19->address, IO_EXP_PIN_CONFIG, 4);
+      |                                  ^~
+../src/BB_test.c:716:55: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  716 |     Status = IOEXP_Init(IOEXP_U19->instance, IOEXP_U19->address, IO_EXP_PIN_CONFIG, 4);
+      |                                                       ^~
+../src/BB_test.c:721:27: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  721 |     IOEXP_Write (IOEXP_U19->instance, IOEXP_U19->address, IOEXP_U19->DIR_CTRL_STATE);
+      |                           ^~
+../src/BB_test.c:721:48: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  721 |     IOEXP_Write (IOEXP_U19->instance, IOEXP_U19->address, IOEXP_U19->DIR_CTRL_STATE);
+      |                                                ^~
+../src/BB_test.c:721:68: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  721 |     IOEXP_Write (IOEXP_U19->instance, IOEXP_U19->address, IOEXP_U19->DIR_CTRL_STATE);
+      |                                                                    ^~
+../src/BB_test.c:725:33: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  725 |     Status = IIC_Init (IOEXP_U20->instance, IIC2_IOEXP_ID, IOEXP_U20->address);
+      |                                 ^~
+In file included from ../src/BB_test.c:62:
+../src/XPAR_AXI_IDS.h:25:25: error: 'XPAR_IIC_2_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_IIC_0_DEVICE_ID'?
+   25 | #define IIC2_IOEXP_ID   XPAR_IIC_2_DEVICE_ID
+      |                         ^~~~~~~~~~~~~~~~~~~~
+../src/BB_test.c:725:45: note: in expansion of macro 'IIC2_IOEXP_ID'
+  725 |     Status = IIC_Init (IOEXP_U20->instance, IIC2_IOEXP_ID, IOEXP_U20->address);
+      |                                             ^~~~~~~~~~~~~
+../src/XPAR_AXI_IDS.h:25:25: note: each undeclared identifier is reported only once for each function it appears in
+   25 | #define IIC2_IOEXP_ID   XPAR_IIC_2_DEVICE_ID
+      |                         ^~~~~~~~~~~~~~~~~~~~
+../src/BB_test.c:725:45: note: in expansion of macro 'IIC2_IOEXP_ID'
+  725 |     Status = IIC_Init (IOEXP_U20->instance, IIC2_IOEXP_ID, IOEXP_U20->address);
+      |                                             ^~~~~~~~~~~~~
+../src/BB_test.c:725:69: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  725 |     Status = IIC_Init (IOEXP_U20->instance, IIC2_IOEXP_ID, IOEXP_U20->address);
+      |                                                                     ^~
+../src/BB_test.c:730:34: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  730 |     Status = IOEXP_Init(IOEXP_U20->instance, IOEXP_U20->address, IO_EXP_PIN_CONFIG, 4);
+      |                                  ^~
+../src/BB_test.c:730:55: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  730 |     Status = IOEXP_Init(IOEXP_U20->instance, IOEXP_U20->address, IO_EXP_PIN_CONFIG, 4);
+      |                                                       ^~
+../src/BB_test.c:735:27: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  735 |     IOEXP_Write (IOEXP_U20->instance, IOEXP_U20->address, IOEXP_U20->DIR_CTRL_STATE);
+      |                           ^~
+../src/BB_test.c:735:48: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  735 |     IOEXP_Write (IOEXP_U20->instance, IOEXP_U20->address, IOEXP_U20->DIR_CTRL_STATE);
+      |                                                ^~
+../src/BB_test.c:735:68: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  735 |     IOEXP_Write (IOEXP_U20->instance, IOEXP_U20->address, IOEXP_U20->DIR_CTRL_STATE);
+      |                                                                    ^~
+../src/BB_test.c:739:33: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  739 |     Status = IIC_Init (IOEXP_U21->instance, IIC2_IOEXP_ID, IOEXP_U21->address);
+      |                                 ^~
+../src/BB_test.c:739:69: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  739 |     Status = IIC_Init (IOEXP_U21->instance, IIC2_IOEXP_ID, IOEXP_U21->address);
+      |                                                                     ^~
+../src/BB_test.c:744:34: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  744 |     Status = IOEXP_Init(IOEXP_U21->instance, IOEXP_U21->address, IO_EXP_PIN_CONFIG, 4);
+      |                                  ^~
+../src/BB_test.c:744:55: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  744 |     Status = IOEXP_Init(IOEXP_U21->instance, IOEXP_U21->address, IO_EXP_PIN_CONFIG, 4);
+      |                                                       ^~
+../src/BB_test.c:749:27: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  749 |     IOEXP_Write (IOEXP_U21->instance, IOEXP_U21->address, IOEXP_U21->DIR_CTRL_STATE);
+      |                           ^~
+../src/BB_test.c:749:48: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  749 |     IOEXP_Write (IOEXP_U21->instance, IOEXP_U21->address, IOEXP_U21->DIR_CTRL_STATE);
+      |                                                ^~
+../src/BB_test.c:749:68: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  749 |     IOEXP_Write (IOEXP_U21->instance, IOEXP_U21->address, IOEXP_U21->DIR_CTRL_STATE);
+      |                                                                    ^~
+../src/BB_test.c:753:33: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  753 |     Status = IIC_Init (IOEXP_U18->instance, IIC1_IOEXP_ID, IOEXP_U18->address);
+      |                                 ^~
+../src/XPAR_AXI_IDS.h:24:25: error: 'XPAR_IIC_1_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_IIC_0_DEVICE_ID'?
+   24 | #define IIC1_IOEXP_ID   XPAR_IIC_1_DEVICE_ID
+      |                         ^~~~~~~~~~~~~~~~~~~~
+../src/BB_test.c:753:45: note: in expansion of macro 'IIC1_IOEXP_ID'
+  753 |     Status = IIC_Init (IOEXP_U18->instance, IIC1_IOEXP_ID, IOEXP_U18->address);
+      |                                             ^~~~~~~~~~~~~
+../src/BB_test.c:753:69: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  753 |     Status = IIC_Init (IOEXP_U18->instance, IIC1_IOEXP_ID, IOEXP_U18->address);
+      |                                                                     ^~
+../src/BB_test.c:758:34: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  758 |     Status = IOEXP_Init(IOEXP_U18->instance, IOEXP_U18->address, IO_EXP_PIN_CONFIG, 4);
+      |                                  ^~
+../src/BB_test.c:758:55: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  758 |     Status = IOEXP_Init(IOEXP_U18->instance, IOEXP_U18->address, IO_EXP_PIN_CONFIG, 4);
+      |                                                       ^~
+../src/BB_test.c:763:27: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  763 |     IOEXP_Write (IOEXP_U18->instance, IOEXP_U18->address, IOEXP_U18->DIR_CTRL_STATE);
+      |                           ^~
+../src/BB_test.c:763:48: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  763 |     IOEXP_Write (IOEXP_U18->instance, IOEXP_U18->address, IOEXP_U18->DIR_CTRL_STATE);
+      |                                                ^~
+../src/BB_test.c:763:68: error: invalid type argument of '->' (have 'DIRCTRL_IOEXP')
+  763 |     IOEXP_Write (IOEXP_U18->instance, IOEXP_U18->address, IOEXP_U18->DIR_CTRL_STATE);
+      |                                                                    ^~
+../src/BB_test.c: In function 'GPIO_Init_Wrapper':
+../src/BB_test.c:1425:42: error: request for member 'DIR_CTRL_STATE' in something not a structure or union
+ 1425 |                         signals[i]->IOEXP->DIR_CTRL_STATE |= signals[i]->DIR_CTRL; //set the IOEXP bit if this pin is to be an output
+      |                                          ^~
+make: *** [src/subdir.mk:29: src/BB_test.o] Error 1

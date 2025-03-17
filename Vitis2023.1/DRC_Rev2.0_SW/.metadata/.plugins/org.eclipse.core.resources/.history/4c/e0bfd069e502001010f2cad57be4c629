@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="PL_ADC_Control" location="C:/Xilinx/Vitis/2023.1/Projects/PL_ADC_Control_Software/PL_ADC_Control" platform="C:/Xilinx/Vitis/2023.1/Projects/PL_ADC_Control_Software/DRCPlatform/export/DRCPlatform/DRCPlatform.xpfm" platformUID="xilinx:osdzu3eg1_2g_1v8_sip::0.0(custom)" systemProject="PL_ADC_Control_system" sysConfig="DRCPlatform" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="8c9917dfef2e8f1abb3fa8bc3293aebc">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.869114227">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1771550359" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
