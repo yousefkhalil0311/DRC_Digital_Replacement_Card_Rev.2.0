@@ -4,12 +4,21 @@
 #include <stdint.h>  // for uint32_t, uint8_t
 #include "xgpio.h"   // assuming you have a header file for XGpio
 #include "xspi.h"
+#include "xiic.h"
 
 typedef struct {
 	uint32_t IOEXP_EN;		//only for sp4t3 that connects to P17. Must disable with -6V on some backplanes
 	uint32_t IOEXP_CTRL1;
 	uint32_t IOEXP_CTRL2;
 } SP4T_t;
+
+
+
+typedef struct {
+	XIic *instance;
+	int address;
+	uint32_t DIR_CTRL_STATE;
+} DIRCTRL_IOEXP;
 
 
 //define all pins
@@ -37,12 +46,6 @@ typedef struct {
 	XSpi *instance;
 	uint32_t CS;
 } LSDAC_t;
-
-typedef struct {
-	XIIC *instance;
-	int address;
-	uint32_t DIR_CTRL_STATE;
-} DIRCTRL_IOEXP;
 
 #endif
 

@@ -233,7 +233,7 @@ const net_t SE78 = {&GPIO10_DS, 17, 2, 2, 1, 78, &IOEXP_U19, 0x000010};
 const net_t SE82 = {&GPIO10_DS, 18, 1, 2, 1, 82, &IOEXP_U20, 0x040000};
 const net_t SE80 = {&GPIO10_DS, 18, 2, 2, 1, 80, &IOEXP_U20, 0x400000};
 const net_t SE84 = {&GPIO10_DS, 19, 1, 2, 1, 84, &IOEXP_U20, 0x000040};
-const net_t SE83 = {&GPIO10_ &IOEXP_U193, &IOEXP_U20, 0x004000};
+const net_t SE83 = {&GPIO10_DS, 19, 2, 2, 1, 83, &IOEXP_U20, 0x004000};
 const net_t SE86 = {&GPIO10_DS, 20, 1, 2, 1, 86, &IOEXP_U19, 0x000001};
 const net_t SE85 = {&GPIO10_DS, 20, 2, 2, 1, 85, &IOEXP_U20, 0x000010};
 const net_t SE88 = {&GPIO10_DS, 21, 1, 2, 1, 88, &IOEXP_U19, 0x000004};
@@ -708,59 +708,59 @@ int main()
         }
     }
 
-    Status = IIC_Init (IOEXP_U19->instance, IIC0_IOEXP_ID, IOEXP_U19->address);
+    Status = IIC_Init (IOEXP_U19.instance, IIC0_IOEXP_ID, IOEXP_U19.address);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    Status = IOEXP_Init(IOEXP_U19->instance, IOEXP_U19->address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U19.instance, IOEXP_U19.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    IOEXP_Write (IOEXP_U19->instance, IOEXP_U19->address, IOEXP_U19->DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
 
 
 
-    Status = IIC_Init (IOEXP_U20->instance, IIC2_IOEXP_ID, IOEXP_U20->address);
+    Status = IIC_Init (IOEXP_U20.instance, IIC2_IOEXP_ID, IOEXP_U20.address);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    Status = IOEXP_Init(IOEXP_U20->instance, IOEXP_U20->address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    IOEXP_Write (IOEXP_U20->instance, IOEXP_U20->address, IOEXP_U20->DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
 
 
 
-    Status = IIC_Init (IOEXP_U21->instance, IIC2_IOEXP_ID, IOEXP_U21->address);
+    Status = IIC_Init (IOEXP_U21.instance, IIC2_IOEXP_ID, IOEXP_U21.address);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    Status = IOEXP_Init(IOEXP_U21->instance, IOEXP_U21->address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    IOEXP_Write (IOEXP_U21->instance, IOEXP_U21->address, IOEXP_U21->DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
 
 
 
-    Status = IIC_Init (IOEXP_U18->instance, IIC1_IOEXP_ID, IOEXP_U18->address);
+    Status = IIC_Init (IOEXP_U18.instance, IIC1_IOEXP_ID, IOEXP_U18.address);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    Status = IOEXP_Init(IOEXP_U18->instance, IOEXP_U18->address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    IOEXP_Write (IOEXP_U18->instance, IOEXP_U18->address, IOEXP_U18->DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
 
 
 

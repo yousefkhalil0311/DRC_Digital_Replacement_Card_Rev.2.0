@@ -114,3 +114,44 @@ bsp reload
 bsp reload
 platform generate -domains 
 platform generate
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2.0_Deliverable.xsa}
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate
+platform active {DRCPlatform}
+domain active {standalone_domain}
+domain active {zynqmp_fsbl}
+bsp reload
+bsp reload
+domain active {standalone_domain}
+bsp config stdout "psu_uart_0"
+bsp config stdin "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+bsp reload
+domain active {zynqmp_fsbl}
+bsp write
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynqmp_pmufw}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains zynqmp_fsbl,zynqmp_pmufw 

@@ -102,8 +102,8 @@
 /* Number of Fabric Resets */
 #define XPAR_NUM_FABRIC_RESETS 1
 
-#define STDIN_BASEADDRESS 0xFF000000
-#define STDOUT_BASEADDRESS 0xFF000000
+#define STDIN_BASEADDRESS 0xFF010000
+#define STDOUT_BASEADDRESS 0xFF010000
 
 /******************************************************************/
 
@@ -1163,7 +1163,7 @@
 /******************************************************************/
 
 /* Definitions for driver IIC */
-#define XPAR_XIIC_NUM_INSTANCES 1
+#define XPAR_XIIC_NUM_INSTANCES 3
 
 /* Definitions for peripheral AXI_IIC_0 */
 #define XPAR_AXI_IIC_0_DEVICE_ID 0
@@ -1171,6 +1171,22 @@
 #define XPAR_AXI_IIC_0_HIGHADDR 0x8009FFFF
 #define XPAR_AXI_IIC_0_TEN_BIT_ADR 0
 #define XPAR_AXI_IIC_0_GPO_WIDTH 1
+
+
+/* Definitions for peripheral AXI_IIC_1 */
+#define XPAR_AXI_IIC_1_DEVICE_ID 1
+#define XPAR_AXI_IIC_1_BASEADDR 0x80110000
+#define XPAR_AXI_IIC_1_HIGHADDR 0x8011FFFF
+#define XPAR_AXI_IIC_1_TEN_BIT_ADR 0
+#define XPAR_AXI_IIC_1_GPO_WIDTH 1
+
+
+/* Definitions for peripheral AXI_IIC_2 */
+#define XPAR_AXI_IIC_2_DEVICE_ID 2
+#define XPAR_AXI_IIC_2_BASEADDR 0x80120000
+#define XPAR_AXI_IIC_2_HIGHADDR 0x8012FFFF
+#define XPAR_AXI_IIC_2_TEN_BIT_ADR 0
+#define XPAR_AXI_IIC_2_GPO_WIDTH 1
 
 
 /******************************************************************/
@@ -1181,6 +1197,20 @@
 #define XPAR_IIC_0_HIGHADDR 0x8009FFFF
 #define XPAR_IIC_0_TEN_BIT_ADR 0
 #define XPAR_IIC_0_GPO_WIDTH 1
+
+/* Canonical definitions for peripheral AXI_IIC_1 */
+#define XPAR_IIC_1_DEVICE_ID XPAR_AXI_IIC_1_DEVICE_ID
+#define XPAR_IIC_1_BASEADDR 0x80110000
+#define XPAR_IIC_1_HIGHADDR 0x8011FFFF
+#define XPAR_IIC_1_TEN_BIT_ADR 0
+#define XPAR_IIC_1_GPO_WIDTH 1
+
+/* Canonical definitions for peripheral AXI_IIC_2 */
+#define XPAR_IIC_2_DEVICE_ID XPAR_AXI_IIC_2_DEVICE_ID
+#define XPAR_IIC_2_BASEADDR 0x80120000
+#define XPAR_IIC_2_HIGHADDR 0x8012FFFF
+#define XPAR_IIC_2_TEN_BIT_ADR 0
+#define XPAR_IIC_2_GPO_WIDTH 1
 
 
 /******************************************************************/
