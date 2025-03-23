@@ -4,6 +4,7 @@
 #include <stdint.h>  // for uint32_t, uint8_t
 #include "xgpio.h"   // assuming you have a header file for XGpio
 #include "xspi.h"
+#include "xiic.h"
 
 typedef struct {
 	uint32_t IOEXP_EN;		//only for sp4t3 that connects to P17. Must disable with -6V on some backplanes
@@ -12,14 +13,24 @@ typedef struct {
 } SP4T_t;
 
 
+
+typedef struct {
+	XIic *instance;
+	int address;
+	uint32_t DIR_CTRL_STATE;
+} DIRCTRL_IOEXP;
+
+
 //define all pins
 typedef struct {
 	XGpio *instance;
 	uint32_t bit_num;
 	uint32_t channel;  //Channel = 0 for blank values. Example: SPDT control net when SP4T control is needed.
-	uint8_t direction; //0 for output, 1 for input, 2 for bidirectional
+	uint8_t direction; //0 for output, 1 for input
 	int default_state; //0 for LOW or connection is input/bidirectional. 1 otherwise
 	int IOpinNum;      //If net_t is connected as DRC GPIO, this holds the 90 pin connector pin number
+	DIRCTRL_IOEXP *IOEXP;
+	uint32_t DIR_CTRL; //bit in IO exander that controls this pin's direction (P7:0, P17:10, P27:20)
 } net_t;
 
 
@@ -35,5 +46,6 @@ typedef struct {
 	XSpi *instance;
 	uint32_t CS;
 } LSDAC_t;
+
 #endif
 
