@@ -1,19 +1,25 @@
-# Ignore everything
+# Ignore everything by default
 *
 
-# Allow specific files and folders
+# Allow specific file types in any subdirectory
+!**/*.tcl
+!**/*.xdc
+!**/*.v
+!**/*.sv
+!**/*.vhdl
+!**/*.vhd
+!**/*.xci
+!**/*.bd
+!**/*.c
+!**/*.cpp
+!**/*.h
+!**/*.ld
+!**/*.xpr
+!**/*.xsa
+!**/*.yaml
+
+# Allow folders, otherwise Git may not check inside them
+!*/
+
+# Allow .gitignore itself to be tracked
 !/.gitignore
-!/*.tcl
-!/*.xdc
-!/*.v
-!/*.sv
-!/*.vhdl
-!/*.xci
-!/*.bd
-!/*.c
-!/*.cpp
-!/*.h
-!/*.ld
-!/*.xpr
-!/*.xsa
-!/*.yaml
