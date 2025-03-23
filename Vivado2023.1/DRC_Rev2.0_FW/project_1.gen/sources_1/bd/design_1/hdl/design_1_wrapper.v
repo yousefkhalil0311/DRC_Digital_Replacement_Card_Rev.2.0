@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Wed Feb  5 01:29:47 2025
+//Date        : Sun Mar 16 17:48:58 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -24,7 +24,11 @@ module design_1_wrapper
     IOBUF_DS_0_21_n,
     IOBUF_DS_0_21_p,
     IOBUF_SCL_0,
+    IOBUF_SCL_1,
+    IOBUF_SCL_2,
     IOBUF_SDA_0,
+    IOBUF_SDA_1,
+    IOBUF_SDA_2,
     IOBUF_SE_0_31,
     IOBUF_SE_32_37,
     MISO_0,
@@ -35,7 +39,7 @@ module design_1_wrapper
     SCK_1,
     SS_0_4bits,
     SS_1_2bits,
-    ctrl_4bits_tri_o,
+    ctrl_8bits_tri_o,
     leds_4bits_tri_o,
     spdt_10bits_tri_o);
   input IOBUF_CLK0;
@@ -51,7 +55,11 @@ module design_1_wrapper
   inout [21:0]IOBUF_DS_0_21_n;
   inout [21:0]IOBUF_DS_0_21_p;
   inout [0:0]IOBUF_SCL_0;
+  inout [0:0]IOBUF_SCL_1;
+  inout [0:0]IOBUF_SCL_2;
   inout [0:0]IOBUF_SDA_0;
+  inout [0:0]IOBUF_SDA_1;
+  inout [0:0]IOBUF_SDA_2;
   inout [31:0]IOBUF_SE_0_31;
   inout [5:0]IOBUF_SE_32_37;
   input MISO_0;
@@ -62,7 +70,7 @@ module design_1_wrapper
   output SCK_1;
   output [3:0]SS_0_4bits;
   output [1:0]SS_1_2bits;
-  output [3:0]ctrl_4bits_tri_o;
+  output [7:0]ctrl_8bits_tri_o;
   output [3:0]leds_4bits_tri_o;
   output [9:0]spdt_10bits_tri_o;
 
@@ -79,7 +87,11 @@ module design_1_wrapper
   wire [21:0]IOBUF_DS_0_21_n;
   wire [21:0]IOBUF_DS_0_21_p;
   wire [0:0]IOBUF_SCL_0;
+  wire [0:0]IOBUF_SCL_1;
+  wire [0:0]IOBUF_SCL_2;
   wire [0:0]IOBUF_SDA_0;
+  wire [0:0]IOBUF_SDA_1;
+  wire [0:0]IOBUF_SDA_2;
   wire [31:0]IOBUF_SE_0_31;
   wire [5:0]IOBUF_SE_32_37;
   wire MISO_0;
@@ -90,7 +102,7 @@ module design_1_wrapper
   wire SCK_1;
   wire [3:0]SS_0_4bits;
   wire [1:0]SS_1_2bits;
-  wire [3:0]ctrl_4bits_tri_o;
+  wire [7:0]ctrl_8bits_tri_o;
   wire [3:0]leds_4bits_tri_o;
   wire [9:0]spdt_10bits_tri_o;
 
@@ -108,7 +120,11 @@ module design_1_wrapper
         .IOBUF_DS_0_21_n(IOBUF_DS_0_21_n),
         .IOBUF_DS_0_21_p(IOBUF_DS_0_21_p),
         .IOBUF_SCL_0(IOBUF_SCL_0),
+        .IOBUF_SCL_1(IOBUF_SCL_1),
+        .IOBUF_SCL_2(IOBUF_SCL_2),
         .IOBUF_SDA_0(IOBUF_SDA_0),
+        .IOBUF_SDA_1(IOBUF_SDA_1),
+        .IOBUF_SDA_2(IOBUF_SDA_2),
         .IOBUF_SE_0_31(IOBUF_SE_0_31),
         .IOBUF_SE_32_37(IOBUF_SE_32_37),
         .MISO_0(MISO_0),
@@ -119,7 +135,7 @@ module design_1_wrapper
         .SCK_1(SCK_1),
         .SS_0_4bits(SS_0_4bits),
         .SS_1_2bits(SS_1_2bits),
-        .ctrl_4bits_tri_o(ctrl_4bits_tri_o),
+        .ctrl_8bits_tri_o(ctrl_8bits_tri_o),
         .leds_4bits_tri_o(leds_4bits_tri_o),
         .spdt_10bits_tri_o(spdt_10bits_tri_o));
 endmodule
