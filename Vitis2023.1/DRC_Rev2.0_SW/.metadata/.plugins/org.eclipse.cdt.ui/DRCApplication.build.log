@@ -1,4 +1,4 @@
-12:10:01 **** Incremental Build of configuration Debug for project DRCApplication ****
+12:25:02 **** Incremental Build of configuration Debug for project DRCApplication ****
 make all 
 'Building file: ../src/BB_test.c'
 'Invoking: ARM v8 gcc compiler'
@@ -60,5 +60,5 @@ aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BB_test.o" -IC:
       |                                                ^~~~~~~~~~~~~~~~
 make: *** [src/subdir.mk:29: src/BB_test.o] Error 1
 
-12:10:04 Build Finished (took 2s.893ms)
+12:25:03 Build Finished (took 496ms)
 

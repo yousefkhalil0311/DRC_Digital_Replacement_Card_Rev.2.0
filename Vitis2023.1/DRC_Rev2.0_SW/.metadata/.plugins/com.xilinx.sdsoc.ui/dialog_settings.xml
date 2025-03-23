@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="C:\Users\yousefkhalil\Vitis_Projects\2023.1\DRCDeliverableSoftware\DRCPlatform\export\DRCPlatform;C:\Xilinx\Vitis\2023.1\Projects\DRCDeliverableSoftware\DRCPlatform\export\DRCPlatform;C:\Xilinx\Vitis\2023.1\Projects\PL_ADC_Control_Software\DRCPlatform\export\DRCPlatform"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\Xilinx\Vitis\2023.1\Projects\PL_ADC_Control_Software\DRCPlatform\export\DRCPlatform"/>
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\yousefkhalil\Vitis_Projects\2023.1\DRCDeliverableSoftware\DRCPlatform\export\DRCPlatform;C:\Xilinx\Vitis\2023.1\Projects\DRCDeliverableSoftware\DRCPlatform\export\DRCPlatform;C:\Xilinx\Vitis\2023.1\Projects\PL_ADC_Control_Software\DRCPlatform\export\DRCPlatform;C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRCPlatform\export\DRCPlatform"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRCPlatform\export\DRCPlatform"/>
 </section>
