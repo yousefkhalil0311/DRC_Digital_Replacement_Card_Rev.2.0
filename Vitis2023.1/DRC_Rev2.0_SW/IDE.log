@@ -12740,3 +12740,4 @@ con
 ----------------End of Script----------------
 
 15:13:23 INFO  : Launch script is exported to file 'C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRC_R2_Deliverables_Application_system\_ide\scripts\systemdebugger_drc_r2_deliverables_application_system_24_standalone.tcl'
+15:18:33 INFO  : Disconnected from the channel tcfchan#24.
