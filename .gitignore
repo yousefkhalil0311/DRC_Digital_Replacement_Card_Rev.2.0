@@ -1,0 +1,19 @@
+# Ignore everything
+*
+
+# Allow specific files and folders
+!/.gitignore
+!/*.tcl
+!/*.xdc
+!/*.v
+!/*.sv
+!/*.vhdl
+!/*.xci
+!/*.bd
+!/*.c
+!/*.cpp
+!/*.h
+!/*.ld
+!/*.xpr
+!/*.xsa
+!/*.yaml
