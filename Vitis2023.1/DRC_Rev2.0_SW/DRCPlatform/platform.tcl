@@ -155,3 +155,9 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains zynqmp_fsbl,zynqmp_pmufw 
+platform generate -domains fsbl_domain,standalone_domain,zynqmp_fsbl,zynqmp_pmufw 
+platform active {DRCPlatform}
+domain active {standalone_domain}
+bsp reload
+bsp reload
+platform generate -domains 

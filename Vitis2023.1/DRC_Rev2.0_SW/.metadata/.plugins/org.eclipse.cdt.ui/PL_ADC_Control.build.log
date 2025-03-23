@@ -1,6 +1,31 @@
-15:06:11 **** Incremental Build of configuration Debug for project PL_ADC_Control ****
+15:34:49 **** Build of configuration Debug for project PL_ADC_Control ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/BB_test.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BB_test.o" -IC:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/BB_test.d" -MT"src/BB_test.o" -o "src/BB_test.o" "../src/BB_test.c"
+'Finished building: ../src/BB_test.c'
+' '
+'Building file: ../src/RegisterMaps.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/RegisterMaps.o" -IC:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/RegisterMaps.d" -MT"src/RegisterMaps.o" -o "src/RegisterMaps.o" "../src/RegisterMaps.c"
+'Finished building: ../src/RegisterMaps.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PL_ADC_Control.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/bsplib/lib -o "PL_ADC_Control.elf"  ./src/BB_test.o ./src/RegisterMaps.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PL_ADC_Control.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size PL_ADC_Control.elf  |tee "PL_ADC_Control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 120484	   8472	  22676	 151632	  25050	PL_ADC_Control.elf
+'Finished building: PL_ADC_Control.elf.size'
+' '
 
-15:06:11 Build Finished (took 137ms)
+15:34:51 Build Finished (took 2s.206ms)
 
