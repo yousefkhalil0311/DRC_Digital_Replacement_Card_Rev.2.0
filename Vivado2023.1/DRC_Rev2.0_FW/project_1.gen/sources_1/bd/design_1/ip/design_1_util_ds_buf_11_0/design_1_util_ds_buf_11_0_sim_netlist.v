@@ -2,18 +2,18 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Nov  4 10:55:27 2024
-// Host        : DESKTOP-JTT5U02 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_util_ds_buf_11_0 -prefix
-//               design_1_util_ds_buf_11_0_ design_1_util_ds_buf_10_1_sim_netlist.v
-// Design      : design_1_util_ds_buf_10_1
+// Date        : Sun Mar 23 21:15:41 2025
+// Host        : OCP001 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0_sim_netlist.v
+// Design      : design_1_util_ds_buf_11_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xczu3eg-sfvc784-1-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_util_ds_buf_10_1,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2023.1" *) 
+(* CHECK_LICENSE_TYPE = "design_1_util_ds_buf_11_0,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module design_1_util_ds_buf_11_0
    (IOBUF_IO_T,
@@ -22,7 +22,7 @@ module design_1_util_ds_buf_11_0
     IOBUF_IO_IO);
   input [0:0]IOBUF_IO_T;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 IOBUF_IO_I CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME IOBUF_IO_I, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input [0:0]IOBUF_IO_I;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 IOBUF_IO_O CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME IOBUF_IO_O, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_util_ds_buf_10_1_IOBUF_IO_O, INSERT_VIP 0" *) output [0:0]IOBUF_IO_O;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 IOBUF_IO_O CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME IOBUF_IO_O, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_util_ds_buf_11_0_IOBUF_IO_O, INSERT_VIP 0" *) output [0:0]IOBUF_IO_O;
   inout [0:0]IOBUF_IO_IO;
 
   (* DRIVE = "12" *) (* IBUF_LOW_PWR *) (* SLEW = "SLOW" *) wire [0:0]IOBUF_IO_I;
@@ -195,7 +195,7 @@ endmodule
 
 (* C_BUFGCE_DIV = "1" *) (* C_BUFG_GT_SYNC = "0" *) (* C_BUF_TYPE = "IOBUF" *) 
 (* C_MODE = "PERFORMANCE" *) (* C_OBUFDS_GTE5_ADV = "2'b00" *) (* C_REFCLK_ICNTL_TX = "5'b00000" *) 
-(* C_SIM_DEVICE = "VERSAL_AI_CORE_ES1" *) (* C_SIZE = "1" *) 
+(* C_SIM_DEVICE = "VERSAL_AI_CORE_ES1" *) (* C_SIZE = "1" *) (* ORIG_REF_NAME = "util_ds_buf" *) 
 module design_1_util_ds_buf_11_0_util_ds_buf
    (IBUF_DS_P,
     IBUF_DS_N,

@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Wed Feb  5 01:08:54 2025
+-- Date        : Sun Mar 23 21:15:42 2025
 -- Host        : OCP001 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_gpio_2_0 -prefix
---               design_1_axi_gpio_2_0_ design_1_axi_gpio_3_0_sim_netlist.vhdl
--- Design      : design_1_axi_gpio_3_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_sim_netlist.vhdl
+-- Design      : design_1_axi_gpio_2_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xczu3eg-sfvc784-1-e
@@ -21,6 +21,8 @@ entity design_1_axi_gpio_2_0_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_cdc_sync : entity is "cdc_sync";
 end design_1_axi_gpio_2_0_cdc_sync;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_cdc_sync is
@@ -1528,6 +1530,8 @@ entity design_1_axi_gpio_2_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_pselect_f : entity is "pselect_f";
 end design_1_axi_gpio_2_0_pselect_f;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_pselect_f is
@@ -1591,6 +1595,8 @@ entity design_1_axi_gpio_2_0_GPIO_Core is
     \Dual.gpio2_OE_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_GPIO_Core : entity is "GPIO_Core";
 end design_1_axi_gpio_2_0_GPIO_Core;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_GPIO_Core is
@@ -2676,6 +2682,8 @@ entity design_1_axi_gpio_2_0_address_decoder is
     reg1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     reg3 : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_address_decoder : entity is "address_decoder";
 end design_1_axi_gpio_2_0_address_decoder;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_address_decoder is
@@ -3095,6 +3103,8 @@ entity design_1_axi_gpio_2_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_slave_attachment : entity is "slave_attachment";
 end design_1_axi_gpio_2_0_slave_attachment;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_slave_attachment is
@@ -3807,6 +3817,8 @@ entity design_1_axi_gpio_2_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end design_1_axi_gpio_2_0_axi_lite_ipif;
 
 architecture STRUCTURE of design_1_axi_gpio_2_0_axi_lite_ipif is
@@ -3907,6 +3919,8 @@ entity design_1_axi_gpio_2_0_axi_gpio is
   attribute C_TRI_DEFAULT of design_1_axi_gpio_2_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of design_1_axi_gpio_2_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_gpio_2_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_axi_gpio_2_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -4298,7 +4312,7 @@ entity design_1_axi_gpio_2_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_axi_gpio_2_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_axi_gpio_2_0 : entity is "design_1_axi_gpio_3_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of design_1_axi_gpio_2_0 : entity is "design_1_axi_gpio_2_0,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_axi_gpio_2_0 : entity is "yes";
   attribute x_core_info : string;

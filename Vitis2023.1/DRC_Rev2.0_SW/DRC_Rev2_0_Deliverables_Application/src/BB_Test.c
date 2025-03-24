@@ -136,7 +136,7 @@ const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
 const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
-const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
+const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 
@@ -472,15 +472,15 @@ SWState_t Pin_Settings[] = {
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
 		//P17_DIGIO17,
-		P17_HS_ADC1B,
-		//P17_HS_DAC1A,
+		//P17_HS_ADC1B,
+		P17_HS_DAC1A,
 		//P17_DISABLE,
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
 		//P21_DIGIO21,
-		P21_HS_ADC0B,
-		//P21_HS_DAC0A,
+		//P21_HS_ADC0B,
+		P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
@@ -502,14 +502,14 @@ SWState_t Pin_Settings[] = {
 		//Pin 48 path setting (uncomment 1)
 		//P48_LS1_DAC01,
 		//P48_DIGIO48,
-		P48_HS_ADC1A,
-		//P48_HS_DAC1B,
+		//P48_HS_ADC1A,
+		P48_HS_DAC1B,
 
 		//Pin 51 path setting (uncomment 1)
 		//P51_LS1_DAC03,
 		//P51_DIGIO51,
-		P51_HS_ADC0A,
-		//P51_HS_DAC0B,
+		//P51_HS_ADC0A,
+		P51_HS_DAC0B,
 
 		//Pin 3 path setting (uncomment 1)
 		//P3_LS0_DAC07,
@@ -833,7 +833,7 @@ int main()
     	return XST_FAILURE;
     }
 	setLEDStatus (0x4);
-/*//For DAC Control application
+//For DAC Control application
     while(1){
         printf("Please enter SPDCTRL value: ");
         int readValue;
@@ -858,7 +858,6 @@ int main()
         }
         usleep(100000);
     }
-*/
 
     uint32_t chvalmax;
     uint32_t chvalmin;

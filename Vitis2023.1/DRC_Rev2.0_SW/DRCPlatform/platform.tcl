@@ -16,3 +16,38 @@ platform write
 platform generate -domains 
 platform active {DRCPlatform}
 platform generate
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_0"
+bsp config stdin "psu_uart_1"
+bsp config ttc_select_cntr "2"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynqmp_fsbl}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+domain active {standalone_domain}
+bsp reload
+bsp reload
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+domain active {standalone_domain}
+bsp reload
+bsp reload
+bsp reload
+platform generate -domains 
+bsp reload
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform active {DRCPlatform}
