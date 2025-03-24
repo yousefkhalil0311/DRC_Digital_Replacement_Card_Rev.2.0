@@ -1227,3 +1227,13 @@ con
 ----------------End of Script----------------
 
 01:02:33 INFO  : Launch script is exported to file 'C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRC_Rev2_0_Deliverables_Application_system\_ide\scripts\systemdebugger_drc_rev2_0_deliverables_application_system_7_standalone.tcl'
+09:52:19 INFO  : Disconnected from the channel tcfchan#1.
+10:00:23 DEBUG : Logs will be stored at 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/IDE.log'.
+10:00:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\temp_xsdb_launch_script.tcl
+10:00:26 INFO  : XSCT server has started successfully.
+10:00:26 INFO  : Successfully done setting XSCT server connection channel  
+10:00:26 INFO  : plnx-install-location is set to ''
+10:00:26 INFO  : Successfully done setting workspace for the tool. 
+10:00:26 INFO  : Successfully done query RDI_DATADIR 
+10:00:28 INFO  : Registering command handlers for Vitis TCF services
+10:00:29 INFO  : Platform repository initialization has completed.
