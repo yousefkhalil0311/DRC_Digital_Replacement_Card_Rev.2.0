@@ -154,90 +154,90 @@ const net_t SPDT74_CTRL = {&GPIO7_SPDT, 9, 1, 0, 1};
 const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 
 //SE XGpio pins
-const net_t SE2  = {&GPIO9_SE, 0, 1, 2, 1, 2, &IOEXP_U19, 0x008000};
-const net_t SE14 = {&GPIO9_SE, 1, 1, 2, 1, 14, &IOEXP_U21, 0x040000};
-const net_t SE17 = {&GPIO9_SE, 2, 1, 2, 1, 17, &IOEXP_U19, 0x000800};
-const net_t SE20 = {&GPIO9_SE, 3, 1, 2, 1, 20, &IOEXP_U20, 0x000100};
-const net_t SE21 = {&GPIO9_SE, 4, 1, 2, 1, 21, &IOEXP_U19, 0x000200};
-const net_t SE22 = {&GPIO9_SE, 5, 1, 2, 1, 22, &IOEXP_U20, 0x080000};
-const net_t SE23 = {&GPIO9_SE, 6, 1, 2, 1, 23, &IOEXP_U20, 0x008000};
-const net_t SE24 = {&GPIO9_SE, 7, 1, 2, 1, 24, &IOEXP_U20, 0x000002};
-const net_t SE25 = {&GPIO9_SE, 8, 1, 2, 1, 25, &IOEXP_U20, 0x000008};
-const net_t SE26 = {&GPIO9_SE, 9, 1, 2, 1, 26, &IOEXP_U20, 0x000001};
-const net_t SE27 = {&GPIO9_SE, 10, 1, 2, 1, 27, &IOEXP_U20, 0x000800};
-const net_t SE28 = {&GPIO9_SE, 11, 1, 2, 1, 28, &IOEXP_U20, 0x010000};
-const net_t SE29 = {&GPIO9_SE, 12, 1, 2, 1, 29, &IOEXP_U20, 0x020000};
-const net_t SE32 = {&GPIO9_SE, 13, 1, 2, 1, 32, &IOEXP_U19, 0x004000};
-const net_t SE33 = {&GPIO9_SE, 14, 1, 2, 1, 33, &IOEXP_U19, 0x002000};
-const net_t SE36 = {&GPIO9_SE, 15, 1, 2, 1, 36, &IOEXP_U18, 0x000800};
-const net_t SE37 = {&GPIO9_SE, 16, 1, 2, 1, 37, &IOEXP_U21, 0x000020};
-const net_t SE38 = {&GPIO9_SE, 17, 1, 2, 1, 38, &IOEXP_U21, 0x000008};
-const net_t SE39 = {&GPIO9_SE, 18, 1, 2, 1, 39, &IOEXP_U18, 0x000400};
-const net_t SE40 = {&GPIO9_SE, 19, 1, 2, 1, 40, &IOEXP_U18, 0x000004};
-const net_t SE41 = {&GPIO9_SE, 20, 1, 2, 1, 41, &IOEXP_U21, 0x000010};
-const net_t SE42 = {&GPIO9_SE, 21, 1, 2, 1, 42, &IOEXP_U21, 0x000080};
-const net_t SE43 = {&GPIO9_SE, 22, 1, 2, 1, 43, &IOEXP_U21, 0x000200};
-const net_t SE44 = {&GPIO9_SE, 23, 1, 2, 1, 44, &IOEXP_U21, 0x080000};
-const net_t SE46 = {&GPIO9_SE, 24, 1, 2, 1, 46, &IOEXP_U19, 0x001000};
-const net_t SE48 = {&GPIO9_SE, 25, 1, 2, 1, 48, &IOEXP_U19, 0x000400};
-const net_t SE49 = {&GPIO9_SE, 26, 1, 2, 1, 49, &IOEXP_U21, 0x800000};
-const net_t SE50 = {&GPIO9_SE, 27, 1, 2, 1, 50, &IOEXP_U18, 0x000020};
-const net_t SE51 = {&GPIO9_SE, 28, 1, 2, 1, 51, &IOEXP_U19, 0x000100};
-const net_t SE52 = {&GPIO9_SE, 29, 1, 2, 1, 52, &IOEXP_U20, 0x002000};
-const net_t SE55 = {&GPIO9_SE, 30, 1, 2, 1, 55, &IOEXP_U18, 0x000010};
-const net_t SE56 = {&GPIO9_SE, 31, 1, 2, 1, 56, &IOEXP_U20, 0x000004};
-const net_t SE57 = {&GPIO9_SE, 0, 2, 2, 1, 57, &IOEXP_U20, 0x001000};
-const net_t SE58 = {&GPIO9_SE, 1, 2, 2, 1, 58, &IOEXP_U20, 0x000400};
-const net_t SE59 = {&GPIO9_SE, 2, 2, 2, 1, 59, &IOEXP_U20, 0x800000};
-const net_t SE74 = {&GPIO9_SE, 3, 2, 2, 1, 74, &IOEXP_U18, 0x000008};
-const net_t SE81 = {&GPIO9_SE, 4, 2, 2, 1, 81, &IOEXP_U20, 0x000200};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 2, 1, 89, &IOEXP_U20, 0x200000};
+const net_t SE2  = {&GPIO9_SE, 0, 1, 0, 1, 2, &IOEXP_U19, 0x008000};
+const net_t SE14 = {&GPIO9_SE, 1, 1, 0, 1, 14, &IOEXP_U21, 0x040000};
+const net_t SE17 = {&GPIO9_SE, 2, 1, 0, 1, 17, &IOEXP_U19, 0x000800};
+const net_t SE20 = {&GPIO9_SE, 3, 1, 0, 1, 20, &IOEXP_U20, 0x000100};
+const net_t SE21 = {&GPIO9_SE, 4, 1, 0, 1, 21, &IOEXP_U19, 0x000200};
+const net_t SE22 = {&GPIO9_SE, 5, 1, 0, 1, 22, &IOEXP_U20, 0x080000};
+const net_t SE23 = {&GPIO9_SE, 6, 1, 0, 1, 23, &IOEXP_U20, 0x008000};
+const net_t SE24 = {&GPIO9_SE, 7, 1, 0, 1, 24, &IOEXP_U20, 0x000002};
+const net_t SE25 = {&GPIO9_SE, 8, 1, 0, 1, 25, &IOEXP_U20, 0x000008};
+const net_t SE26 = {&GPIO9_SE, 9, 1, 0, 1, 26, &IOEXP_U20, 0x000001};
+const net_t SE27 = {&GPIO9_SE, 10, 1, 0, 1, 27, &IOEXP_U20, 0x000800};
+const net_t SE28 = {&GPIO9_SE, 11, 1, 0, 1, 28, &IOEXP_U20, 0x010000};
+const net_t SE29 = {&GPIO9_SE, 12, 1, 0, 1, 29, &IOEXP_U20, 0x020000};
+const net_t SE32 = {&GPIO9_SE, 13, 1, 0, 1, 32, &IOEXP_U19, 0x004000};
+const net_t SE33 = {&GPIO9_SE, 14, 1, 0, 1, 33, &IOEXP_U19, 0x002000};
+const net_t SE36 = {&GPIO9_SE, 15, 1, 0, 1, 36, &IOEXP_U18, 0x000800};
+const net_t SE37 = {&GPIO9_SE, 16, 1, 0, 1, 37, &IOEXP_U21, 0x000020};
+const net_t SE38 = {&GPIO9_SE, 17, 1, 0, 1, 38, &IOEXP_U21, 0x000008};
+const net_t SE39 = {&GPIO9_SE, 18, 1, 0, 1, 39, &IOEXP_U18, 0x000400};
+const net_t SE40 = {&GPIO9_SE, 19, 1, 0, 1, 40, &IOEXP_U18, 0x000004};
+const net_t SE41 = {&GPIO9_SE, 20, 1, 0, 1, 41, &IOEXP_U21, 0x000010};
+const net_t SE42 = {&GPIO9_SE, 21, 1, 0, 1, 42, &IOEXP_U21, 0x000080};
+const net_t SE43 = {&GPIO9_SE, 22, 1, 0, 1, 43, &IOEXP_U21, 0x000200};
+const net_t SE44 = {&GPIO9_SE, 23, 1, 0, 1, 44, &IOEXP_U21, 0x080000};
+const net_t SE46 = {&GPIO9_SE, 24, 1, 0, 1, 46, &IOEXP_U19, 0x001000};
+const net_t SE48 = {&GPIO9_SE, 25, 1, 0, 1, 48, &IOEXP_U19, 0x000400};
+const net_t SE49 = {&GPIO9_SE, 26, 1, 0, 1, 49, &IOEXP_U21, 0x800000};
+const net_t SE50 = {&GPIO9_SE, 27, 1, 0, 1, 50, &IOEXP_U18, 0x000020};
+const net_t SE51 = {&GPIO9_SE, 28, 1, 0, 1, 51, &IOEXP_U19, 0x000100};
+const net_t SE52 = {&GPIO9_SE, 29, 1, 0, 1, 52, &IOEXP_U20, 0x002000};
+const net_t SE55 = {&GPIO9_SE, 30, 1, 0, 1, 55, &IOEXP_U18, 0x000010};
+const net_t SE56 = {&GPIO9_SE, 31, 1, 0, 1, 56, &IOEXP_U20, 0x000004};
+const net_t SE57 = {&GPIO9_SE, 0, 2, 0, 1, 57, &IOEXP_U20, 0x001000};
+const net_t SE58 = {&GPIO9_SE, 1, 2, 0, 1, 58, &IOEXP_U20, 0x000400};
+const net_t SE59 = {&GPIO9_SE, 2, 2, 0, 1, 59, &IOEXP_U20, 0x800000};
+const net_t SE74 = {&GPIO9_SE, 3, 2, 0, 1, 74, &IOEXP_U18, 0x000008};
+const net_t SE81 = {&GPIO9_SE, 4, 2, 0, 1, 81, &IOEXP_U20, 0x000200};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 0, 1, 89, &IOEXP_U20, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
-const net_t SE4  = {&GPIO10_DS, 0, 1, 2, 1, 4, &IOEXP_U18, 0x000040};
-const net_t SE3  = {&GPIO10_DS, 0, 2, 2, 1, 3, &IOEXP_U18, 0x008000};
-const net_t SE6  = {&GPIO10_DS, 1, 1, 2, 1, 6, &IOEXP_U18, 0x000080};
-const net_t SE5  = {&GPIO10_DS, 1, 2, 2, 1, 5, &IOEXP_U18, 0x002000};
-const net_t SE8  = {&GPIO10_DS, 2, 1, 2, 1, 8, &IOEXP_U21, 0x000001};
-const net_t SE7  = {&GPIO10_DS, 2, 2, 2, 1, 7, &IOEXP_U21, 0x008000};
-const net_t SE10 = {&GPIO10_DS, 3, 1, 2, 1, 10, &IOEXP_U18, 0x000002};
-const net_t SE9  = {&GPIO10_DS, 3, 2, 2, 1, 9, &IOEXP_U18, 0x000001};
+const net_t SE4  = {&GPIO10_DS, 0, 1, 0, 1, 4, &IOEXP_U18, 0x000040};
+const net_t SE3  = {&GPIO10_DS, 0, 2, 0, 1, 3, &IOEXP_U18, 0x008000};
+const net_t SE6  = {&GPIO10_DS, 1, 1, 0, 1, 6, &IOEXP_U18, 0x000080};
+const net_t SE5  = {&GPIO10_DS, 1, 2, 0, 1, 5, &IOEXP_U18, 0x002000};
+const net_t SE8  = {&GPIO10_DS, 2, 1, 0, 1, 8, &IOEXP_U21, 0x000001};
+const net_t SE7  = {&GPIO10_DS, 2, 2, 0, 1, 7, &IOEXP_U21, 0x008000};
+const net_t SE10 = {&GPIO10_DS, 3, 1, 0, 1, 10, &IOEXP_U18, 0x000002};
+const net_t SE9  = {&GPIO10_DS, 3, 2, 0, 1, 9, &IOEXP_U18, 0x000001};
 const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12, &IOEXP_U21, 0x000800};
-const net_t SE11 = {&GPIO10_DS, 4, 2, 2, 1, 11, &IOEXP_U21, 0x001000};
-const net_t SE18 = {&GPIO10_DS, 5, 1, 2, 1, 18, &IOEXP_U21, 0x000100};
-const net_t SE16 = {&GPIO10_DS, 5, 2, 2, 1, 16, &IOEXP_U19, 0x000008};
-const net_t SE34 = {&GPIO10_DS, 6, 1, 2, 1, 34, &IOEXP_U18, 0x004000};
-const net_t SE19 = {&GPIO10_DS, 6, 2, 2, 1, 19, &IOEXP_U21, 0x400000};
-const net_t SE45 = {&GPIO10_DS, 7, 1, 2, 1, 45, &IOEXP_U21, 0x100000};
-const net_t SE35 = {&GPIO10_DS, 7, 2, 2, 1, 35, &IOEXP_U18, 0x001000};
-const net_t SE53 = {&GPIO10_DS, 8, 1, 2, 1, 53, &IOEXP_U20, 0x000080};
-const net_t SE47 = {&GPIO10_DS, 8, 2, 2, 1, 47, &IOEXP_U21, 0x000400};
-const net_t SE62 = {&GPIO10_DS, 9, 1, 2, 1, 62, &IOEXP_U18, 0x000200};
-const net_t SE54 = {&GPIO10_DS, 9, 2, 2, 1, 54, &IOEXP_U20, 0x000020};
-const net_t SE64 = {&GPIO10_DS, 10, 1, 2, 1, 64, &IOEXP_U18, 0x800000};
-const net_t SE63 = {&GPIO10_DS, 10, 2, 2, 1, 63, &IOEXP_U18, 0x000100};
-const net_t SE66 = {&GPIO10_DS, 11, 1, 2, 1, 66, &IOEXP_U18, 0x200000};
-const net_t SE65 = {&GPIO10_DS, 11, 2, 2, 1, 65, &IOEXP_U18, 0x400000};
-const net_t SE68 = {&GPIO10_DS, 12, 1, 2, 1, 68, &IOEXP_U21, 0x000002};
-const net_t SE67 = {&GPIO10_DS, 12, 2, 2, 1, 67, &IOEXP_U21, 0x004000};
-const net_t SE70 = {&GPIO10_DS, 13, 1, 2, 1, 70, &IOEXP_U21, 0x000040};
-const net_t SE69 = {&GPIO10_DS, 13, 2, 2, 1, 69, &IOEXP_U21, 0x000004};
-const net_t SE72 = {&GPIO10_DS, 14, 1, 2, 1, 72, &IOEXP_U21, 0x010000};
-const net_t SE71 = {&GPIO10_DS, 14, 2, 2, 1, 71, &IOEXP_U21, 0x002000};
-const net_t SE75 = {&GPIO10_DS, 15, 1, 2, 1, 75, &IOEXP_U21, 0x200000};
-const net_t SE73 = {&GPIO10_DS, 15, 2, 2, 1, 73, &IOEXP_U21, 0x020000};
-const net_t SE77 = {&GPIO10_DS, 16, 1, 2, 1, 77, &IOEXP_U19, 0x010000};
-const net_t SE76 = {&GPIO10_DS, 16, 2, 2, 1, 76, &IOEXP_U19, 0x000002};
-const net_t SE79 = {&GPIO10_DS, 17, 1, 2, 1, 79, &IOEXP_U20, 0x100000};
-const net_t SE78 = {&GPIO10_DS, 17, 2, 2, 1, 78, &IOEXP_U19, 0x000010};
-const net_t SE82 = {&GPIO10_DS, 18, 1, 2, 1, 82, &IOEXP_U20, 0x040000};
-const net_t SE80 = {&GPIO10_DS, 18, 2, 2, 1, 80, &IOEXP_U20, 0x400000};
-const net_t SE84 = {&GPIO10_DS, 19, 1, 2, 1, 84, &IOEXP_U20, 0x000040};
-const net_t SE83 = {&GPIO10_DS, 19, 2, 2, 1, 83, &IOEXP_U20, 0x004000};
-const net_t SE86 = {&GPIO10_DS, 20, 1, 2, 1, 86, &IOEXP_U19, 0x000001};
-const net_t SE85 = {&GPIO10_DS, 20, 2, 2, 1, 85, &IOEXP_U20, 0x000010};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 2, 1, 88, &IOEXP_U19, 0x000004};
-const net_t SE87 = {&GPIO10_DS, 21, 2, 2, 1, 87, &IOEXP_U19, 0x000080};
+const net_t SE11 = {&GPIO10_DS, 4, 2, 0, 1, 11, &IOEXP_U21, 0x001000};
+const net_t SE18 = {&GPIO10_DS, 5, 1, 0, 1, 18, &IOEXP_U21, 0x000100};
+const net_t SE16 = {&GPIO10_DS, 5, 2, 0, 1, 16, &IOEXP_U19, 0x000008};
+const net_t SE34 = {&GPIO10_DS, 6, 1, 0, 1, 34, &IOEXP_U18, 0x004000};
+const net_t SE19 = {&GPIO10_DS, 6, 2, 0, 1, 19, &IOEXP_U21, 0x400000};
+const net_t SE45 = {&GPIO10_DS, 7, 1, 0, 1, 45, &IOEXP_U21, 0x100000};
+const net_t SE35 = {&GPIO10_DS, 7, 2, 0, 1, 35, &IOEXP_U18, 0x001000};
+const net_t SE53 = {&GPIO10_DS, 8, 1, 0, 1, 53, &IOEXP_U20, 0x000080};
+const net_t SE47 = {&GPIO10_DS, 8, 2, 0, 1, 47, &IOEXP_U21, 0x000400};
+const net_t SE62 = {&GPIO10_DS, 9, 1, 0, 1, 62, &IOEXP_U18, 0x000200};
+const net_t SE54 = {&GPIO10_DS, 9, 2, 0, 1, 54, &IOEXP_U20, 0x000020};
+const net_t SE64 = {&GPIO10_DS, 10, 1, 0, 1, 64, &IOEXP_U18, 0x800000};
+const net_t SE63 = {&GPIO10_DS, 10, 2, 0, 1, 63, &IOEXP_U18, 0x000100};
+const net_t SE66 = {&GPIO10_DS, 11, 1, 0, 1, 66, &IOEXP_U18, 0x200000};
+const net_t SE65 = {&GPIO10_DS, 11, 2, 0, 1, 65, &IOEXP_U18, 0x400000};
+const net_t SE68 = {&GPIO10_DS, 12, 1, 0, 1, 68, &IOEXP_U21, 0x000002};
+const net_t SE67 = {&GPIO10_DS, 12, 2, 0, 1, 67, &IOEXP_U21, 0x004000};
+const net_t SE70 = {&GPIO10_DS, 13, 1, 0, 1, 70, &IOEXP_U21, 0x000040};
+const net_t SE69 = {&GPIO10_DS, 13, 2, 0, 1, 69, &IOEXP_U21, 0x000004};
+const net_t SE72 = {&GPIO10_DS, 14, 1, 0, 1, 72, &IOEXP_U21, 0x010000};
+const net_t SE71 = {&GPIO10_DS, 14, 2, 0, 1, 71, &IOEXP_U21, 0x002000};
+const net_t SE75 = {&GPIO10_DS, 15, 1, 0, 1, 75, &IOEXP_U21, 0x200000};
+const net_t SE73 = {&GPIO10_DS, 15, 2, 0, 1, 73, &IOEXP_U21, 0x020000};
+const net_t SE77 = {&GPIO10_DS, 16, 1, 0, 1, 77, &IOEXP_U19, 0x010000};
+const net_t SE76 = {&GPIO10_DS, 16, 2, 0, 1, 76, &IOEXP_U19, 0x000002};
+const net_t SE79 = {&GPIO10_DS, 17, 1, 0, 1, 79, &IOEXP_U20, 0x100000};
+const net_t SE78 = {&GPIO10_DS, 17, 2, 0, 1, 78, &IOEXP_U19, 0x000010};
+const net_t SE82 = {&GPIO10_DS, 18, 1, 0, 1, 82, &IOEXP_U20, 0x040000};
+const net_t SE80 = {&GPIO10_DS, 18, 2, 0, 1, 80, &IOEXP_U20, 0x400000};
+const net_t SE84 = {&GPIO10_DS, 19, 1, 0, 1, 84, &IOEXP_U20, 0x000040};
+const net_t SE83 = {&GPIO10_DS, 19, 2, 0, 1, 83, &IOEXP_U20, 0x004000};
+const net_t SE86 = {&GPIO10_DS, 20, 1, 0, 1, 86, &IOEXP_U19, 0x000001};
+const net_t SE85 = {&GPIO10_DS, 20, 2, 0, 1, 85, &IOEXP_U20, 0x000010};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 1, 88, &IOEXP_U19, 0x000004};
+const net_t SE87 = {&GPIO10_DS, 21, 2, 0, 1, 87, &IOEXP_U19, 0x000080};
 
 ////DATA0/CLK0 XGpio pins
 //const net_t DATA0_0   = {&GPIO3_DATA0,  0, 1, 2, 0};
@@ -708,19 +708,19 @@ int main()
         }
     }
 
-    Status = IIC_Init (IOEXP_U19.instance, IIC0_IOEXP_ID, IOEXP_U19.address);
+    Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP_U19.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
-    //Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
-    //IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
 
 
 
@@ -730,13 +730,13 @@ int main()
     	return XST_FAILURE;
     }
 
-    //Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U20\n");
     	return XST_FAILURE;
     }
 
-    //IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
 
 
 
@@ -746,13 +746,13 @@ int main()
     	return XST_FAILURE;
     }
 
-    //Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U21\n");
     	return XST_FAILURE;
     }
 
-    //IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
 
 
 
@@ -762,13 +762,13 @@ int main()
     	return XST_FAILURE;
     }
 
-    //Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address, IO_EXP_PIN_CONFIG, 4);
+    Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U18\n");
     	return XST_FAILURE;
     }
 
-    //IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
+    IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
 
 
 
