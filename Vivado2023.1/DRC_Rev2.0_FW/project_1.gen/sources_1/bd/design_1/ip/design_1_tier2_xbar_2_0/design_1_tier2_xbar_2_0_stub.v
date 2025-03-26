@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
 // Date        : Sun Mar 16 17:50:01 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_tier2_xbar_2_0/design_1_tier2_xbar_2_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_tier2_xbar_2_0 -prefix
+//               design_1_tier2_xbar_2_0_ design_1_tier2_xbar_2_0_stub.v
 // Design      : design_1_tier2_xbar_2_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu3eg-sfvc784-1-e

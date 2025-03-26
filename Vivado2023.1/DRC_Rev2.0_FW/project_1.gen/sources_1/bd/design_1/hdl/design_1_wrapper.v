@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Sun Mar 16 17:48:58 2025
+//Date        : Mon Mar 24 00:30:24 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -42,14 +42,14 @@ module design_1_wrapper
     ctrl_8bits_tri_o,
     leds_4bits_tri_o,
     spdt_10bits_tri_o);
-  input IOBUF_CLK0;
-  input IOBUF_CLK1;
+  output IOBUF_CLK0;
+  output IOBUF_CLK1;
   input IOBUF_CLK2;
   input IOBUF_CLK3;
   output [0:0]IOBUF_CLKN;
   output [0:0]IOBUF_CLKP;
-  input [11:0]IOBUF_DATA0;
-  input [11:0]IOBUF_DATA1;
+  output [11:0]IOBUF_DATA0;
+  output [11:0]IOBUF_DATA1;
   input [11:0]IOBUF_DATA2;
   input [11:0]IOBUF_DATA3;
   inout [21:0]IOBUF_DS_0_21_n;

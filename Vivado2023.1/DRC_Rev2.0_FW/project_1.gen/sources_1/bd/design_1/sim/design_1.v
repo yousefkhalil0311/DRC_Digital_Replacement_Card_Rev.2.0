@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Sun Mar 16 17:48:58 2025
+//Date        : Mon Mar 24 00:30:24 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=73,numReposBlks=49,numNonXlnxBlks=0,numHierBlks=24,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=23,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=73,numReposBlks=49,numNonXlnxBlks=0,numHierBlks=24,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (IOBUF_CLK0,
     IOBUF_CLK1,
@@ -43,14 +43,14 @@ module design_1
     ctrl_8bits_tri_o,
     leds_4bits_tri_o,
     spdt_10bits_tri_o);
-  input IOBUF_CLK0;
-  input IOBUF_CLK1;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.IOBUF_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.IOBUF_CLK0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 12999870, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output IOBUF_CLK0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.IOBUF_CLK1 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.IOBUF_CLK1, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 12999870, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 90.0" *) output IOBUF_CLK1;
   input IOBUF_CLK2;
   input IOBUF_CLK3;
   output [0:0]IOBUF_CLKN;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.IOBUF_CLKP CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.IOBUF_CLKP, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 64999350, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output [0:0]IOBUF_CLKP;
-  input [11:0]IOBUF_DATA0;
-  input [11:0]IOBUF_DATA1;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.IOBUF_CLKP CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.IOBUF_CLKP, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 129998700, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output [0:0]IOBUF_CLKP;
+  output [11:0]IOBUF_DATA0;
+  output [11:0]IOBUF_DATA1;
   input [11:0]IOBUF_DATA2;
   input [11:0]IOBUF_DATA3;
   inout [21:0]IOBUF_DS_0_21_n;
@@ -71,12 +71,10 @@ module design_1
   output SCK_1;
   output [3:0]SS_0_4bits;
   output [1:0]SS_1_2bits;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ctrl_8bits " *) output [7:0]ctrl_8bits_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ctrl_8bits TRI_O" *) output [7:0]ctrl_8bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O" *) output [3:0]leds_4bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 spdt_10bits TRI_O" *) output [9:0]spdt_10bits_tri_o;
 
-  wire [11:0]ADCDATA_0_1;
-  wire [11:0]ADCDATA_1_1;
   wire [11:0]ADCDATA_2_1;
   wire [11:0]ADCDATA_3_1;
   wire [11:0]ADC_MinMax_0_CHAMAX_OUT;
@@ -96,8 +94,8 @@ module design_1
   wire [11:0]ADC_MinMax_0_CHBMIN_OUT2;
   wire [11:0]ADC_MinMax_0_CHBMIN_OUT3;
   wire ClockDivider_0_CLKOUT;
-  wire DCKIN_0_1;
-  wire DCKIN_1_1;
+  wire [11:0]DAC_CTRL_0_DACDATA;
+  wire [11:0]DAC_CTRL_1_DACDATA;
   wire DCKIN_2_1;
   wire DCKIN_3_1;
   wire [5:0]Net;
@@ -141,7 +139,9 @@ module design_1
   wire axi_quad_spi_1_sck_o;
   wire [1:0]axi_quad_spi_1_ss_o;
   wire clk_wiz_0_clk_out1;
+  wire clk_wiz_0_clk_out2;
   wire clk_wiz_0_clk_out3;
+  wire clk_wiz_0_clk_out4;
   wire io1_i_0_1;
   wire io1_i_1_1;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
@@ -520,16 +520,16 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  assign ADCDATA_0_1 = IOBUF_DATA0[11:0];
-  assign ADCDATA_1_1 = IOBUF_DATA1[11:0];
   assign ADCDATA_2_1 = IOBUF_DATA2[11:0];
   assign ADCDATA_3_1 = IOBUF_DATA3[11:0];
-  assign DCKIN_0_1 = IOBUF_CLK0;
-  assign DCKIN_1_1 = IOBUF_CLK1;
   assign DCKIN_2_1 = IOBUF_CLK2;
   assign DCKIN_3_1 = IOBUF_CLK3;
+  assign IOBUF_CLK0 = clk_wiz_0_clk_out2;
+  assign IOBUF_CLK1 = clk_wiz_0_clk_out4;
   assign IOBUF_CLKN[0] = util_vector_logic_0_Res;
   assign IOBUF_CLKP[0] = util_ds_buf_11_BUFG_O;
+  assign IOBUF_DATA0[11:0] = DAC_CTRL_0_DACDATA;
+  assign IOBUF_DATA1[11:0] = DAC_CTRL_1_DACDATA;
   assign MOSI_0 = axi_quad_spi_0_io0_o;
   assign MOSI_1 = axi_quad_spi_1_io0_o;
   assign SCK_0 = axi_quad_spi_0_sck_o;
@@ -542,21 +542,21 @@ module design_1
   assign leds_4bits_tri_o[3:0] = axi_gpio_0_GPIO_TRI_O;
   assign spdt_10bits_tri_o[9:0] = axi_gpio_7_GPIO_TRI_O;
   design_1_ADC_MinMax_0_0 ADC_MinMax_0
-       (.ADCDATA(ADCDATA_0_1),
+       (.ADCDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .CHAMAX_OUT(ADC_MinMax_0_CHAMAX_OUT),
         .CHAMIN_OUT(ADC_MinMax_0_CHAMIN_OUT),
         .CHBMAX_OUT(ADC_MinMax_0_CHBMAX_OUT),
         .CHBMIN_OUT(ADC_MinMax_0_CHBMIN_OUT),
         .CLKIN(clk_wiz_0_clk_out3),
-        .DCKIN(DCKIN_0_1));
+        .DCKIN(1'b0));
   design_1_ADC_MinMax_0_1 ADC_MinMax_1
-       (.ADCDATA(ADCDATA_1_1),
+       (.ADCDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .CHAMAX_OUT(ADC_MinMax_0_CHAMAX_OUT1),
         .CHAMIN_OUT(ADC_MinMax_0_CHAMIN_OUT1),
         .CHBMAX_OUT(ADC_MinMax_0_CHBMAX_OUT1),
         .CHBMIN_OUT(ADC_MinMax_0_CHBMIN_OUT1),
         .CLKIN(clk_wiz_0_clk_out3),
-        .DCKIN(DCKIN_1_1));
+        .DCKIN(1'b0));
   design_1_ADC_MinMax_0_2 ADC_MinMax_2
        (.ADCDATA(ADCDATA_2_1),
         .CHAMAX_OUT(ADC_MinMax_0_CHAMAX_OUT2),
@@ -578,9 +578,11 @@ module design_1
         .CLKOUT(ClockDivider_0_CLKOUT),
         .counterVal(axi_gpio_1_gpio_io_o));
   design_1_DAC_CTRL_0_0 DAC_CTRL_0
-       (.CLKIN(ClockDivider_0_CLKOUT));
+       (.CLKIN(ClockDivider_0_CLKOUT),
+        .DACDATA(DAC_CTRL_0_DACDATA));
   design_1_DAC_CTRL_0_1 DAC_CTRL_1
-       (.CLKIN(ClockDivider_0_CLKOUT));
+       (.CLKIN(ClockDivider_0_CLKOUT),
+        .DACDATA(DAC_CTRL_1_DACDATA));
   design_1_DAC_CTRL_0_2 DAC_CTRL_2
        (.CLKIN(ClockDivider_0_CLKOUT));
   design_1_DAC_CTRL_0_3 DAC_CTRL_3
@@ -1034,7 +1036,9 @@ module design_1
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(zynq_ultra_ps_e_0_pl_clk0),
         .clk_out1(clk_wiz_0_clk_out1),
-        .clk_out3(clk_wiz_0_clk_out3));
+        .clk_out2(clk_wiz_0_clk_out2),
+        .clk_out3(clk_wiz_0_clk_out3),
+        .clk_out4(clk_wiz_0_clk_out4));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

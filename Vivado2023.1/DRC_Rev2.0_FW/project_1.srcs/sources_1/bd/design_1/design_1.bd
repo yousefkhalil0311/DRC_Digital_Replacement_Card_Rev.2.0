@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x960E7F0050632CEE",
+      "boundary_crc": "0xF2F17336763A9186",
       "device": "xczu3eg-sfvc784-1-e",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -197,7 +197,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "64999350",
+            "value": "129998700",
             "value_src": "ip_prop"
           },
           "PHASE": {
@@ -225,7 +225,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "64999350",
+            "value": "129998700",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -242,27 +242,11 @@
           }
         }
       },
-      "IOBUF_CLK0": {
-        "direction": "I"
-      },
-      "IOBUF_CLK1": {
-        "direction": "I"
-      },
       "IOBUF_CLK2": {
         "direction": "I"
       },
       "IOBUF_CLK3": {
         "direction": "I"
-      },
-      "IOBUF_DATA0": {
-        "direction": "I",
-        "left": "11",
-        "right": "0"
-      },
-      "IOBUF_DATA1": {
-        "direction": "I",
-        "left": "11",
-        "right": "0"
       },
       "IOBUF_DATA2": {
         "direction": "I",
@@ -292,6 +276,68 @@
       "IOBUF_SDA_2": {
         "direction": "IO",
         "left": "0",
+        "right": "0"
+      },
+      "IOBUF_CLK0": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_wiz_0_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "12999870",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "IOBUF_DATA0": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "IOBUF_CLK1": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_wiz_0_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "12999870",
+            "value_src": "ip_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "90.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "IOBUF_DATA1": {
+        "direction": "O",
+        "left": "11",
         "right": "0"
       }
     },
@@ -2741,25 +2787,25 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "247.433"
+            "value": "224.860"
           },
           "CLKOUT1_PHASE_ERROR": {
             "value": "300.282"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "65"
+            "value": "130"
           },
           "CLKOUT2_JITTER": {
-            "value": "224.860"
+            "value": "325.846"
           },
           "CLKOUT2_PHASE_ERROR": {
             "value": "300.282"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "130"
+            "value": "13"
           },
           "CLKOUT2_REQUESTED_PHASE": {
-            "value": "90"
+            "value": "0"
           },
           "CLKOUT2_USED": {
             "value": "true"
@@ -2779,6 +2825,21 @@
           "CLKOUT3_USED": {
             "value": "true"
           },
+          "CLKOUT4_JITTER": {
+            "value": "325.846"
+          },
+          "CLKOUT4_PHASE_ERROR": {
+            "value": "300.282"
+          },
+          "CLKOUT4_REQUESTED_OUT_FREQ": {
+            "value": "13"
+          },
+          "CLKOUT4_REQUESTED_PHASE": {
+            "value": "90"
+          },
+          "CLKOUT4_USED": {
+            "value": "true"
+          },
           "JITTER_SEL": {
             "value": "No_Jitter"
           },
@@ -2792,19 +2853,19 @@
             "value": "10.000"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "16.000"
+            "value": "8.000"
           },
           "MMCM_CLKOUT0_DUTY_CYCLE": {
             "value": "0.5"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "8"
+            "value": "80"
           },
           "MMCM_CLKOUT1_DUTY_CYCLE": {
             "value": "0.5"
           },
           "MMCM_CLKOUT1_PHASE": {
-            "value": "90.000"
+            "value": "0.000"
           },
           "MMCM_CLKOUT2_DIVIDE": {
             "value": "2"
@@ -2815,11 +2876,20 @@
           "MMCM_CLKOUT2_PHASE": {
             "value": "0.000"
           },
+          "MMCM_CLKOUT3_DIVIDE": {
+            "value": "80"
+          },
+          "MMCM_CLKOUT3_DUTY_CYCLE": {
+            "value": "0.5"
+          },
+          "MMCM_CLKOUT3_PHASE": {
+            "value": "90.000"
+          },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "5"
           },
           "NUM_OUT_CLKS": {
-            "value": "3"
+            "value": "4"
           },
           "USE_LOCKED": {
             "value": "false"
@@ -6001,6 +6071,9 @@
           },
           "USB1_BOARD_INTERFACE": {
             "value": "custom"
+          },
+          "preset": {
+            "value": "None"
           }
         },
         "interface_ports": {
@@ -6869,18 +6942,6 @@
       }
     },
     "nets": {
-      "ADCDATA_0_1": {
-        "ports": [
-          "IOBUF_DATA0",
-          "ADC_MinMax_0/ADCDATA"
-        ]
-      },
-      "ADCDATA_1_1": {
-        "ports": [
-          "IOBUF_DATA1",
-          "ADC_MinMax_1/ADCDATA"
-        ]
-      },
       "ADCDATA_2_1": {
         "ports": [
           "IOBUF_DATA2",
@@ -6998,16 +7059,16 @@
           "DAC_CTRL_3/CLKIN"
         ]
       },
-      "DCKIN_0_1": {
+      "DAC_CTRL_0_DACDATA": {
         "ports": [
-          "IOBUF_CLK0",
-          "ADC_MinMax_0/DCKIN"
+          "DAC_CTRL_0/DACDATA",
+          "IOBUF_DATA0"
         ]
       },
-      "DCKIN_1_1": {
+      "DAC_CTRL_1_DACDATA": {
         "ports": [
-          "IOBUF_CLK1",
-          "ADC_MinMax_1/DCKIN"
+          "DAC_CTRL_1/DACDATA",
+          "IOBUF_DATA1"
         ]
       },
       "DCKIN_2_1": {
@@ -7251,6 +7312,12 @@
           "util_vector_logic_0/Op1"
         ]
       },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "IOBUF_CLK0"
+        ]
+      },
       "clk_wiz_0_clk_out3": {
         "ports": [
           "clk_wiz_0/clk_out3",
@@ -7259,6 +7326,12 @@
           "ADC_MinMax_2/CLKIN",
           "ADC_MinMax_3/CLKIN",
           "ADC_MinMax_1/CLKIN"
+        ]
+      },
+      "clk_wiz_0_clk_out4": {
+        "ports": [
+          "clk_wiz_0/clk_out4",
+          "IOBUF_CLK1"
         ]
       },
       "io1_i_0_1": {

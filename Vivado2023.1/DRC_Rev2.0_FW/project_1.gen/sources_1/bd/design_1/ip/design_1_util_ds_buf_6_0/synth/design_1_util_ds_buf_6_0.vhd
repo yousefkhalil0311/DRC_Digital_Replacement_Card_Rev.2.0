@@ -1,5 +1,5 @@
 -- (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
+-- (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of AMD and is protected under U.S. and international copyright
@@ -191,9 +191,9 @@ ARCHITECTURE design_1_util_ds_buf_6_0_arch OF design_1_util_ds_buf_6_0 IS
   ATTRIBUTE CORE_GENERATION_INFO OF design_1_util_ds_buf_6_0_arch: ARCHITECTURE IS "design_1_util_ds_buf_6_0,util_ds_buf,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.2,x_ipCoreRevision=30,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BUF_TYPE=BUFG,C_SIZE=1,C_BUFGCE_DIV=1,C_BUFG_GT_SYNC=0,C_SIM_DEVICE=VERSAL_AI_CORE_ES1,C_OBUFDS_GTE5_ADV=00,C_REFCLK_ICNTL_TX=00000}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF BUFG_I: SIGNAL IS "XIL_INTERFACENAME BUFG_I, FREQ_HZ 49999500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF BUFG_I: SIGNAL IS "XIL_INTERFACENAME BUFG_I, FREQ_HZ 64999350, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF BUFG_I: SIGNAL IS "xilinx.com:signal:clock:1.0 BUFG_I CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF BUFG_O: SIGNAL IS "XIL_INTERFACENAME BUFG_O, FREQ_HZ 49999500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF BUFG_O: SIGNAL IS "XIL_INTERFACENAME BUFG_O, FREQ_HZ 64999350, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF BUFG_O: SIGNAL IS "xilinx.com:signal:clock:1.0 BUFG_O CLK";
 BEGIN
   U0 : util_ds_buf
