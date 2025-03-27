@@ -98,6 +98,16 @@ maxigp2_rvalid,
 maxigp2_rready, 
 maxigp2_awqos, 
 maxigp2_arqos, 
+emio_sdio0_clkout, 
+emio_sdio0_fb_clk_in, 
+emio_sdio0_cmdout, 
+emio_sdio0_cmdin, 
+emio_sdio0_cmdena, 
+emio_sdio0_datain, 
+emio_sdio0_dataout, 
+emio_sdio0_dataena, 
+emio_sdio0_ledcontrol, 
+emio_sdio0_bus_volt, 
 pl_resetn0, 
 pl_clk0 
 );
@@ -141,6 +151,16 @@ input maxigp2_rvalid;
 output maxigp2_rready;
 output [3 : 0] maxigp2_awqos;
 output [3 : 0] maxigp2_arqos;
+output emio_sdio0_clkout;
+input emio_sdio0_fb_clk_in;
+output emio_sdio0_cmdout;
+input emio_sdio0_cmdin;
+output emio_sdio0_cmdena;
+input [3 : 0] emio_sdio0_datain;
+output [3 : 0] emio_sdio0_dataout;
+output [3 : 0] emio_sdio0_dataena;
+output emio_sdio0_ledcontrol;
+output [2 : 0] emio_sdio0_bus_volt;
 output pl_resetn0;
 output pl_clk0;
 wire pl_clk_t[3:0] ;

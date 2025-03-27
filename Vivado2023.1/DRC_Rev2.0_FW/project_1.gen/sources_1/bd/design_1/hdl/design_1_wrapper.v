@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Mar 24 00:30:24 2025
+//Date        : Thu Mar 27 15:37:26 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -35,6 +35,11 @@ module design_1_wrapper
     MISO_1,
     MOSI_0,
     MOSI_1,
+    P17,
+    P21,
+    P74,
+    P80,
+    P89,
     SCK_0,
     SCK_1,
     SS_0_4bits,
@@ -66,6 +71,11 @@ module design_1_wrapper
   input MISO_1;
   output MOSI_0;
   output MOSI_1;
+  output P17;
+  output P21;
+  output P74;
+  output P80;
+  output P89;
   output SCK_0;
   output SCK_1;
   output [3:0]SS_0_4bits;
@@ -98,6 +108,11 @@ module design_1_wrapper
   wire MISO_1;
   wire MOSI_0;
   wire MOSI_1;
+  wire P17;
+  wire P21;
+  wire P74;
+  wire P80;
+  wire P89;
   wire SCK_0;
   wire SCK_1;
   wire [3:0]SS_0_4bits;
@@ -131,6 +146,11 @@ module design_1_wrapper
         .MISO_1(MISO_1),
         .MOSI_0(MOSI_0),
         .MOSI_1(MOSI_1),
+        .P17(P17),
+        .P21(P21),
+        .P74(P74),
+        .P80(P80),
+        .P89(P89),
         .SCK_0(SCK_0),
         .SCK_1(SCK_1),
         .SS_0_4bits(SS_0_4bits),

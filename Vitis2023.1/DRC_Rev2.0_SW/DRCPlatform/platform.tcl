@@ -65,3 +65,34 @@ platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023
 platform generate -domains 
 platform generate
 platform generate -domains zynqmp_fsbl,zynqmp_pmufw 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains zynqmp_fsbl,zynqmp_pmufw 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform active {DRCPlatform}
+domain create -name {fsbl_domain} -display-name {fsbl_domain} -os {standalone} -proc {psu_cortexa53_0} -runtime {cpp} -arch {64-bit} -support-app {zynqmp_fsbl}
+platform generate -domains 
+platform write
+domain active {zynqmp_fsbl}
+domain active {zynqmp_pmufw}
+domain active {standalone_domain}
+domain active {fsbl_domain}
+platform generate -quick
+platform generate -domains fsbl_domain 
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains fsbl_domain 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 

@@ -156,9 +156,9 @@ const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 //SE XGpio pins
 const net_t SE2  = {&GPIO9_SE, 0, 1, 1, 0, 2, &IOEXP_U19, 0x008000};
 const net_t SE14 = {&GPIO9_SE, 1, 1, 1, 0, 14, &IOEXP_U21, 0x040000};
-const net_t SE17 = {&GPIO9_SE, 2, 1, 1, 0, 17, &IOEXP_U19, 0x000800};
+const net_t SE17 = {&GPIO9_SE, 2, 1, 0, 0, 17, &IOEXP_U19, 0x000800};
 const net_t SE20 = {&GPIO9_SE, 3, 1, 1, 0, 20, &IOEXP_U20, 0x000100};
-const net_t SE21 = {&GPIO9_SE, 4, 1, 1, 0, 21, &IOEXP_U19, 0x000200};
+const net_t SE21 = {&GPIO9_SE, 4, 1, 0, 0, 21, &IOEXP_U19, 0x000200};
 const net_t SE22 = {&GPIO9_SE, 5, 1, 1, 0, 22, &IOEXP_U20, 0x080000};
 const net_t SE23 = {&GPIO9_SE, 6, 1, 1, 0, 23, &IOEXP_U20, 0x008000};
 const net_t SE24 = {&GPIO9_SE, 7, 1, 1, 0, 24, &IOEXP_U20, 0x000002};
@@ -189,9 +189,9 @@ const net_t SE56 = {&GPIO9_SE, 31, 1, 1, 0, 56, &IOEXP_U20, 0x000004};
 const net_t SE57 = {&GPIO9_SE, 0, 2, 1, 0, 57, &IOEXP_U20, 0x001000};
 const net_t SE58 = {&GPIO9_SE, 1, 2, 1, 0, 58, &IOEXP_U20, 0x000400};
 const net_t SE59 = {&GPIO9_SE, 2, 2, 1, 0, 59, &IOEXP_U20, 0x800000};
-const net_t SE74 = {&GPIO9_SE, 3, 2, 1, 0, 74, &IOEXP_U18, 0x000008};
+const net_t SE74 = {&GPIO9_SE, 3, 2, 0, 0, 74, &IOEXP_U18, 0x000008};
 const net_t SE81 = {&GPIO9_SE, 4, 2, 1, 0, 81, &IOEXP_U20, 0x000200};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 1, 0, 89, &IOEXP_U20, 0x200000};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 0, 0, 89, &IOEXP_U20, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
 const net_t SE4  = {&GPIO10_DS, 0, 1, 1, 0, 4, &IOEXP_U18, 0x000040};
@@ -231,7 +231,7 @@ const net_t SE76 = {&GPIO10_DS, 16, 2, 1, 0, 76, &IOEXP_U19, 0x000002};
 const net_t SE79 = {&GPIO10_DS, 17, 1, 1, 0, 79, &IOEXP_U20, 0x100000};
 const net_t SE78 = {&GPIO10_DS, 17, 2, 1, 0, 78, &IOEXP_U19, 0x000010};
 const net_t SE82 = {&GPIO10_DS, 18, 1, 1, 0, 82, &IOEXP_U20, 0x040000};
-const net_t SE80 = {&GPIO10_DS, 18, 2, 1, 0, 80, &IOEXP_U20, 0x400000};
+const net_t SE80 = {&GPIO10_DS, 18, 2, 0, 0, 80, &IOEXP_U20, 0x400000};
 const net_t SE84 = {&GPIO10_DS, 19, 1, 1, 0, 84, &IOEXP_U20, 0x000040};
 const net_t SE83 = {&GPIO10_DS, 19, 2, 1, 0, 83, &IOEXP_U20, 0x004000};
 const net_t SE86 = {&GPIO10_DS, 20, 1, 1, 0, 86, &IOEXP_U19, 0x000001};
@@ -466,8 +466,8 @@ SWState_t Pin_Settings[] = {
 
 		//Pin 2 path setting (uncomment 1)
 		//P2_LS1_DAC04,
-		P2_DIGIO2,
-		//P2_HS_DAC3A,
+		//P2_DIGIO2,
+		P2_HS_DAC3A,
 
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
@@ -489,14 +489,14 @@ SWState_t Pin_Settings[] = {
 
 		//Pin 33 path setting (uncomment 1)
 		//P33_LS1_DAC06,
-		P33_DIGIO33,
+		//P33_DIGIO33,
 		//P33_HS_ADC2B,
-		//P33_HS_DAC2A,
+		P33_HS_DAC2A,
 
 		//Pin 46 path setting (uncomment 1)
 		//P46_LS1_DAC07,
-		P46_DIGIO46,
-		//P46_HS_ADC2A,
+		//P46_DIGIO46,
+		P46_HS_ADC2A,
 		//P46_HS_DAC2B,
 
 		//Pin 48 path setting (uncomment 1)
@@ -834,6 +834,7 @@ int main()
     }
 	setLEDStatus (0x4);
 
+	/*
 	printf("\033[2J\033[H");
 	while(1){
 		for (int i = 0; i < sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]); i++){
@@ -841,8 +842,8 @@ int main()
 			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
 		}
 	}
+	*/
 
-	/*
 //For DAC Control application
     while(1){
         printf("Please enter SPDCTRL value: ");
@@ -868,7 +869,6 @@ int main()
         }
         usleep(100000);
     }
-    */
 
     uint32_t chvalmax;
     uint32_t chvalmin;

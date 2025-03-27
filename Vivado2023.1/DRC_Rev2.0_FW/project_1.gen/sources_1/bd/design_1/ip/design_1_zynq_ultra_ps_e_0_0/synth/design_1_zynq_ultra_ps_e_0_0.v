@@ -53,7 +53,7 @@
 (* X_CORE_INFO = "zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_zynq_ultra_ps_e_0_0,zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e,{}" *)
 (* CORE_GENERATION_INFO = "design_1_zynq_ultra_ps_e_0_0,zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=zynq_ultra_ps_e,x_ipVersion=3.5,x_ipCoreRevision=0,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_DP_USE_AUDIO=0,C_DP_USE_VIDEO=0,C_MAXIGP0_DATA_WIDTH=128,C_MAXIGP1_DATA_WIDTH=128,C_MAXIGP2_DATA_WIDTH=64,C_SAXIGP0_DATA_WIDTH=128,C_SAXIGP1_DATA_WIDTH=128,C_SAXIGP2_DATA_WIDTH=128,C_SAXIGP3_DATA_WIDTH=128,C_SAXIGP4_DATA_WIDTH=128,C_SAXIGP5_DATA_WIDTH=128,C_SAXIG\
-P6_DATA_WIDTH=128,C_USE_DIFF_RW_CLK_GP0=0,C_USE_DIFF_RW_CLK_GP1=0,C_USE_DIFF_RW_CLK_GP2=0,C_USE_DIFF_RW_CLK_GP3=0,C_USE_DIFF_RW_CLK_GP4=0,C_USE_DIFF_RW_CLK_GP5=0,C_USE_DIFF_RW_CLK_GP6=0,C_EN_FIFO_ENET0=0,C_EN_FIFO_ENET1=0,C_EN_FIFO_ENET2=0,C_EN_FIFO_ENET3=0,C_PL_CLK0_BUF=TRUE,C_PL_CLK1_BUF=FALSE,C_PL_CLK2_BUF=FALSE,C_PL_CLK3_BUF=FALSE,C_TRACE_PIPELINE_WIDTH=8,C_EN_EMIO_TRACE=0,C_TRACE_DATA_WIDTH=32,C_USE_DEBUG_TEST=0,C_SD0_INTERNAL_BUS_WIDTH=8,C_SD1_INTERNAL_BUS_WIDTH=4,C_NUM_F2P_0_INTR_INPUTS=1\
+P6_DATA_WIDTH=128,C_USE_DIFF_RW_CLK_GP0=0,C_USE_DIFF_RW_CLK_GP1=0,C_USE_DIFF_RW_CLK_GP2=0,C_USE_DIFF_RW_CLK_GP3=0,C_USE_DIFF_RW_CLK_GP4=0,C_USE_DIFF_RW_CLK_GP5=0,C_USE_DIFF_RW_CLK_GP6=0,C_EN_FIFO_ENET0=0,C_EN_FIFO_ENET1=0,C_EN_FIFO_ENET2=0,C_EN_FIFO_ENET3=0,C_PL_CLK0_BUF=TRUE,C_PL_CLK1_BUF=FALSE,C_PL_CLK2_BUF=FALSE,C_PL_CLK3_BUF=FALSE,C_TRACE_PIPELINE_WIDTH=8,C_EN_EMIO_TRACE=0,C_TRACE_DATA_WIDTH=32,C_USE_DEBUG_TEST=0,C_SD0_INTERNAL_BUS_WIDTH=4,C_SD1_INTERNAL_BUS_WIDTH=4,C_NUM_F2P_0_INTR_INPUTS=1\
 ,C_NUM_F2P_1_INTR_INPUTS=1,C_EMIO_GPIO_WIDTH=1,C_NUM_FABRIC_RESETS=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_zynq_ultra_ps_e_0_0 (
@@ -97,6 +97,16 @@ module design_1_zynq_ultra_ps_e_0_0 (
   maxigp2_rready,
   maxigp2_awqos,
   maxigp2_arqos,
+  emio_sdio0_clkout,
+  emio_sdio0_fb_clk_in,
+  emio_sdio0_cmdout,
+  emio_sdio0_cmdin,
+  emio_sdio0_cmdena,
+  emio_sdio0_datain,
+  emio_sdio0_dataout,
+  emio_sdio0_dataena,
+  emio_sdio0_ledcontrol,
+  emio_sdio0_bus_volt,
   pl_resetn0,
   pl_clk0
 );
@@ -184,6 +194,26 @@ output wire [3 : 0] maxigp2_awqos;
 ADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARQOS" *)
 output wire [3 : 0] maxigp2_arqos;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 CLK" *)
+output wire emio_sdio0_clkout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 CLK_FB" *)
+input wire emio_sdio0_fb_clk_in;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 CMD_O" *)
+output wire emio_sdio0_cmdout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 CMD_I" *)
+input wire emio_sdio0_cmdin;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 CMD_T" *)
+output wire emio_sdio0_cmdena;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 DATA_I" *)
+input wire [3 : 0] emio_sdio0_datain;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 DATA_O" *)
+output wire [3 : 0] emio_sdio0_dataout;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 DATA_T" *)
+output wire [3 : 0] emio_sdio0_dataena;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 LED" *)
+output wire emio_sdio0_ledcontrol;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sdio:1.0 SDIO_0 BUSVOLT" *)
+output wire [2 : 0] emio_sdio0_bus_volt;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 PL_RESETN0 RST" *)
 output wire pl_resetn0;
@@ -223,7 +253,7 @@ output wire pl_clk0;
     .C_EN_EMIO_TRACE(0),
     .C_TRACE_DATA_WIDTH(32),
     .C_USE_DEBUG_TEST(0),
-    .C_SD0_INTERNAL_BUS_WIDTH(8),
+    .C_SD0_INTERNAL_BUS_WIDTH(4),
     .C_SD1_INTERNAL_BUS_WIDTH(4),
     .C_NUM_F2P_0_INTR_INPUTS(1),
     .C_NUM_F2P_1_INTR_INPUTS(1),
@@ -1031,19 +1061,19 @@ output wire pl_clk0;
     .emio_uart1_dcdn(1'B0),
     .emio_uart1_rin(1'B0),
     .emio_uart1_dtrn(),
-    .emio_sdio0_clkout(),
-    .emio_sdio0_fb_clk_in(1'B0),
-    .emio_sdio0_cmdout(),
-    .emio_sdio0_cmdin(1'B0),
-    .emio_sdio0_cmdena(),
-    .emio_sdio0_datain(8'B0),
-    .emio_sdio0_dataout(),
-    .emio_sdio0_dataena(),
+    .emio_sdio0_clkout(emio_sdio0_clkout),
+    .emio_sdio0_fb_clk_in(emio_sdio0_fb_clk_in),
+    .emio_sdio0_cmdout(emio_sdio0_cmdout),
+    .emio_sdio0_cmdin(emio_sdio0_cmdin),
+    .emio_sdio0_cmdena(emio_sdio0_cmdena),
+    .emio_sdio0_datain(emio_sdio0_datain),
+    .emio_sdio0_dataout(emio_sdio0_dataout),
+    .emio_sdio0_dataena(emio_sdio0_dataena),
     .emio_sdio0_cd_n(1'B0),
     .emio_sdio0_wp(1'B1),
-    .emio_sdio0_ledcontrol(),
+    .emio_sdio0_ledcontrol(emio_sdio0_ledcontrol),
     .emio_sdio0_buspower(),
-    .emio_sdio0_bus_volt(),
+    .emio_sdio0_bus_volt(emio_sdio0_bus_volt),
     .emio_sdio1_clkout(),
     .emio_sdio1_fb_clk_in(1'B0),
     .emio_sdio1_cmdout(),

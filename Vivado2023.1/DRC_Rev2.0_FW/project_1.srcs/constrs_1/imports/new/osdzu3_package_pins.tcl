@@ -111,9 +111,9 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin C14 [get_ports {spdt_10bits_tri_o
 #Single Ended IO pin location constraints
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U4  [get_ports {IOBUF_SE_0_31[0]}];  #90P-2 /SP4T_1
 tclapp::octavo::osdzu3::set_osdzu3_package_pin G5  [get_ports {IOBUF_SE_0_31[1]}];  #90P-14
-tclapp::octavo::osdzu3::set_osdzu3_package_pin T8  [get_ports {IOBUF_SE_0_31[2]}];  #90P-17 /SP4T_2
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R5  [get_ports {IOBUF_SE_0_31[2]}];  #90P-17 /SP4T_2         SET BACK TO package pin V7
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V8  [get_ports {IOBUF_SE_0_31[3]}];  #90P-20
-tclapp::octavo::osdzu3::set_osdzu3_package_pin R8  [get_ports {IOBUF_SE_0_31[4]}];  #90P-21 /SP4T_3
+tclapp::octavo::osdzu3::set_osdzu3_package_pin P6  [get_ports {IOBUF_SE_0_31[4]}];  #90P-21 /SP4T_3         SET BACK TO package pin V7
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U9  [get_ports {IOBUF_SE_0_31[5]}];  #90P-22 /22/74DP /P
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V10 [get_ports {IOBUF_SE_0_31[6]}];  #90P-23
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V12 [get_ports {IOBUF_SE_0_31[7]}];  #90P-24
@@ -144,9 +144,9 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin V14 [get_ports {IOBUF_SE_0_31[31]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V15 [get_ports {IOBUF_SE_32_37[0]}]; #90P-57
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V16 [get_ports {IOBUF_SE_32_37[1]}]; #90P-58
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V17 [get_ports {IOBUF_SE_32_37[2]}]; #90P-59
-tclapp::octavo::osdzu3::set_osdzu3_package_pin A14 [get_ports {IOBUF_SE_32_37[3]}]; #90P-74 /SPDT_8 /22/74DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin N6 [get_ports {IOBUF_SE_32_37[3]}]; #90P-74 /SPDT_8 /22/74DP /N SET BACK TO package pin V7
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U8  [get_ports {IOBUF_SE_32_37[4]}]; #90P-81
-tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {IOBUF_SE_32_37[5]}]; #90P-89
+tclapp::octavo::osdzu3::set_osdzu3_package_pin P5 [get_ports {IOBUF_SE_32_37[5]}]; #90P-89                     SET BACK TO package pin V7
 
 #Differential Signal IO pin location constraints (Single ended temporarily)
 tclapp::octavo::osdzu3::set_osdzu3_package_pin D17 [get_ports {IOBUF_DS_0_21_p[0]}] ; #90P-3  /3/5DP   /N /SPDT_1
@@ -185,7 +185,7 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin W18 [get_ports {IOBUF_DS_0_21_p[1
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U1  [get_ports {IOBUF_DS_0_21_n[16]}]; #90P-77 /47/77DP /P
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y19 [get_ports {IOBUF_DS_0_21_p[17]}]; #90P-78 /78/88DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U7  [get_ports {IOBUF_DS_0_21_n[17]}]; #90P-79 /79/80DP /P
-tclapp::octavo::osdzu3::set_osdzu3_package_pin V7  [get_ports {IOBUF_DS_0_21_p[18]}]; #90P-80 /79/80DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R6  [get_ports {IOBUF_DS_0_21_p[18]}]; #90P-80 /79/80DP /N SET BACK TO package pin V7
 tclapp::octavo::osdzu3::set_osdzu3_package_pin R10 [get_ports {IOBUF_DS_0_21_n[18]}]; #90P-82 /82/83DP /P
 tclapp::octavo::osdzu3::set_osdzu3_package_pin T10 [get_ports {IOBUF_DS_0_21_p[19]}]; #90P-83 /82/83DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U12 [get_ports {IOBUF_DS_0_21_n[19]}]; #90P-84 /84/85DP /P
@@ -193,3 +193,10 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin U13 [get_ports {IOBUF_DS_0_21_p[2
 tclapp::octavo::osdzu3::set_osdzu3_package_pin W19 [get_ports {IOBUF_DS_0_21_n[20]}]; #90P-86 /76/86DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V19 [get_ports {IOBUF_DS_0_21_p[21]}]; #90P-87 /16/87DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y18 [get_ports {IOBUF_DS_0_21_n[21]}]; #90P-88 /78/88DP /P
+
+#Make sure to delete the following line in the final project. Only needed when testing pin 80 output.
+tclapp::octavo::osdzu3::set_osdzu3_package_pin V7  [get_ports {P80}]; #90P-80 /79/80DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin T8  [get_ports {P17}];  #90P-17 /SP4T_2
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R8  [get_ports {P21}];  #90P-21 /SP4T_3
+tclapp::octavo::osdzu3::set_osdzu3_package_pin A14 [get_ports {P74}]; #90P-74 /SPDT_8 /22/74DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {P89}]; #90P-89

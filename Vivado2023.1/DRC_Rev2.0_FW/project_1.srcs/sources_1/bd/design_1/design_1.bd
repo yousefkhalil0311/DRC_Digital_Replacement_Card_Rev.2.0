@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF2F17336763A9186",
+      "boundary_crc": "0x925D68258FA087B6",
       "device": "xczu3eg-sfvc784-1-e",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -85,7 +85,8 @@
       "util_ds_buf_3": "",
       "axi_iic_2": "",
       "util_ds_buf_4": "",
-      "util_ds_buf_5": ""
+      "util_ds_buf_5": "",
+      "Clock_Pulse_to_Trans_0": ""
     },
     "interface_ports": {
       "ctrl_8bits": {
@@ -339,6 +340,42 @@
         "direction": "O",
         "left": "11",
         "right": "0"
+      },
+      "P80": {
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_wiz_0_0_clk_out1",
+            "value_src": "ip_prop"
+          },
+          "FREQ_HZ": {
+            "value": "194998050",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "P74": {
+        "direction": "O"
+      },
+      "P21": {
+        "direction": "O"
+      },
+      "P17": {
+        "direction": "O"
+      },
+      "P89": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -2787,19 +2824,19 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "224.860"
+            "value": "131.603"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "300.282"
+            "value": "239.437"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "130"
           },
           "CLKOUT2_JITTER": {
-            "value": "325.846"
+            "value": "191.420"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "300.282"
+            "value": "239.437"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "13"
@@ -2811,10 +2848,10 @@
             "value": "true"
           },
           "CLKOUT3_JITTER": {
-            "value": "186.136"
+            "value": "110.711"
           },
           "CLKOUT3_PHASE_ERROR": {
-            "value": "300.282"
+            "value": "239.437"
           },
           "CLKOUT3_REQUESTED_OUT_FREQ": {
             "value": "520"
@@ -2826,10 +2863,10 @@
             "value": "true"
           },
           "CLKOUT4_JITTER": {
-            "value": "325.846"
+            "value": "191.420"
           },
           "CLKOUT4_PHASE_ERROR": {
-            "value": "300.282"
+            "value": "239.437"
           },
           "CLKOUT4_REQUESTED_OUT_FREQ": {
             "value": "13"
@@ -2840,11 +2877,41 @@
           "CLKOUT4_USED": {
             "value": "true"
           },
+          "CLKOUT5_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT5_JITTER": {
+            "value": "125.022"
+          },
+          "CLKOUT5_PHASE_ERROR": {
+            "value": "239.437"
+          },
+          "CLKOUT5_REQUESTED_OUT_FREQ": {
+            "value": "200"
+          },
+          "CLKOUT5_USED": {
+            "value": "true"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT6_JITTER": {
+            "value": "117.891"
+          },
+          "CLKOUT6_PHASE_ERROR": {
+            "value": "239.437"
+          },
+          "CLKOUT6_REQUESTED_OUT_FREQ": {
+            "value": "300"
+          },
+          "CLKOUT6_USED": {
+            "value": "true"
+          },
           "JITTER_SEL": {
             "value": "No_Jitter"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "52.000"
+            "value": "78.000"
           },
           "MMCM_CLKIN1_PERIOD": {
             "value": "10.000"
@@ -2853,13 +2920,13 @@
             "value": "10.000"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "8.000"
+            "value": "12.000"
           },
           "MMCM_CLKOUT0_DUTY_CYCLE": {
             "value": "0.5"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "80"
+            "value": "120"
           },
           "MMCM_CLKOUT1_DUTY_CYCLE": {
             "value": "0.5"
@@ -2868,7 +2935,7 @@
             "value": "0.000"
           },
           "MMCM_CLKOUT2_DIVIDE": {
-            "value": "2"
+            "value": "3"
           },
           "MMCM_CLKOUT2_DUTY_CYCLE": {
             "value": "0.5"
@@ -2877,7 +2944,7 @@
             "value": "0.000"
           },
           "MMCM_CLKOUT3_DIVIDE": {
-            "value": "80"
+            "value": "120"
           },
           "MMCM_CLKOUT3_DUTY_CYCLE": {
             "value": "0.5"
@@ -2885,11 +2952,23 @@
           "MMCM_CLKOUT3_PHASE": {
             "value": "90.000"
           },
+          "MMCM_CLKOUT4_DIVIDE": {
+            "value": "8"
+          },
+          "MMCM_CLKOUT4_DUTY_CYCLE": {
+            "value": "0.5"
+          },
+          "MMCM_CLKOUT5_DIVIDE": {
+            "value": "5"
+          },
+          "MMCM_CLKOUT5_DUTY_CYCLE": {
+            "value": "0.5"
+          },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "5"
           },
           "NUM_OUT_CLKS": {
-            "value": "4"
+            "value": "6"
           },
           "USE_LOCKED": {
             "value": "false"
@@ -3966,9 +4045,6 @@
           "PSU_MIO_70_SLEW": {
             "value": "fast"
           },
-          "PSU_MIO_71_DIRECTION": {
-            "value": "<Select>"
-          },
           "PSU_MIO_71_DRIVE_STRENGTH": {
             "value": "12"
           },
@@ -3980,9 +4056,6 @@
           },
           "PSU_MIO_71_SLEW": {
             "value": "fast"
-          },
-          "PSU_MIO_72_DIRECTION": {
-            "value": "<Select>"
           },
           "PSU_MIO_72_DRIVE_STRENGTH": {
             "value": "12"
@@ -3996,9 +4069,6 @@
           "PSU_MIO_72_SLEW": {
             "value": "fast"
           },
-          "PSU_MIO_73_DIRECTION": {
-            "value": "<Select>"
-          },
           "PSU_MIO_73_DRIVE_STRENGTH": {
             "value": "12"
           },
@@ -4010,9 +4080,6 @@
           },
           "PSU_MIO_73_SLEW": {
             "value": "fast"
-          },
-          "PSU_MIO_74_DIRECTION": {
-            "value": "<Select>"
           },
           "PSU_MIO_74_DRIVE_STRENGTH": {
             "value": "12"
@@ -4026,9 +4093,6 @@
           "PSU_MIO_74_SLEW": {
             "value": "fast"
           },
-          "PSU_MIO_75_DIRECTION": {
-            "value": "<Select>"
-          },
           "PSU_MIO_75_DRIVE_STRENGTH": {
             "value": "12"
           },
@@ -4041,14 +4105,8 @@
           "PSU_MIO_75_SLEW": {
             "value": "fast"
           },
-          "PSU_MIO_76_DIRECTION": {
-            "value": "out"
-          },
           "PSU_MIO_76_DRIVE_STRENGTH": {
             "value": "12"
-          },
-          "PSU_MIO_76_INPUT_TYPE": {
-            "value": "cmos"
           },
           "PSU_MIO_76_PULLUPDOWN": {
             "value": "pullup"
@@ -4056,20 +4114,11 @@
           "PSU_MIO_76_SLEW": {
             "value": "fast"
           },
-          "PSU_MIO_77_DIRECTION": {
-            "value": "inout"
-          },
-          "PSU_MIO_77_DRIVE_STRENGTH": {
-            "value": "12"
-          },
           "PSU_MIO_77_INPUT_TYPE": {
             "value": "cmos"
           },
           "PSU_MIO_77_PULLUPDOWN": {
             "value": "pullup"
-          },
-          "PSU_MIO_77_SLEW": {
-            "value": "fast"
           },
           "PSU_MIO_7_DRIVE_STRENGTH": {
             "value": "12"
@@ -4118,16 +4167,16 @@
           },
           "PSU_MIO_TREE_PERIPHERALS": {
             "value": [
-              "Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD",
-              "0#SD 0#SD 0#GPIO0 MIO#I2C 1#I2C 1#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#UART 1#UART 1#UART 0#UART 0#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1",
-              "MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1##########################"
+              "Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0",
+              "MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#I2C 1#I2C 1#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#UART 1#UART 1#UART 0#UART 0#GPIO1 MIO#GPIO1 MIO#GPIO1",
+              "MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO####################SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1"
             ]
           },
           "PSU_MIO_TREE_SIGNALS": {
-            "value": "sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#gpio0[6]#gpio0[7]#gpio0[8]#gpio0[9]#gpio0[10]#gpio0[11]#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#sdio0_data_out[4]#sdio0_data_out[5]#sdio0_data_out[6]#sdio0_data_out[7]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#scl_out#sda_out#gpio1[26]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpio1[31]#txd#rxd#rxd#txd#gpio1[36]#gpio1[37]#gpio1[38]#gpio1[39]#gpio1[40]#gpio1[41]#gpio1[42]#gpio1[43]#sdio1_wp#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out##########################"
+            "value": "sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#gpio0[6]#gpio0[7]#gpio0[8]#gpio0[9]#gpio0[10]#gpio0[11]#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#gpio1[26]#gpio1[27]#gpio1[28]#gpio1[29]#gpio1[30]#gpio1[31]#txd#rxd#rxd#txd#gpio1[36]#gpio1[37]#gpio1[38]#gpio1[39]#gpio1[40]#gpio1[41]#gpio1[42]#gpio1[43]#gpio1[44]#gpio1[45]#gpio1[46]#gpio1[47]#gpio1[48]#gpio1[49]#gpio1[50]#gpio1[51]####################sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#sdio1_cd_n"
           },
           "PSU_SD0_INTERNAL_BUS_WIDTH": {
-            "value": "8"
+            "value": "4"
           },
           "PSU_SD1_INTERNAL_BUS_WIDTH": {
             "value": "4"
@@ -5670,38 +5719,32 @@
           "PSU__SD0_ROUTE_THROUGH_FPD": {
             "value": "0"
           },
-          "PSU__SD0__CLK_200_SDR_OTAP_DLY": {
-            "value": "0x3"
-          },
-          "PSU__SD0__CLK_50_DDR_ITAP_DLY": {
-            "value": "0x12"
-          },
-          "PSU__SD0__CLK_50_DDR_OTAP_DLY": {
-            "value": "0x6"
-          },
           "PSU__SD0__CLK_50_SDR_ITAP_DLY": {
             "value": "0x15"
           },
           "PSU__SD0__CLK_50_SDR_OTAP_DLY": {
-            "value": "0x6"
+            "value": "0x5"
           },
           "PSU__SD0__DATA_TRANSFER_MODE": {
-            "value": "8Bit"
+            "value": "4Bit"
+          },
+          "PSU__SD0__GRP_CD__ENABLE": {
+            "value": "0"
           },
           "PSU__SD0__GRP_POW__ENABLE": {
+            "value": "0"
+          },
+          "PSU__SD0__GRP_WP__ENABLE": {
             "value": "0"
           },
           "PSU__SD0__PERIPHERAL__ENABLE": {
             "value": "1"
           },
           "PSU__SD0__PERIPHERAL__IO": {
-            "value": "MIO 13 .. 22"
-          },
-          "PSU__SD0__RESET__ENABLE": {
-            "value": "0"
+            "value": "EMIO"
           },
           "PSU__SD0__SLOT_TYPE": {
-            "value": "eMMC"
+            "value": "SD 2.0"
           },
           "PSU__SD1_COHERENCY": {
             "value": "0"
@@ -5722,22 +5765,19 @@
             "value": "1"
           },
           "PSU__SD1__GRP_CD__IO": {
-            "value": "MIO 45"
+            "value": "MIO 77"
           },
           "PSU__SD1__GRP_POW__ENABLE": {
             "value": "0"
           },
           "PSU__SD1__GRP_WP__ENABLE": {
-            "value": "1"
-          },
-          "PSU__SD1__GRP_WP__IO": {
-            "value": "MIO 44"
+            "value": "0"
           },
           "PSU__SD1__PERIPHERAL__ENABLE": {
             "value": "1"
           },
           "PSU__SD1__PERIPHERAL__IO": {
-            "value": "MIO 46 .. 51"
+            "value": "MIO 71 .. 76"
           },
           "PSU__SD1__SLOT_TYPE": {
             "value": "SD 2.0"
@@ -6799,6 +6839,26 @@
             "value": "1"
           }
         }
+      },
+      "Clock_Pulse_to_Trans_0": {
+        "vlnv": "xilinx.com:module_ref:Clock_Pulse_to_Transition:1.0",
+        "xci_name": "design_1_Clock_Pulse_to_Trans_0_0",
+        "xci_path": "ip\\design_1_Clock_Pulse_to_Trans_0_0\\design_1_Clock_Pulse_to_Trans_0_0.xci",
+        "inst_hier_path": "Clock_Pulse_to_Trans_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_Pulse_to_Transition",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLKIN": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "CLKOUT": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -7056,7 +7116,16 @@
           "DAC_CTRL_0/CLKIN",
           "DAC_CTRL_1/CLKIN",
           "DAC_CTRL_2/CLKIN",
-          "DAC_CTRL_3/CLKIN"
+          "DAC_CTRL_3/CLKIN",
+          "Clock_Pulse_to_Trans_0/CLKIN"
+        ]
+      },
+      "Clock_Pulse_to_Trans_0_CLKOUT": {
+        "ports": [
+          "Clock_Pulse_to_Trans_0/CLKOUT",
+          "P74",
+          "P21",
+          "P17"
         ]
       },
       "DAC_CTRL_0_DACDATA": {
@@ -7332,6 +7401,18 @@
         "ports": [
           "clk_wiz_0/clk_out4",
           "IOBUF_CLK1"
+        ]
+      },
+      "clk_wiz_0_clk_out5": {
+        "ports": [
+          "clk_wiz_0/clk_out5",
+          "P80"
+        ]
+      },
+      "clk_wiz_0_clk_out6": {
+        "ports": [
+          "clk_wiz_0/clk_out6",
+          "P89"
         ]
       },
       "io1_i_0_1": {

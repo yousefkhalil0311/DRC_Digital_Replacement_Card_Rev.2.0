@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Sun Mar 23 21:02:00 2025
+-- Date        : Thu Mar 27 13:30:19 2025
 -- Host        : OCP001 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.vhdl
@@ -55,6 +55,16 @@ entity design_1_zynq_ultra_ps_e_0_0 is
     maxigp2_rready : out STD_LOGIC;
     maxigp2_awqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
     maxigp2_arqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    emio_sdio0_clkout : out STD_LOGIC;
+    emio_sdio0_fb_clk_in : in STD_LOGIC;
+    emio_sdio0_cmdout : out STD_LOGIC;
+    emio_sdio0_cmdin : in STD_LOGIC;
+    emio_sdio0_cmdena : out STD_LOGIC;
+    emio_sdio0_datain : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    emio_sdio0_dataout : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    emio_sdio0_dataena : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    emio_sdio0_ledcontrol : out STD_LOGIC;
+    emio_sdio0_bus_volt : out STD_LOGIC_VECTOR ( 2 downto 0 );
     pl_resetn0 : out STD_LOGIC;
     pl_clk0 : out STD_LOGIC
   );
@@ -65,7 +75,7 @@ architecture stub of design_1_zynq_ultra_ps_e_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[63:0],maxigp2_wstrb[7:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[63:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],pl_resetn0,pl_clk0";
+attribute black_box_pad_pin of stub : architecture is "maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[63:0],maxigp2_wstrb[7:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[63:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],emio_sdio0_clkout,emio_sdio0_fb_clk_in,emio_sdio0_cmdout,emio_sdio0_cmdin,emio_sdio0_cmdena,emio_sdio0_datain[3:0],emio_sdio0_dataout[3:0],emio_sdio0_dataena[3:0],emio_sdio0_ledcontrol,emio_sdio0_bus_volt[2:0],pl_resetn0,pl_clk0";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "zynq_ultra_ps_e_v3_5_0_zynq_ultra_ps_e,Vivado 2023.1";
 begin

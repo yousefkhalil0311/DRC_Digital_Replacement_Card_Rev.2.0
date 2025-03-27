@@ -143,6 +143,16 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
     zynq_ultra_ps_e_tlm :: zynq_ultra_ps_e_tlm (sc_core::sc_module_name name,
     xsc::common_cpp::properties&): sc_module(name)//registering module name with parent
         ,maxihpm0_lpd_aclk("maxihpm0_lpd_aclk")
+        ,emio_sdio0_clkout("emio_sdio0_clkout")
+        ,emio_sdio0_fb_clk_in("emio_sdio0_fb_clk_in")
+        ,emio_sdio0_cmdout("emio_sdio0_cmdout")
+        ,emio_sdio0_cmdin("emio_sdio0_cmdin")
+        ,emio_sdio0_cmdena("emio_sdio0_cmdena")
+        ,emio_sdio0_datain("emio_sdio0_datain")
+        ,emio_sdio0_dataout("emio_sdio0_dataout")
+        ,emio_sdio0_dataena("emio_sdio0_dataena")
+        ,emio_sdio0_ledcontrol("emio_sdio0_ledcontrol")
+        ,emio_sdio0_bus_volt("emio_sdio0_bus_volt")
         ,pl_resetn0("pl_resetn0")
         ,pl_clk0("pl_clk0")
     ,m_rp_bridge_M_AXI_HPM0_LPD("m_rp_bridge_M_AXI_HPM0_LPD")

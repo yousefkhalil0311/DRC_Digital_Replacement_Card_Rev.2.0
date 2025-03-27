@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Sun Mar 23 21:02:00 2025
+// Date        : Thu Mar 27 13:30:19 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_stub.v
@@ -23,9 +23,12 @@ module design_1_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   maxigp2_arsize, maxigp2_arburst, maxigp2_arlock, maxigp2_arcache, maxigp2_arprot, 
   maxigp2_arvalid, maxigp2_aruser, maxigp2_arready, maxigp2_rid, maxigp2_rdata, 
   maxigp2_rresp, maxigp2_rlast, maxigp2_rvalid, maxigp2_rready, maxigp2_awqos, maxigp2_arqos, 
-  pl_resetn0, pl_clk0)
-/* synthesis syn_black_box black_box_pad_pin="maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[63:0],maxigp2_wstrb[7:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[63:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],pl_resetn0" */
+  emio_sdio0_clkout, emio_sdio0_fb_clk_in, emio_sdio0_cmdout, emio_sdio0_cmdin, 
+  emio_sdio0_cmdena, emio_sdio0_datain, emio_sdio0_dataout, emio_sdio0_dataena, 
+  emio_sdio0_ledcontrol, emio_sdio0_bus_volt, pl_resetn0, pl_clk0)
+/* synthesis syn_black_box black_box_pad_pin="maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[63:0],maxigp2_wstrb[7:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[63:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],emio_sdio0_clkout,emio_sdio0_cmdout,emio_sdio0_cmdin,emio_sdio0_cmdena,emio_sdio0_datain[3:0],emio_sdio0_dataout[3:0],emio_sdio0_dataena[3:0],emio_sdio0_ledcontrol,emio_sdio0_bus_volt[2:0],pl_resetn0" */
 /* synthesis syn_force_seq_prim="maxihpm0_lpd_aclk" */
+/* synthesis syn_force_seq_prim="emio_sdio0_fb_clk_in" */
 /* synthesis syn_force_seq_prim="pl_clk0" */;
   input maxihpm0_lpd_aclk /* synthesis syn_isclock = 1 */;
   output [15:0]maxigp2_awid;
@@ -67,6 +70,16 @@ module design_1_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   output maxigp2_rready;
   output [3:0]maxigp2_awqos;
   output [3:0]maxigp2_arqos;
+  output emio_sdio0_clkout;
+  input emio_sdio0_fb_clk_in /* synthesis syn_isclock = 1 */;
+  output emio_sdio0_cmdout;
+  input emio_sdio0_cmdin;
+  output emio_sdio0_cmdena;
+  input [3:0]emio_sdio0_datain;
+  output [3:0]emio_sdio0_dataout;
+  output [3:0]emio_sdio0_dataena;
+  output emio_sdio0_ledcontrol;
+  output [2:0]emio_sdio0_bus_volt;
   output pl_resetn0;
   output pl_clk0 /* synthesis syn_isclock = 1 */;
 endmodule

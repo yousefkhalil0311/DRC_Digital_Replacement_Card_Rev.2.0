@@ -120,6 +120,16 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_sdio0_clkout;
+  sc_core::sc_in< bool > emio_sdio0_fb_clk_in;
+  sc_core::sc_out< bool > emio_sdio0_cmdout;
+  sc_core::sc_in< bool > emio_sdio0_cmdin;
+  sc_core::sc_out< bool > emio_sdio0_cmdena;
+  sc_core::sc_in< sc_dt::sc_bv<4> > emio_sdio0_datain;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataout;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataena;
+  sc_core::sc_out< bool > emio_sdio0_ledcontrol;
+  sc_core::sc_out< sc_dt::sc_bv<3> > emio_sdio0_bus_volt;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
@@ -191,6 +201,16 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_sdio0_clkout;
+  sc_core::sc_in< bool > emio_sdio0_fb_clk_in;
+  sc_core::sc_out< bool > emio_sdio0_cmdout;
+  sc_core::sc_in< bool > emio_sdio0_cmdin;
+  sc_core::sc_out< bool > emio_sdio0_cmdena;
+  sc_core::sc_in< sc_dt::sc_bv<4> > emio_sdio0_datain;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataout;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataena;
+  sc_core::sc_out< bool > emio_sdio0_ledcontrol;
+  sc_core::sc_out< sc_dt::sc_bv<3> > emio_sdio0_bus_volt;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
@@ -262,6 +282,16 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_sdio0_clkout;
+  sc_core::sc_in< bool > emio_sdio0_fb_clk_in;
+  sc_core::sc_out< bool > emio_sdio0_cmdout;
+  sc_core::sc_in< bool > emio_sdio0_cmdin;
+  sc_core::sc_out< bool > emio_sdio0_cmdena;
+  sc_core::sc_in< sc_dt::sc_bv<4> > emio_sdio0_datain;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataout;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataena;
+  sc_core::sc_out< bool > emio_sdio0_ledcontrol;
+  sc_core::sc_out< sc_dt::sc_bv<3> > emio_sdio0_bus_volt;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
@@ -335,6 +365,16 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_sdio0_clkout;
+  sc_core::sc_in< bool > emio_sdio0_fb_clk_in;
+  sc_core::sc_out< bool > emio_sdio0_cmdout;
+  sc_core::sc_in< bool > emio_sdio0_cmdin;
+  sc_core::sc_out< bool > emio_sdio0_cmdena;
+  sc_core::sc_in< sc_dt::sc_bv<4> > emio_sdio0_datain;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataout;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataena;
+  sc_core::sc_out< bool > emio_sdio0_ledcontrol;
+  sc_core::sc_out< sc_dt::sc_bv<3> > emio_sdio0_bus_volt;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
@@ -414,6 +454,16 @@ public:
   sc_core::sc_out< bool > maxigp2_rready;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_awqos;
   sc_core::sc_out< sc_dt::sc_bv<4> > maxigp2_arqos;
+  sc_core::sc_out< bool > emio_sdio0_clkout;
+  sc_core::sc_in< bool > emio_sdio0_fb_clk_in;
+  sc_core::sc_out< bool > emio_sdio0_cmdout;
+  sc_core::sc_in< bool > emio_sdio0_cmdin;
+  sc_core::sc_out< bool > emio_sdio0_cmdena;
+  sc_core::sc_in< sc_dt::sc_bv<4> > emio_sdio0_datain;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataout;
+  sc_core::sc_out< sc_dt::sc_bv<4> > emio_sdio0_dataena;
+  sc_core::sc_out< bool > emio_sdio0_ledcontrol;
+  sc_core::sc_out< sc_dt::sc_bv<3> > emio_sdio0_bus_volt;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 

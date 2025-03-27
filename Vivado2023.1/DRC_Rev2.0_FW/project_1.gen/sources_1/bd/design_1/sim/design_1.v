@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Mar 24 00:30:24 2025
+//Date        : Thu Mar 27 15:37:26 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=73,numReposBlks=49,numNonXlnxBlks=0,numHierBlks=24,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=74,numReposBlks=50,numNonXlnxBlks=0,numHierBlks=24,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (IOBUF_CLK0,
     IOBUF_CLK1,
@@ -36,6 +36,11 @@ module design_1
     MISO_1,
     MOSI_0,
     MOSI_1,
+    P17,
+    P21,
+    P74,
+    P80,
+    P89,
     SCK_0,
     SCK_1,
     SS_0_4bits,
@@ -67,6 +72,11 @@ module design_1
   input MISO_1;
   output MOSI_0;
   output MOSI_1;
+  output P17;
+  output P21;
+  output P74;
+  output P80;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.P89 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.P89, LAYERED_METADATA undef" *) output P89;
   output SCK_0;
   output SCK_1;
   output [3:0]SS_0_4bits;
@@ -94,6 +104,7 @@ module design_1
   wire [11:0]ADC_MinMax_0_CHBMIN_OUT2;
   wire [11:0]ADC_MinMax_0_CHBMIN_OUT3;
   wire ClockDivider_0_CLKOUT;
+  wire Clock_Pulse_to_Trans_0_CLKOUT;
   wire [11:0]DAC_CTRL_0_DACDATA;
   wire [11:0]DAC_CTRL_1_DACDATA;
   wire DCKIN_2_1;
@@ -142,6 +153,8 @@ module design_1
   wire clk_wiz_0_clk_out2;
   wire clk_wiz_0_clk_out3;
   wire clk_wiz_0_clk_out4;
+  wire clk_wiz_0_clk_out5;
+  wire clk_wiz_0_clk_out6;
   wire io1_i_0_1;
   wire io1_i_1_1;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
@@ -532,6 +545,11 @@ module design_1
   assign IOBUF_DATA1[11:0] = DAC_CTRL_1_DACDATA;
   assign MOSI_0 = axi_quad_spi_0_io0_o;
   assign MOSI_1 = axi_quad_spi_1_io0_o;
+  assign P17 = Clock_Pulse_to_Trans_0_CLKOUT;
+  assign P21 = Clock_Pulse_to_Trans_0_CLKOUT;
+  assign P74 = Clock_Pulse_to_Trans_0_CLKOUT;
+  assign P80 = clk_wiz_0_clk_out5;
+  assign P89 = clk_wiz_0_clk_out6;
   assign SCK_0 = axi_quad_spi_0_sck_o;
   assign SCK_1 = axi_quad_spi_1_sck_o;
   assign SS_0_4bits[3:0] = axi_quad_spi_0_ss_o;
@@ -577,6 +595,9 @@ module design_1
        (.CLKIN(clk_wiz_0_clk_out3),
         .CLKOUT(ClockDivider_0_CLKOUT),
         .counterVal(axi_gpio_1_gpio_io_o));
+  design_1_Clock_Pulse_to_Trans_0_0 Clock_Pulse_to_Trans_0
+       (.CLKIN(ClockDivider_0_CLKOUT),
+        .CLKOUT(Clock_Pulse_to_Trans_0_CLKOUT));
   design_1_DAC_CTRL_0_0 DAC_CTRL_0
        (.CLKIN(ClockDivider_0_CLKOUT),
         .DACDATA(DAC_CTRL_0_DACDATA));
@@ -1038,7 +1059,9 @@ module design_1
         .clk_out1(clk_wiz_0_clk_out1),
         .clk_out2(clk_wiz_0_clk_out2),
         .clk_out3(clk_wiz_0_clk_out3),
-        .clk_out4(clk_wiz_0_clk_out4));
+        .clk_out4(clk_wiz_0_clk_out4),
+        .clk_out5(clk_wiz_0_clk_out5),
+        .clk_out6(clk_wiz_0_clk_out6));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
@@ -1506,7 +1529,10 @@ module design_1
        (.Op1(clk_wiz_0_clk_out1),
         .Res(util_vector_logic_0_Res));
   design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
-       (.maxigp2_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
+       (.emio_sdio0_cmdin(1'b0),
+        .emio_sdio0_datain({1'b0,1'b0,1'b0,1'b0}),
+        .emio_sdio0_fb_clk_in(1'b0),
+        .maxigp2_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
         .maxigp2_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST),
         .maxigp2_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE),
         .maxigp2_arid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARID),

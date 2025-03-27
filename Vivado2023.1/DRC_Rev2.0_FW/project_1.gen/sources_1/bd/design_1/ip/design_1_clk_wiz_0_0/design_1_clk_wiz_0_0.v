@@ -56,10 +56,12 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__129.99870______0.000______50.0______224.860____300.282
-// clk_out2__12.99987______0.000______50.0______325.846____300.282
-// clk_out3__519.99480______0.000______50.0______186.136____300.282
-// clk_out4__12.99987_____90.000______50.0______325.846____300.282
+// clk_out1__129.99870______0.000______50.0______131.603____239.437
+// clk_out2__12.99987______0.000______50.0______191.420____239.437
+// clk_out3__519.99480______0.000______50.0______110.711____239.437
+// clk_out4__12.99987_____90.000______50.0______191.420____239.437
+// clk_out5__194.99805______0.000______50.0______125.022____239.437
+// clk_out6__311.99688______0.000______50.0______117.891____239.437
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -68,7 +70,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "design_1_clk_wiz_0_0,clk_wiz_v6_0_12_0_0,{component_name=design_1_clk_wiz_0_0,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=4,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "design_1_clk_wiz_0_0,clk_wiz_v6_0_12_0_0,{component_name=design_1_clk_wiz_0_0,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=6,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module design_1_clk_wiz_0_0 
  (
@@ -77,6 +79,8 @@ module design_1_clk_wiz_0_0
   output        clk_out2,
   output        clk_out3,
   output        clk_out4,
+  output        clk_out5,
+  output        clk_out6,
  // Clock in ports
   input         clk_in1
  );
@@ -88,6 +92,8 @@ module design_1_clk_wiz_0_0
   .clk_out2(clk_out2),
   .clk_out3(clk_out3),
   .clk_out4(clk_out4),
+  .clk_out5(clk_out5),
+  .clk_out6(clk_out6),
  // Clock in ports
   .clk_in1(clk_in1)
   );

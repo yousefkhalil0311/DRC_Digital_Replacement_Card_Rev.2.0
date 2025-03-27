@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Wed Mar 26 12:01:00 2025
+| Date         : Thu Mar 27 15:49:35 2025
 | Host         : OCP001 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 268
+             Violations found: 269
 +-----------+------------------+-----------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                               | Violations |
 +-----------+------------------+-----------------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree        | 1          |
 | TIMING-6  | Critical Warning | No common primary clock between related clocks            | 1          |
 | TIMING-7  | Critical Warning | No common node between related clocks                     | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                               | 26         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                               | 27         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                 | 1          |
 | TIMING-51 | Critical Warning | No common phase between related clocks from parallel CMBs | 1          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                              | 3          |
@@ -59,130 +59,135 @@ Related violations: <none>
 
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[0]/C is not reached by a timing clock
+The clock pin design_1_i/Clock_Pulse_to_Trans_0/inst/clkstate_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[10]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[11]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[1]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[2]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[3]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[8]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[9]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_0/inst/channel_reg/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/DACVAL_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[0]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_0/inst/channel_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[10]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[11]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[1]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[2]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[3]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[4]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[5]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[6]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[7]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[8]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[9]/C is not reached by a timing clock
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/DAC_CTRL_1/inst/DACVAL_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
 The clock pin design_1_i/DAC_CTRL_1/inst/channel_reg/C is not reached by a timing clock
 Related violations: <none>
@@ -259,112 +264,112 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -2.446 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/clkstate_reg__0/D (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.932 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/clkstate_reg__0/D (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -2.532 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/clkstate_reg/D (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.049 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[7]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -2.573 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[11]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.053 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/clkstate_reg/D (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -2.573 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[13]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[12]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -2.573 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[14]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[14]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -2.573 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[17]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[15]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -2.573 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[19]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[2]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[0]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[4]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[10]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[6]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[12]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.072 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[9]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[15]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[0]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[16]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[10]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[18]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[11]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[1]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[13]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[2]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[1]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[3]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[5]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[4]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.076 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[8]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[5]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.123 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[16]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[6]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.123 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[17]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[7]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.123 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[18]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[8]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.123 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[19]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -2.617 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[25]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[9]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.123 ns between design_1_i/axi_gpio_1/U0/gpio_core_1/Not_Dual.gpio_Data_Out_reg[15]/C (clocked by clk_pl_0) and design_1_i/ClockDivider_0/inst/counter_reg[3]/R (clocked by clk_out3_design_1_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

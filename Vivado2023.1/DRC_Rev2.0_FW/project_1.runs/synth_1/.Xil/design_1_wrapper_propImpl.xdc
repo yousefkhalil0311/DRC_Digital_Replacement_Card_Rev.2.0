@@ -192,11 +192,11 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin U4  [get_ports {IOBUF_SE_0_31[0]}
 set_property src_info {type:XDC file:1 line:113 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin G5  [get_ports {IOBUF_SE_0_31[1]}];  #90P-14
 set_property src_info {type:XDC file:1 line:114 export:INPUT save:NONE read:READ} [current_design]
-tclapp::octavo::osdzu3::set_osdzu3_package_pin T8  [get_ports {IOBUF_SE_0_31[2]}];  #90P-17 /SP4T_2
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R5  [get_ports {IOBUF_SE_0_31[2]}];  #90P-17 /SP4T_2         SET BACK TO package pin V7
 set_property src_info {type:XDC file:1 line:115 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V8  [get_ports {IOBUF_SE_0_31[3]}];  #90P-20
 set_property src_info {type:XDC file:1 line:116 export:INPUT save:NONE read:READ} [current_design]
-tclapp::octavo::osdzu3::set_osdzu3_package_pin R8  [get_ports {IOBUF_SE_0_31[4]}];  #90P-21 /SP4T_3
+tclapp::octavo::osdzu3::set_osdzu3_package_pin P6  [get_ports {IOBUF_SE_0_31[4]}];  #90P-21 /SP4T_3         SET BACK TO package pin V7
 set_property src_info {type:XDC file:1 line:117 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U9  [get_ports {IOBUF_SE_0_31[5]}];  #90P-22 /22/74DP /P
 set_property src_info {type:XDC file:1 line:118 export:INPUT save:NONE read:READ} [current_design]
@@ -258,11 +258,11 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin V16 [get_ports {IOBUF_SE_32_37[1]
 set_property src_info {type:XDC file:1 line:146 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V17 [get_ports {IOBUF_SE_32_37[2]}]; #90P-59
 set_property src_info {type:XDC file:1 line:147 export:INPUT save:NONE read:READ} [current_design]
-tclapp::octavo::osdzu3::set_osdzu3_package_pin A14 [get_ports {IOBUF_SE_32_37[3]}]; #90P-74 /SPDT_8 /22/74DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin N6 [get_ports {IOBUF_SE_32_37[3]}]; #90P-74 /SPDT_8 /22/74DP /N SET BACK TO package pin V7
 set_property src_info {type:XDC file:1 line:148 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U8  [get_ports {IOBUF_SE_32_37[4]}]; #90P-81
 set_property src_info {type:XDC file:1 line:149 export:INPUT save:NONE read:READ} [current_design]
-tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {IOBUF_SE_32_37[5]}]; #90P-89
+tclapp::octavo::osdzu3::set_osdzu3_package_pin P5 [get_ports {IOBUF_SE_32_37[5]}]; #90P-89                     SET BACK TO package pin V7
 set_property src_info {type:XDC file:1 line:152 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin D17 [get_ports {IOBUF_DS_0_21_p[0]}] ; #90P-3  /3/5DP   /N /SPDT_1
 set_property src_info {type:XDC file:1 line:153 export:INPUT save:NONE read:READ} [current_design]
@@ -336,7 +336,7 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin Y19 [get_ports {IOBUF_DS_0_21_p[1
 set_property src_info {type:XDC file:1 line:187 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U7  [get_ports {IOBUF_DS_0_21_n[17]}]; #90P-79 /79/80DP /P
 set_property src_info {type:XDC file:1 line:188 export:INPUT save:NONE read:READ} [current_design]
-tclapp::octavo::osdzu3::set_osdzu3_package_pin V7  [get_ports {IOBUF_DS_0_21_p[18]}]; #90P-80 /79/80DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R6  [get_ports {IOBUF_DS_0_21_p[18]}]; #90P-80 /79/80DP /N SET BACK TO package pin V7
 set_property src_info {type:XDC file:1 line:189 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin R10 [get_ports {IOBUF_DS_0_21_n[18]}]; #90P-82 /82/83DP /P
 set_property src_info {type:XDC file:1 line:190 export:INPUT save:NONE read:READ} [current_design]
@@ -351,3 +351,13 @@ set_property src_info {type:XDC file:1 line:194 export:INPUT save:NONE read:READ
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V19 [get_ports {IOBUF_DS_0_21_p[21]}]; #90P-87 /16/87DP /N
 set_property src_info {type:XDC file:1 line:195 export:INPUT save:NONE read:READ} [current_design]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y18 [get_ports {IOBUF_DS_0_21_n[21]}]; #90P-88 /78/88DP /P
+set_property src_info {type:XDC file:1 line:198 export:INPUT save:NONE read:READ} [current_design]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin V7  [get_ports {P80}]; #90P-80 /79/80DP /N
+set_property src_info {type:XDC file:1 line:199 export:INPUT save:NONE read:READ} [current_design]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin T8  [get_ports {P17}];  #90P-17 /SP4T_2
+set_property src_info {type:XDC file:1 line:200 export:INPUT save:NONE read:READ} [current_design]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R8  [get_ports {P21}];  #90P-21 /SP4T_3
+set_property src_info {type:XDC file:1 line:201 export:INPUT save:NONE read:READ} [current_design]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin A14 [get_ports {P74}]; #90P-74 /SPDT_8 /22/74DP /N
+set_property src_info {type:XDC file:1 line:202 export:INPUT save:NONE read:READ} [current_design]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {P89}]; #90P-89
