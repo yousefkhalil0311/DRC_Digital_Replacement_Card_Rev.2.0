@@ -65,3 +65,4 @@ platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023
 platform generate -domains 
 platform generate
 platform generate -domains zynqmp_fsbl,zynqmp_pmufw 
+platform generate -domains zynqmp_fsbl,zynqmp_pmufw 
