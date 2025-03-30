@@ -137,8 +137,8 @@ const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
 const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
-const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
-const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -496,8 +496,8 @@ SWState_t Pin_Settings[] = {
 		//Pin 46 path setting (uncomment 1)
 		//P46_LS1_DAC07,
 		//P46_DIGIO46,
-		P46_HS_ADC2A,
-		//P46_HS_DAC2B,
+		//P46_HS_ADC2A,
+		P46_HS_DAC2B,
 
 		//Pin 48 path setting (uncomment 1)
 		//P48_LS1_DAC01,
@@ -630,30 +630,35 @@ int main()
     int Status; 	//used to hold return status throughout the function.
 
     //Initialize LED GPIO AXI device
+    printf("Initializing LED GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_LED, sizeof(GPIO_LED) / sizeof(GPIO_LED[0]), GPIO0_LEDS_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize CTRL GPIO AXI device
+    printf("Initializing CTRL GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_CTRL, sizeof(GPIO_CTRL) / sizeof(GPIO_CTRL[0]), GPIO8_CTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize SPDT GPIO AXI device
+    printf("Initializing SPDT GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_SPDT, sizeof(GPIO_SPDT) / sizeof(GPIO_SPDT[0]), GPIO7_SPDT_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize Single Ended GPIO AXI device
+    printf("Initializing Single Ended GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_SE, sizeof(GPIO_SE) / sizeof(GPIO_SE[0]), GPIO9_SE_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize Differential(In this app single ended) GPIO AXI device
+    printf("Initializing Differential(In this app single ended) GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_DS, sizeof(GPIO_DS) / sizeof(GPIO_DS[0]), GPIO10_DS_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
@@ -690,151 +695,185 @@ int main()
     }
 
     //Initialize AFE7222 SPI devices
+    printf("Initializing AFE7222 SPI devices.\n");
     Status = SPI_Init(&SPI0_AFE, SPI0_AFE_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize LTC2666 SPI devices
+    printf("Initializing LTC2666 SPI devices.\n");
     Status = SPI_Init(&SPI1_LSDAC, SPI1_LSDAC_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes all AFEs;
+    printf("Writing registers to AFE chips.\n");
+    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
         Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
         }
     }
+    for (int i = 0x04; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+        if(Status != XST_SUCCESS){
+        	return XST_FAILURE;
+        }
+    }
 
+    printf("Initializing IIC0.\n");
     Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP_U19.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U19.\n");
     Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U19.\n");
     IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
 
 
 
+    printf("Initializing IIC2.\n");
     Status = IIC_Init (IOEXP_U20.instance, IIC2_IOEXP_ID, IOEXP_U20.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U20\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U20.\n");
     Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U20\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U20.\n");
     IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
 
 
 
+    printf("Reinitializing IIC2.\n");
     Status = IIC_Init (IOEXP_U21.instance, IIC2_IOEXP_ID, IOEXP_U21.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U21\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U21.\n");
     Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U21\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U21.\n");
     IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
 
 
 
+    printf("Initializing.\n");
     Status = IIC_Init (IOEXP_U18.instance, IIC1_IOEXP_ID, IOEXP_U18.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U18\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U18\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U21.\n");
     IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
 
 
 
 	setLEDStatus (0x1);
+    printf("Initializing.\n");
     Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP0_ADDRESS);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_Init(&IIC0_IOEXP, IOEXP0_ADDRESS, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO1_SPDCTRL,  GPIO1_SPDCTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO2_DATA0A,  GPIO2_DATA0A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO3_DATA0B,  GPIO3_DATA0B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO4_DATA1A,  GPIO4_DATA1A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO5_DATA1B,  GPIO5_DATA1B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO6_DATA2A,  GPIO6_DATA2A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO11_DATA2B,  GPIO11_DATA2B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO12_DATA3A,  GPIO12_DATA3A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO13_DATA3B,  GPIO13_DATA3B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 	setLEDStatus (0x4);
 //For DAC Control application
-    while(1){
+    printf("Initializing.\n");
+    //while(1){
         printf("Please enter SPDCTRL value: ");
         int readValue;
         usleep(100000);
@@ -857,38 +896,38 @@ int main()
             XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
         }
         usleep(100000);
-    }
+    //}
 
     uint32_t chvalmax;
     uint32_t chvalmin;
     printf("DRC ADC MinMax Test.\n");
     while(1){
-    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
-    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO3_DATA0B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO3_DATA0B, 2);
-    	printf("Pin 21:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO4_DATA1A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO4_DATA1A, 2);
-    	printf("Pin 48:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO5_DATA1B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO5_DATA1B, 2);
-    	printf("Pin 17:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
-    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
+//    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO3_DATA0B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO3_DATA0B, 2);
+//    	printf("Pin 21:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO4_DATA1A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO4_DATA1A, 2);
+//    	printf("Pin 48:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO5_DATA1B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO5_DATA1B, 2);
+//    	printf("Pin 17:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
+//    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
     	chvalmax = XGpio_DiscreteRead(&GPIO11_DATA2B, 1);
     	chvalmin = XGpio_DiscreteRead(&GPIO11_DATA2B, 2);
     	printf("Pin 33:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
-    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO13_DATA3B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO13_DATA3B, 2);
-    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	usleep(50000);
-    	printf("\033[2J\033[H");
+//    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
+//    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO13_DATA3B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO13_DATA3B, 2);
+//    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	usleep(50000);
+    	//printf("\033[2J\033[H");
     	usleep(50000);
     }
 
@@ -909,7 +948,7 @@ int main()
     printf("7) High speed ADC/DAC loopback mode B. Tests channel B on each ADC/DAC pair.\n");
 
     //store user selected value
-    int readValue;
+    //int readValue;
     scanf("%d", &readValue);
 
     //clear buffer
