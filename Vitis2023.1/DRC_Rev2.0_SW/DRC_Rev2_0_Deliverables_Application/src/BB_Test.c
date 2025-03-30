@@ -126,7 +126,7 @@ const SP4T_t NOT_SP4T = {	   0, 0, 0};
 
 //LED XGpio pins
 const net_t LED1 = {&GPIO0_LEDS, 0, 1, 0, 0};
-const net_t LED2 = {&GPIO0_LEDS, 1, 1, 0, 0};
+const net_t LED2 = {&GPIO0_LEDS, 1, 1, 0, 1};
 const net_t LED3 = {&GPIO0_LEDS, 2, 1, 0, 1};
 const net_t LED4 = {&GPIO0_LEDS, 3, 1, 0, 0};
 
@@ -137,8 +137,8 @@ const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
 const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
-const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
-const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -154,90 +154,90 @@ const net_t SPDT74_CTRL = {&GPIO7_SPDT, 9, 1, 0, 1};
 const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 
 //SE XGpio pins
-const net_t SE2  = {&GPIO9_SE, 0, 1, 1, 0, 2, &IOEXP_U19, 0x008000};
-const net_t SE14 = {&GPIO9_SE, 1, 1, 1, 0, 14, &IOEXP_U21, 0x040000};
-const net_t SE17 = {&GPIO9_SE, 2, 1, 1, 0, 17, &IOEXP_U19, 0x000800};
-const net_t SE20 = {&GPIO9_SE, 3, 1, 1, 0, 20, &IOEXP_U20, 0x000100};
-const net_t SE21 = {&GPIO9_SE, 4, 1, 1, 0, 21, &IOEXP_U19, 0x000200};
-const net_t SE22 = {&GPIO9_SE, 5, 1, 1, 0, 22, &IOEXP_U20, 0x080000};
-const net_t SE23 = {&GPIO9_SE, 6, 1, 1, 0, 23, &IOEXP_U20, 0x008000};
-const net_t SE24 = {&GPIO9_SE, 7, 1, 1, 0, 24, &IOEXP_U20, 0x000002};
-const net_t SE25 = {&GPIO9_SE, 8, 1, 1, 0, 25, &IOEXP_U20, 0x000008};
-const net_t SE26 = {&GPIO9_SE, 9, 1, 1, 0, 26, &IOEXP_U20, 0x000001};
-const net_t SE27 = {&GPIO9_SE, 10, 1, 1, 0, 27, &IOEXP_U20, 0x000800};
-const net_t SE28 = {&GPIO9_SE, 11, 1, 1, 0, 28, &IOEXP_U20, 0x010000};
-const net_t SE29 = {&GPIO9_SE, 12, 1, 1, 0, 29, &IOEXP_U20, 0x020000};
-const net_t SE32 = {&GPIO9_SE, 13, 1, 1, 0, 32, &IOEXP_U19, 0x004000};
-const net_t SE33 = {&GPIO9_SE, 14, 1, 1, 0, 33, &IOEXP_U19, 0x002000};
-const net_t SE36 = {&GPIO9_SE, 15, 1, 1, 0, 36, &IOEXP_U18, 0x000800};
-const net_t SE37 = {&GPIO9_SE, 16, 1, 1, 0, 37, &IOEXP_U21, 0x000020};
-const net_t SE38 = {&GPIO9_SE, 17, 1, 1, 0, 38, &IOEXP_U21, 0x000008};
-const net_t SE39 = {&GPIO9_SE, 18, 1, 1, 0, 39, &IOEXP_U18, 0x000400};
-const net_t SE40 = {&GPIO9_SE, 19, 1, 1, 0, 40, &IOEXP_U18, 0x000004};
-const net_t SE41 = {&GPIO9_SE, 20, 1, 1, 0, 41, &IOEXP_U21, 0x000010};
-const net_t SE42 = {&GPIO9_SE, 21, 1, 1, 0, 42, &IOEXP_U21, 0x000080};
-const net_t SE43 = {&GPIO9_SE, 22, 1, 1, 0, 43, &IOEXP_U21, 0x000200};
-const net_t SE44 = {&GPIO9_SE, 23, 1, 1, 0, 44, &IOEXP_U21, 0x080000};
-const net_t SE46 = {&GPIO9_SE, 24, 1, 1, 0, 46, &IOEXP_U19, 0x001000};
-const net_t SE48 = {&GPIO9_SE, 25, 1, 1, 0, 48, &IOEXP_U19, 0x000400};
-const net_t SE49 = {&GPIO9_SE, 26, 1, 1, 0, 49, &IOEXP_U21, 0x800000};
-const net_t SE50 = {&GPIO9_SE, 27, 1, 1, 0, 50, &IOEXP_U18, 0x000020};
-const net_t SE51 = {&GPIO9_SE, 28, 1, 1, 0, 51, &IOEXP_U19, 0x000100};
-const net_t SE52 = {&GPIO9_SE, 29, 1, 1, 0, 52, &IOEXP_U20, 0x002000};
-const net_t SE55 = {&GPIO9_SE, 30, 1, 1, 0, 55, &IOEXP_U18, 0x000010};
-const net_t SE56 = {&GPIO9_SE, 31, 1, 1, 0, 56, &IOEXP_U20, 0x000004};
-const net_t SE57 = {&GPIO9_SE, 0, 2, 1, 0, 57, &IOEXP_U20, 0x001000};
-const net_t SE58 = {&GPIO9_SE, 1, 2, 1, 0, 58, &IOEXP_U20, 0x000400};
-const net_t SE59 = {&GPIO9_SE, 2, 2, 1, 0, 59, &IOEXP_U20, 0x800000};
-const net_t SE74 = {&GPIO9_SE, 3, 2, 1, 0, 74, &IOEXP_U18, 0x000008};
-const net_t SE81 = {&GPIO9_SE, 4, 2, 1, 0, 81, &IOEXP_U20, 0x000200};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 1, 0, 89, &IOEXP_U20, 0x200000};
+const net_t SE2  = {&GPIO9_SE, 0, 1, 0, 1, 2, &IOEXP_U19, 0x008000};
+const net_t SE14 = {&GPIO9_SE, 1, 1, 0, 1, 14, &IOEXP_U21, 0x040000};
+const net_t SE17 = {&GPIO9_SE, 2, 1, 0, 1, 17, &IOEXP_U19, 0x000800};
+const net_t SE20 = {&GPIO9_SE, 3, 1, 0, 1, 20, &IOEXP_U20, 0x000100};
+const net_t SE21 = {&GPIO9_SE, 4, 1, 0, 1, 21, &IOEXP_U19, 0x000200};
+const net_t SE22 = {&GPIO9_SE, 5, 1, 0, 1, 22, &IOEXP_U20, 0x080000};
+const net_t SE23 = {&GPIO9_SE, 6, 1, 0, 1, 23, &IOEXP_U20, 0x008000};
+const net_t SE24 = {&GPIO9_SE, 7, 1, 0, 1, 24, &IOEXP_U20, 0x000002};
+const net_t SE25 = {&GPIO9_SE, 8, 1, 0, 1, 25, &IOEXP_U20, 0x000008};
+const net_t SE26 = {&GPIO9_SE, 9, 1, 0, 1, 26, &IOEXP_U20, 0x000001};
+const net_t SE27 = {&GPIO9_SE, 10, 1, 0, 1, 27, &IOEXP_U20, 0x000800};
+const net_t SE28 = {&GPIO9_SE, 11, 1, 0, 1, 28, &IOEXP_U20, 0x010000};
+const net_t SE29 = {&GPIO9_SE, 12, 1, 0, 1, 29, &IOEXP_U20, 0x020000};
+const net_t SE32 = {&GPIO9_SE, 13, 1, 0, 1, 32, &IOEXP_U19, 0x004000};
+const net_t SE33 = {&GPIO9_SE, 14, 1, 0, 1, 33, &IOEXP_U19, 0x002000};
+const net_t SE36 = {&GPIO9_SE, 15, 1, 0, 1, 36, &IOEXP_U18, 0x000800};
+const net_t SE37 = {&GPIO9_SE, 16, 1, 0, 1, 37, &IOEXP_U21, 0x000020};
+const net_t SE38 = {&GPIO9_SE, 17, 1, 0, 1, 38, &IOEXP_U21, 0x000008};
+const net_t SE39 = {&GPIO9_SE, 18, 1, 0, 1, 39, &IOEXP_U18, 0x000400};
+const net_t SE40 = {&GPIO9_SE, 19, 1, 0, 1, 40, &IOEXP_U18, 0x000004};
+const net_t SE41 = {&GPIO9_SE, 20, 1, 0, 1, 41, &IOEXP_U21, 0x000010};
+const net_t SE42 = {&GPIO9_SE, 21, 1, 0, 1, 42, &IOEXP_U21, 0x000080};
+const net_t SE43 = {&GPIO9_SE, 22, 1, 0, 1, 43, &IOEXP_U21, 0x000200};
+const net_t SE44 = {&GPIO9_SE, 23, 1, 0, 1, 44, &IOEXP_U21, 0x080000};
+const net_t SE46 = {&GPIO9_SE, 24, 1, 0, 1, 46, &IOEXP_U19, 0x001000};
+const net_t SE48 = {&GPIO9_SE, 25, 1, 0, 1, 48, &IOEXP_U19, 0x000400};
+const net_t SE49 = {&GPIO9_SE, 26, 1, 0, 1, 49, &IOEXP_U21, 0x800000};
+const net_t SE50 = {&GPIO9_SE, 27, 1, 0, 1, 50, &IOEXP_U18, 0x000020};
+const net_t SE51 = {&GPIO9_SE, 28, 1, 0, 1, 51, &IOEXP_U19, 0x000100};
+const net_t SE52 = {&GPIO9_SE, 29, 1, 0, 1, 52, &IOEXP_U20, 0x002000};
+const net_t SE55 = {&GPIO9_SE, 30, 1, 0, 1, 55, &IOEXP_U18, 0x000010};
+const net_t SE56 = {&GPIO9_SE, 31, 1, 0, 1, 56, &IOEXP_U20, 0x000004};
+const net_t SE57 = {&GPIO9_SE, 0, 2, 0, 1, 57, &IOEXP_U20, 0x001000};
+const net_t SE58 = {&GPIO9_SE, 1, 2, 0, 1, 58, &IOEXP_U20, 0x000400};
+const net_t SE59 = {&GPIO9_SE, 2, 2, 0, 1, 59, &IOEXP_U20, 0x800000};
+const net_t SE74 = {&GPIO9_SE, 3, 2, 0, 1, 74, &IOEXP_U18, 0x000008};
+const net_t SE81 = {&GPIO9_SE, 4, 2, 0, 1, 81, &IOEXP_U20, 0x000200};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 0, 1, 89, &IOEXP_U20, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
-const net_t SE4  = {&GPIO10_DS, 0, 1, 1, 0, 4, &IOEXP_U18, 0x000040};
-const net_t SE3  = {&GPIO10_DS, 0, 2, 1, 0, 3, &IOEXP_U18, 0x008000};
-const net_t SE6  = {&GPIO10_DS, 1, 1, 1, 0, 6, &IOEXP_U18, 0x000080};
-const net_t SE5  = {&GPIO10_DS, 1, 2, 1, 0, 5, &IOEXP_U18, 0x002000};
-const net_t SE8  = {&GPIO10_DS, 2, 1, 1, 0, 8, &IOEXP_U21, 0x000001};
-const net_t SE7  = {&GPIO10_DS, 2, 2, 1, 0, 7, &IOEXP_U21, 0x008000};
-const net_t SE10 = {&GPIO10_DS, 3, 1, 1, 0, 10, &IOEXP_U18, 0x000002};
-const net_t SE9  = {&GPIO10_DS, 3, 2, 1, 0, 9, &IOEXP_U18, 0x000001};
+const net_t SE4  = {&GPIO10_DS, 0, 1, 0, 1, 4, &IOEXP_U18, 0x000040};
+const net_t SE3  = {&GPIO10_DS, 0, 2, 0, 1, 3, &IOEXP_U18, 0x008000};
+const net_t SE6  = {&GPIO10_DS, 1, 1, 0, 1, 6, &IOEXP_U18, 0x000080};
+const net_t SE5  = {&GPIO10_DS, 1, 2, 0, 1, 5, &IOEXP_U18, 0x002000};
+const net_t SE8  = {&GPIO10_DS, 2, 1, 0, 1, 8, &IOEXP_U21, 0x000001};
+const net_t SE7  = {&GPIO10_DS, 2, 2, 0, 1, 7, &IOEXP_U21, 0x008000};
+const net_t SE10 = {&GPIO10_DS, 3, 1, 0, 1, 10, &IOEXP_U18, 0x000002};
+const net_t SE9  = {&GPIO10_DS, 3, 2, 0, 1, 9, &IOEXP_U18, 0x000001};
 const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12, &IOEXP_U21, 0x000800};
-const net_t SE11 = {&GPIO10_DS, 4, 2, 1, 0, 11, &IOEXP_U21, 0x001000};
-const net_t SE18 = {&GPIO10_DS, 5, 1, 1, 0, 18, &IOEXP_U21, 0x000100};
-const net_t SE16 = {&GPIO10_DS, 5, 2, 1, 0, 16, &IOEXP_U19, 0x000008};
-const net_t SE34 = {&GPIO10_DS, 6, 1, 1, 0, 34, &IOEXP_U18, 0x004000};
-const net_t SE19 = {&GPIO10_DS, 6, 2, 1, 0, 19, &IOEXP_U21, 0x400000};
-const net_t SE45 = {&GPIO10_DS, 7, 1, 1, 0, 45, &IOEXP_U21, 0x100000};
-const net_t SE35 = {&GPIO10_DS, 7, 2, 1, 0, 35, &IOEXP_U18, 0x001000};
-const net_t SE53 = {&GPIO10_DS, 8, 1, 1, 0, 53, &IOEXP_U20, 0x000080};
-const net_t SE47 = {&GPIO10_DS, 8, 2, 1, 0, 47, &IOEXP_U21, 0x000400};
-const net_t SE62 = {&GPIO10_DS, 9, 1, 1, 0, 62, &IOEXP_U18, 0x000200};
-const net_t SE54 = {&GPIO10_DS, 9, 2, 1, 0, 54, &IOEXP_U20, 0x000020};
-const net_t SE64 = {&GPIO10_DS, 10, 1, 1, 0, 64, &IOEXP_U18, 0x800000};
-const net_t SE63 = {&GPIO10_DS, 10, 2, 1, 0, 63, &IOEXP_U18, 0x000100};
-const net_t SE66 = {&GPIO10_DS, 11, 1, 1, 0, 66, &IOEXP_U18, 0x200000};
-const net_t SE65 = {&GPIO10_DS, 11, 2, 1, 0, 65, &IOEXP_U18, 0x400000};
-const net_t SE68 = {&GPIO10_DS, 12, 1, 1, 0, 68, &IOEXP_U21, 0x000002};
-const net_t SE67 = {&GPIO10_DS, 12, 2, 1, 0, 67, &IOEXP_U21, 0x004000};
-const net_t SE70 = {&GPIO10_DS, 13, 1, 1, 0, 70, &IOEXP_U21, 0x000040};
-const net_t SE69 = {&GPIO10_DS, 13, 2, 1, 0, 69, &IOEXP_U21, 0x000004};
-const net_t SE72 = {&GPIO10_DS, 14, 1, 1, 0, 72, &IOEXP_U21, 0x010000};
-const net_t SE71 = {&GPIO10_DS, 14, 2, 1, 0, 71, &IOEXP_U21, 0x002000};
-const net_t SE75 = {&GPIO10_DS, 15, 1, 1, 0, 75, &IOEXP_U21, 0x200000};
-const net_t SE73 = {&GPIO10_DS, 15, 2, 1, 0, 73, &IOEXP_U21, 0x020000};
-const net_t SE77 = {&GPIO10_DS, 16, 1, 1, 0, 77, &IOEXP_U19, 0x010000};
-const net_t SE76 = {&GPIO10_DS, 16, 2, 1, 0, 76, &IOEXP_U19, 0x000002};
-const net_t SE79 = {&GPIO10_DS, 17, 1, 1, 0, 79, &IOEXP_U20, 0x100000};
-const net_t SE78 = {&GPIO10_DS, 17, 2, 1, 0, 78, &IOEXP_U19, 0x000010};
-const net_t SE82 = {&GPIO10_DS, 18, 1, 1, 0, 82, &IOEXP_U20, 0x040000};
-const net_t SE80 = {&GPIO10_DS, 18, 2, 1, 0, 80, &IOEXP_U20, 0x400000};
-const net_t SE84 = {&GPIO10_DS, 19, 1, 1, 0, 84, &IOEXP_U20, 0x000040};
-const net_t SE83 = {&GPIO10_DS, 19, 2, 1, 0, 83, &IOEXP_U20, 0x004000};
-const net_t SE86 = {&GPIO10_DS, 20, 1, 1, 0, 86, &IOEXP_U19, 0x000001};
-const net_t SE85 = {&GPIO10_DS, 20, 2, 1, 0, 85, &IOEXP_U20, 0x000010};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 1, 0, 88, &IOEXP_U19, 0x000004};
-const net_t SE87 = {&GPIO10_DS, 21, 2, 1, 0, 87, &IOEXP_U19, 0x000080};
+const net_t SE11 = {&GPIO10_DS, 4, 2, 0, 1, 11, &IOEXP_U21, 0x001000};
+const net_t SE18 = {&GPIO10_DS, 5, 1, 0, 1, 18, &IOEXP_U21, 0x000100};
+const net_t SE16 = {&GPIO10_DS, 5, 2, 0, 1, 16, &IOEXP_U19, 0x000008};
+const net_t SE34 = {&GPIO10_DS, 6, 1, 0, 1, 34, &IOEXP_U18, 0x004000};
+const net_t SE19 = {&GPIO10_DS, 6, 2, 0, 1, 19, &IOEXP_U21, 0x400000};
+const net_t SE45 = {&GPIO10_DS, 7, 1, 0, 1, 45, &IOEXP_U21, 0x100000};
+const net_t SE35 = {&GPIO10_DS, 7, 2, 0, 1, 35, &IOEXP_U18, 0x001000};
+const net_t SE53 = {&GPIO10_DS, 8, 1, 0, 1, 53, &IOEXP_U20, 0x000080};
+const net_t SE47 = {&GPIO10_DS, 8, 2, 0, 1, 47, &IOEXP_U21, 0x000400};
+const net_t SE62 = {&GPIO10_DS, 9, 1, 0, 1, 62, &IOEXP_U18, 0x000200};
+const net_t SE54 = {&GPIO10_DS, 9, 2, 0, 1, 54, &IOEXP_U20, 0x000020};
+const net_t SE64 = {&GPIO10_DS, 10, 1, 0, 1, 64, &IOEXP_U18, 0x800000};
+const net_t SE63 = {&GPIO10_DS, 10, 2, 0, 1, 63, &IOEXP_U18, 0x000100};
+const net_t SE66 = {&GPIO10_DS, 11, 1, 0, 1, 66, &IOEXP_U18, 0x200000};
+const net_t SE65 = {&GPIO10_DS, 11, 2, 0, 1, 65, &IOEXP_U18, 0x400000};
+const net_t SE68 = {&GPIO10_DS, 12, 1, 0, 1, 68, &IOEXP_U21, 0x000002};
+const net_t SE67 = {&GPIO10_DS, 12, 2, 0, 1, 67, &IOEXP_U21, 0x004000};
+const net_t SE70 = {&GPIO10_DS, 13, 1, 0, 1, 70, &IOEXP_U21, 0x000040};
+const net_t SE69 = {&GPIO10_DS, 13, 2, 0, 1, 69, &IOEXP_U21, 0x000004};
+const net_t SE72 = {&GPIO10_DS, 14, 1, 0, 1, 72, &IOEXP_U21, 0x010000};
+const net_t SE71 = {&GPIO10_DS, 14, 2, 0, 1, 71, &IOEXP_U21, 0x002000};
+const net_t SE75 = {&GPIO10_DS, 15, 1, 0, 1, 75, &IOEXP_U21, 0x200000};
+const net_t SE73 = {&GPIO10_DS, 15, 2, 0, 1, 73, &IOEXP_U21, 0x020000};
+const net_t SE77 = {&GPIO10_DS, 16, 1, 0, 1, 77, &IOEXP_U19, 0x010000};
+const net_t SE76 = {&GPIO10_DS, 16, 2, 0, 1, 76, &IOEXP_U19, 0x000002};
+const net_t SE79 = {&GPIO10_DS, 17, 1, 0, 1, 79, &IOEXP_U20, 0x100000};
+const net_t SE78 = {&GPIO10_DS, 17, 2, 0, 1, 78, &IOEXP_U19, 0x000010};
+const net_t SE82 = {&GPIO10_DS, 18, 1, 0, 1, 82, &IOEXP_U20, 0x040000};
+const net_t SE80 = {&GPIO10_DS, 18, 2, 0, 1, 80, &IOEXP_U20, 0x400000};
+const net_t SE84 = {&GPIO10_DS, 19, 1, 0, 1, 84, &IOEXP_U20, 0x000040};
+const net_t SE83 = {&GPIO10_DS, 19, 2, 0, 1, 83, &IOEXP_U20, 0x004000};
+const net_t SE86 = {&GPIO10_DS, 20, 1, 0, 1, 86, &IOEXP_U19, 0x000001};
+const net_t SE85 = {&GPIO10_DS, 20, 2, 0, 1, 85, &IOEXP_U20, 0x000010};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 1, 88, &IOEXP_U19, 0x000004};
+const net_t SE87 = {&GPIO10_DS, 21, 2, 0, 1, 87, &IOEXP_U19, 0x000080};
 
 ////DATA0/CLK0 XGpio pins
 //const net_t DATA0_0   = {&GPIO3_DATA0,  0, 1, 2, 0};
@@ -466,50 +466,50 @@ SWState_t Pin_Settings[] = {
 
 		//Pin 2 path setting (uncomment 1)
 		//P2_LS1_DAC04,
-		P2_DIGIO2,
-		//P2_HS_DAC3A,
+		//P2_DIGIO2,
+		P2_HS_DAC3A,
 
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
-		P17_DIGIO17,
+		//P17_DIGIO17,
 		//P17_HS_ADC1B,
-		//P17_HS_DAC1A,
+		P17_HS_DAC1A,
 		//P17_DISABLE,
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
-		P21_DIGIO21,
+		//P21_DIGIO21,
 		//P21_HS_ADC0B,
-		//P21_HS_DAC0A,
+		P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
-		P32_DIGIO32,
-		//P32_HS_DAC3B,
+		//P32_DIGIO32,
+		P32_HS_DAC3B,
 
 		//Pin 33 path setting (uncomment 1)
 		//P33_LS1_DAC06,
-		P33_DIGIO33,
-		//P33_HS_ADC2B,
+		//P33_DIGIO33,
+		P33_HS_ADC2B,
 		//P33_HS_DAC2A,
 
 		//Pin 46 path setting (uncomment 1)
 		//P46_LS1_DAC07,
-		P46_DIGIO46,
+		//P46_DIGIO46,
 		//P46_HS_ADC2A,
-		//P46_HS_DAC2B,
+		P46_HS_DAC2B,
 
 		//Pin 48 path setting (uncomment 1)
 		//P48_LS1_DAC01,
-		P48_DIGIO48,
+		//P48_DIGIO48,
 		//P48_HS_ADC1A,
-		//P48_HS_DAC1B,
+		P48_HS_DAC1B,
 
 		//Pin 51 path setting (uncomment 1)
 		//P51_LS1_DAC03,
-		P51_DIGIO51,
+		//P51_DIGIO51,
 		//P51_HS_ADC0A,
-		//P51_HS_DAC0B,
+		P51_HS_DAC0B,
 
 		//Pin 3 path setting (uncomment 1)
 		//P3_LS0_DAC07,
@@ -630,30 +630,35 @@ int main()
     int Status; 	//used to hold return status throughout the function.
 
     //Initialize LED GPIO AXI device
+    printf("Initializing LED GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_LED, sizeof(GPIO_LED) / sizeof(GPIO_LED[0]), GPIO0_LEDS_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize CTRL GPIO AXI device
+    printf("Initializing CTRL GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_CTRL, sizeof(GPIO_CTRL) / sizeof(GPIO_CTRL[0]), GPIO8_CTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize SPDT GPIO AXI device
+    printf("Initializing SPDT GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_SPDT, sizeof(GPIO_SPDT) / sizeof(GPIO_SPDT[0]), GPIO7_SPDT_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize Single Ended GPIO AXI device
+    printf("Initializing Single Ended GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_SE, sizeof(GPIO_SE) / sizeof(GPIO_SE[0]), GPIO9_SE_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize Differential(In this app single ended) GPIO AXI device
+    printf("Initializing Differential(In this app single ended) GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_DS, sizeof(GPIO_DS) / sizeof(GPIO_DS[0]), GPIO10_DS_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
@@ -690,161 +695,185 @@ int main()
     }
 
     //Initialize AFE7222 SPI devices
+    printf("Initializing AFE7222 SPI devices.\n");
     Status = SPI_Init(&SPI0_AFE, SPI0_AFE_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
     //Initialize LTC2666 SPI devices
+    printf("Initializing LTC2666 SPI devices.\n");
     Status = SPI_Init(&SPI1_LSDAC, SPI1_LSDAC_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes all AFEs;
+    printf("Writing registers to AFE chips.\n");
+    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
         Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
         }
     }
+    for (int i = 0x04; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+        if(Status != XST_SUCCESS){
+        	return XST_FAILURE;
+        }
+    }
 
+    printf("Initializing IIC0.\n");
     Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP_U19.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U19.\n");
     Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U19\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U19.\n");
     IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
 
 
 
+    printf("Initializing IIC2.\n");
     Status = IIC_Init (IOEXP_U20.instance, IIC2_IOEXP_ID, IOEXP_U20.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U20\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U20.\n");
     Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U20\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U20.\n");
     IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
 
 
 
+    printf("Reinitializing IIC2.\n");
     Status = IIC_Init (IOEXP_U21.instance, IIC2_IOEXP_ID, IOEXP_U21.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U21\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing IOEXP_U21.\n");
     Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U21\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U21.\n");
     IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
 
 
 
+    printf("Initializing.\n");
     Status = IIC_Init (IOEXP_U18.instance, IIC1_IOEXP_ID, IOEXP_U18.address);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IIC for IOEXP_U18\n");
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	printf("Failed to initialize IOEXP_U18\n");
     	return XST_FAILURE;
     }
 
+    printf("Writing to IOEXP_U21.\n");
     IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
 
 
 
 	setLEDStatus (0x1);
+    printf("Initializing.\n");
     Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP0_ADDRESS);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_Init(&IIC0_IOEXP, IOEXP0_ADDRESS, IO_EXP_PIN_CONFIG, 4);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO1_SPDCTRL,  GPIO1_SPDCTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO2_DATA0A,  GPIO2_DATA0A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO3_DATA0B,  GPIO3_DATA0B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO4_DATA1A,  GPIO4_DATA1A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO5_DATA1B,  GPIO5_DATA1B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO6_DATA2A,  GPIO6_DATA2A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO11_DATA2B,  GPIO11_DATA2B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO12_DATA3A,  GPIO12_DATA3A_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 
+    printf("Initializing.\n");
     Status = XGpio_Initialize(&GPIO13_DATA3B,  GPIO13_DATA3B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
 	setLEDStatus (0x4);
-
-	printf("\033[2J\033[H");
-	while(1){
-		for (int i = 0; i < sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]); i++){
-			printf("\033[%d;%dH", 1 + ALL_GPIO[i]->IOpinNum%30, 30 * (ALL_GPIO[i]->IOpinNum/30));
-			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
-		}
-	}
-
-	/*
 //For DAC Control application
-    while(1){
+    printf("Initializing.\n");
+    //while(1){
         printf("Please enter SPDCTRL value: ");
         int readValue;
         usleep(100000);
@@ -867,39 +896,38 @@ int main()
             XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
         }
         usleep(100000);
-    }
-    */
+    //}
 
     uint32_t chvalmax;
     uint32_t chvalmin;
     printf("DRC ADC MinMax Test.\n");
     while(1){
-    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
-    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO3_DATA0B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO3_DATA0B, 2);
-    	printf("Pin 21:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO4_DATA1A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO4_DATA1A, 2);
-    	printf("Pin 48:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO5_DATA1B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO5_DATA1B, 2);
-    	printf("Pin 17:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
-    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
+//    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO3_DATA0B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO3_DATA0B, 2);
+//    	printf("Pin 21:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO4_DATA1A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO4_DATA1A, 2);
+//    	printf("Pin 48:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO5_DATA1B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO5_DATA1B, 2);
+//    	printf("Pin 17:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
+//    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
     	chvalmax = XGpio_DiscreteRead(&GPIO11_DATA2B, 1);
     	chvalmin = XGpio_DiscreteRead(&GPIO11_DATA2B, 2);
     	printf("Pin 33:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
-    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO13_DATA3B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO13_DATA3B, 2);
-    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	usleep(50000);
-    	printf("\033[2J\033[H");
+//    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
+//    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	chvalmax = XGpio_DiscreteRead(&GPIO13_DATA3B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO13_DATA3B, 2);
+//    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//    	usleep(50000);
+    	//printf("\033[2J\033[H");
     	usleep(50000);
     }
 
@@ -920,7 +948,7 @@ int main()
     printf("7) High speed ADC/DAC loopback mode B. Tests channel B on each ADC/DAC pair.\n");
 
     //store user selected value
-    int readValue;
+    //int readValue;
     scanf("%d", &readValue);
 
     //clear buffer
