@@ -24,11 +24,12 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/boot/fsbl.elf
-set bp_49_46_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_10_50_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_49_46_fsbl_bp
+bpremove $bp_10_50_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/Debug/DRC_Rev2_0_Deliverables_Application.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
