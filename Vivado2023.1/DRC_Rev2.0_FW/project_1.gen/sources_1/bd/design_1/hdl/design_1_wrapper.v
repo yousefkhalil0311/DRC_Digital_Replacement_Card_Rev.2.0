@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Mar 24 00:30:24 2025
+//Date        : Mon Mar 31 16:10:28 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -42,16 +42,16 @@ module design_1_wrapper
     ctrl_8bits_tri_o,
     leds_4bits_tri_o,
     spdt_10bits_tri_o);
-  output IOBUF_CLK0;
-  output IOBUF_CLK1;
-  input IOBUF_CLK2;
-  input IOBUF_CLK3;
+  inout [0:0]IOBUF_CLK0;
+  inout [0:0]IOBUF_CLK1;
+  inout [0:0]IOBUF_CLK2;
+  inout [0:0]IOBUF_CLK3;
   output [0:0]IOBUF_CLKN;
   output [0:0]IOBUF_CLKP;
-  output [11:0]IOBUF_DATA0;
-  output [11:0]IOBUF_DATA1;
-  input [11:0]IOBUF_DATA2;
-  input [11:0]IOBUF_DATA3;
+  inout [11:0]IOBUF_DATA0;
+  inout [11:0]IOBUF_DATA1;
+  inout [11:0]IOBUF_DATA2;
+  inout [11:0]IOBUF_DATA3;
   inout [21:0]IOBUF_DS_0_21_n;
   inout [21:0]IOBUF_DS_0_21_p;
   inout [0:0]IOBUF_SCL_0;
@@ -74,10 +74,10 @@ module design_1_wrapper
   output [3:0]leds_4bits_tri_o;
   output [9:0]spdt_10bits_tri_o;
 
-  wire IOBUF_CLK0;
-  wire IOBUF_CLK1;
-  wire IOBUF_CLK2;
-  wire IOBUF_CLK3;
+  wire [0:0]IOBUF_CLK0;
+  wire [0:0]IOBUF_CLK1;
+  wire [0:0]IOBUF_CLK2;
+  wire [0:0]IOBUF_CLK3;
   wire [0:0]IOBUF_CLKN;
   wire [0:0]IOBUF_CLKP;
   wire [11:0]IOBUF_DATA0;

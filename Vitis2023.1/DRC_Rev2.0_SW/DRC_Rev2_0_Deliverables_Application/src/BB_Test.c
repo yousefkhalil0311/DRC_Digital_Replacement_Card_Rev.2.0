@@ -164,7 +164,7 @@ const net_t SE25 = {&GPIO9_SE, 8, 1, 1, 0, 25, &IOEXP_U20, 0x000008};
 const net_t SE26 = {&GPIO9_SE, 9, 1, 1, 0, 26, &IOEXP_U20, 0x000001};
 const net_t SE27 = {&GPIO9_SE, 10, 1, 1, 0, 27, &IOEXP_U20, 0x000800};
 const net_t SE28 = {&GPIO9_SE, 11, 1, 1, 0, 28, &IOEXP_U20, 0x010000};
-const net_t SE29 = {&GPIO9_SE, 12, 1, 0, 1, 29, &IOEXP_U20, 0x020000};
+const net_t SE29 = {&GPIO9_SE, 12, 1, 1, 0, 29, &IOEXP_U20, 0x020000};
 const net_t SE32 = {&GPIO9_SE, 13, 1, 1, 0, 32, &IOEXP_U19, 0x004000};
 const net_t SE33 = {&GPIO9_SE, 14, 1, 1, 0, 33, &IOEXP_U19, 0x002000};
 const net_t SE36 = {&GPIO9_SE, 15, 1, 1, 0, 36, &IOEXP_U18, 0x000800};
@@ -183,13 +183,13 @@ const net_t SE50 = {&GPIO9_SE, 27, 1, 1, 0, 50, &IOEXP_U18, 0x000020};
 const net_t SE51 = {&GPIO9_SE, 28, 1, 1, 0, 51, &IOEXP_U19, 0x000100};
 const net_t SE52 = {&GPIO9_SE, 29, 1, 1, 0, 52, &IOEXP_U20, 0x002000};
 const net_t SE55 = {&GPIO9_SE, 30, 1, 1, 0, 55, &IOEXP_U18, 0x000010};
-const net_t SE56 = {&GPIO9_SE, 31, 1, 0, 1, 56, &IOEXP_U20, 0x000004};
+const net_t SE56 = {&GPIO9_SE, 31, 1, 1, 0, 56, &IOEXP_U20, 0x000004};
 const net_t SE57 = {&GPIO9_SE, 0, 2, 1, 0, 57, &IOEXP_U20, 0x001000};
 const net_t SE58 = {&GPIO9_SE, 1, 2, 1, 0, 58, &IOEXP_U20, 0x000400};
 const net_t SE59 = {&GPIO9_SE, 2, 2, 1, 0, 59, &IOEXP_U20, 0x800000};
 const net_t SE74 = {&GPIO9_SE, 3, 2, 1, 0, 74, &IOEXP_U18, 0x000008};
 const net_t SE81 = {&GPIO9_SE, 4, 2, 1, 0, 81, &IOEXP_U20, 0x000200};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 0, 1, 89, &IOEXP_U20, 0x200000};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 1, 0, 89, &IOEXP_U20, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
 const net_t SE4  = {&GPIO10_DS, 0, 1, 1, 0, 4, &IOEXP_U18, 0x000040};
@@ -747,7 +747,7 @@ int main()
 	setLEDStatus (0x4);
 
 	while(1){
-		TestMode4(4096);
+		TestMode3(1000);
 	}
 
 //	XUartPs Uart_Ps;  // UART instance
@@ -757,15 +757,7 @@ int main()
 //	// Set baud rate, parity, stop bits, etc.
 //	XUartPs_SetBaudRate(&Uart_Ps, 115200);  // Ensure this matches Tera Term's baud rate
 //
-//	//Display DRC Input Data on pins
-//	printf("\033[2J\033[H");
-//	uint8_t inByte[1];
-//	while(1){
-//		for (int i = 0; i < sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]); i++){
-//			printf("\033[%d;%dH", 1 + ALL_GPIO[i]->IOpinNum%30, 30 * (ALL_GPIO[i]->IOpinNum/30));
-//			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
-//		}
-//	}
+
 //For DAC Control application
 //    printf("Initializing.\n");
 //    while(1){
@@ -1035,6 +1027,15 @@ void TestMode3(uint32_t runTime){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
+
+    //Display DRC Input Data on pins
+	printf("\033[2J\033[H");
+	while(1){
+		for (int i = 0; i < sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]); i++){
+			printf("\033[%d;%dH", 1 + ALL_GPIO[i]->IOpinNum%30, 30 * (ALL_GPIO[i]->IOpinNum/30));
+			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
+		}
+	}
 
     int numIOPins = sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]);
 

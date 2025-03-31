@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Mar 26 11:47:07 2025
-# Process ID: 51936
+# Start of session at: Mon Mar 31 16:12:39 2025
+# Process ID: 44872
 # Current directory: C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/design_1_wrapper.vds
@@ -15,7 +15,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1557.398 ; gain = 77.574
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1556.582 ; gain = 76.555
 Command: synth_design -top design_1_wrapper -part xczu3eg-sfvc784-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
@@ -23,326 +23,363 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg
 INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 52972
+INFO: [Synth 8-7075] Helper process launched with PID 24600
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2836.602 ; gain = 336.258
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2846.168 ; gain = 337.129
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'DCKOUT' of module 'design_1_DAC_CTRL_0_0' is unconnected for instance 'DAC_CTRL_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:580]
-WARNING: [Synth 8-7023] instance 'DAC_CTRL_0' of module 'design_1_DAC_CTRL_0_0' has 3 connections declared, but only 2 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:580]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'DCKOUT' of module 'design_1_DAC_CTRL_0_1' is unconnected for instance 'DAC_CTRL_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:583]
-WARNING: [Synth 8-7023] instance 'DAC_CTRL_1' of module 'design_1_DAC_CTRL_0_1' has 3 connections declared, but only 2 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:583]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:586]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
-WARNING: [Synth 8-7071] port 'DACDATA' of module 'design_1_DAC_CTRL_0_2' is unconnected for instance 'DAC_CTRL_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:586]
-WARNING: [Synth 8-7071] port 'DCKOUT' of module 'design_1_DAC_CTRL_0_2' is unconnected for instance 'DAC_CTRL_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:586]
-WARNING: [Synth 8-7023] instance 'DAC_CTRL_2' of module 'design_1_DAC_CTRL_0_2' has 3 connections declared, but only 1 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:586]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:588]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
-WARNING: [Synth 8-7071] port 'DACDATA' of module 'design_1_DAC_CTRL_0_3' is unconnected for instance 'DAC_CTRL_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:588]
-WARNING: [Synth 8-7071] port 'DCKOUT' of module 'design_1_DAC_CTRL_0_3' is unconnected for instance 'DAC_CTRL_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:588]
-WARNING: [Synth 8-7023] instance 'DAC_CTRL_3' of module 'design_1_DAC_CTRL_0_3' has 3 connections declared, but only 1 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:588]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:902]
-WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:902]
-WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:902]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:928]
-WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:928]
-WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'design_1_axi_iic_0_1' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:928]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:954]
-WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:954]
-WARNING: [Synth 8-7023] instance 'axi_iic_2' of module 'design_1_axi_iic_0_2' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:954]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'design_1_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:980]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'design_1_axi_quad_spi_0_1' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1008]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1551]
-INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_4SIBI7' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4629]
-INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_4SIBI7' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4629]
-INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_1YI1VMM' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4775]
-INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_1YI1VMM' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4775]
-INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_5PG2F0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4921]
-INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_5PG2F0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4921]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5067]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5067]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5199]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5199]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5331]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5331]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5463]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5463]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5595]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5595]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5727]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5727]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5859]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5859]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5991]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5991]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6123]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6123]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6255]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6255]
-INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_11TD8LA' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6387]
-INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_11TD8LA' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6387]
-INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_SLT6JJ' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6519]
-INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_SLT6JJ' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6519]
-INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_13AKZEL' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6651]
-INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_13AKZEL' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6651]
-INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_REVGT8' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6783]
-INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_REVGT8' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6783]
-INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_10LD0VS' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6915]
-INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_10LD0VS' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6915]
-INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_U5NP7D' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7047]
-INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_U5NP7D' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7047]
-INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_118MOFV' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7179]
-INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_118MOFV' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7179]
-INFO: [Synth 8-6157] synthesizing module 'm17_couplers_imp_T8QBBU' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7311]
-INFO: [Synth 8-6155] done synthesizing module 'm17_couplers_imp_T8QBBU' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7311]
-INFO: [Synth 8-6157] synthesizing module 'm18_couplers_imp_185APBM' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7443]
-INFO: [Synth 8-6155] done synthesizing module 'm18_couplers_imp_185APBM' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7443]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7575]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7575]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4469]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4469]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_0' of module 'design_1_tier2_xbar_0_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4469]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4508]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4508]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_1' of module 'design_1_tier2_xbar_1_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4508]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4547]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4547]
-WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'design_1_tier2_xbar_2_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4547]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1551]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_11_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_11_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_12_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_12_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-51936-OCP001/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1508]
-WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1508]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 40 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1508]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_14_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_14_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:963]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:963]
+WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:963]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:989]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:989]
+WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'design_1_axi_iic_0_1' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:989]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1015]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1015]
+WARNING: [Synth 8-7023] instance 'axi_iic_2' of module 'design_1_axi_iic_0_2' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1015]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'design_1_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'design_1_axi_quad_spi_0_1' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1069]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_out2' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1097]
+WARNING: [Synth 8-7071] port 'clk_out4' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1097]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 5 connections declared, but only 3 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1097]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1101]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1101]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1101]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1101]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1101]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1737]
+INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_4SIBI7' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4943]
+INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_4SIBI7' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4943]
+INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_1YI1VMM' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5089]
+INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_1YI1VMM' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5089]
+INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_5PG2F0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5235]
+INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_5PG2F0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5235]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5381]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5381]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5513]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5513]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5645]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5645]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5777]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5777]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5909]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5909]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6041]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6041]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6173]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6173]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6305]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6305]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6437]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6437]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6569]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6569]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_11TD8LA' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6701]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_11TD8LA' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6701]
+INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_SLT6JJ' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6833]
+INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_SLT6JJ' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6833]
+INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_13AKZEL' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6965]
+INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_13AKZEL' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:6965]
+INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_REVGT8' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7097]
+INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_REVGT8' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7097]
+INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_10LD0VS' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7229]
+INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_10LD0VS' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7229]
+INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_U5NP7D' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7361]
+INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_U5NP7D' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7361]
+INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_118MOFV' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7493]
+INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_118MOFV' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7493]
+INFO: [Synth 8-6157] synthesizing module 'm17_couplers_imp_T8QBBU' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7625]
+INFO: [Synth 8-6155] done synthesizing module 'm17_couplers_imp_T8QBBU' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7625]
+INFO: [Synth 8-6157] synthesizing module 'm18_couplers_imp_185APBM' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7757]
+INFO: [Synth 8-6155] done synthesizing module 'm18_couplers_imp_185APBM' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7757]
+INFO: [Synth 8-6157] synthesizing module 'm19_couplers_imp_V5LG0J' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7889]
+INFO: [Synth 8-6155] done synthesizing module 'm19_couplers_imp_V5LG0J' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:7889]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:8021]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:8021]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4783]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4783]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_0' of module 'design_1_tier2_xbar_0_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4783]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4822]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4822]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_1' of module 'design_1_tier2_xbar_1_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4822]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4861]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4861]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'design_1_tier2_xbar_2_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:4861]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1737]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_11_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_11_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_12_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_12_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_7_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_7_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_15_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_15_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_15_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_15_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_15_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_15_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_15_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_4' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_4' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_ds_buf_6_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_1' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_2/synth/design_1_xlconcat_0_2.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_2' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_2/synth/design_1_xlconcat_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_3/synth/design_1_xlconcat_0_3.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_3/synth/design_1_xlconcat_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_3/synth/design_1_xlslice_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_3' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_3/synth/design_1_xlslice_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-44872-OCP001/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1694]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1694]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 40 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1694]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
-WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1A7ZMW4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1A7ZMW4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m18_couplers_imp_185APBM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m18_couplers_imp_185APBM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m18_couplers_imp_185APBM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m18_couplers_imp_185APBM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m17_couplers_imp_T8QBBU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m17_couplers_imp_T8QBBU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m17_couplers_imp_T8QBBU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m17_couplers_imp_T8QBBU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m16_couplers_imp_118MOFV is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m16_couplers_imp_118MOFV is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m16_couplers_imp_118MOFV is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m16_couplers_imp_118MOFV is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m15_couplers_imp_U5NP7D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m15_couplers_imp_U5NP7D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m15_couplers_imp_U5NP7D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m15_couplers_imp_U5NP7D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m14_couplers_imp_10LD0VS is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m14_couplers_imp_10LD0VS is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m14_couplers_imp_10LD0VS is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m14_couplers_imp_10LD0VS is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m13_couplers_imp_REVGT8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m13_couplers_imp_REVGT8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m13_couplers_imp_REVGT8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m13_couplers_imp_REVGT8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m12_couplers_imp_13AKZEL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m12_couplers_imp_13AKZEL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m12_couplers_imp_13AKZEL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m12_couplers_imp_13AKZEL is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m11_couplers_imp_SLT6JJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m11_couplers_imp_SLT6JJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m11_couplers_imp_SLT6JJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m11_couplers_imp_SLT6JJ is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m10_couplers_imp_11TD8LA is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m10_couplers_imp_11TD8LA is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m10_couplers_imp_11TD8LA is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m10_couplers_imp_11TD8LA is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m09_couplers_imp_1AITGY3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m09_couplers_imp_1AITGY3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m09_couplers_imp_1AITGY3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m09_couplers_imp_1AITGY3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m08_couplers_imp_K8X5UY is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m08_couplers_imp_K8X5UY is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m08_couplers_imp_K8X5UY is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m08_couplers_imp_K8X5UY is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m07_couplers_imp_1GV49DU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m07_couplers_imp_1GV49DU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m07_couplers_imp_1GV49DU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m07_couplers_imp_1GV49DU is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m06_couplers_imp_MPDFMR is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m06_couplers_imp_MPDFMR is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m06_couplers_imp_MPDFMR is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m06_couplers_imp_MPDFMR is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m05_couplers_imp_1FZ4A9T is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m05_couplers_imp_1FZ4A9T is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m05_couplers_imp_1FZ4A9T is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m05_couplers_imp_1FZ4A9T is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m04_couplers_imp_NB1YAO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m04_couplers_imp_NB1YAO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m04_couplers_imp_NB1YAO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m04_couplers_imp_NB1YAO is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m03_couplers_imp_1E9R4HW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m03_couplers_imp_1E9R4HW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m03_couplers_imp_1E9R4HW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m03_couplers_imp_1E9R4HW is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_P3UMW5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1D3SAH3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_QJIMLI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_QJIMLI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_QJIMLI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_QJIMLI is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module i02_couplers_imp_5PG2F0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module i02_couplers_imp_5PG2F0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module i02_couplers_imp_5PG2F0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module i02_couplers_imp_5PG2F0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module i01_couplers_imp_1YI1VMM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module i01_couplers_imp_1YI1VMM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module i01_couplers_imp_1YI1VMM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module i01_couplers_imp_1YI1VMM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module i00_couplers_imp_4SIBI7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module i00_couplers_imp_4SIBI7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module i00_couplers_imp_4SIBI7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module i00_couplers_imp_4SIBI7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M03_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ACLK in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M04_ARESETN in module design_1_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2947.938 ; gain = 447.594
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2961.738 ; gain = 452.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2965.844 ; gain = 465.500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2979.641 ; gain = 470.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2965.844 ; gain = 465.500
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2979.641 ; gain = 470.602
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2965.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2979.641 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -445,6 +482,24 @@ Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Re
 Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_3/design_1_util_ds_buf_0_3/design_1_util_ds_buf_10_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_4'
 Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1/design_1_util_ds_buf_10_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_5'
 Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1/design_1_util_ds_buf_10_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_5'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_6'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_6'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc] for cell 'design_1_i/util_ds_buf_7'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc] for cell 'design_1_i/util_ds_buf_7'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc] for cell 'design_1_i/util_ds_buf_8'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc] for cell 'design_1_i/util_ds_buf_8'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc] for cell 'design_1_i/util_ds_buf_9'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc] for cell 'design_1_i/util_ds_buf_9'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_15'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_15'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_16'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_16'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_17'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1_in_context.xdc] for cell 'design_1_i/util_ds_buf_17'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2_in_context.xdc] for cell 'design_1_i/util_ds_buf_18'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2_in_context.xdc] for cell 'design_1_i/util_ds_buf_18'
+Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0_in_context.xdc] for cell 'design_1_i/axi_gpio_14'
+Finished Parsing XDC File [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0_in_context.xdc] for cell 'design_1_i/axi_gpio_14'
 Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc]
 Finished Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/new/OSDZU3_HardwarePlatform_IO_Standards.xdc]
 Sourcing Tcl File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.srcs/constrs_1/imports/new/osdzu3_helper.tcl]
@@ -560,16 +615,16 @@ Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Re
 Finished Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3001.285 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3015.070 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3001.285 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3015.070 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/axi_quad_spi_1' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '15.385' specified during out-of-context synthesis of instance 'design_1_i/util_ds_buf_11' at clock pin 'BUFG_I[0]' is different from the actual clock period '7.692', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3001.285 ; gain = 500.941
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3015.070 ; gain = 506.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -577,7 +632,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3001.285 ; gain = 500.941
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3015.070 ; gain = 506.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -758,6 +813,110 @@ Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_SDA_2[0]. (constraint file 
 Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_SDA_2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_3/design_1_util_ds_buf_0_3/design_1_util_ds_buf_10_1_in_context.xdc, line 2).
 Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_SCL_2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1/design_1_util_ds_buf_10_1_in_context.xdc, line 1).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_SCL_2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_1_1/design_1_util_ds_buf_1_1/design_1_util_ds_buf_10_1_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA0[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA0[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA1[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA1[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2/design_1_util_ds_buf_6_2_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA2[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA2[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3/design_1_util_ds_buf_6_3_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[10]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[11]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[1]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[2]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[3]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[4]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[5]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[6]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[7]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[8]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_DATA3[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_DATA3[9]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4/design_1_util_ds_buf_6_4_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_CLK0[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_CLK0[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_CLK1[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_CLK1[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_CLK2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_CLK2[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1/design_1_util_ds_buf_15_1_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for IOBUF_CLK3[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for IOBUF_CLK3[0]. (constraint file  c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2/design_1_util_ds_buf_15_2_in_context.xdc, line 2).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/tier2_xbar_0. (constraint file  auto generated constraint).
@@ -809,11 +968,28 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_3. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_iic_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_4. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_9. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_15. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_16. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_17. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_ds_buf_18. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio_14. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_3. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3001.285 ; gain = 500.941
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3015.070 ; gain = 506.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3001.285 ; gain = 500.941
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3015.070 ; gain = 506.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -836,25 +1012,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3001.285 ; gain = 500.941
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3015.070 ; gain = 506.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3477.875 ; gain = 977.531
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3490.188 ; gain = 981.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3479.289 ; gain = 978.945
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3491.480 ; gain = 982.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3492.000 ; gain = 991.656
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3502.949 ; gain = 993.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -872,37 +1048,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -933,34 +1109,43 @@ Report BlackBoxes:
 |19    |design_1_axi_gpio_3_1          |         1|
 |20    |design_1_axi_gpio_2_3          |         1|
 |21    |design_1_axi_gpio_3_2          |         1|
-|22    |design_1_axi_gpio_1_1          |         1|
-|23    |design_1_axi_gpio_2_0          |         1|
-|24    |design_1_axi_gpio_2_1          |         1|
-|25    |design_1_axi_gpio_3_0          |         1|
-|26    |design_1_axi_gpio_2_2          |         1|
-|27    |design_1_axi_gpio_8_0          |         1|
-|28    |design_1_axi_gpio_0_2          |         1|
-|29    |design_1_axi_gpio_0_0          |         1|
-|30    |design_1_axi_iic_0_0           |         1|
-|31    |design_1_axi_iic_0_1           |         1|
-|32    |design_1_axi_iic_0_2           |         1|
-|33    |design_1_axi_quad_spi_0_0      |         1|
-|34    |design_1_axi_quad_spi_0_1      |         1|
-|35    |design_1_clk_wiz_0_0           |         1|
-|36    |design_1_proc_sys_reset_0_0    |         1|
-|37    |design_1_util_ds_buf_10_1      |         1|
-|38    |design_1_util_ds_buf_11_0      |         1|
-|39    |design_1_util_ds_buf_0_0       |         1|
-|40    |design_1_util_ds_buf_6_0       |         1|
-|41    |design_1_util_ds_buf_0_1       |         1|
-|42    |design_1_util_ds_buf_12_0      |         1|
-|43    |design_1_util_ds_buf_10_0      |         1|
-|44    |design_1_util_ds_buf_0_2       |         1|
-|45    |design_1_util_ds_buf_1_0       |         1|
-|46    |design_1_util_ds_buf_0_3       |         1|
-|47    |design_1_util_ds_buf_1_1       |         1|
-|48    |design_1_util_vector_logic_0_0 |         1|
-|49    |design_1_zynq_ultra_ps_e_0_0   |         1|
+|22    |design_1_axi_gpio_14_0         |         1|
+|23    |design_1_axi_gpio_1_1          |         1|
+|24    |design_1_axi_gpio_2_0          |         1|
+|25    |design_1_axi_gpio_2_1          |         1|
+|26    |design_1_axi_gpio_3_0          |         1|
+|27    |design_1_axi_gpio_2_2          |         1|
+|28    |design_1_axi_gpio_8_0          |         1|
+|29    |design_1_axi_gpio_0_2          |         1|
+|30    |design_1_axi_gpio_0_0          |         1|
+|31    |design_1_axi_iic_0_0           |         1|
+|32    |design_1_axi_iic_0_1           |         1|
+|33    |design_1_axi_iic_0_2           |         1|
+|34    |design_1_axi_quad_spi_0_0      |         1|
+|35    |design_1_axi_quad_spi_0_1      |         1|
+|36    |design_1_clk_wiz_0_0           |         1|
+|37    |design_1_proc_sys_reset_0_0    |         1|
+|38    |design_1_util_ds_buf_10_1      |         1|
+|39    |design_1_util_ds_buf_11_0      |         1|
+|40    |design_1_util_ds_buf_0_0       |         1|
+|41    |design_1_util_ds_buf_6_0       |         1|
+|42    |design_1_util_ds_buf_0_1       |         1|
+|43    |design_1_util_ds_buf_12_0      |         1|
+|44    |design_1_util_ds_buf_10_0      |         1|
+|45    |design_1_util_ds_buf_7_0       |         1|
+|46    |design_1_util_ds_buf_15_0      |         1|
+|47    |design_1_util_ds_buf_15_1      |         1|
+|48    |design_1_util_ds_buf_15_2      |         1|
+|49    |design_1_util_ds_buf_0_2       |         1|
+|50    |design_1_util_ds_buf_1_0       |         1|
+|51    |design_1_util_ds_buf_0_3       |         1|
+|52    |design_1_util_ds_buf_1_1       |         1|
+|53    |design_1_util_ds_buf_6_1       |         1|
+|54    |design_1_util_ds_buf_6_2       |         1|
+|55    |design_1_util_ds_buf_6_3       |         1|
+|56    |design_1_util_ds_buf_6_4       |         1|
+|57    |design_1_util_vector_logic_0_0 |         1|
+|58    |design_1_zynq_ultra_ps_e_0_0   |         1|
 +------+-------------------------------+----------+
 
 Report Cell Usage: 
@@ -973,52 +1158,55 @@ Report Cell Usage:
 |10    |design_1_auto_ds             |     1|
 |11    |design_1_auto_pc             |     1|
 |12    |design_1_axi_gpio_0          |     3|
-|15    |design_1_axi_gpio_1          |     2|
-|17    |design_1_axi_gpio_2          |     4|
-|21    |design_1_axi_gpio_3          |     3|
-|24    |design_1_axi_gpio_8          |     1|
-|25    |design_1_axi_gpio_9          |     1|
-|26    |design_1_axi_iic_0           |     3|
-|29    |design_1_axi_quad_spi_0      |     2|
-|31    |design_1_clk_wiz_0           |     1|
-|32    |design_1_proc_sys_reset_0    |     1|
-|33    |design_1_tier2_xbar_0        |     1|
-|34    |design_1_tier2_xbar_1        |     1|
-|35    |design_1_tier2_xbar_2        |     1|
-|36    |design_1_util_ds_buf_0       |     4|
-|40    |design_1_util_ds_buf_10      |     2|
-|42    |design_1_util_ds_buf_11      |     1|
-|43    |design_1_util_ds_buf_12      |     1|
-|44    |design_1_util_ds_buf_1       |     2|
-|46    |design_1_util_ds_buf_6       |     1|
-|47    |design_1_util_vector_logic_0 |     1|
-|48    |design_1_xbar                |     1|
-|49    |design_1_zynq_ultra_ps_e_0   |     1|
-|50    |IBUF                         |    28|
-|51    |OBUF                         |    60|
+|15    |design_1_axi_gpio_14         |     1|
+|16    |design_1_axi_gpio_1          |     2|
+|18    |design_1_axi_gpio_2          |     4|
+|22    |design_1_axi_gpio_3          |     3|
+|25    |design_1_axi_gpio_8          |     1|
+|26    |design_1_axi_gpio_9          |     1|
+|27    |design_1_axi_iic_0           |     3|
+|30    |design_1_axi_quad_spi_0      |     2|
+|32    |design_1_clk_wiz_0           |     1|
+|33    |design_1_proc_sys_reset_0    |     1|
+|34    |design_1_tier2_xbar_0        |     1|
+|35    |design_1_tier2_xbar_1        |     1|
+|36    |design_1_tier2_xbar_2        |     1|
+|37    |design_1_util_ds_buf_0       |     4|
+|41    |design_1_util_ds_buf_10      |     2|
+|43    |design_1_util_ds_buf_11      |     1|
+|44    |design_1_util_ds_buf_12      |     1|
+|45    |design_1_util_ds_buf_15      |     3|
+|48    |design_1_util_ds_buf_1       |     2|
+|50    |design_1_util_ds_buf_6       |     5|
+|55    |design_1_util_ds_buf_7       |     1|
+|56    |design_1_util_vector_logic_0 |     1|
+|57    |design_1_xbar                |     1|
+|58    |design_1_zynq_ultra_ps_e_0   |     1|
+|59    |IBUF                         |     2|
+|60    |OBUF                         |    34|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 3504.801 ; gain = 969.016
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 3504.801 ; gain = 1004.457
+Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 3516.738 ; gain = 972.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3516.738 ; gain = 1007.699
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 3516.820 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3528.781 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3546.496 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3561.531 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 28 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 28 instances
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
 
-Synth Design complete | Checksum: 7e64b45
+Synth Design complete | Checksum: d7ab2b80
 INFO: [Common 17-83] Releasing license: Synthesis
-272 Infos, 156 Warnings, 0 Critical Warnings and 0 Errors encountered.
+318 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 3546.496 ; gain = 1989.098
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3561.531 ; gain = 2004.949
 INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 11:47:54 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 31 16:13:26 2025...

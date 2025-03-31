@@ -76,3 +76,8 @@ timestamp=[2025-03-31 13:47:26], mode=BUILD, duration=0:00:00.819, duration_ms=8
 timestamp=[2025-03-31 14:03:31], mode=BUILD, duration=0:00:00.889, duration_ms=889, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
 timestamp=[2025-03-31 14:05:04], mode=BUILD, duration=0:00:00.769, duration_ms=769, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
 timestamp=[2025-03-31 14:10:40], mode=BUILD, duration=0:00:00.777, duration_ms=777, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-03-31 15:07:31], mode=WORKBENCH_START, duration=0:00:05.503, duration_ms=5503, data={}
+timestamp=[2025-03-31 15:07:31], mode=WORKBENCH_UI_INIT, duration=0:00:00.488, duration_ms=488, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=DRCPlatform,DRC_Rev2_0_Deliverables_Application,DRC_Rev2_0_Deliverables_Application_system,RemoteSystemsTempFiles}
+timestamp=[2025-03-31 15:07:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.803, duration_ms=803, data={}
+timestamp=[2025-03-31 15:09:30], mode=BUILD, duration=0:00:00.788, duration_ms=788, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-03-31 15:16:34], mode=BUILD, duration=0:00:00.759, duration_ms=759, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
