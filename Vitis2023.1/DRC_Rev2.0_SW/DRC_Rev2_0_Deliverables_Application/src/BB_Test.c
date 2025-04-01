@@ -65,16 +65,6 @@
 #include "PeripheralMacros.h"
 #include "StructDefinitions.h"
 
-//define GPIO IDs for MinMax values of the converters
-#define GPIO2_DATA0A_ID		XPAR_AXI_GPIO_2_DEVICE_ID
-#define GPIO3_DATA0B_ID		XPAR_AXI_GPIO_3_DEVICE_ID
-#define GPIO4_DATA1A_ID		XPAR_AXI_GPIO_4_DEVICE_ID
-#define GPIO5_DATA1B_ID		XPAR_AXI_GPIO_5_DEVICE_ID
-#define GPIO6_DATA2A_ID		XPAR_AXI_GPIO_6_DEVICE_ID
-#define GPIO11_DATA2B_ID	XPAR_AXI_GPIO_11_DEVICE_ID
-#define GPIO12_DATA3A_ID	XPAR_AXI_GPIO_12_DEVICE_ID
-#define GPIO13_DATA3B_ID	XPAR_AXI_GPIO_13_DEVICE_ID
-
 //GPIO bus XGpio instances
 XGpio GPIO8_CTRL;
 XGpio GPIO0_LEDS;
@@ -91,6 +81,7 @@ XGpio GPIO6_DATA2A;
 XGpio GPIO11_DATA2B;
 XGpio GPIO12_DATA3A;
 XGpio GPIO13_DATA3B;
+XGpio GPIO14_AFE_CTRL;
 
 //IIC bus XIic instances
 XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
@@ -137,6 +128,12 @@ const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
+
+//AFE_CTRL XGpio pins
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 0};
+const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 0};
+const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 0};
+const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 0};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -245,6 +242,11 @@ const net_t* GPIO_LED[] = {
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_CTRL[] = {
 	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3
+};
+
+//Arrays used in initialization of GPIO AXI blocks
+const net_t* GPIO_AFE_CTRL[] = {
+		&AFE0_CTRL, &AFE1_CTRL, &AFE2_CTRL, &AFE3_CTRL
 };
 
 //Arrays used in initialization of GPIO AXI blocks
@@ -564,6 +566,13 @@ int main()
     //Initialize Differential(In this app single ended) GPIO AXI device
     printf("Initializing Differential(In this app single ended) GPIO AXI device.\n");
     Status = GPIO_Init_Wrapper (GPIO_DS, sizeof(GPIO_DS) / sizeof(GPIO_DS[0]), GPIO10_DS_ID);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
+
+    //Initialize AFE Mode Control GPIO AXI device
+    printf("Initializing AFE Mode control GPIO AXI device.\n");
+    Status = GPIO_Init_Wrapper (GPIO_AFE_CTRL, sizeof(GPIO_AFE_CTRL) / sizeof(GPIO_AFE_CTRL[0]), GPIO14_AFE_CNTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }

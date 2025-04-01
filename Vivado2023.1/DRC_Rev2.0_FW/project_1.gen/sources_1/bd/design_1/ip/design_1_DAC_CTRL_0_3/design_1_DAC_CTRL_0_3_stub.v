@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Sun Mar 23 21:11:17 2025
+// Date        : Mon Mar 31 17:15:53 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_DAC_CTRL_0_3/design_1_DAC_CTRL_0_3_stub.v
@@ -15,10 +15,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "DAC_CTRL,Vivado 2023.1" *)
-module design_1_DAC_CTRL_0_3(CLKIN, DACDATA, DCKOUT)
-/* synthesis syn_black_box black_box_pad_pin="DACDATA[11:0],DCKOUT" */
+module design_1_DAC_CTRL_0_3(CLKIN, DATA_INA, DATA_INB, DACDATA, DCKOUT)
+/* synthesis syn_black_box black_box_pad_pin="DATA_INA[11:0],DATA_INB[11:0],DACDATA[11:0],DCKOUT" */
 /* synthesis syn_force_seq_prim="CLKIN" */;
   input CLKIN /* synthesis syn_isclock = 1 */;
+  input [11:0]DATA_INA;
+  input [11:0]DATA_INB;
   output [11:0]DACDATA;
   output DCKOUT;
 endmodule

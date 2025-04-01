@@ -57,6 +57,8 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_DAC_CTRL_0_3 (
   CLKIN,
+  DATA_INA,
+  DATA_INB,
   DACDATA,
   DCKOUT
 );
@@ -64,11 +66,15 @@ module design_1_DAC_CTRL_0_3 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIN CLK" *)
 input wire CLKIN;
+input wire [11 : 0] DATA_INA;
+input wire [11 : 0] DATA_INB;
 output wire [11 : 0] DACDATA;
 output wire DCKOUT;
 
   DAC_CTRL inst (
     .CLKIN(CLKIN),
+    .DATA_INA(DATA_INA),
+    .DATA_INB(DATA_INB),
     .DACDATA(DACDATA),
     .DCKOUT(DCKOUT)
   );

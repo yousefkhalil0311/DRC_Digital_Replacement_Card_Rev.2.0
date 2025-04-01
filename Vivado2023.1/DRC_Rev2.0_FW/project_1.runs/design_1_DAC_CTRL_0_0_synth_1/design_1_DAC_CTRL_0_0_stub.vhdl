@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Sun Mar 23 21:10:40 2025
+-- Date        : Mon Mar 31 17:15:52 2025
 -- Host        : OCP001 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_DAC_CTRL_0_0_stub.vhdl
@@ -16,6 +16,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     CLKIN : in STD_LOGIC;
+    DATA_INA : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    DATA_INB : in STD_LOGIC_VECTOR ( 11 downto 0 );
     DACDATA : out STD_LOGIC_VECTOR ( 11 downto 0 );
     DCKOUT : out STD_LOGIC
   );
@@ -26,7 +28,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "CLKIN,DACDATA[11:0],DCKOUT";
+attribute black_box_pad_pin of stub : architecture is "CLKIN,DATA_INA[11:0],DATA_INB[11:0],DACDATA[11:0],DCKOUT";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "DAC_CTRL,Vivado 2023.1";
 begin
