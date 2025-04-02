@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="design_1_tier2_xbar_0_0_synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1742790630">
+<GenRun Id="design_1_tier2_xbar_0_0_synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1743455684">
   <File Type="PA-TCL" Name="design_1_tier2_xbar_0_0.tcl"/>
   <File Type="REPORTS-TCL" Name="design_1_tier2_xbar_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_1_tier2_xbar_0_0.vds"/>

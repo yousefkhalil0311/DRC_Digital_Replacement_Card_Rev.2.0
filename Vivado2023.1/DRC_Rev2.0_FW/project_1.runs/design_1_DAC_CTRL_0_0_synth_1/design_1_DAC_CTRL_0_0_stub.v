@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Sun Mar 23 21:10:39 2025
+// Date        : Mon Mar 31 17:15:52 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_DAC_CTRL_0_0_stub.v
@@ -15,10 +15,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "DAC_CTRL,Vivado 2023.1" *)
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(CLKIN, DACDATA, DCKOUT)
-/* synthesis syn_black_box black_box_pad_pin="DACDATA[11:0],DCKOUT" */
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(CLKIN, DATA_INA, DATA_INB, DACDATA, DCKOUT)
+/* synthesis syn_black_box black_box_pad_pin="DATA_INA[11:0],DATA_INB[11:0],DACDATA[11:0],DCKOUT" */
 /* synthesis syn_force_seq_prim="CLKIN" */;
   input CLKIN /* synthesis syn_isclock = 1 */;
+  input [11:0]DATA_INA;
+  input [11:0]DATA_INB;
   output [11:0]DACDATA;
   output DCKOUT;
 endmodule

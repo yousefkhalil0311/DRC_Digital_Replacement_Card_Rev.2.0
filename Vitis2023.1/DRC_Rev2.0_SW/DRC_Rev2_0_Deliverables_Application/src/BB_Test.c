@@ -50,28 +50,20 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <math.h>
+
 #include "platform.h"
 #include "xil_printf.h"
 #include "xiic.h"
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xspi.h"
+#include "xuartps.h"
 
 //Project specific files
 #include "RegisterMaps.h"
 #include "XPAR_AXI_IDS.h"
 #include "PeripheralMacros.h"
 #include "StructDefinitions.h"
-
-//define GPIO IDs for MinMax values of the converters
-#define GPIO2_DATA0A_ID		XPAR_AXI_GPIO_2_DEVICE_ID
-#define GPIO3_DATA0B_ID		XPAR_AXI_GPIO_3_DEVICE_ID
-#define GPIO4_DATA1A_ID		XPAR_AXI_GPIO_4_DEVICE_ID
-#define GPIO5_DATA1B_ID		XPAR_AXI_GPIO_5_DEVICE_ID
-#define GPIO6_DATA2A_ID		XPAR_AXI_GPIO_6_DEVICE_ID
-#define GPIO11_DATA2B_ID	XPAR_AXI_GPIO_11_DEVICE_ID
-#define GPIO12_DATA3A_ID	XPAR_AXI_GPIO_12_DEVICE_ID
-#define GPIO13_DATA3B_ID	XPAR_AXI_GPIO_13_DEVICE_ID
 
 //GPIO bus XGpio instances
 XGpio GPIO8_CTRL;
@@ -81,10 +73,6 @@ XGpio GPIO10_DS;
 XGpio GPIO7_SPDT;
 XGpio GPIO11_CLKP;
 XGpio GPIO1_SPDCTRL;
-//XGpio GPIO6_DATA3;
-//XGpio GPIO3_DATA0;
-//XGpio GPIO5_DATA2;
-//XGpio GPIO4_DATA1;
 XGpio GPIO2_DATA0A;
 XGpio GPIO3_DATA0B;
 XGpio GPIO4_DATA1A;
@@ -93,6 +81,11 @@ XGpio GPIO6_DATA2A;
 XGpio GPIO11_DATA2B;
 XGpio GPIO12_DATA3A;
 XGpio GPIO13_DATA3B;
+XGpio GPIO14_AFE_CTRL;
+XGpio GPIO15_DAC0Const;
+XGpio GPIO16_DAC1Const;
+XGpio GPIO17_DAC2Const;
+XGpio GPIO18_DAC3Const;
 
 //IIC bus XIic instances
 XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
@@ -140,6 +133,12 @@ const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
 
+//AFE_CTRL XGpio pins
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
+const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};//set to 1 for loopback mode
+const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};
+const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};
+
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
 const net_t SPDT6_CTRL  = {&GPIO7_SPDT, 1, 1, 0, 1}; //All paths must be either GPIO (instead of LSDAC) or ADC (instead of GPIO) to avoid damage
@@ -154,153 +153,90 @@ const net_t SPDT74_CTRL = {&GPIO7_SPDT, 9, 1, 0, 1};
 const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 
 //SE XGpio pins
-const net_t SE2  = {&GPIO9_SE, 0, 1, 0, 1, 2, &IOEXP_U19, 0x008000};
-const net_t SE14 = {&GPIO9_SE, 1, 1, 0, 1, 14, &IOEXP_U21, 0x040000};
+const net_t SE2  = {&GPIO9_SE, 0, 1, 1, 0, 2, &IOEXP_U19, 0x008000};
+const net_t SE14 = {&GPIO9_SE, 1, 1, 1, 0, 14, &IOEXP_U21, 0x040000};
 const net_t SE17 = {&GPIO9_SE, 2, 1, 0, 1, 17, &IOEXP_U19, 0x000800};
-const net_t SE20 = {&GPIO9_SE, 3, 1, 0, 1, 20, &IOEXP_U20, 0x000100};
+const net_t SE20 = {&GPIO9_SE, 3, 1, 1, 0, 20, &IOEXP_U20, 0x000100};
 const net_t SE21 = {&GPIO9_SE, 4, 1, 0, 1, 21, &IOEXP_U19, 0x000200};
 const net_t SE22 = {&GPIO9_SE, 5, 1, 0, 1, 22, &IOEXP_U20, 0x080000};
-const net_t SE23 = {&GPIO9_SE, 6, 1, 0, 1, 23, &IOEXP_U20, 0x008000};
-const net_t SE24 = {&GPIO9_SE, 7, 1, 0, 1, 24, &IOEXP_U20, 0x000002};
-const net_t SE25 = {&GPIO9_SE, 8, 1, 0, 1, 25, &IOEXP_U20, 0x000008};
-const net_t SE26 = {&GPIO9_SE, 9, 1, 0, 1, 26, &IOEXP_U20, 0x000001};
-const net_t SE27 = {&GPIO9_SE, 10, 1, 0, 1, 27, &IOEXP_U20, 0x000800};
-const net_t SE28 = {&GPIO9_SE, 11, 1, 0, 1, 28, &IOEXP_U20, 0x010000};
+const net_t SE23 = {&GPIO9_SE, 6, 1, 1, 0, 23, &IOEXP_U20, 0x008000};
+const net_t SE24 = {&GPIO9_SE, 7, 1, 1, 0, 24, &IOEXP_U20, 0x000002};
+const net_t SE25 = {&GPIO9_SE, 8, 1, 1, 0, 25, &IOEXP_U20, 0x000008};
+const net_t SE26 = {&GPIO9_SE, 9, 1, 1, 0, 26, &IOEXP_U20, 0x000001};
+const net_t SE27 = {&GPIO9_SE, 10, 1, 1, 0, 27, &IOEXP_U20, 0x000800};
+const net_t SE28 = {&GPIO9_SE, 11, 1, 1, 0, 28, &IOEXP_U20, 0x010000};
 const net_t SE29 = {&GPIO9_SE, 12, 1, 0, 1, 29, &IOEXP_U20, 0x020000};
-const net_t SE32 = {&GPIO9_SE, 13, 1, 0, 1, 32, &IOEXP_U19, 0x004000};
-const net_t SE33 = {&GPIO9_SE, 14, 1, 0, 1, 33, &IOEXP_U19, 0x002000};
-const net_t SE36 = {&GPIO9_SE, 15, 1, 0, 1, 36, &IOEXP_U18, 0x000800};
-const net_t SE37 = {&GPIO9_SE, 16, 1, 0, 1, 37, &IOEXP_U21, 0x000020};
-const net_t SE38 = {&GPIO9_SE, 17, 1, 0, 1, 38, &IOEXP_U21, 0x000008};
-const net_t SE39 = {&GPIO9_SE, 18, 1, 0, 1, 39, &IOEXP_U18, 0x000400};
-const net_t SE40 = {&GPIO9_SE, 19, 1, 0, 1, 40, &IOEXP_U18, 0x000004};
-const net_t SE41 = {&GPIO9_SE, 20, 1, 0, 1, 41, &IOEXP_U21, 0x000010};
-const net_t SE42 = {&GPIO9_SE, 21, 1, 0, 1, 42, &IOEXP_U21, 0x000080};
-const net_t SE43 = {&GPIO9_SE, 22, 1, 0, 1, 43, &IOEXP_U21, 0x000200};
-const net_t SE44 = {&GPIO9_SE, 23, 1, 0, 1, 44, &IOEXP_U21, 0x080000};
-const net_t SE46 = {&GPIO9_SE, 24, 1, 0, 1, 46, &IOEXP_U19, 0x001000};
-const net_t SE48 = {&GPIO9_SE, 25, 1, 0, 1, 48, &IOEXP_U19, 0x000400};
-const net_t SE49 = {&GPIO9_SE, 26, 1, 0, 1, 49, &IOEXP_U21, 0x800000};
-const net_t SE50 = {&GPIO9_SE, 27, 1, 0, 1, 50, &IOEXP_U18, 0x000020};
-const net_t SE51 = {&GPIO9_SE, 28, 1, 0, 1, 51, &IOEXP_U19, 0x000100};
-const net_t SE52 = {&GPIO9_SE, 29, 1, 0, 1, 52, &IOEXP_U20, 0x002000};
-const net_t SE55 = {&GPIO9_SE, 30, 1, 0, 1, 55, &IOEXP_U18, 0x000010};
-const net_t SE56 = {&GPIO9_SE, 31, 1, 0, 1, 56, &IOEXP_U20, 0x000004};
-const net_t SE57 = {&GPIO9_SE, 0, 2, 0, 1, 57, &IOEXP_U20, 0x001000};
-const net_t SE58 = {&GPIO9_SE, 1, 2, 0, 1, 58, &IOEXP_U20, 0x000400};
-const net_t SE59 = {&GPIO9_SE, 2, 2, 0, 1, 59, &IOEXP_U20, 0x800000};
-const net_t SE74 = {&GPIO9_SE, 3, 2, 0, 1, 74, &IOEXP_U18, 0x000008};
-const net_t SE81 = {&GPIO9_SE, 4, 2, 0, 1, 81, &IOEXP_U20, 0x000200};
-const net_t SE89 = {&GPIO9_SE, 5, 2, 0, 1, 89, &IOEXP_U20, 0x200000};
+const net_t SE32 = {&GPIO9_SE, 13, 1, 1, 0, 32, &IOEXP_U19, 0x004000};
+const net_t SE33 = {&GPIO9_SE, 14, 1, 1, 0, 33, &IOEXP_U19, 0x002000};
+const net_t SE36 = {&GPIO9_SE, 15, 1, 1, 0, 36, &IOEXP_U18, 0x000800};
+const net_t SE37 = {&GPIO9_SE, 16, 1, 1, 0, 37, &IOEXP_U21, 0x000020};
+const net_t SE38 = {&GPIO9_SE, 17, 1, 1, 0, 38, &IOEXP_U21, 0x000008};
+const net_t SE39 = {&GPIO9_SE, 18, 1, 1, 0, 39, &IOEXP_U18, 0x000400};
+const net_t SE40 = {&GPIO9_SE, 19, 1, 1, 0, 40, &IOEXP_U18, 0x000004};
+const net_t SE41 = {&GPIO9_SE, 20, 1, 1, 0, 41, &IOEXP_U21, 0x000010};
+const net_t SE42 = {&GPIO9_SE, 21, 1, 1, 0, 42, &IOEXP_U21, 0x000080};
+const net_t SE43 = {&GPIO9_SE, 22, 1, 1, 0, 43, &IOEXP_U21, 0x000200};
+const net_t SE44 = {&GPIO9_SE, 23, 1, 1, 0, 44, &IOEXP_U21, 0x080000};
+const net_t SE46 = {&GPIO9_SE, 24, 1, 1, 0, 46, &IOEXP_U19, 0x001000};
+const net_t SE48 = {&GPIO9_SE, 25, 1, 1, 0, 48, &IOEXP_U19, 0x000400};
+const net_t SE49 = {&GPIO9_SE, 26, 1, 1, 0, 49, &IOEXP_U21, 0x800000};
+const net_t SE50 = {&GPIO9_SE, 27, 1, 1, 0, 50, &IOEXP_U18, 0x000020};
+const net_t SE51 = {&GPIO9_SE, 28, 1, 1, 0, 51, &IOEXP_U19, 0x000100};
+const net_t SE52 = {&GPIO9_SE, 29, 1, 1, 0, 52, &IOEXP_U20, 0x002000};
+const net_t SE55 = {&GPIO9_SE, 30, 1, 1, 0, 55, &IOEXP_U18, 0x000010};
+const net_t SE56 = {&GPIO9_SE, 31, 1, 1, 0, 56, &IOEXP_U20, 0x000004};
+const net_t SE57 = {&GPIO9_SE, 0, 2, 1, 0, 57, &IOEXP_U20, 0x001000};
+const net_t SE58 = {&GPIO9_SE, 1, 2, 1, 0, 58, &IOEXP_U20, 0x000400};
+const net_t SE59 = {&GPIO9_SE, 2, 2, 1, 0, 59, &IOEXP_U20, 0x800000};
+const net_t SE74 = {&GPIO9_SE, 3, 2, 1, 0, 74, &IOEXP_U18, 0x000008};
+const net_t SE81 = {&GPIO9_SE, 4, 2, 1, 0, 81, &IOEXP_U20, 0x000200};
+const net_t SE89 = {&GPIO9_SE, 5, 2, 1, 0, 89, &IOEXP_U20, 0x200000};
 
 //Diff IO XGpio set up as single ended for now
-const net_t SE4  = {&GPIO10_DS, 0, 1, 0, 1, 4, &IOEXP_U18, 0x000040};
-const net_t SE3  = {&GPIO10_DS, 0, 2, 0, 1, 3, &IOEXP_U18, 0x008000};
-const net_t SE6  = {&GPIO10_DS, 1, 1, 0, 1, 6, &IOEXP_U18, 0x000080};
-const net_t SE5  = {&GPIO10_DS, 1, 2, 0, 1, 5, &IOEXP_U18, 0x002000};
-const net_t SE8  = {&GPIO10_DS, 2, 1, 0, 1, 8, &IOEXP_U21, 0x000001};
-const net_t SE7  = {&GPIO10_DS, 2, 2, 0, 1, 7, &IOEXP_U21, 0x008000};
-const net_t SE10 = {&GPIO10_DS, 3, 1, 0, 1, 10, &IOEXP_U18, 0x000002};
-const net_t SE9  = {&GPIO10_DS, 3, 2, 0, 1, 9, &IOEXP_U18, 0x000001};
-const net_t SE12 = {&GPIO10_DS, 4, 1, 2, 0, 12, &IOEXP_U21, 0x000800};
-const net_t SE11 = {&GPIO10_DS, 4, 2, 0, 1, 11, &IOEXP_U21, 0x001000};
-const net_t SE18 = {&GPIO10_DS, 5, 1, 0, 1, 18, &IOEXP_U21, 0x000100};
-const net_t SE16 = {&GPIO10_DS, 5, 2, 0, 1, 16, &IOEXP_U19, 0x000008};
-const net_t SE34 = {&GPIO10_DS, 6, 1, 0, 1, 34, &IOEXP_U18, 0x004000};
-const net_t SE19 = {&GPIO10_DS, 6, 2, 0, 1, 19, &IOEXP_U21, 0x400000};
-const net_t SE45 = {&GPIO10_DS, 7, 1, 0, 1, 45, &IOEXP_U21, 0x100000};
-const net_t SE35 = {&GPIO10_DS, 7, 2, 0, 1, 35, &IOEXP_U18, 0x001000};
-const net_t SE53 = {&GPIO10_DS, 8, 1, 0, 1, 53, &IOEXP_U20, 0x000080};
-const net_t SE47 = {&GPIO10_DS, 8, 2, 0, 1, 47, &IOEXP_U21, 0x000400};
-const net_t SE62 = {&GPIO10_DS, 9, 1, 0, 1, 62, &IOEXP_U18, 0x000200};
-const net_t SE54 = {&GPIO10_DS, 9, 2, 0, 1, 54, &IOEXP_U20, 0x000020};
-const net_t SE64 = {&GPIO10_DS, 10, 1, 0, 1, 64, &IOEXP_U18, 0x800000};
-const net_t SE63 = {&GPIO10_DS, 10, 2, 0, 1, 63, &IOEXP_U18, 0x000100};
-const net_t SE66 = {&GPIO10_DS, 11, 1, 0, 1, 66, &IOEXP_U18, 0x200000};
-const net_t SE65 = {&GPIO10_DS, 11, 2, 0, 1, 65, &IOEXP_U18, 0x400000};
-const net_t SE68 = {&GPIO10_DS, 12, 1, 0, 1, 68, &IOEXP_U21, 0x000002};
-const net_t SE67 = {&GPIO10_DS, 12, 2, 0, 1, 67, &IOEXP_U21, 0x004000};
-const net_t SE70 = {&GPIO10_DS, 13, 1, 0, 1, 70, &IOEXP_U21, 0x000040};
-const net_t SE69 = {&GPIO10_DS, 13, 2, 0, 1, 69, &IOEXP_U21, 0x000004};
-const net_t SE72 = {&GPIO10_DS, 14, 1, 0, 1, 72, &IOEXP_U21, 0x010000};
-const net_t SE71 = {&GPIO10_DS, 14, 2, 0, 1, 71, &IOEXP_U21, 0x002000};
-const net_t SE75 = {&GPIO10_DS, 15, 1, 0, 1, 75, &IOEXP_U21, 0x200000};
-const net_t SE73 = {&GPIO10_DS, 15, 2, 0, 1, 73, &IOEXP_U21, 0x020000};
-const net_t SE77 = {&GPIO10_DS, 16, 1, 0, 1, 77, &IOEXP_U19, 0x010000};
-const net_t SE76 = {&GPIO10_DS, 16, 2, 0, 1, 76, &IOEXP_U19, 0x000002};
-const net_t SE79 = {&GPIO10_DS, 17, 1, 0, 1, 79, &IOEXP_U20, 0x100000};
-const net_t SE78 = {&GPIO10_DS, 17, 2, 0, 1, 78, &IOEXP_U19, 0x000010};
-const net_t SE82 = {&GPIO10_DS, 18, 1, 0, 1, 82, &IOEXP_U20, 0x040000};
-const net_t SE80 = {&GPIO10_DS, 18, 2, 0, 1, 80, &IOEXP_U20, 0x400000};
-const net_t SE84 = {&GPIO10_DS, 19, 1, 0, 1, 84, &IOEXP_U20, 0x000040};
-const net_t SE83 = {&GPIO10_DS, 19, 2, 0, 1, 83, &IOEXP_U20, 0x004000};
-const net_t SE86 = {&GPIO10_DS, 20, 1, 0, 1, 86, &IOEXP_U19, 0x000001};
-const net_t SE85 = {&GPIO10_DS, 20, 2, 0, 1, 85, &IOEXP_U20, 0x000010};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 1, 88, &IOEXP_U19, 0x000004};
-const net_t SE87 = {&GPIO10_DS, 21, 2, 0, 1, 87, &IOEXP_U19, 0x000080};
-
-////DATA0/CLK0 XGpio pins
-//const net_t DATA0_0   = {&GPIO3_DATA0,  0, 1, 2, 0};
-//const net_t DATA0_1   = {&GPIO3_DATA0,  1, 1, 2, 0};
-//const net_t DATA0_2   = {&GPIO3_DATA0,  2, 1, 2, 0};
-//const net_t DATA0_3   = {&GPIO3_DATA0,  3, 1, 2, 0};
-//const net_t DATA0_4   = {&GPIO3_DATA0,  4, 1, 2, 0};
-//const net_t DATA0_5   = {&GPIO3_DATA0,  5, 1, 2, 0};
-//const net_t DATA0_6   = {&GPIO3_DATA0,  6, 1, 2, 0};
-//const net_t DATA0_7   = {&GPIO3_DATA0,  7, 1, 2, 0};
-//const net_t DATA0_8   = {&GPIO3_DATA0,  8, 1, 2, 0};
-//const net_t DATA0_9   = {&GPIO3_DATA0,  9, 1, 2, 0};
-//const net_t DATA0_10  = {&GPIO3_DATA0, 10, 1, 2, 0};
-//const net_t DATA0_11  = {&GPIO3_DATA0, 11, 1, 2, 0};
-//const net_t DATA0_CLK = {&GPIO3_DATA0,  0, 2, 2, 0};
-//
-////DATA0/CLK0 XGpio pins
-//const net_t DATA1_0   = {&GPIO4_DATA1,  0, 1, 2, 0};
-//const net_t DATA1_1   = {&GPIO4_DATA1,  1, 1, 2, 0};
-//const net_t DATA1_2   = {&GPIO4_DATA1,  2, 1, 2, 0};
-//const net_t DATA1_3   = {&GPIO4_DATA1,  3, 1, 2, 0};
-//const net_t DATA1_4   = {&GPIO4_DATA1,  4, 1, 2, 0};
-//const net_t DATA1_5   = {&GPIO4_DATA1,  5, 1, 2, 0};
-//const net_t DATA1_6   = {&GPIO4_DATA1,  6, 1, 2, 0};
-//const net_t DATA1_7   = {&GPIO4_DATA1,  7, 1, 2, 0};
-//const net_t DATA1_8   = {&GPIO4_DATA1,  8, 1, 2, 0};
-//const net_t DATA1_9   = {&GPIO4_DATA1,  9, 1, 2, 0};
-//const net_t DATA1_10  = {&GPIO4_DATA1, 10, 1, 2, 0};
-//const net_t DATA1_11  = {&GPIO4_DATA1, 11, 1, 2, 0};
-//const net_t DATA1_CLK = {&GPIO4_DATA1,  0, 2, 2, 0};
-//
-////DATA0/CLK0 XGpio pins
-//const net_t DATA2_0   = {&GPIO5_DATA2,  0, 1, 2, 0};
-//const net_t DATA2_1   = {&GPIO5_DATA2,  1, 1, 2, 0};
-//const net_t DATA2_2   = {&GPIO5_DATA2,  2, 1, 2, 0};
-//const net_t DATA2_3   = {&GPIO5_DATA2,  3, 1, 2, 0};
-//const net_t DATA2_4   = {&GPIO5_DATA2,  4, 1, 2, 0};
-//const net_t DATA2_5   = {&GPIO5_DATA2,  5, 1, 2, 0};
-//const net_t DATA2_6   = {&GPIO5_DATA2,  6, 1, 2, 0};
-//const net_t DATA2_7   = {&GPIO5_DATA2,  7, 1, 2, 0};
-//const net_t DATA2_8   = {&GPIO5_DATA2,  8, 1, 2, 0};
-//const net_t DATA2_9   = {&GPIO5_DATA2,  9, 1, 2, 0};
-//const net_t DATA2_10  = {&GPIO5_DATA2, 10, 1, 2, 0};
-//const net_t DATA2_11  = {&GPIO5_DATA2, 11, 1, 2, 0};
-//const net_t DATA2_CLK = {&GPIO5_DATA2,  0, 2, 2, 0};
-//
-////DATA0/CLK0 XGpio pins
-//const net_t DATA3_0   = {&GPIO6_DATA3,  0, 1, 2, 0};
-//const net_t DATA3_1   = {&GPIO6_DATA3,  1, 1, 2, 0};
-//const net_t DATA3_2   = {&GPIO6_DATA3,  2, 1, 2, 0};
-//const net_t DATA3_3   = {&GPIO6_DATA3,  3, 1, 2, 0};
-//const net_t DATA3_4   = {&GPIO6_DATA3,  4, 1, 2, 0};
-//const net_t DATA3_5   = {&GPIO6_DATA3,  5, 1, 2, 0};
-//const net_t DATA3_6   = {&GPIO6_DATA3,  6, 1, 2, 0};
-//const net_t DATA3_7   = {&GPIO6_DATA3,  7, 1, 2, 0};
-//const net_t DATA3_8   = {&GPIO6_DATA3,  8, 1, 2, 0};
-//const net_t DATA3_9   = {&GPIO6_DATA3,  9, 1, 2, 0};
-//const net_t DATA3_10  = {&GPIO6_DATA3, 10, 1, 2, 0};
-//const net_t DATA3_11  = {&GPIO6_DATA3, 11, 1, 2, 0};
-//const net_t DATA3_CLK = {&GPIO6_DATA3,  0, 2, 2, 0};
-
-//CLKP/N (SAMPLECLK) XGpio pins
-//const net_t SAMPLE_CLKP  = {&GPIO11_CLKP,  0, 1, 0, 0}; //diff output on fpga pins
+const net_t SE4  = {&GPIO10_DS, 0, 1, 1, 0, 4, &IOEXP_U18, 0x000040};
+const net_t SE3  = {&GPIO10_DS, 0, 2, 1, 0, 3, &IOEXP_U18, 0x008000};
+const net_t SE6  = {&GPIO10_DS, 1, 1, 1, 0, 6, &IOEXP_U18, 0x000080};
+const net_t SE5  = {&GPIO10_DS, 1, 2, 1, 0, 5, &IOEXP_U18, 0x002000};
+const net_t SE8  = {&GPIO10_DS, 2, 1, 1, 0, 8, &IOEXP_U21, 0x000001};
+const net_t SE7  = {&GPIO10_DS, 2, 2, 1, 0, 7, &IOEXP_U21, 0x008000};
+const net_t SE10 = {&GPIO10_DS, 3, 1, 1, 0, 10, &IOEXP_U18, 0x000002};
+const net_t SE9  = {&GPIO10_DS, 3, 2, 1, 0, 9, &IOEXP_U18, 0x000001};
+const net_t SE12 = {&GPIO10_DS, 4, 1, 1, 0, 12, &IOEXP_U21, 0x000800};
+const net_t SE11 = {&GPIO10_DS, 4, 2, 1, 0, 11, &IOEXP_U21, 0x001000};
+const net_t SE18 = {&GPIO10_DS, 5, 1, 1, 0, 18, &IOEXP_U21, 0x000100};
+const net_t SE16 = {&GPIO10_DS, 5, 2, 1, 0, 16, &IOEXP_U19, 0x000008};
+const net_t SE34 = {&GPIO10_DS, 6, 1, 1, 0, 34, &IOEXP_U18, 0x004000};
+const net_t SE19 = {&GPIO10_DS, 6, 2, 1, 0, 19, &IOEXP_U21, 0x400000};
+const net_t SE45 = {&GPIO10_DS, 7, 1, 1, 0, 45, &IOEXP_U21, 0x100000};
+const net_t SE35 = {&GPIO10_DS, 7, 2, 1, 0, 35, &IOEXP_U18, 0x001000};
+const net_t SE53 = {&GPIO10_DS, 8, 1, 1, 0, 53, &IOEXP_U20, 0x000080};
+const net_t SE47 = {&GPIO10_DS, 8, 2, 1, 0, 47, &IOEXP_U21, 0x000400};
+const net_t SE62 = {&GPIO10_DS, 9, 1, 1, 0, 62, &IOEXP_U18, 0x000200};
+const net_t SE54 = {&GPIO10_DS, 9, 2, 1, 0, 54, &IOEXP_U20, 0x000020};
+const net_t SE64 = {&GPIO10_DS, 10, 1, 1, 0, 64, &IOEXP_U18, 0x800000};
+const net_t SE63 = {&GPIO10_DS, 10, 2, 1, 0, 63, &IOEXP_U18, 0x000100};
+const net_t SE66 = {&GPIO10_DS, 11, 1, 1, 0, 66, &IOEXP_U18, 0x200000};
+const net_t SE65 = {&GPIO10_DS, 11, 2, 1, 0, 65, &IOEXP_U18, 0x400000};
+const net_t SE68 = {&GPIO10_DS, 12, 1, 1, 0, 68, &IOEXP_U21, 0x000002};
+const net_t SE67 = {&GPIO10_DS, 12, 2, 1, 0, 67, &IOEXP_U21, 0x004000};
+const net_t SE70 = {&GPIO10_DS, 13, 1, 1, 0, 70, &IOEXP_U21, 0x000040};
+const net_t SE69 = {&GPIO10_DS, 13, 2, 1, 0, 69, &IOEXP_U21, 0x000004};
+const net_t SE72 = {&GPIO10_DS, 14, 1, 1, 0, 72, &IOEXP_U21, 0x010000};
+const net_t SE71 = {&GPIO10_DS, 14, 2, 1, 0, 71, &IOEXP_U21, 0x002000};
+const net_t SE75 = {&GPIO10_DS, 15, 1, 1, 0, 75, &IOEXP_U21, 0x200000};
+const net_t SE73 = {&GPIO10_DS, 15, 2, 1, 0, 73, &IOEXP_U21, 0x020000};
+const net_t SE77 = {&GPIO10_DS, 16, 1, 1, 0, 77, &IOEXP_U19, 0x010000};
+const net_t SE76 = {&GPIO10_DS, 16, 2, 1, 0, 76, &IOEXP_U19, 0x000002};
+const net_t SE79 = {&GPIO10_DS, 17, 1, 1, 0, 79, &IOEXP_U20, 0x100000};
+const net_t SE78 = {&GPIO10_DS, 17, 2, 1, 0, 78, &IOEXP_U19, 0x000010};
+const net_t SE82 = {&GPIO10_DS, 18, 1, 1, 0, 82, &IOEXP_U20, 0x040000};
+const net_t SE80 = {&GPIO10_DS, 18, 2, 1, 0, 80, &IOEXP_U20, 0x400000};
+const net_t SE84 = {&GPIO10_DS, 19, 1, 1, 0, 84, &IOEXP_U20, 0x000040};
+const net_t SE83 = {&GPIO10_DS, 19, 2, 1, 0, 83, &IOEXP_U20, 0x004000};
+const net_t SE86 = {&GPIO10_DS, 20, 1, 1, 0, 86, &IOEXP_U19, 0x000001};
+const net_t SE85 = {&GPIO10_DS, 20, 2, 1, 0, 85, &IOEXP_U20, 0x000010};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 0, 88, &IOEXP_U19, 0x000004};
+const net_t SE87 = {&GPIO10_DS, 21, 2, 1, 0, 87, &IOEXP_U19, 0x000080};
 
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_LED[] = {
@@ -310,6 +246,11 @@ const net_t* GPIO_LED[] = {
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_CTRL[] = {
 	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3
+};
+
+//Arrays used in initialization of GPIO AXI blocks
+const net_t* GPIO_AFE_CTRL[] = {
+		&AFE0_CTRL, &AFE1_CTRL, &AFE2_CTRL, &AFE3_CTRL
 };
 
 //Arrays used in initialization of GPIO AXI blocks
@@ -345,32 +286,6 @@ const net_t* ALL_GPIO[] = {
 	&SE68, &SE69, &SE70, &SE71, &SE72, &SE73, &SE74, &SE75, &SE76, &SE77,
 	&SE78, &SE79, &SE80, &SE81, &SE82, &SE83, &SE84, &SE85, &SE86, &SE87,
 	&SE88, &SE89
-};
-
-//Arrays used in initialization of GPIO AXI blocks
-const net_t* GPIO_DATA0[] = {
-	//&DATA0_0, &DATA0_1, &DATA0_2, &DATA0_3, &DATA0_4, &DATA0_5, &DATA0_6,
-	//&DATA0_7, &DATA0_8, &DATA0_9, &DATA0_10, &DATA0_11, &DATA0_CLK
-};
-
-const net_t* GPIO_DATA1[] = {
-	//&DATA1_0, &DATA1_1, &DATA1_2, &DATA1_3, &DATA1_4, &DATA1_5, &DATA1_6,
-	//&DATA1_7, &DATA1_8, &DATA1_9, &DATA1_10, &DATA1_11, &DATA1_CLK
-};
-
-const net_t* GPIO_DATA2[] = {
-	//&DATA2_0, &DATA2_1, &DATA2_2, &DATA2_3, &DATA2_4, &DATA2_5, &DATA2_6,
-	//&DATA2_7, &DATA2_8, &DATA2_9, &DATA2_10, &DATA2_11, &DATA2_CLK
-};
-
-const net_t* GPIO_DATA3[] = {
-	//&DATA3_0, &DATA3_1, &DATA3_2, &DATA3_3, &DATA3_4, &DATA3_5, &DATA3_6,
-	//&DATA3_7, &DATA3_8, &DATA3_9, &DATA3_10, &DATA3_11, &DATA3_CLK
-};
-
-//Arrays used in initialization of GPIO AXI blocks
-const net_t* GPIO_SAMPLECLK[]  = {
-	//&SAMPLE_CLKP
 };
 
 const SWState_t P2_LS1_DAC04  = { 2, SP4T, 1, NOSPDT, SP4T7};
@@ -465,22 +380,22 @@ const SWState_t P74_DIGIO74   = {74, SPDT, 2, SPDT74_CTRL, NOT_SP4T};
 SWState_t Pin_Settings[] = {
 
 		//Pin 2 path setting (uncomment 1)
-		//P2_LS1_DAC04,
+		P2_LS1_DAC04,
 		//P2_DIGIO2,
-		P2_HS_DAC3A,
+		//P2_HS_DAC3A,
 
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
-		//P17_DIGIO17,
+		P17_DIGIO17,
 		//P17_HS_ADC1B,
-		P17_HS_DAC1A,
+		//P17_HS_DAC1A,
 		//P17_DISABLE,
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
-		//P21_DIGIO21,
+		P21_DIGIO21,
 		//P21_HS_ADC0B,
-		P21_HS_DAC0A,
+		//P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
@@ -619,11 +534,6 @@ uint32_t IOEXP_STATE = 0x000001; //pin data. 1 is on 0 is off. P7-0, P17-10, P27
 
 uint32_t SPDT_CTRL_STATE = 0x000000;
 
-#define numSamples 100
-
-int sinSamples[numSamples];
-int cosSamples[numSamples];
-
 int main()
 {
     init_platform();
@@ -664,34 +574,11 @@ int main()
     	return XST_FAILURE;
     }
 
-    //Initialize AFE0 DATA & DCLK GPIO AXI device
-    //Status = GPIO_Init_Wrapper (GPIO_DATA0, sizeof(GPIO_DATA0) / sizeof(GPIO_DATA0[0]), GPIO3_DATA0_ID);
+    //Initialize AFE Mode Control GPIO AXI device
+    printf("Initializing AFE Mode control GPIO AXI device.\n");
+    Status = GPIO_Init_Wrapper (GPIO_AFE_CTRL, sizeof(GPIO_AFE_CTRL) / sizeof(GPIO_AFE_CTRL[0]), GPIO14_AFE_CNTRL_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
-    }
-
-    //Initialize AFE1 DATA & DCLK GPIO AXI device
-    //Status = GPIO_Init_Wrapper (GPIO_DATA1, sizeof(GPIO_DATA1) / sizeof(GPIO_DATA1[0]), GPIO4_DATA1_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //Initialize AFE2 DATA & DCLK GPIO AXI device
-    //Status = GPIO_Init_Wrapper (GPIO_DATA2, sizeof(GPIO_DATA2) / sizeof(GPIO_DATA2[0]), GPIO5_DATA2_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //Initialize AFE3 DATA & DCLK GPIO AXI device
-    //Status = GPIO_Init_Wrapper (GPIO_DATA3, sizeof(GPIO_DATA3) / sizeof(GPIO_DATA3[0]), GPIO6_DATA3_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //Initialize Sample Clock GPIO AXI device
-    //Status = GPIO_Init_Wrapper (GPIO_SAMPLECLK, sizeof(GPIO_SAMPLECLK) / sizeof(GPIO_SAMPLECLK[0]), GPIO11_CLKP_ID);
-    if(Status != XST_SUCCESS){
-    	//return XST_FAILURE;
     }
 
     //Initialize AFE7222 SPI devices
@@ -709,13 +596,13 @@ int main()
     }
 
     printf("Writing registers to AFE chips.\n");
-    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
-        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
-        if(Status != XST_SUCCESS){
-        	return XST_FAILURE;
-        }
-    }
-    for (int i = 0x04; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+//    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
+//        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
+//        if(Status != XST_SUCCESS){
+//        	return XST_FAILURE;
+//        }
+//    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
         Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
@@ -865,43 +752,66 @@ int main()
     	return XST_FAILURE;
     }
 
-    printf("Initializing.\n");
+    printf("Initializing1.\n");
     Status = XGpio_Initialize(&GPIO13_DATA3B,  GPIO13_DATA3B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
-	setLEDStatus (0x4);
-//For DAC Control application
-    printf("Initializing.\n");
-    //while(1){
-        printf("Please enter SPDCTRL value: ");
-        int readValue;
-        usleep(100000);
-        fflush(stdin);
-        scanf("%d", &readValue);
-        fflush(stdin);
-        if(readValue == 4097){
-            printf("Please enter sleep time\n");
-            int sleeptime;
-            fflush(stdin);
-            scanf("%d", &sleeptime);
-            fflush(stdin);
-        	for(int i = 0; i < 4096; i++){
-        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
-        		printf("Current Value: %d\n", i);
-        		usleep(sleeptime);
-        	}
-    		usleep(100000);
-        }else{
-            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
-        }
-        usleep(100000);
-    //}
 
-    uint32_t chvalmax;
-    uint32_t chvalmin;
-    printf("DRC ADC MinMax Test.\n");
-    while(1){
+//    GPIO_Init (&GPIO15_DAC0Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO15_DAC0Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO16_DAC1Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO16_DAC1Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO17_DAC2Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO17_DAC2Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO18_DAC3Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO18_DAC3Const, 2, 0x000, 0x000);
+
+	setLEDStatus (0x4);
+
+	while(1){
+		TestMode4(1000000000);
+	}
+
+//	XUartPs Uart_Ps;  // UART instance
+//	XUartPs_Config *Config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+//	XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+//
+//	// Set baud rate, parity, stop bits, etc.
+//	XUartPs_SetBaudRate(&Uart_Ps, 115200);  // Ensure this matches Tera Term's baud rate
+//
+
+//For DAC Control application
+//    printf("Initializing.\n");
+//    while(1){
+//        printf("Please enter SPDCTRL value: ");
+//        int readValue;
+//        usleep(100000);
+//        fflush(stdin);
+//        scanf("%d", &readValue);
+//        fflush(stdin);
+//        if(readValue == 4097){
+//            printf("Please enter sleep time\n");
+//            int sleeptime;
+//            fflush(stdin);
+//            scanf("%d", &sleeptime);
+//            fflush(stdin);
+//        	for(int i = 0; i < 4096; i++){
+//        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
+//        		printf("Current Value: %d\n", i);
+//        		usleep(sleeptime);
+//        	}
+//    		usleep(100000);
+//        }else{
+//            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
+//        }
+//        usleep(100000);
+//    }
+
+//    uint32_t chvalmax;
+//    uint32_t chvalmin;
+//    printf("DRC ADC MinMax Test.\n");
+//    while(1){
 //    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
 //    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
 //    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
@@ -917,9 +827,9 @@ int main()
 //    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
 //    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
 //    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO11_DATA2B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO11_DATA2B, 2);
-    	printf("Pin 33:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
+//   	chvalmax = XGpio_DiscreteRead(&GPIO11_DATA2B, 1);
+//    	chvalmin = XGpio_DiscreteRead(&GPIO11_DATA2B, 2);
+//    	printf("Pin 33:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
 //    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
 //    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
 //    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
@@ -928,8 +838,8 @@ int main()
 //    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
 //    	usleep(50000);
     	//printf("\033[2J\033[H");
-    	usleep(50000);
-    }
+//    	usleep(50000);
+//    }
 
 	////////////////////////////////////////////////////////////////////
 	// Test Procedure Begin
@@ -948,7 +858,7 @@ int main()
     printf("7) High speed ADC/DAC loopback mode B. Tests channel B on each ADC/DAC pair.\n");
 
     //store user selected value
-    //int readValue;
+    int readValue;
     scanf("%d", &readValue);
 
     //clear buffer
@@ -957,6 +867,7 @@ int main()
 
     //store user selected runTime of test
     uint32_t runTime;
+    printf("Runtime = Frequency division in TestMode8.\n");
     printf("Enter runTime: ");
     scanf("%u", &runTime);
 
@@ -996,27 +907,14 @@ int main()
     case 7:
     	TestMode7();
     	break;
+    case 8:
+    	TestMode8(runTime);
+    	break;
     default:
     	printf("Invalid Test\n");
     	break;
     }
 	goto QueryTest;
-
-    //for (int sample = 0; sample < numSamples; sample++){
-     //   sinSamples[sample] = (int) (4095 * (0.5 + 0.5 * sin((((float) sample)/numSamples) * 2 * M_PI)));
-     //   cosSamples[sample] = (int) (4095 * (0.5 + 0.5 * cos((((float) sample)/numSamples) * 2 * M_PI)));
-    //}
-    //uint32_t i = 0;
-	//XGpio_DiscreteWrite(&GPIO3_DATA0, 2, 0);
-
-    while(1){
-
-    	//Generate sin and cos signal
-    	//XGpio_DiscreteWrite(&GPIO3_DATA0, 1, sinSamples[i%numSamples]);
-    	//XGpio_DiscreteWrite(&GPIO3_DATA0, 2, 1);
-    	//XGpio_DiscreteWrite(&GPIO3_DATA0, 1, cosSamples[i%numSamples]);
-    	//XGpio_DiscreteWrite(&GPIO3_DATA0, 2, 0);
-    }
 
 
 
@@ -1157,6 +1055,15 @@ void TestMode3(uint32_t runTime){
 //    	return XST_FAILURE;
 //    }
 
+    //Display DRC Input Data on pins
+	printf("\033[2J\033[H");
+	while(1){
+		for (int i = 0; i < sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]); i++){
+			printf("\033[%d;%dH", 1 + ALL_GPIO[i]->IOpinNum%30, 30 * (ALL_GPIO[i]->IOpinNum/30));
+			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
+		}
+	}
+
     int numIOPins = sizeof(ALL_GPIO) / sizeof(ALL_GPIO[0]);
 
 	//Array to hold previous states of IO pins to compare to read value
@@ -1246,10 +1153,9 @@ void TestMode4(uint32_t runTime){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
-
 	//Cycling through LSDAC values
 	for (uint32_t i = 0; i < runTime; i+=4096){
-    	for(int j = 0; j < 4096; j++){
+    	for(int j = 0; j < 4096; j+=1<<8){
         	LS_DAC_WriteAll(&LSDAC0, j);
         	LS_DAC_WriteAll(&LSDAC1, 4095 - j);
     	}
@@ -1372,6 +1278,9 @@ void TestMode6(){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
 
     printf("System configured in channel A loopback mode.\n");
     printf("Mode will persist until another test is selected.\n");
@@ -1384,7 +1293,7 @@ void TestMode7(){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 7 Begin
 	// HS ADC/DAC loopback test for channel B
-    printf("Test Mode 6: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
+    printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
     printf("Following pins used for loopback test.\n");
     printf("Pin 21 (ADC0B) to Pin 51 (DAC0B)\n");
     printf("Pin 17 (ADC1B) to Pin 48 (DAC1B)\n");
@@ -1427,11 +1336,76 @@ void TestMode7(){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
 
     printf("System configured in channel B loopback mode.\n");
     printf("Mode will persist until another test is selected.\n");
     printf("\n.\n.\n.\n");
 	// Test Mode 7 End
+	////////////////////////////////////////////////////////////////////
+}
+
+void TestMode8(uint32_t DACFrequency){
+	////////////////////////////////////////////////////////////////////
+	// Test Mode 8 Begin
+	// HS DAC output test
+    printf("Test Mode 8: High speed DAC output test\n");
+    printf("Following pins used for HS DACs\n");
+    printf("Pin 21 (DAC0A)\n");
+    printf("Pin 51 (DAC0B)\n");
+    printf("Pin 17 (DAC1A)\n");
+    printf("Pin 48 (DAC1B)\n");
+    printf("Pin 33 (DAC2A)\n");
+    printf("Pin 46 (DAC2B)\n");
+    printf("Pin 2  (DAC3A)\n");
+    printf("Pin 32 (DAC3B)\n\n\n");
+
+	setLEDStatus(0x07);
+
+	//Configure paths for High Speed ADC/DAC loopback mode
+	//NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
+	//in the case where a path is not necessary for this loopback test
+	SWState_t HSLoopbackB[] = {
+			P2_HS_DAC3A,
+			P17_HS_DAC1A,
+			P21_HS_DAC0A,
+			P32_HS_DAC3B,
+			P33_HS_DAC2A,
+			P46_HS_DAC2B,
+			P48_HS_DAC1B,
+			P51_HS_DAC0B,
+			P3_LS0_DAC07,
+			P6_LS0_DAC06,
+			P10_LS0_DAC01,
+			P34_LS0_DAC05,
+			P35_LS0_DAC04,
+			P36_LS0_DAC00,
+			P40_LS0_DAC02,
+			P50_HS_ADC3A,
+			P55_HS_ADC3B,
+			P74_LS0_DAC03
+	};
+
+	//Set Pin_Settings Array to desired Array settings
+	for(int i = 0; i < sizeof(Pin_Settings) / sizeof(Pin_Settings[0]); i++){
+		Pin_Settings[i] = HSLoopbackB[i];
+	};
+
+	//Reinitialize Switch Settings For Desired States
+    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+//    if(Status != XST_SUCCESS){
+//    	return XST_FAILURE;
+//    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
+
+    printf("System configured in DAC Test mode.\n");
+    printf("Mode will persist until another test is selected.\n");
+    printf("\n.\n.\n.\n");
+	// Test Mode 8 End
 	////////////////////////////////////////////////////////////////////
 }
 
@@ -1443,12 +1417,16 @@ void setLEDStatus (uint8_t status){
 
 //sets the State of an IO pin
 void setIOPin (const net_t* pin, uint8_t state){
+	//pin->IOEXP->DIR_CTRL_STATE = 0xFFFF;
+    //IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
 	XGpio_SetDataDirection(pin->instance, pin->channel, 0x0);
 	XGpio_DiscreteWrite(pin->instance, pin->channel, state << pin->bit_num);
 }
 
 //sets the State of an IO pin
 int readIOPin (const net_t* pin){
+	pin->IOEXP->DIR_CTRL_STATE = 0x0000;
+    IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
 	XGpio_SetDataDirection(pin->instance, pin->channel, 0xFFFFFFFF);
 	if (XGpio_DiscreteRead(pin->instance, pin->channel) & (1 << pin->bit_num)){
 		return 1;

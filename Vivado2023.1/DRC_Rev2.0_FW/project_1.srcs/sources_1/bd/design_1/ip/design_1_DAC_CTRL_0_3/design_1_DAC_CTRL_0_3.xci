@@ -37,6 +37,8 @@
     "boundary": {
       "ports": {
         "CLKIN": [ { "direction": "in" } ],
+        "DATA_INA": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "DATA_INB": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
         "DACDATA": [ { "direction": "out", "size_left": "11", "size_right": "0" } ],
         "DCKOUT": [ { "direction": "out" } ]
       },

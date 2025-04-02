@@ -8,16 +8,14 @@
 #define GPIO10_DS_ID	XPAR_AXI_GPIO_10_DEVICE_ID	//axi10 ch2 -> IOBUF_DS_0_21_p ch1 -> IOBUF_DS_0_21_n
 #define GPIO7_SPDT_ID 	XPAR_AXI_GPIO_7_DEVICE_ID	//axi7 10BITS
 
-//define GPIO IDs for AFE Converter IDs (Removed in PL driven Converters)
-//#define GPIO11_CLKP_ID	XPAR_AXI_GPIO_11_DEVICE_ID	//axi11 1BIT
-//#define GPIO6_DATA3_ID 	XPAR_AXI_GPIO_6_DEVICE_ID	//axi6 ch1->DATA 12 BITS ch2->clk 1 BIT
-//#define GPIO3_DATA0_ID 	XPAR_AXI_GPIO_3_DEVICE_ID	//axi3 ch1->DATA 12 BITS ch2->clk 1 BIT
-//#define GPIO5_DATA2_ID 	XPAR_AXI_GPIO_5_DEVICE_ID	//axi5 ch1->DATA 12 BITS ch2->clk 1 BIT
-//#define GPIO4_DATA1_ID 	XPAR_AXI_GPIO_4_DEVICE_ID	//axi4 ch1->DATA 12 BITS ch2->clk 1 BIT
-
-
 //define GPIO IDs for block used to control DAC waveform frequency
 #define GPIO1_SPDCTRL_ID	XPAR_AXI_GPIO_1_DEVICE_ID
+
+//define GPIO IDs for controlling whether AFE pins are connected to DAC or ADC ctrl block
+#define GPIO14_AFE_CNTRL_ID	XPAR_AXI_GPIO_14_DEVICE_ID
+
+//define GPIO IDs for controlling DAC values(constant values)
+//#define GPIO15_AFE
 
 //define IIC IDs for IO expander's IIC bus
 #define IIC0_IOEXP_ID	XPAR_IIC_0_DEVICE_ID
@@ -27,5 +25,22 @@
 //define SPI IDs for the AFE SPI bus and LSDAC SPI bus
 #define SPI0_AFE_ID 	XPAR_SPI_0_DEVICE_ID	//SPI0 - 4 SS pins
 #define SPI1_LSDAC_ID 	XPAR_SPI_1_DEVICE_ID	//SPI1 - 2 SS pins
+
+//define GPIO IDs for MinMax values of the converters
+#define GPIO2_DATA0A_ID		XPAR_AXI_GPIO_2_DEVICE_ID
+#define GPIO3_DATA0B_ID		XPAR_AXI_GPIO_3_DEVICE_ID
+#define GPIO4_DATA1A_ID		XPAR_AXI_GPIO_4_DEVICE_ID
+#define GPIO5_DATA1B_ID		XPAR_AXI_GPIO_5_DEVICE_ID
+#define GPIO6_DATA2A_ID		XPAR_AXI_GPIO_6_DEVICE_ID
+#define GPIO11_DATA2B_ID	XPAR_AXI_GPIO_11_DEVICE_ID
+#define GPIO12_DATA3A_ID	XPAR_AXI_GPIO_12_DEVICE_ID
+#define GPIO13_DATA3B_ID	XPAR_AXI_GPIO_13_DEVICE_ID
+
+
+//define GPIO IDs for Const values of the converters
+#define GPIO15_DAC0Const_ID		XPAR_AXI_GPIO_15_DEVICE_ID
+#define GPIO16_DAC1Const_ID		XPAR_AXI_GPIO_16_DEVICE_ID
+#define GPIO17_DAC2Const_ID		XPAR_AXI_GPIO_17_DEVICE_ID
+#define GPIO18_DAC3Const_ID		XPAR_AXI_GPIO_18_DEVICE_ID
 
 #endif
