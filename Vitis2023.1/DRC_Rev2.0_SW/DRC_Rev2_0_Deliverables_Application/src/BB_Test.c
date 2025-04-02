@@ -82,6 +82,10 @@ XGpio GPIO11_DATA2B;
 XGpio GPIO12_DATA3A;
 XGpio GPIO13_DATA3B;
 XGpio GPIO14_AFE_CTRL;
+XGpio GPIO15_DAC0Const;
+XGpio GPIO16_DAC1Const;
+XGpio GPIO17_DAC2Const;
+XGpio GPIO18_DAC3Const;
 
 //IIC bus XIic instances
 XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
@@ -124,16 +128,16 @@ const net_t INT_n   = {&GPIO8_CTRL, 0, 1, 1, 0};
 const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
-const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the DAC FE
-const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
-const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
-const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
+const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
+const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
 
 //AFE_CTRL XGpio pins
-const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 0};
-const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 0};
-const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 0};
-const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 0};
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
+const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};//set to 1 for loopback mode
+const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};
+const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -151,17 +155,17 @@ const net_t NOSPDT = {&GPIO7_SPDT, 0, 0, 0};
 //SE XGpio pins
 const net_t SE2  = {&GPIO9_SE, 0, 1, 1, 0, 2, &IOEXP_U19, 0x008000};
 const net_t SE14 = {&GPIO9_SE, 1, 1, 1, 0, 14, &IOEXP_U21, 0x040000};
-const net_t SE17 = {&GPIO9_SE, 2, 1, 1, 0, 17, &IOEXP_U19, 0x000800};
+const net_t SE17 = {&GPIO9_SE, 2, 1, 0, 1, 17, &IOEXP_U19, 0x000800};
 const net_t SE20 = {&GPIO9_SE, 3, 1, 1, 0, 20, &IOEXP_U20, 0x000100};
-const net_t SE21 = {&GPIO9_SE, 4, 1, 1, 0, 21, &IOEXP_U19, 0x000200};
-const net_t SE22 = {&GPIO9_SE, 5, 1, 1, 0, 22, &IOEXP_U20, 0x080000};
+const net_t SE21 = {&GPIO9_SE, 4, 1, 0, 1, 21, &IOEXP_U19, 0x000200};
+const net_t SE22 = {&GPIO9_SE, 5, 1, 0, 1, 22, &IOEXP_U20, 0x080000};
 const net_t SE23 = {&GPIO9_SE, 6, 1, 1, 0, 23, &IOEXP_U20, 0x008000};
 const net_t SE24 = {&GPIO9_SE, 7, 1, 1, 0, 24, &IOEXP_U20, 0x000002};
 const net_t SE25 = {&GPIO9_SE, 8, 1, 1, 0, 25, &IOEXP_U20, 0x000008};
 const net_t SE26 = {&GPIO9_SE, 9, 1, 1, 0, 26, &IOEXP_U20, 0x000001};
 const net_t SE27 = {&GPIO9_SE, 10, 1, 1, 0, 27, &IOEXP_U20, 0x000800};
 const net_t SE28 = {&GPIO9_SE, 11, 1, 1, 0, 28, &IOEXP_U20, 0x010000};
-const net_t SE29 = {&GPIO9_SE, 12, 1, 1, 0, 29, &IOEXP_U20, 0x020000};
+const net_t SE29 = {&GPIO9_SE, 12, 1, 0, 1, 29, &IOEXP_U20, 0x020000};
 const net_t SE32 = {&GPIO9_SE, 13, 1, 1, 0, 32, &IOEXP_U19, 0x004000};
 const net_t SE33 = {&GPIO9_SE, 14, 1, 1, 0, 33, &IOEXP_U19, 0x002000};
 const net_t SE36 = {&GPIO9_SE, 15, 1, 1, 0, 36, &IOEXP_U18, 0x000800};
@@ -231,7 +235,7 @@ const net_t SE84 = {&GPIO10_DS, 19, 1, 1, 0, 84, &IOEXP_U20, 0x000040};
 const net_t SE83 = {&GPIO10_DS, 19, 2, 1, 0, 83, &IOEXP_U20, 0x004000};
 const net_t SE86 = {&GPIO10_DS, 20, 1, 1, 0, 86, &IOEXP_U19, 0x000001};
 const net_t SE85 = {&GPIO10_DS, 20, 2, 1, 0, 85, &IOEXP_U20, 0x000010};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 1, 0, 88, &IOEXP_U19, 0x000004};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 0, 88, &IOEXP_U19, 0x000004};
 const net_t SE87 = {&GPIO10_DS, 21, 2, 1, 0, 87, &IOEXP_U19, 0x000080};
 
 //Arrays used in initialization of GPIO AXI blocks
@@ -376,22 +380,22 @@ const SWState_t P74_DIGIO74   = {74, SPDT, 2, SPDT74_CTRL, NOT_SP4T};
 SWState_t Pin_Settings[] = {
 
 		//Pin 2 path setting (uncomment 1)
-		//P2_LS1_DAC04,
+		P2_LS1_DAC04,
 		//P2_DIGIO2,
-		P2_HS_DAC3A,
+		//P2_HS_DAC3A,
 
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
-		//P17_DIGIO17,
+		P17_DIGIO17,
 		//P17_HS_ADC1B,
-		P17_HS_DAC1A,
+		//P17_HS_DAC1A,
 		//P17_DISABLE,
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
-		//P21_DIGIO21,
+		P21_DIGIO21,
 		//P21_HS_ADC0B,
-		P21_HS_DAC0A,
+		//P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
@@ -592,13 +596,13 @@ int main()
     }
 
     printf("Writing registers to AFE chips.\n");
-    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
-        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
-        if(Status != XST_SUCCESS){
-        	return XST_FAILURE;
-        }
-    }
-    for (int i = 0x04; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+//    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
+//        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
+//        if(Status != XST_SUCCESS){
+//        	return XST_FAILURE;
+//        }
+//    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
         Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
@@ -748,15 +752,25 @@ int main()
     	return XST_FAILURE;
     }
 
-    printf("Initializing.\n");
+    printf("Initializing1.\n");
     Status = XGpio_Initialize(&GPIO13_DATA3B,  GPIO13_DATA3B_ID);
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
+
+//    GPIO_Init (&GPIO15_DAC0Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO15_DAC0Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO16_DAC1Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO16_DAC1Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO17_DAC2Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO17_DAC2Const, 2, 0x000, 0x000);
+//    GPIO_Init (&GPIO18_DAC3Const, 1, 0x000, 0x000);
+//    GPIO_Init (&GPIO18_DAC3Const, 2, 0x000, 0x000);
+
 	setLEDStatus (0x4);
 
 	while(1){
-		TestMode3(1000);
+		TestMode4(1000000000);
 	}
 
 //	XUartPs Uart_Ps;  // UART instance
@@ -853,6 +867,7 @@ int main()
 
     //store user selected runTime of test
     uint32_t runTime;
+    printf("Runtime = Frequency division in TestMode8.\n");
     printf("Enter runTime: ");
     scanf("%u", &runTime);
 
@@ -891,6 +906,9 @@ int main()
     	break;
     case 7:
     	TestMode7();
+    	break;
+    case 8:
+    	TestMode8(runTime);
     	break;
     default:
     	printf("Invalid Test\n");
@@ -1135,10 +1153,9 @@ void TestMode4(uint32_t runTime){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
-
 	//Cycling through LSDAC values
 	for (uint32_t i = 0; i < runTime; i+=4096){
-    	for(int j = 0; j < 4096; j++){
+    	for(int j = 0; j < 4096; j+=1<<8){
         	LS_DAC_WriteAll(&LSDAC0, j);
         	LS_DAC_WriteAll(&LSDAC1, 4095 - j);
     	}
@@ -1261,6 +1278,9 @@ void TestMode6(){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
 
     printf("System configured in channel A loopback mode.\n");
     printf("Mode will persist until another test is selected.\n");
@@ -1273,7 +1293,7 @@ void TestMode7(){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 7 Begin
 	// HS ADC/DAC loopback test for channel B
-    printf("Test Mode 6: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
+    printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
     printf("Following pins used for loopback test.\n");
     printf("Pin 21 (ADC0B) to Pin 51 (DAC0B)\n");
     printf("Pin 17 (ADC1B) to Pin 48 (DAC1B)\n");
@@ -1316,11 +1336,76 @@ void TestMode7(){
 //    if(Status != XST_SUCCESS){
 //    	return XST_FAILURE;
 //    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
 
     printf("System configured in channel B loopback mode.\n");
     printf("Mode will persist until another test is selected.\n");
     printf("\n.\n.\n.\n");
 	// Test Mode 7 End
+	////////////////////////////////////////////////////////////////////
+}
+
+void TestMode8(uint32_t DACFrequency){
+	////////////////////////////////////////////////////////////////////
+	// Test Mode 8 Begin
+	// HS DAC output test
+    printf("Test Mode 8: High speed DAC output test\n");
+    printf("Following pins used for HS DACs\n");
+    printf("Pin 21 (DAC0A)\n");
+    printf("Pin 51 (DAC0B)\n");
+    printf("Pin 17 (DAC1A)\n");
+    printf("Pin 48 (DAC1B)\n");
+    printf("Pin 33 (DAC2A)\n");
+    printf("Pin 46 (DAC2B)\n");
+    printf("Pin 2  (DAC3A)\n");
+    printf("Pin 32 (DAC3B)\n\n\n");
+
+	setLEDStatus(0x07);
+
+	//Configure paths for High Speed ADC/DAC loopback mode
+	//NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
+	//in the case where a path is not necessary for this loopback test
+	SWState_t HSLoopbackB[] = {
+			P2_HS_DAC3A,
+			P17_HS_DAC1A,
+			P21_HS_DAC0A,
+			P32_HS_DAC3B,
+			P33_HS_DAC2A,
+			P46_HS_DAC2B,
+			P48_HS_DAC1B,
+			P51_HS_DAC0B,
+			P3_LS0_DAC07,
+			P6_LS0_DAC06,
+			P10_LS0_DAC01,
+			P34_LS0_DAC05,
+			P35_LS0_DAC04,
+			P36_LS0_DAC00,
+			P40_LS0_DAC02,
+			P50_HS_ADC3A,
+			P55_HS_ADC3B,
+			P74_LS0_DAC03
+	};
+
+	//Set Pin_Settings Array to desired Array settings
+	for(int i = 0; i < sizeof(Pin_Settings) / sizeof(Pin_Settings[0]); i++){
+		Pin_Settings[i] = HSLoopbackB[i];
+	};
+
+	//Reinitialize Switch Settings For Desired States
+    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+//    if(Status != XST_SUCCESS){
+//    	return XST_FAILURE;
+//    }
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+        AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+    }
+
+    printf("System configured in DAC Test mode.\n");
+    printf("Mode will persist until another test is selected.\n");
+    printf("\n.\n.\n.\n");
+	// Test Mode 8 End
 	////////////////////////////////////////////////////////////////////
 }
 
@@ -1332,12 +1417,16 @@ void setLEDStatus (uint8_t status){
 
 //sets the State of an IO pin
 void setIOPin (const net_t* pin, uint8_t state){
+	//pin->IOEXP->DIR_CTRL_STATE = 0xFFFF;
+    //IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
 	XGpio_SetDataDirection(pin->instance, pin->channel, 0x0);
 	XGpio_DiscreteWrite(pin->instance, pin->channel, state << pin->bit_num);
 }
 
 //sets the State of an IO pin
 int readIOPin (const net_t* pin){
+	pin->IOEXP->DIR_CTRL_STATE = 0x0000;
+    IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
 	XGpio_SetDataDirection(pin->instance, pin->channel, 0xFFFFFFFF);
 	if (XGpio_DiscreteRead(pin->instance, pin->channel) & (1 << pin->bit_num)){
 		return 1;
