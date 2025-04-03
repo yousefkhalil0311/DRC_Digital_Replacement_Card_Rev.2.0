@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Apr  3 01:15:06 2025
+| Date         : Thu Apr  3 14:16:03 2025
 | Host         : OCP001 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -183,10 +183,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_util_ds_buf_0_2       |    1 |
 | design_1_util_ds_buf_0_1       |    1 |
 | design_1_util_ds_buf_0_0       |    1 |
+| design_1_tier2_xbar_3_0        |    1 |
 | design_1_tier2_xbar_2_0        |    1 |
 | design_1_tier2_xbar_1_0        |    1 |
 | design_1_tier2_xbar_0_0        |    1 |
 | design_1_proc_sys_reset_0_0    |    1 |
+| design_1_ila_0_0               |    1 |
 | design_1_clk_wiz_0_0           |    1 |
 | design_1_axi_quad_spi_0_1      |    1 |
 | design_1_axi_quad_spi_0_0      |    1 |
@@ -204,6 +206,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_axi_gpio_2_0          |    1 |
 | design_1_axi_gpio_1_1          |    1 |
 | design_1_axi_gpio_1_0          |    1 |
+| design_1_axi_gpio_19_0         |    1 |
 | design_1_axi_gpio_18_0         |    1 |
 | design_1_axi_gpio_17_0         |    1 |
 | design_1_axi_gpio_16_0         |    1 |

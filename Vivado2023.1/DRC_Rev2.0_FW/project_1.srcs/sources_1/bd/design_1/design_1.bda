@@ -619,6 +619,24 @@
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V27": {
+                "VT": "AC",
+                "BA": "0x0080180000",
+                "HA": "0x008018FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/zynq_ultra_ps_e_0",
+                "MI": "M_AXI_HPM0_LPD",
+                "MS": "SEG_ADC_READ_Reg",
+                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
+                "SX": "/ADC_READ",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
@@ -747,6 +765,11 @@
             },
             {
                 "src": "V26",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V27",
                 "trg": "V2",
                 "EH": "2"
             }
