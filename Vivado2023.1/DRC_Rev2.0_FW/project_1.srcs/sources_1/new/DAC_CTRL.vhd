@@ -52,13 +52,15 @@ begin
     begin
         
         if (rising_edge(CLKIN)) then
-            if channel = '0' and DATA_INA = "000000000000" then
+            if (channel = '0' and DATA_INA = "000000000000") then
                 DACVAL <= (not DACVAL);
-            else
+            end if;
+            
+            if (channel = '0' and DATA_INA /= "000000000000") then
                 DACVAL <= UNSIGNED(DATA_INA); 
             end if;
             
-            if channel = '1' and DATA_INB /= "000000000000" then
+            if (channel = '1' and DATA_INB /= "000000000000") then
                 DACVAL <= UNSIGNED(DATA_INB);
             end if;
             

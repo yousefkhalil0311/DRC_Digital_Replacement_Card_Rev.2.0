@@ -294,7 +294,7 @@ BEGIN
       C_BYTE_LEVEL_INTERRUPT_EN => 0,
       C_UC_FAMILY => 1,
       C_FIFO_DEPTH => 16,
-      C_SCK_RATIO => 512,
+      C_SCK_RATIO => 8,
       C_DUAL_QUAD_MODE => 0,
       C_NUM_SS_BITS => 2,
       C_NUM_TRANSFER_BITS => 8,

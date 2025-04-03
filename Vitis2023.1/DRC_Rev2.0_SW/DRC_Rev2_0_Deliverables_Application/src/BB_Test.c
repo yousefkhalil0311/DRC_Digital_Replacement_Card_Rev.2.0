@@ -129,15 +129,15 @@ const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
 const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
-const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
-const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
-const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
+const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 
 //AFE_CTRL XGpio pins
-const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
-const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};//set to 1 for loopback mode
-const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};
-const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 0};
+const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 0};//set to 1 for loopback mode
+const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 0};
+const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 0};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -380,22 +380,22 @@ const SWState_t P74_DIGIO74   = {74, SPDT, 2, SPDT74_CTRL, NOT_SP4T};
 SWState_t Pin_Settings[] = {
 
 		//Pin 2 path setting (uncomment 1)
-		P2_LS1_DAC04,
+		//P2_LS1_DAC04,
 		//P2_DIGIO2,
-		//P2_HS_DAC3A,
+		P2_HS_DAC3A,
 
 		//Pin 17 path setting (uncomment 1)
 		//P17_LS1_DAC00,
-		P17_DIGIO17,
+		//P17_DIGIO17,
 		//P17_HS_ADC1B,
-		//P17_HS_DAC1A,
+		P17_HS_DAC1A,
 		//P17_DISABLE,
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
-		P21_DIGIO21,
+		//P21_DIGIO21,
 		//P21_HS_ADC0B,
-		//P21_HS_DAC0A,
+		P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
@@ -405,8 +405,8 @@ SWState_t Pin_Settings[] = {
 		//Pin 33 path setting (uncomment 1)
 		//P33_LS1_DAC06,
 		//P33_DIGIO33,
-		P33_HS_ADC2B,
-		//P33_HS_DAC2A,
+		//P33_HS_ADC2B,
+		P33_HS_DAC2A,
 
 		//Pin 46 path setting (uncomment 1)
 		//P46_LS1_DAC07,
@@ -595,6 +595,18 @@ int main()
     	return XST_FAILURE;
     }
 
+    XGpio_Initialize(&GPIO15_DAC0Const, GPIO15_DAC0Const_ID);
+    XGpio_Initialize(&GPIO16_DAC1Const, GPIO16_DAC1Const_ID);
+    XGpio_Initialize(&GPIO17_DAC2Const, GPIO17_DAC2Const_ID);
+    XGpio_Initialize(&GPIO18_DAC3Const, GPIO18_DAC3Const_ID);
+    XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0x400);
+    XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x400);
+    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0x000);
+    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x000);
+    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0x000);
+    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x000);
+    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0x000);
+    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x000);
     printf("Writing registers to AFE chips.\n");
 //    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
 //        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
@@ -603,7 +615,7 @@ int main()
 //        }
 //    }
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
-        Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+        Status = AFE_Init(&SPI0_AFE, AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
         }
@@ -758,20 +770,12 @@ int main()
     	return XST_FAILURE;
     }
 
-//    GPIO_Init (&GPIO15_DAC0Const, 1, 0x000, 0x000);
-//    GPIO_Init (&GPIO15_DAC0Const, 2, 0x000, 0x000);
-//    GPIO_Init (&GPIO16_DAC1Const, 1, 0x000, 0x000);
-//    GPIO_Init (&GPIO16_DAC1Const, 2, 0x000, 0x000);
-//    GPIO_Init (&GPIO17_DAC2Const, 1, 0x000, 0x000);
-//    GPIO_Init (&GPIO17_DAC2Const, 2, 0x000, 0x000);
-//    GPIO_Init (&GPIO18_DAC3Const, 1, 0x000, 0x000);
-//    GPIO_Init (&GPIO18_DAC3Const, 2, 0x000, 0x000);
 
 	setLEDStatus (0x4);
 
-	while(1){
-		TestMode4(1000000000);
-	}
+	//while(1){
+		//TestMode4(1000000000);
+	//}
 
 //	XUartPs Uart_Ps;  // UART instance
 //	XUartPs_Config *Config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
@@ -782,31 +786,54 @@ int main()
 //
 
 //For DAC Control application
-//    printf("Initializing.\n");
-//    while(1){
-//        printf("Please enter SPDCTRL value: ");
-//        int readValue;
-//        usleep(100000);
-//        fflush(stdin);
-//        scanf("%d", &readValue);
-//        fflush(stdin);
-//        if(readValue == 4097){
-//            printf("Please enter sleep time\n");
-//            int sleeptime;
-//            fflush(stdin);
-//            scanf("%d", &sleeptime);
-//            fflush(stdin);
-//        	for(int i = 0; i < 4096; i++){
-//        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
-//        		printf("Current Value: %d\n", i);
-//        		usleep(sleeptime);
-//        	}
-//    		usleep(100000);
-//        }else{
-//            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
-//        }
-//        usleep(100000);
-//    }
+    printf("Initializing.\n");
+    while(1){
+        printf("Please enter SPDCTRL value: ");
+        int readValue;
+        usleep(100000);
+        fflush(stdin);
+        scanf("%d", &readValue);
+        fflush(stdin);
+        printf("\n");
+        if(readValue == 4097){
+            printf("Please enter sleep time\n");
+            int sleeptime;
+            fflush(stdin);
+            scanf("%d", &sleeptime);
+            fflush(stdin);
+        	for(int i = 0; i < 4096; i++){
+        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
+        		printf("Current Value: %d\n", i);
+        		usleep(sleeptime);
+        	}
+    		usleep(100000);
+        }else{
+            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
+        }
+        usleep(100000);
+        printf("Please enter SMPLCTRL value: ");
+        usleep(100000);
+        fflush(stdin);
+        scanf("%d", &readValue);
+        fflush(stdin);
+        printf("\n");
+        if(readValue == 4097){
+            printf("Please enter sleep time\n");
+            int sleeptime;
+            fflush(stdin);
+            scanf("%d", &sleeptime);
+            fflush(stdin);
+        	for(int i = 0; i < 4096; i++){
+        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
+        		printf("Current Value: %d\n", i);
+        		usleep(sleeptime);
+        	}
+    		usleep(100000);
+        }else{
+            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, readValue);
+        }
+        usleep(100000);
+    }
 
 //    uint32_t chvalmax;
 //    uint32_t chvalmin;

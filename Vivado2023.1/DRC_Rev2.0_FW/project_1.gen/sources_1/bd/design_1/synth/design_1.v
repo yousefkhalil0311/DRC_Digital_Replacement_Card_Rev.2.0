@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Mar 31 17:14:35 2025
+//Date        : Thu Apr  3 01:12:38 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=99,numReposBlks=70,numNonXlnxBlks=0,numHierBlks=29,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=100,numReposBlks=71,numNonXlnxBlks=0,numHierBlks=29,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (IOBUF_CLK0,
     IOBUF_CLK1,
@@ -115,6 +115,7 @@ module design_1
   wire [21:0]Net2;
   wire [0:0]Net20;
   wire [0:0]Net21;
+  wire Net22;
   wire [21:0]Net3;
   wire [0:0]Net4;
   wire [11:0]Net5;
@@ -136,6 +137,7 @@ module design_1
   wire [11:0]axi_gpio_17_gpio_io_o;
   wire [11:0]axi_gpio_18_gpio2_io_o;
   wire [11:0]axi_gpio_18_gpio_io_o;
+  wire [27:0]axi_gpio_1_gpio2_io_o;
   wire [27:0]axi_gpio_1_gpio_io_o;
   wire [9:0]axi_gpio_7_GPIO_TRI_O;
   wire [7:0]axi_gpio_8_GPIO_TRI_O;
@@ -687,6 +689,10 @@ module design_1
        (.CLKIN(clk_wiz_0_clk_out3),
         .CLKOUT(ClockDivider_0_CLKOUT),
         .counterVal(axi_gpio_1_gpio_io_o));
+  design_1_ClockDivider_0_1 ClockDivider_1
+       (.CLKIN(clk_wiz_0_clk_out1),
+        .CLKOUT(Net22),
+        .counterVal(axi_gpio_1_gpio2_io_o));
   design_1_DAC_CTRL_0_0 DAC_CTRL_0
        (.CLKIN(ClockDivider_0_CLKOUT),
         .DACDATA(DAC_CTRL_0_DACDATA),
@@ -733,7 +739,8 @@ module design_1
         .s_axi_wstrb(ps8_0_axi_periph_M06_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M06_AXI_WVALID));
   design_1_axi_gpio_1_0 axi_gpio_1
-       (.gpio_io_o(axi_gpio_1_gpio_io_o),
+       (.gpio2_io_o(axi_gpio_1_gpio2_io_o),
+        .gpio_io_o(axi_gpio_1_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(ps8_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -866,7 +873,7 @@ module design_1
         .s_axi_wready(ps8_0_axi_periph_M19_AXI_WREADY),
         .s_axi_wstrb(ps8_0_axi_periph_M19_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M19_AXI_WVALID));
-  design_1_axi_gpio_2_4 axi_gpio_15
+  design_1_axi_gpio_15_0 axi_gpio_15
        (.gpio2_io_o(axi_gpio_15_gpio2_io_o),
         .gpio_io_o(axi_gpio_15_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -888,7 +895,7 @@ module design_1
         .s_axi_wready(ps8_0_axi_periph_M20_AXI_WREADY),
         .s_axi_wstrb(ps8_0_axi_periph_M20_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M20_AXI_WVALID));
-  design_1_axi_gpio_15_0 axi_gpio_16
+  design_1_axi_gpio_16_0 axi_gpio_16
        (.gpio2_io_o(axi_gpio_16_gpio2_io_o),
         .gpio_io_o(axi_gpio_16_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -910,7 +917,7 @@ module design_1
         .s_axi_wready(ps8_0_axi_periph_M21_AXI_WREADY),
         .s_axi_wstrb(ps8_0_axi_periph_M21_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M21_AXI_WVALID));
-  design_1_axi_gpio_15_1 axi_gpio_17
+  design_1_axi_gpio_17_0 axi_gpio_17
        (.gpio2_io_o(axi_gpio_17_gpio2_io_o),
         .gpio_io_o(axi_gpio_17_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -932,7 +939,7 @@ module design_1
         .s_axi_wready(ps8_0_axi_periph_M22_AXI_WREADY),
         .s_axi_wstrb(ps8_0_axi_periph_M22_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M22_AXI_WVALID));
-  design_1_axi_gpio_15_2 axi_gpio_18
+  design_1_axi_gpio_18_0 axi_gpio_18
        (.gpio2_io_o(axi_gpio_18_gpio2_io_o),
         .gpio_io_o(axi_gpio_18_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -1791,7 +1798,7 @@ module design_1
         .IOBUF_IO_O(util_ds_buf_10_IOBUF_IO_O),
         .IOBUF_IO_T(axi_gpio_9_gpio2_io_t));
   design_1_util_ds_buf_6_0 util_ds_buf_11
-       (.BUFG_I(clk_wiz_0_clk_out1),
+       (.BUFG_I(Net22),
         .BUFG_O(util_ds_buf_11_BUFG_O));
   design_1_util_ds_buf_0_1 util_ds_buf_12
        (.IOBUF_IO_I(axi_gpio_0_gpio_io_o),
@@ -1808,22 +1815,22 @@ module design_1
         .IOBUF_IO_IO(IOBUF_DS_0_21_p[21:0]),
         .IOBUF_IO_O(util_ds_buf_10_IOBUF_IO_O1),
         .IOBUF_IO_T(axi_gpio_9_gpio2_io_t1));
-  design_1_util_ds_buf_7_0 util_ds_buf_15
+  design_1_util_ds_buf_15_0 util_ds_buf_15
        (.IOBUF_IO_I(DAC_CTRL_0_DCKOUT),
         .IOBUF_IO_IO(IOBUF_CLK0[0]),
         .IOBUF_IO_O(util_ds_buf_15_IOBUF_IO_O),
         .IOBUF_IO_T(Net18));
-  design_1_util_ds_buf_15_0 util_ds_buf_16
+  design_1_util_ds_buf_16_0 util_ds_buf_16
        (.IOBUF_IO_I(DAC_CTRL_1_DCKOUT),
         .IOBUF_IO_IO(IOBUF_CLK1[0]),
         .IOBUF_IO_O(util_ds_buf_16_IOBUF_IO_O),
         .IOBUF_IO_T(Net19));
-  design_1_util_ds_buf_15_1 util_ds_buf_17
+  design_1_util_ds_buf_17_0 util_ds_buf_17
        (.IOBUF_IO_I(DAC_CTRL_2_DCKOUT),
         .IOBUF_IO_IO(IOBUF_CLK2[0]),
         .IOBUF_IO_O(util_ds_buf_17_IOBUF_IO_O),
         .IOBUF_IO_T(Net20));
-  design_1_util_ds_buf_15_2 util_ds_buf_18
+  design_1_util_ds_buf_18_0 util_ds_buf_18
        (.IOBUF_IO_I(DAC_CTRL_3_DCKOUT),
         .IOBUF_IO_IO(IOBUF_CLK3[0]),
         .IOBUF_IO_O(util_ds_buf_18_IOBUF_IO_O),
@@ -1853,23 +1860,23 @@ module design_1
         .IOBUF_IO_IO(IOBUF_DATA0[11:0]),
         .IOBUF_IO_O(util_ds_buf_6_IOBUF_IO_O),
         .IOBUF_IO_T(xlconcat_0_dout));
-  design_1_util_ds_buf_6_2 util_ds_buf_7
+  design_1_util_ds_buf_7_0 util_ds_buf_7
        (.IOBUF_IO_I(DAC_CTRL_1_DACDATA),
         .IOBUF_IO_IO(IOBUF_DATA1[11:0]),
         .IOBUF_IO_O(util_ds_buf_7_IOBUF_IO_O),
         .IOBUF_IO_T(xlconcat_1_dout));
-  design_1_util_ds_buf_6_3 util_ds_buf_8
+  design_1_util_ds_buf_8_0 util_ds_buf_8
        (.IOBUF_IO_I(DAC_CTRL_2_DACDATA),
         .IOBUF_IO_IO(IOBUF_DATA2[11:0]),
         .IOBUF_IO_O(util_ds_buf_8_IOBUF_IO_O),
         .IOBUF_IO_T(xlconcat_2_dout));
-  design_1_util_ds_buf_6_4 util_ds_buf_9
+  design_1_util_ds_buf_9_0 util_ds_buf_9
        (.IOBUF_IO_I(DAC_CTRL_3_DACDATA),
         .IOBUF_IO_IO(IOBUF_DATA3[11:0]),
         .IOBUF_IO_O(util_ds_buf_9_IOBUF_IO_O),
         .IOBUF_IO_T(xlconcat_3_dout));
   design_1_util_vector_logic_0_0 util_vector_logic_0
-       (.Op1(clk_wiz_0_clk_out1),
+       (.Op1(Net22),
         .Res(util_vector_logic_0_Res));
   design_1_xlconcat_0_0 xlconcat_0
        (.In0(Net18),
@@ -1885,7 +1892,7 @@ module design_1
         .In8(Net18),
         .In9(Net18),
         .dout(xlconcat_0_dout));
-  design_1_xlconcat_0_1 xlconcat_1
+  design_1_xlconcat_1_0 xlconcat_1
        (.In0(Net19),
         .In1(Net19),
         .In10(Net19),
@@ -1899,7 +1906,7 @@ module design_1
         .In8(Net19),
         .In9(Net19),
         .dout(xlconcat_1_dout));
-  design_1_xlconcat_0_2 xlconcat_2
+  design_1_xlconcat_2_0 xlconcat_2
        (.In0(Net20),
         .In1(Net20),
         .In10(Net20),
@@ -1913,7 +1920,7 @@ module design_1
         .In8(Net20),
         .In9(Net20),
         .dout(xlconcat_2_dout));
-  design_1_xlconcat_0_3 xlconcat_3
+  design_1_xlconcat_3_0 xlconcat_3
        (.In0(Net21),
         .In1(Net21),
         .In10(Net21),
@@ -1930,13 +1937,13 @@ module design_1
   design_1_xlslice_0_0 xlslice_0
        (.Din(axi_gpio_14_gpio_io_o),
         .Dout(Net18));
-  design_1_xlslice_0_1 xlslice_1
+  design_1_xlslice_1_0 xlslice_1
        (.Din(axi_gpio_14_gpio_io_o),
         .Dout(Net19));
-  design_1_xlslice_0_2 xlslice_2
+  design_1_xlslice_2_0 xlslice_2
        (.Din(axi_gpio_14_gpio_io_o),
         .Dout(Net20));
-  design_1_xlslice_0_3 xlslice_3
+  design_1_xlslice_3_0 xlslice_3
        (.Din(axi_gpio_14_gpio_io_o),
         .Dout(Net21));
   design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0

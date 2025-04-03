@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Mar 31 17:15:54 2025
+// Date        : Thu Apr  3 01:13:49 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_DAC_CTRL_0_1/design_1_DAC_CTRL_0_1_sim_netlist.v
@@ -57,294 +57,301 @@ module design_1_DAC_CTRL_0_1_DAC_CTRL
 
   wire CLKIN;
   wire [11:0]DACDATA;
-  wire DACVAL12_out;
-  wire DACVAL1__11;
-  wire \DACVAL[0]_i_1_n_0 ;
-  wire \DACVAL[10]_i_1_n_0 ;
+  wire DACVAL1;
+  wire DACVAL13_out;
+  wire DACVAL2;
   wire \DACVAL[11]_i_1_n_0 ;
-  wire \DACVAL[11]_i_4_n_0 ;
   wire \DACVAL[11]_i_5_n_0 ;
   wire \DACVAL[11]_i_6_n_0 ;
   wire \DACVAL[11]_i_7_n_0 ;
   wire \DACVAL[11]_i_8_n_0 ;
-  wire \DACVAL[1]_i_1_n_0 ;
-  wire \DACVAL[2]_i_1_n_0 ;
-  wire \DACVAL[3]_i_1_n_0 ;
-  wire \DACVAL[4]_i_1_n_0 ;
-  wire \DACVAL[5]_i_1_n_0 ;
-  wire \DACVAL[6]_i_1_n_0 ;
-  wire \DACVAL[7]_i_1_n_0 ;
-  wire \DACVAL[8]_i_1_n_0 ;
-  wire \DACVAL[9]_i_1_n_0 ;
+  wire \DACVAL[11]_i_9_n_0 ;
   wire [11:0]DATA_INA;
   wire [11:0]DATA_INB;
   wire DCKOUT;
   wire channel;
   wire isDCLK1_i_1_n_0;
-  wire p_0_in;
+  wire [11:0]p_1_in;
 
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
     \DACVAL[0]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[0]),
+       (.I0(channel),
+        .I1(DACVAL1),
         .I2(DACDATA[0]),
-        .I3(DATA_INB[0]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[10]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[10]),
-        .I2(DACDATA[10]),
-        .I3(DATA_INB[10]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[10]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[11]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[11]),
-        .I2(DACDATA[11]),
-        .I3(DATA_INB[11]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00020000)) 
-    \DACVAL[11]_i_2 
-       (.I0(\DACVAL[11]_i_4_n_0 ),
-        .I1(DATA_INA[2]),
-        .I2(DATA_INA[1]),
         .I3(DATA_INA[0]),
-        .I4(\DACVAL[11]_i_5_n_0 ),
-        .O(DACVAL12_out));
+        .I4(DATA_INB[0]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[0]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[10]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[10]),
+        .I3(DATA_INA[10]),
+        .I4(DATA_INB[10]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[10]));
+  LUT2 #(
+    .INIT(4'hD)) 
+    \DACVAL[11]_i_1 
+       (.I0(channel),
+        .I1(DACVAL13_out),
+        .O(\DACVAL[11]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[11]_i_2 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[11]),
+        .I3(DATA_INA[11]),
+        .I4(DATA_INB[11]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[11]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hAAA8)) 
     \DACVAL[11]_i_3 
        (.I0(channel),
-        .I1(\DACVAL[11]_i_6_n_0 ),
-        .I2(\DACVAL[11]_i_7_n_0 ),
-        .I3(\DACVAL[11]_i_8_n_0 ),
-        .O(DACVAL1__11));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \DACVAL[11]_i_4 
-       (.I0(DATA_INA[6]),
-        .I1(DATA_INA[5]),
-        .I2(DATA_INA[4]),
-        .I3(DATA_INA[3]),
-        .O(\DACVAL[11]_i_4_n_0 ));
+        .I1(\DACVAL[11]_i_5_n_0 ),
+        .I2(\DACVAL[11]_i_6_n_0 ),
+        .I3(\DACVAL[11]_i_7_n_0 ),
+        .O(DACVAL13_out));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \DACVAL[11]_i_5 
-       (.I0(DATA_INA[7]),
-        .I1(DATA_INA[8]),
-        .I2(DATA_INA[9]),
-        .I3(DATA_INA[10]),
-        .I4(channel),
-        .I5(DATA_INA[11]),
-        .O(\DACVAL[11]_i_5_n_0 ));
+    .INIT(64'h0000000200000000)) 
+    \DACVAL[11]_i_4 
+       (.I0(\DACVAL[11]_i_8_n_0 ),
+        .I1(DATA_INA[11]),
+        .I2(DATA_INA[10]),
+        .I3(DATA_INA[9]),
+        .I4(DATA_INA[8]),
+        .I5(\DACVAL[11]_i_9_n_0 ),
+        .O(DACVAL1));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_6 
+    \DACVAL[11]_i_5 
        (.I0(DATA_INB[0]),
         .I1(DATA_INB[1]),
         .I2(DATA_INB[2]),
         .I3(DATA_INB[3]),
-        .O(\DACVAL[11]_i_6_n_0 ));
+        .O(\DACVAL[11]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_7 
+    \DACVAL[11]_i_6 
        (.I0(DATA_INB[4]),
         .I1(DATA_INB[5]),
         .I2(DATA_INB[6]),
         .I3(DATA_INB[7]),
-        .O(\DACVAL[11]_i_7_n_0 ));
+        .O(\DACVAL[11]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_8 
+    \DACVAL[11]_i_7 
        (.I0(DATA_INB[8]),
         .I1(DATA_INB[9]),
         .I2(DATA_INB[11]),
         .I3(DATA_INB[10]),
-        .O(\DACVAL[11]_i_8_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[1]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[1]),
-        .I2(DACDATA[1]),
-        .I3(DATA_INB[1]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[2]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[2]),
-        .I2(DACDATA[2]),
-        .I3(DATA_INB[2]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[3]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[3]),
-        .I2(DACDATA[3]),
-        .I3(DATA_INB[3]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[4]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[4]),
-        .I2(DACDATA[4]),
-        .I3(DATA_INB[4]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[4]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[5]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[5]),
-        .I2(DACDATA[5]),
-        .I3(DATA_INB[5]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
-    \DACVAL[6]_i_1 
-       (.I0(DACVAL12_out),
+        .O(\DACVAL[11]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \DACVAL[11]_i_8 
+       (.I0(DATA_INA[7]),
         .I1(DATA_INA[6]),
+        .I2(DATA_INA[5]),
+        .I3(DATA_INA[4]),
+        .O(\DACVAL[11]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \DACVAL[11]_i_9 
+       (.I0(DATA_INA[1]),
+        .I1(DATA_INA[0]),
+        .I2(DATA_INA[3]),
+        .I3(DATA_INA[2]),
+        .O(\DACVAL[11]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[1]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[1]),
+        .I3(DATA_INA[1]),
+        .I4(DATA_INB[1]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[1]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[2]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[2]),
+        .I3(DATA_INA[2]),
+        .I4(DATA_INB[2]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[2]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[3]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[3]),
+        .I3(DATA_INA[3]),
+        .I4(DATA_INB[3]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[3]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[4]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[4]),
+        .I3(DATA_INA[4]),
+        .I4(DATA_INB[4]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[4]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[5]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
+        .I2(DACDATA[5]),
+        .I3(DATA_INA[5]),
+        .I4(DATA_INB[5]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[5]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
+    \DACVAL[6]_i_1 
+       (.I0(channel),
+        .I1(DACVAL1),
         .I2(DACDATA[6]),
-        .I3(DATA_INB[6]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
+        .I3(DATA_INA[6]),
+        .I4(DATA_INB[6]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[6]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
     \DACVAL[7]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[7]),
+       (.I0(channel),
+        .I1(DACVAL1),
         .I2(DACDATA[7]),
-        .I3(DATA_INB[7]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[7]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
+        .I3(DATA_INA[7]),
+        .I4(DATA_INB[7]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[7]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
     \DACVAL[8]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[8]),
+       (.I0(channel),
+        .I1(DACVAL1),
         .I2(DACDATA[8]),
-        .I3(DATA_INB[8]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFF004E4E)) 
+        .I3(DATA_INA[8]),
+        .I4(DATA_INB[8]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[8]));
+  LUT6 #(
+    .INIT(64'hFFFF00001F0E1F0E)) 
     \DACVAL[9]_i_1 
-       (.I0(DACVAL12_out),
-        .I1(DATA_INA[9]),
+       (.I0(channel),
+        .I1(DACVAL1),
         .I2(DACDATA[9]),
-        .I3(DATA_INB[9]),
-        .I4(DACVAL1__11),
-        .O(\DACVAL[9]_i_1_n_0 ));
+        .I3(DATA_INA[9]),
+        .I4(DATA_INB[9]),
+        .I5(DACVAL13_out),
+        .O(p_1_in[9]));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[0] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[0]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[0]),
         .Q(DACDATA[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[10] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[10]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[10]),
         .Q(DACDATA[10]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
     \DACVAL_reg[11] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[11]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[11]),
         .Q(DACDATA[11]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[1] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[1]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[1]),
         .Q(DACDATA[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[2] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[2]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[2]),
         .Q(DACDATA[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[3] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[3]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[3]),
         .Q(DACDATA[3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[4] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[4]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[4]),
         .Q(DACDATA[4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[5] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[5]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[5]),
         .Q(DACDATA[5]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[6] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[6]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[6]),
         .Q(DACDATA[6]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[7] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[7]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[7]),
         .Q(DACDATA[7]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[8] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[8]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[8]),
         .Q(DACDATA[8]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[9] 
        (.C(CLKIN),
-        .CE(1'b1),
-        .D(\DACVAL[9]_i_1_n_0 ),
+        .CE(\DACVAL[11]_i_1_n_0 ),
+        .D(p_1_in[9]),
         .Q(DACDATA[9]),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -352,13 +359,13 @@ module design_1_DAC_CTRL_0_1_DAC_CTRL
     .INIT(2'h1)) 
     channel_i_1
        (.I0(channel),
-        .O(p_0_in));
+        .O(DACVAL2));
   FDRE #(
     .INIT(1'b0)) 
     channel_reg
        (.C(CLKIN),
         .CE(1'b1),
-        .D(p_0_in),
+        .D(DACVAL2),
         .Q(channel),
         .R(1'b0));
   LUT1 #(
