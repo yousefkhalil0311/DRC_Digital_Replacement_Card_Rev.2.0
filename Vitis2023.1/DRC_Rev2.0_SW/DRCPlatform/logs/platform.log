@@ -51111,3 +51111,1468 @@ C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform
 C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
 
 TRACE::2025-04-03.00:51:50::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:10::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:10::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:10::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:10::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:10::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:10::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:10::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened new HwDB with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWReader::Active system found as  DRCPlatform
+TRACE::2025-04-03.10:09:15::SCWReader::Handling sysconfig DRCPlatform
+TRACE::2025-04-03.10:09:15::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWReader::Boot application domain added for zynqmp_fsbl
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-04-03.10:09:15::SCWMssOS::No sw design opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::mss exists loading the mss file  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design from mss  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Adding the swdes entry C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2025-04-03.10:09:15::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design.  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilffs:5.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilsecure:5.1
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilpm:5.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWReader::No isolation master present  
+TRACE::2025-04-03.10:09:15::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWReader::Boot application domain added for zynqmp_pmufw
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::No sw design opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::mss exists loading the mss file  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design from mss  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Adding the swdes entry C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2025-04-03.10:09:15::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design.  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilfpga:6.4
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilsecure:5.1
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS:: library already available in sw design:  xilskey:7.4
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWReader::No isolation master present  
+TRACE::2025-04-03.10:09:15::SCWDomain::checking for install qemu data   : 
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2025-04-03.10:09:15::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2023.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::No sw design opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::mss exists loading the mss file  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design from mss  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Adding the swdes entry C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2025-04-03.10:09:15::SCWMssOS::updating the scw layer about changes
+TRACE::2025-04-03.10:09:15::SCWMssOS::Opened the sw design.  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:15::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-04-03.10:09:15::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:15::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:15::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:15::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:15::SCWReader::No isolation master present  
+TRACE::2025-04-03.10:09:18::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:18::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:18::SCWPlatform:: Platform location is C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa
+TRACE::2025-04-03.10:09:18::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:18::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:22::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::update - Opened existing hwdb design_1_wrapper_1
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:22::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::update - Opened existing hwdb design_1_wrapper_1
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:22::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/tempdsa/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:22::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:22::SCWPlatform::update - Opened existing hwdb design_1_wrapper_1
+TRACE::2025-04-03.10:09:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:22::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2025-04-03.10:09:22::SCWMssOS::Removing the swdes entry for  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2025-04-03.10:09:22::SCWMssOS::Removing the swdes entry for  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:22::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2025-04-03.10:09:22::SCWMssOS::Removing the swdes entry for  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:23::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:23::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:23::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:23::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:23::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:23::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:23::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-04-03.10:09:27::SCWPlatform::Opened new HwDB with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2025-04-03.10:09:27::SCWMssOS::Writing the mss file completed C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:27::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2025-04-03.10:09:27::SCWMssOS::Writing the mss file completed C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:27::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2025-04-03.10:09:27::SCWMssOS::Writing the mss file completed C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:27::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:27::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:27::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:27::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:27::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:27::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:27::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:27::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:27::SCWWriter::formatted JSON is {
+	"platformName":	"DRCPlatform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"DRCPlatform",
+	"platHandOff":	"C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DRC_Rev2_0_Deliverables.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"DRCPlatform",
+	"systems":	[{
+			"systemName":	"DRCPlatform",
+			"systemDesc":	"DRCPlatform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"DRCPlatform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"c733dab4fe068c4b0cbd9c935b9a81691",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.0", "xilsecure:5.1", "xilpm:5.0"],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_uart_1",
+							"stdout":	"psu_uart_1",
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["stdin", "stdout", "zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"e1370786108069266748fff93838d3371",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.4", "xilsecure:5.1", "xilskey:7.4"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/DRCPlatform/standalone_domain/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/DRCPlatform/standalone_domain/qemu",
+					"pmuQemuArgs":	"<platformDir>/resources/DRCPlatform/standalone_domain/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"675bf75e318e3e0a0b79422bdead59de1",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_uart_1",
+							"stdout":	"psu_uart_1",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-04-03.10:09:33::SCWPlatform::Started generating the artifacts platform DRCPlatform
+TRACE::2025-04-03.10:09:33::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-04-03.10:09:33::SCWPlatform::Started generating the artifacts for system configuration DRCPlatform
+LOG::2025-04-03.10:09:33::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2025-04-03.10:09:33::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2025-04-03.10:09:33::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-04-03.10:09:33::SCWDomain::Skipping the build for domain :  zynqmp_fsbl
+LOG::2025-04-03.10:09:33::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2025-04-03.10:09:33::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2025-04-03.10:09:33::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-04-03.10:09:33::SCWDomain::Skipping the build for domain :  zynqmp_pmufw
+LOG::2025-04-03.10:09:33::SCWSystem::Checking the domain standalone_domain
+LOG::2025-04-03.10:09:33::SCWSystem::Not a boot domain 
+LOG::2025-04-03.10:09:33::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-04-03.10:09:33::SCWDomain::Generating domain artifcats
+TRACE::2025-04-03.10:09:33::SCWMssOS::Generating standalone artifcats
+TRACE::2025-04-03.10:09:33::SCWMssOS::Copying the qemu file from  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/resources/DRCPlatform/standalone_domain/qemu_args.txt To C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/qemu/
+TRACE::2025-04-03.10:09:33::SCWMssOS::Copying the qemu file from  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/resources/DRCPlatform/standalone_domain/qemu_args.txt To C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/qemu/
+TRACE::2025-04-03.10:09:33::SCWMssOS::Copying the qemu file from  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/resources/DRCPlatform/standalone_domain/qemu_args.txt To C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/qemu/
+TRACE::2025-04-03.10:09:33::SCWMssOS::Copying the qemu file from  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/resources/DRCPlatform/standalone_domain/qemu_args.txt To C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/standalone_domain/qemu/
+TRACE::2025-04-03.10:09:33::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-04-03.10:09:33::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:33::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:33::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:33::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:33::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:33::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:33::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:33::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:33::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:33::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:33::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:33::SCWMssOS::Completed writing the mss file at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2025-04-03.10:09:33::SCWMssOS::Mss edits present, copying mssfile into export location C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:34::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2025-04-03.10:09:35::SCWMssOS::doing bsp build ... 
+TRACE::2025-04-03.10:09:35::SCWMssOS::System Command Ran  C: & cd  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp & make 
+TRACE::2025-04-03.10:09:35::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2025-04-03.10:09:35::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2025-04-03.10:09:35::SCWMssOS::make -j 30 --no-print-directory par_libs
+
+TRACE::2025-04-03.10:09:35::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
+
+TRACE::2025-04-03.10:09:35::SCWMssOS::make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:35::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:35::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_4/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:36::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:36::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
+TRACE::2025-04-03.10:09:36::SCWMssOS::h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop
+TRACE::2025-04-03.10:09:36::SCWMssOS::-distribute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2025-04-03.10:09:36::SCWMssOS::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-d
+TRACE::2025-04-03.10:09:36::SCWMssOS::istribute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_13/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:36::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:36::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:36::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:36::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:36::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:36::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/gpio_v4_9/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:36::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:36::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_17/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2025-04-03.10:09:36::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2025-04-03.10:09:36::SCWMssOS::te-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/iic_v3_9/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/iic_v3_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2025-04-03.10:09:36::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2025-04-03.10:09:36::SCWMssOS::patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:36::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:36::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
+
+TRACE::2025-04-03.10:09:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2025-04-03.10:09:36::SCWMssOS::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distri
+TRACE::2025-04-03.10:09:36::SCWMssOS::bute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_5/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:37::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:37::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_1/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:37::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:37::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2025-04-03.10:09:37::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2025-04-03.10:09:37::SCWMssOS::te-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/sdps_v4_1/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:37::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:37::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/spi_v4_10/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/spi_v4_10/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:37::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:37::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/standalone_v8_1/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2025-04-03.10:09:37::SCWMssOS::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dist
+TRACE::2025-04-03.10:09:37::SCWMssOS::ribute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2025-04-03.10:09:37::SCWMssOS::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+TRACE::2025-04-03.10:09:37::SCWMssOS::ibute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2025-04-03.10:09:37::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2025-04-03.10:09:37::SCWMssOS::te-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_12/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:37::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:37::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_5/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/wdtps_v3_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2025-04-03.10:09:37::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2025-04-03.10:09:37::SCWMssOS::e-patterns"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_16/src"
+
+TRACE::2025-04-03.10:09:37::SCWMssOS::make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2025-04-03.10:09:37::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2025-04-03.10:09:37::SCWMssOS::e-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:38::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:38::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_4/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:38::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:38::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+TRACE::2025-04-03.10:09:38::SCWMssOS::-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-di
+TRACE::2025-04-03.10:09:38::SCWMssOS::stribute-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2025-04-03.10:09:38::SCWMssOS::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dist
+TRACE::2025-04-03.10:09:38::SCWMssOS::ribute-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_13/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:38::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:38::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:38::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:38::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:38::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:39::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:39::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/gpio_v4_9/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
+TRACE::2025-04-03.10:09:39::SCWMssOS::s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2025-04-03.10:09:39::SCWMssOS::tterns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_17/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2025-04-03.10:09:39::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2025-04-03.10:09:39::SCWMssOS::patterns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/iic_v3_9/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/iic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-as
+TRACE::2025-04-03.10:09:39::SCWMssOS::" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2025-04-03.10:09:39::SCWMssOS::terns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:39::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:39::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2025-04-03.10:09:39::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2025-04-03.10:09:39::SCWMssOS::e-patterns"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_5/src"
+
+TRACE::2025-04-03.10:09:39::SCWMssOS::make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:39::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:39::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:40::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:40::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/scugic_v5_1/src"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2025-04-03.10:09:40::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2025-04-03.10:09:40::SCWMssOS::patterns"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/sdps_v4_1/src"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
+TRACE::2025-04-03.10:09:40::SCWMssOS::s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2025-04-03.10:09:40::SCWMssOS::tterns"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/spi_v4_10/src"
+
+TRACE::2025-04-03.10:09:40::SCWMssOS::make -C psu_cortexa53_0/libsrc/spi_v4_10/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
+TRACE::2025-04-03.10:09:40::SCWMssOS::s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2025-04-03.10:09:40::SCWMssOS::tterns"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/standalone_v8_1/src"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2025-04-03.10:09:41::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distrib
+TRACE::2025-04-03.10:09:41::SCWMssOS::ute-patterns"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2025-04-03.10:09:41::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2025-04-03.10:09:41::SCWMssOS::te-patterns"
+
+TRACE::2025-04-03.10:09:41::SCWMssOS::make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2025-04-03.10:09:41::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2025-04-03.10:09:41::SCWMssOS::patterns"
+
+TRACE::2025-04-03.10:09:42::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_12/src"
+
+TRACE::2025-04-03.10:09:42::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2025-04-03.10:09:42::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2025-04-03.10:09:42::SCWMssOS::-patterns"
+
+TRACE::2025-04-03.10:09:42::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_5/src"
+
+TRACE::2025-04-03.10:09:42::SCWMssOS::make -C psu_cortexa53_0/libsrc/wdtps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2025-04-03.10:09:42::SCWMssOS::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2025-04-03.10:09:42::SCWMssOS::atterns"
+
+TRACE::2025-04-03.10:09:43::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_16/src"
+
+TRACE::2025-04-03.10:09:43::SCWMssOS::make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2025-04-03.10:09:43::SCWMssOS::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2025-04-03.10:09:43::SCWMssOS::atterns"
+
+TRACE::2025-04-03.10:09:46::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2025-04-03.10:09:46::SCWMssOS::make --no-print-directory archive
+
+TRACE::2025-04-03.10:09:46::SCWMssOS::aarch64-none-elf-ar -r  psu_cortexa53_0/lib/libxil.a psu_cortexa53_0/lib/_exit.o psu_cortexa53_0/lib/_open.o psu_cortexa53_0/li
+TRACE::2025-04-03.10:09:46::SCWMssOS::b/_sbrk.o psu_cortexa53_0/lib/abort.o psu_cortexa53_0/lib/asm_vectors.o psu_cortexa53_0/lib/boot.o psu_cortexa53_0/lib/close.o 
+TRACE::2025-04-03.10:09:46::SCWMssOS::psu_cortexa53_0/lib/cpputest_time.o psu_cortexa53_0/lib/errno.o psu_cortexa53_0/lib/fcntl.o psu_cortexa53_0/lib/fstat.o psu_cor
+TRACE::2025-04-03.10:09:46::SCWMssOS::texa53_0/lib/getentropy.o psu_cortexa53_0/lib/getpid.o psu_cortexa53_0/lib/inbyte.o psu_cortexa53_0/lib/initialise_monitor_hand
+TRACE::2025-04-03.10:09:46::SCWMssOS::les.o psu_cortexa53_0/lib/isatty.o psu_cortexa53_0/lib/kill.o psu_cortexa53_0/lib/lseek.o psu_cortexa53_0/lib/open.o psu_cortex
+TRACE::2025-04-03.10:09:46::SCWMssOS::a53_0/lib/outbyte.o psu_cortexa53_0/lib/print.o psu_cortexa53_0/lib/putnum.o psu_cortexa53_0/lib/read.o psu_cortexa53_0/lib/sbr
+TRACE::2025-04-03.10:09:46::SCWMssOS::k.o psu_cortexa53_0/lib/sleep.o psu_cortexa53_0/lib/time.o psu_cortexa53_0/lib/translation_table.o psu_cortexa53_0/lib/unlink.o
+TRACE::2025-04-03.10:09:46::SCWMssOS:: psu_cortexa53_0/lib/vectors.o psu_cortexa53_0/lib/write.o psu_cortexa53_0/lib/xaxipmon.o psu_cortexa53_0/lib/xaxipmon_g.o psu_
+TRACE::2025-04-03.10:09:46::SCWMssOS::cortexa53_0/lib/xaxipmon_selftest.o psu_cortexa53_0/lib/xaxipmon_sinit.o psu_cortexa53_0/lib/xclockps.o psu_cortexa53_0/lib/xcl
+TRACE::2025-04-03.10:09:46::SCWMssOS::ockps_divider.o psu_cortexa53_0/lib/xclockps_fixedfactor.o psu_cortexa53_0/lib/xclockps_g.o psu_cortexa53_0/lib/xclockps_gate.o
+TRACE::2025-04-03.10:09:46::SCWMssOS:: psu_cortexa53_0/lib/xclockps_mux.o psu_cortexa53_0/lib/xclockps_pll.o psu_cortexa53_0/lib/xclockps_sinit.o psu_cortexa53_0/lib
+TRACE::2025-04-03.10:09:46::SCWMssOS::/xcoresightpsdcc.o psu_cortexa53_0/lib/xcsudma.o psu_cortexa53_0/lib/xcsudma_g.o psu_cortexa53_0/lib/xcsudma_intr.o psu_cortexa
+TRACE::2025-04-03.10:09:46::SCWMssOS::53_0/lib/xcsudma_selftest.o psu_cortexa53_0/lib/xcsudma_sinit.o psu_cortexa53_0/lib/xgpio.o psu_cortexa53_0/lib/xgpio_extra.o p
+TRACE::2025-04-03.10:09:46::SCWMssOS::su_cortexa53_0/lib/xgpio_g.o psu_cortexa53_0/lib/xgpio_intr.o psu_cortexa53_0/lib/xgpio_selftest.o psu_cortexa53_0/lib/xgpio_si
+TRACE::2025-04-03.10:09:46::SCWMssOS::nit.o psu_cortexa53_0/lib/xgpiops.o psu_cortexa53_0/lib/xgpiops_g.o psu_cortexa53_0/lib/xgpiops_hw.o psu_cortexa53_0/lib/xgpiop
+TRACE::2025-04-03.10:09:46::SCWMssOS::s_intr.o psu_cortexa53_0/lib/xgpiops_selftest.o psu_cortexa53_0/lib/xgpiops_sinit.o psu_cortexa53_0/lib/xiic.o psu_cortexa53_0/
+TRACE::2025-04-03.10:09:46::SCWMssOS::lib/xiic_dyn_master.o psu_cortexa53_0/lib/xiic_g.o psu_cortexa53_0/lib/xiic_intr.o psu_cortexa53_0/lib/xiic_l.o psu_cortexa53_0
+TRACE::2025-04-03.10:09:46::SCWMssOS::/lib/xiic_master.o psu_cortexa53_0/lib/xiic_multi_master.o psu_cortexa53_0/lib/xiic_options.o psu_cortexa53_0/lib/xiic_selftest
+TRACE::2025-04-03.10:09:46::SCWMssOS::.o psu_cortexa53_0/lib/xiic_sinit.o psu_cortexa53_0/lib/xiic_slave.o psu_cortexa53_0/lib/xiic_stats.o psu_cortexa53_0/lib/xiicp
+TRACE::2025-04-03.10:09:46::SCWMssOS::s.o psu_cortexa53_0/lib/xiicps_g.o psu_cortexa53_0/lib/xiicps_hw.o psu_cortexa53_0/lib/xiicps_intr.o psu_cortexa53_0/lib/xiicps
+TRACE::2025-04-03.10:09:46::SCWMssOS::_master.o psu_cortexa53_0/lib/xiicps_options.o psu_cortexa53_0/lib/xiicps_selftest.o psu_cortexa53_0/lib/xiicps_sinit.o psu_cor
+TRACE::2025-04-03.10:09:46::SCWMssOS::texa53_0/lib/xiicps_slave.o psu_cortexa53_0/lib/xiicps_xfer.o psu_cortexa53_0/lib/xil-crt0.o psu_cortexa53_0/lib/xil_assert.o p
+TRACE::2025-04-03.10:09:46::SCWMssOS::su_cortexa53_0/lib/xil_cache.o psu_cortexa53_0/lib/xil_clocking.o psu_cortexa53_0/lib/xil_exception.o psu_cortexa53_0/lib/xil_m
+TRACE::2025-04-03.10:09:46::SCWMssOS::em.o psu_cortexa53_0/lib/xil_mmu.o psu_cortexa53_0/lib/xil_printf.o psu_cortexa53_0/lib/xil_sleepcommon.o psu_cortexa53_0/lib/x
+TRACE::2025-04-03.10:09:46::SCWMssOS::il_sleeptimer.o psu_cortexa53_0/lib/xil_smc.o psu_cortexa53_0/lib/xil_spinlock.o psu_cortexa53_0/lib/xil_testcache.o psu_cortex
+TRACE::2025-04-03.10:09:46::SCWMssOS::a53_0/lib/xil_testio.o psu_cortexa53_0/lib/xil_testmem.o psu_cortexa53_0/lib/xil_util.o psu_cortexa53_0/lib/xinterrupt_wrap.o p
+TRACE::2025-04-03.10:09:46::SCWMssOS::su_cortexa53_0/lib/xipipsu.o psu_cortexa53_0/lib/xipipsu_buf.o psu_cortexa53_0/lib/xipipsu_g.o psu_cortexa53_0/lib/xipipsu_sini
+TRACE::2025-04-03.10:09:46::SCWMssOS::t.o psu_cortexa53_0/lib/xplatform_info.o psu_cortexa53_0/lib/xpm_counter.o psu_cortexa53_0/lib/xqspipsu.o psu_cortexa53_0/lib/x
+TRACE::2025-04-03.10:09:46::SCWMssOS::qspipsu_control.o psu_cortexa53_0/lib/xqspipsu_g.o psu_cortexa53_0/lib/xqspipsu_hw.o psu_cortexa53_0/lib/xqspipsu_options.o psu
+TRACE::2025-04-03.10:09:46::SCWMssOS::_cortexa53_0/lib/xqspipsu_sinit.o psu_cortexa53_0/lib/xresetps.o psu_cortexa53_0/lib/xresetps_g.o psu_cortexa53_0/lib/xresetps_
+TRACE::2025-04-03.10:09:46::SCWMssOS::sinit.o psu_cortexa53_0/lib/xrtcpsu.o psu_cortexa53_0/lib/xrtcpsu_g.o psu_cortexa53_0/lib/xrtcpsu_intr.o psu_cortexa53_0/lib/xr
+TRACE::2025-04-03.10:09:46::SCWMssOS::tcpsu_selftest.o psu_cortexa53_0/lib/xrtcpsu_sinit.o psu_cortexa53_0/lib/xscugic.o psu_cortexa53_0/lib/xscugic_g.o psu_cortexa5
+TRACE::2025-04-03.10:09:46::SCWMssOS::3_0/lib/xscugic_hw.o psu_cortexa53_0/lib/xscugic_intr.o psu_cortexa53_0/lib/xscugic_selftest.o psu_cortexa53_0/lib/xscugic_sini
+TRACE::2025-04-03.10:09:46::SCWMssOS::t.o psu_cortexa53_0/lib/xsdps.o psu_cortexa53_0/lib/xsdps_card.o psu_cortexa53_0/lib/xsdps_g.o psu_cortexa53_0/lib/xsdps_host.o
+TRACE::2025-04-03.10:09:46::SCWMssOS:: psu_cortexa53_0/lib/xsdps_options.o psu_cortexa53_0/lib/xsdps_sinit.o psu_cortexa53_0/lib/xspi.o psu_cortexa53_0/lib/xspi_g.o 
+TRACE::2025-04-03.10:09:46::SCWMssOS::psu_cortexa53_0/lib/xspi_options.o psu_cortexa53_0/lib/xspi_selftest.o psu_cortexa53_0/lib/xspi_sinit.o psu_cortexa53_0/lib/xsp
+TRACE::2025-04-03.10:09:46::SCWMssOS::i_stats.o psu_cortexa53_0/lib/xsysmonpsu.o psu_cortexa53_0/lib/xsysmonpsu_g.o psu_cortexa53_0/lib/xsysmonpsu_intr.o psu_cortexa
+TRACE::2025-04-03.10:09:46::SCWMssOS::53_0/lib/xsysmonpsu_selftest.o psu_cortexa53_0/lib/xsysmonpsu_sinit.o psu_cortexa53_0/lib/xtime_l.o psu_cortexa53_0/lib/xttcps.
+TRACE::2025-04-03.10:09:46::SCWMssOS::o psu_cortexa53_0/lib/xttcps_g.o psu_cortexa53_0/lib/xttcps_options.o psu_cortexa53_0/lib/xttcps_selftest.o psu_cortexa53_0/lib
+TRACE::2025-04-03.10:09:46::SCWMssOS::/xttcps_sinit.o psu_cortexa53_0/lib/xuartps.o psu_cortexa53_0/lib/xuartps_g.o psu_cortexa53_0/lib/xuartps_hw.o psu_cortexa53_0/
+TRACE::2025-04-03.10:09:46::SCWMssOS::lib/xuartps_intr.o psu_cortexa53_0/lib/xuartps_options.o psu_cortexa53_0/lib/xuartps_selftest.o psu_cortexa53_0/lib/xuartps_sin
+TRACE::2025-04-03.10:09:46::SCWMssOS::it.o psu_cortexa53_0/lib/xwdtps.o psu_cortexa53_0/lib/xwdtps_g.o psu_cortexa53_0/lib/xwdtps_selftest.o psu_cortexa53_0/lib/xwdt
+TRACE::2025-04-03.10:09:46::SCWMssOS::ps_sinit.o psu_cortexa53_0/lib/xzdma.o psu_cortexa53_0/lib/xzdma_g.o psu_cortexa53_0/lib/xzdma_intr.o psu_cortexa53_0/lib/xzdma
+TRACE::2025-04-03.10:09:46::SCWMssOS::_selftest.o psu_cortexa53_0/lib/xzdma_sinit.o
+
+TRACE::2025-04-03.10:09:47::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-04-03.10:09:47::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-04-03.10:09:47::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-04-03.10:09:47::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-04-03.10:09:47::SCWSystem::Completed Processing the sysconfig DRCPlatform
+LOG::2025-04-03.10:09:47::SCWPlatform::Completed generating the artifacts for system configuration DRCPlatform
+TRACE::2025-04-03.10:09:47::SCWPlatform::Started preparing the platform 
+TRACE::2025-04-03.10:09:47::SCWSystem::Writing the bif file for system config DRCPlatform
+TRACE::2025-04-03.10:09:47::SCWSystem::dir created 
+TRACE::2025-04-03.10:09:47::SCWSystem::Writing the bif 
+TRACE::2025-04-03.10:09:47::SCWPlatform::Started writing the spfm file 
+TRACE::2025-04-03.10:09:47::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-04-03.10:09:47::SCWPlatform::Completed generating the platform
+TRACE::2025-04-03.10:09:47::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:47::SCWMssOS::Saving the mss changes C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2025-04-03.10:09:47::SCWMssOS::Writing the mss file completed C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::Commit changes completed.
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:47::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:47::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:47::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:47::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:47::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:47::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:47::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:47::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:47::SCWWriter::formatted JSON is {
+	"platformName":	"DRCPlatform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"DRCPlatform",
+	"platHandOff":	"C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DRC_Rev2_0_Deliverables.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"DRCPlatform",
+	"systems":	[{
+			"systemName":	"DRCPlatform",
+			"systemDesc":	"DRCPlatform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"DRCPlatform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"c733dab4fe068c4b0cbd9c935b9a81691",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.0", "xilsecure:5.1", "xilpm:5.0"],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_uart_1",
+							"stdout":	"psu_uart_1",
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["stdin", "stdout", "zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"e1370786108069266748fff93838d3371",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.4", "xilsecure:5.1", "xilskey:7.4"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/DRCPlatform/standalone_domain/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/DRCPlatform/standalone_domain/qemu",
+					"pmuQemuArgs":	"<platformDir>/resources/DRCPlatform/standalone_domain/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"675bf75e318e3e0a0b79422bdead59de",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_uart_1",
+							"stdout":	"psu_uart_1",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-04-03.10:09:47::SCWPlatform::updated the xpfm file.
+TRACE::2025-04-03.10:09:48::SCWPlatform::Trying to open the hw design at C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:48::SCWPlatform::DSA given C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:48::SCWPlatform::DSA absoulate path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:48::SCWPlatform::DSA directory C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw
+TRACE::2025-04-03.10:09:48::SCWPlatform:: Platform Path C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa
+TRACE::2025-04-03.10:09:48::SCWPlatform:: Unique name xilinx:osdzu3eg1_2g_1v8_sip::0.0
+TRACE::2025-04-03.10:09:48::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_2
+TRACE::2025-04-03.10:09:48::SCWPlatform::Opened existing hwdb design_1_wrapper_2
+TRACE::2025-04-03.10:09:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-04-03.10:09:48::SCWMssOS::Checking the sw design at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2025-04-03.10:09:48::SCWMssOS::DEBUG:  swdes dump  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2025-04-03.10:09:48::SCWMssOS::Sw design exists and opened at  C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/psu_cortexa53_0/standalone_domain/bsp/system.mss
