@@ -9,6 +9,7 @@
 
 //Project specific includes
 #include "StructDefinitions.h"
+#include "PeripheralMacros.h"
 
 //Sets IOEXP_STATE variable
 void Set_IOEXP_STATE (uint32_t mask, uint8_t state);
@@ -27,5 +28,8 @@ int IOEXP_Init (XIic *instance, uint8_t address);
 
 //Writes values to ports of IO expander
 int IOEXP_Write (XIic *instance, uint8_t address, uint32_t state_words);
+
+//Writes value to single pin of IO expander to control IO pin direction
+int IOEXP_WriteDirection (DIRCTRL_IOEXP *IOEXP, uint32_t bitMask, pinMode mode);
 
 #endif

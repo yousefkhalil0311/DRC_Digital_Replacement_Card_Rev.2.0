@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 void TestMode1();
-void TestMode2(uint32_t runTime);
+void TestMode2(uint32_t delay);
 void TestMode3(uint32_t runTime);
 void TestMode4(uint32_t runTime);
 void TestMode5(uint32_t runTime);

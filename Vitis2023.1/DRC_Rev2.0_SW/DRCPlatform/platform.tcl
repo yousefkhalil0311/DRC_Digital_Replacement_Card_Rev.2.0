@@ -94,3 +94,10 @@ platform generate -domains
 platform active {DRCPlatform}
 platform generate -domains standalone_domain,zynqmp_fsbl,zynqmp_pmufw 
 platform generate -domains standalone_domain,zynqmp_fsbl,zynqmp_pmufw 
+bsp reload
+bsp reload
+bsp reload
+bsp reload
+bsp reload
+platform generate -domains 
+platform generate -domains standalone_domain,zynqmp_fsbl,zynqmp_pmufw 

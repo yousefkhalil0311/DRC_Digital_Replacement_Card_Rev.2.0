@@ -30,21 +30,6 @@
 *
 ******************************************************************************/
 
-/*
- * helloworld.c: simple test application
- *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
- */
-
 //Standard C includes
 #include <stdio.h>
 #include <stdint.h>
@@ -68,31 +53,10 @@
 #include "StructDefinitions.h"
 #include "DRC_Parameters.h"
 #include "AXI_Block_Init.h"
-
-
-//sets the Status of the edge mounted LEDs.
-void setLEDStatus (uint8_t status){
-	XGpio_DiscreteWrite(&GPIO0_LEDS, 1, status);
-}
-
-//sets the State of an IO pin
-void setIOPin (const net_t* pin, uint8_t state){
-	//pin->IOEXP->DIR_CTRL_STATE = 0xFFFF;
-    //IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
-	//XGpio_SetDataDirection(pin->instance, pin->channel, 0x0);
-	XGpio_DiscreteWrite(pin->instance, pin->channel, state << pin->bit_num);
-}
-
-//sets the State of an IO pin
-int readIOPin (const net_t* pin){
-	//pin->IOEXP->DIR_CTRL_STATE = 0x0000;
-    //IOEXP_Write (pin->IOEXP->instance, pin->IOEXP->address, pin->IOEXP->DIR_CTRL_STATE);
-	//XGpio_SetDataDirection(pin->instance, pin->channel, 0xFFFFFFFF);
-	if (XGpio_DiscreteRead(pin->instance, pin->channel) & (1 << pin->bit_num)){
-		return 1;
-	}
-	return 0;
-}
+#include "AFE7222.h"
+#include "IOEXP.h"
+#include "Hardware_Tests.h"
+#include "DRC_Functions.h"
 
 int main()
 {
@@ -175,7 +139,7 @@ int main()
 //        }
 //    }
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
-        Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+        Status = AFE_Init(&SPI0_AFE, AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, i);
         if(Status != XST_SUCCESS){
         	return XST_FAILURE;
         }
@@ -409,7 +373,7 @@ int main()
     uint32_t chvalmax;
     uint32_t chvalmin;
     printf("DRC ADC MinMax Test.\n");
-    while(1){
+    while(0){
     	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
     	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
     	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
@@ -445,59 +409,82 @@ int main()
 
     // Print out testing options
     QueryTest:
-    printf("DRC Test Procedure.\n");
+	printf("\033[2J\033[H");
+    printf("DRC Rev. 2.0 Device Verification Test.\n");
     printf("Please Select a Test.\n");
-    printf("1) Set LED Status to 1.\n");
-    printf("2) Set all pins to Digital paths and cycle IO pins.\n");
-    printf("3) Read IO Pins and report state changes.\n");
-    printf("4) Low speed DAC triangle wave outputs.\n");
-    printf("5) Low speed DAC square wave outputs. Transition time test.\n");
-    printf("6) High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
-    printf("7) High speed ADC/DAC loopback mode B. Tests channel B on each ADC/DAC pair.\n");
+    printf("1) LED Test.\n");
+    printf("2) Digital Output Test.\n");
+    printf("3) Digital Input Test.\n");
+    printf("4) Low Speed DAC Ramp.\n");
+    printf("5) Low Speed DAC Square Wave.\n");
+    printf("6) High Speed ADC/DAC Loopback Mode A.\n");
+    printf("7) High Speed ADC/DAC Loopback Mode B.\n");
+    printf("8) High Speed DAC output mode. Tests High speed DAC to FPGA communication bus.\n");
+    printf("9) High speed DAC Quadrature mode. Tests High speed DAC on board quadrature generation.\n");
 
     //store user selected value
     int readValue;
-    scanf("%d", &readValue);
-
-    //clear buffer
-    int d;
-    while((d = getchar()) != '\n' && d != EOF);
-
-    //store user selected runTime of test
-    uint32_t runTime;
-    printf("Runtime = Frequency division in TestMode8.\n");
-    printf("Enter runTime: ");
-    scanf("%u", &runTime);
-
-    //clear buffer
-    while((d = getchar()) != '\n' && d != EOF);
-
-    for(int i = 0; i < readValue; i++){
-    	setIOPin(&SE88, 1);
-    	usleep(20000);
-    	setIOPin(&SE88, 0);
-    	usleep(20000);
+    if(scanf("%d", &readValue) != 1){
+    	printf("Invalid input.\n");
+    	usleep(100000);
+    	clearBuffer();
+    	goto QueryTest;
     }
 
-    setIOPin(&SE89, 1);
-	usleep(20000);
-	setIOPin(&SE89, 0);
+    if(readValue < 1 || readValue > 9){
+    	printf("Invalid input.\n");
+    	usleep(100000);
+    	clearBuffer();
+    	goto QueryTest;
+    }
+
+    printf("%d\n", readValue);
+
+    clearBuffer();
+    parseCase:
+
+    uint32_t runTime = 0;
 
     switch(readValue){
     case 1:
     	TestMode1();
     	break;
+
     case 2:
-    	TestMode2(runTime);
+        uint32_t delay;
+
+        printf("\nEnter delay between state changes (in ms): ");
+        scanf("%u", &delay);
+
+        if(delay < 0){
+        	goto parseCase;
+        }
+
+    	TestMode2(delay);
     	break;
+
     case 3:
+        printf("\nEnter length of test in seconds: ");
+        scanf("%u", &runTime);
+
+        if(runTime < 0){
+        	goto parseCase;
+        }
     	TestMode3(runTime);
     	break;
+
     case 4:
+        printf("\nEnter length of test in seconds: ");
+        scanf("%u", &runTime);
+
+        if(runTime < 0){
+        	goto parseCase;
+        }
     	TestMode4(runTime);
     	break;
+
     case 5:
-    	TestMode5(runTime);
+    	//TestMode5(runTime);
     	break;
     case 6:
     	TestMode6();
@@ -506,7 +493,7 @@ int main()
     	TestMode7();
     	break;
     case 8:
-    	TestMode8(runTime);
+    	//TestMode8(runTime);
     	break;
     default:
     	printf("Invalid Test\n");

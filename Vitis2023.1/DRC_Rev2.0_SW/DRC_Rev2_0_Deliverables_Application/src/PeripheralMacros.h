@@ -21,4 +21,9 @@
 #define SPDT 0x02
 #define SP4T 0x04
 
+typedef enum {
+	OUTPUT,
+	INPUT
+} pinMode;
+
 #endif

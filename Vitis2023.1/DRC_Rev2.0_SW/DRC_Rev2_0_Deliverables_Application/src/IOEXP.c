@@ -122,3 +122,34 @@ int IOEXP_Write (XIic *instance, uint8_t address, uint32_t state){ //state_words
 
 	return XST_SUCCESS;
 }
+
+int IOEXP_WriteDirection (DIRCTRL_IOEXP *IOEXP, uint32_t bitMask, pinMode mode){ //state_words = {P7_0, P17_10, P27_20}
+	int Status;
+
+	uint32_t IOEXPState = IOEXP->DIR_CTRL_STATE;
+
+	if(mode == OUTPUT){
+		IOEXPState |= bitMask;
+	}
+	if(mode == INPUT){
+		IOEXPState &= ~bitMask;
+	}
+
+	uint8_t data[] = { //converts 24 LSBs of state_words to 3 bytes.
+			IOEXP_write_cmd,
+			(IOEXPState >> 16) & 0xFF,  //P7_0
+			(IOEXPState >> 8)  & 0xFF,  //P17_10
+			(IOEXPState >> 0)  & 0xFF,  //P27_20
+	};
+
+	Status = XIic_Send(IOEXP->instance->BaseAddress, IOEXP->address, data, 4, XIIC_STOP);
+
+	if(Status != 4){
+		return XST_FAILURE;
+	}
+
+	IOEXP->DIR_CTRL_STATE = IOEXPState;
+
+	return XST_SUCCESS;
+}
+

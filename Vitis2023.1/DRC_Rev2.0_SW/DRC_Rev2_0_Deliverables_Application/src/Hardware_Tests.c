@@ -2,44 +2,66 @@
 
 //Standard C includes
 #include <stdio.h>
+#include <inttypes.h>
 
 //Xilinx specific includes
 #include "xuartps.h"
 #include "sleep.h"
+#include "xtime_l.h"
 
 //Project specific includes
 #include "StructDefinitions.h"
 #include "RegisterMaps.h"
 #include "DRC_Parameters.h"
 #include "PeripheralMacros.h"
+#include "DRC_Functions.h"
+#include "IOEXP.h"
+#include "LSDAC.h"
+#include "AFE7222.h"
+
+
+XTime start, end;
 
 void TestMode1(){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 1 Begin
 	// Edge mounted LEDs will cycle
+    clearTerminal();
     printf("Test Mode 1: Cycle Status LEDs.\n\n");
 
 	for(int i = 1; i <= 0x8; i <<= 1){
 		setLEDStatus(i);
+		printf("\033[3;1H");
+		printf("LED 1: %s\n", i == 0x1 ? "ON " : "OFF");
+		printf("LED 2: %s\n", i == 0x2 ? "ON " : "OFF");
+		printf("LED 3: %s\n", i == 0x4 ? "ON " : "OFF");
+		printf("LED 4: %s\n", i == 0x8 ? "ON " : "OFF");
 		sleep(1);
 	}
 	for(int i = 8; i >= 0x1; i >>= 1){
 		setLEDStatus(i);
+		printf("\033[3;1H");
+		printf("LED 1: %s\n", i == 0x1 ? "ON " : "OFF");
+		printf("LED 2: %s\n", i == 0x2 ? "ON " : "OFF");
+		printf("LED 3: %s\n", i == 0x4 ? "ON " : "OFF");
+		printf("LED 4: %s\n", i == 0x8 ? "ON " : "OFF");
 		sleep(1);
 	}
 
-    printf("Test Mode 1 End.\n.\n.\n.\n");
+    printf("Test Mode 1 End.\n");
 	// Test Mode 1 End
 	////////////////////////////////////////////////////////////////////
 }
 
-void TestMode2(uint32_t runTime){
+void TestMode2(uint32_t delay){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 2 Begin
 	// Set all pins to digital mode, and cycle each pin between ON and OFF
     //
-    printf("Test Mode 2: Set all pins to Digital paths and cycle IO pins.\n");
-    printf("Runtime: %u\n\n", runTime);
+	clearTerminal();
+    printf("Test Mode 2: Digital Output Test.\n");
+    printf("Set all multifunction pins to digital mode and cycles IO pins.\n");
+    printf("Delay: %u milliseconds\n\n", delay);
 
 	//Change Status to Mode 2
 	setLEDStatus(0x02);
@@ -72,33 +94,44 @@ void TestMode2(uint32_t runTime){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
 
     int numIOPins = ALL_GPIO_LEN;
 
-    //Cascade LEDs
-	for (int j = 0; j < numIOPins; j++){
-		setIOPin(ALL_GPIO[j], 1);
-		usleep(500000);
-		setIOPin(ALL_GPIO[j], 0);
+    for(int pin = 0; pin < numIOPins; pin++){
+    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
     }
-	XGpio_DiscreteWrite(&GPIO9_SE, 1, 0xFFFFFFFF);
-	XGpio_DiscreteWrite(&GPIO9_SE, 2, 0xFFFFFFFF);
-	XGpio_DiscreteWrite(&GPIO10_DS, 1, 0xFFFFFFFF);
-	XGpio_DiscreteWrite(&GPIO10_DS, 2, 0xFFFFFFFF);
-	for(int i = runTime; i >= 0; i--){
-	    printf("%d\n", i);
-	    sleep(1);
-	}
-	XGpio_DiscreteWrite(&GPIO9_SE, 1, 0);
-	XGpio_DiscreteWrite(&GPIO9_SE, 2, 0);
-	XGpio_DiscreteWrite(&GPIO10_DS, 1, 0);
-	XGpio_DiscreteWrite(&GPIO10_DS, 2, 0);
 
-    printf("Test Mode 2 End.\n.\n.\n.\n");
+    //Cascade LEDs
+	for (int pin = 0; pin < numIOPins; pin++){
+		setIOPin(ALL_GPIO[pin], 1);
+    	displayPinState(ALL_GPIO[pin]->IOpinNum, 1);
+		usleep(delay*1000);
+		setIOPin(ALL_GPIO[pin], 0);
+    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
+    }
+
+	//Turn all LEDs ON
+	for (int pin = 0; pin < numIOPins; pin++){
+		setIOPin(ALL_GPIO[pin], 1);
+    	displayPinState(ALL_GPIO[pin]->IOpinNum, 1);
+		usleep(delay * 1000);
+    }
+
+	sleep(2);
+
+	//Turn all LEDs OFF
+	for (int pin = 0; pin < numIOPins; pin++){
+		setIOPin(ALL_GPIO[pin], 0);
+    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
+		usleep(delay * 1000);
+    }
+
+    printf("Test Mode 2 End.\n");
+    sleep(1);
 	// Test Mode 2 End
 	////////////////////////////////////////////////////////////////////
 }
@@ -107,8 +140,11 @@ void TestMode3(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 3 Begin
 	// Read IO Test
+	clearTerminal();
     printf("Test Mode 3: Read IO Pins and report state changes.\n");
-    printf("Runtime: %u\n\n", runTime);
+    printf("Time Remaining: %us  \n\n", runTime);
+
+    int msRemaining = runTime * 1000.0; //msRemaining in ms
 
 	//Change Status to Mode 3
 	setLEDStatus(0x03);
@@ -141,64 +177,35 @@ void TestMode3(uint32_t runTime){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
-
-    //Display DRC Input Data on pins
-	printf("\033[2J\033[H");
-	while(1){
-		for (int i = 0; i < ALL_GPIO_LEN; i++){
-			printf("\033[%d;%dH", 1 + ALL_GPIO[i]->IOpinNum%30, 30 * (ALL_GPIO[i]->IOpinNum/30));
-			printf("Pin %d: %d\n", ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
-		}
-	}
-
-    int numIOPins = ALL_GPIO_LEN;
-
-	//Array to hold previous states of IO pins to compare to read value
-	int states[numIOPins];
-
-	//Array to hold whether each IO pin changed (it works)
-	int changes[numIOPins];
-
-	//Set all elements to 0
-	for (int i = 0; i < numIOPins; i++){
-		states[i] = 0;
-		changes[i] = 0;
-	}
-
-	//Cycle through reading each IO pin. If its state changes, print out.
-    for (uint32_t i = 0; i < runTime; i+=numIOPins){
-    	for (int j = 0; j < numIOPins; j++){
-    		if (states[j] != readIOPin(ALL_GPIO[j])){
-    			printf("IO Pin %d transitioned to %d\n", ALL_GPIO[j]->IOpinNum, states[j] ? 0 : 1);
-    			states[j] = states[j] ? 0 : 1;
-    			changes[j] = 1;
-    		}
-
-    	}
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
     }
 
-    sleep(1);
-	printf("\n\n\nTest 3 Results:\n\n\n\n");
-	sleep(1);
+    XTime_GetTime(&start);
 
-	int allIOGood = 1;
-	for (int j = 0; j < numIOPins; j++){
-		if (changes[j] == 0){
-			printf("IO Pin %d failed.\n", ALL_GPIO[j]->IOpinNum);
-			allIOGood = 0;
+    //Display DRC Input Data on pins
+	while(msRemaining > 0){
+
+		XTime_GetTime(&end);
+
+		uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
+
+		msRemaining = runTime*1000/*ms*/ - elapsedTime;
+
+		if (msRemaining < 0){
+			msRemaining = 0;
+		}
+
+		printf("\033[2;1H\033[K");
+		printf("Time Remaining: %d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
+
+		for (int i = 0; i < ALL_GPIO_LEN; i++){
+			displayPinState(ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
 		}
 	}
-	if(allIOGood){
-		printf("Test 3 Successful\n\n\n\n");
-	}
 
-    printf("Test Mode 3 End.\n.\n.\n.\n");
-
-    sleep(1);
+    printf("Test Mode 3 End.\n");
 	// Test Mode 3 End
 	////////////////////////////////////////////////////////////////////
 }
@@ -207,12 +214,15 @@ void TestMode4(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 4 Begin
 	// LSDAC Triangle Wave Test
+
+	clearTerminal();
     printf("Test Mode 4: Low speed DAC triangle wave outputs. \n");
-    printf("Runtime: %u\n\n", runTime);
+    printf("Time Remaining: %us  \n\n", runTime);
+
+    int msRemaining = runTime * 1000.0; //msRemaining in ms
 
 	//Change Status to Mode 4
 	setLEDStatus(0x04);
-
 
 	//Configure Switches for all Low Speed DAC Paths
 	const SWState_t AllLSDACPaths[] = {
@@ -231,6 +241,8 @@ void TestMode4(uint32_t runTime){
 			P35_LS0_DAC04,
 			P36_LS0_DAC00,
 			P40_LS0_DAC02,
+			P50_HS_ADC3A,
+			P55_HS_ADC3B,
 			P74_LS0_DAC03,
 	};
 
@@ -240,21 +252,86 @@ void TestMode4(uint32_t runTime){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
-	//Cycling through LSDAC values
-	for (uint32_t i = 0; i < runTime; i+=4096){
-    	for(int j = 0; j < 4096; j++){
-        	LS_DAC_WriteAll(&LSDAC0, j);
-        	LS_DAC_WriteAll(&LSDAC1, 4096 - j);
-    	}
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
+
+    XTime_GetTime(&start);
+
+    //initial value to be loaded into LSDACs
+    uint32_t LSDACVal = 0;
+
+    //LSDACVal will change by 1 per cycle
+    int addVal = 1;
+
+    //draw serial console static text
+	printf("\033[2;1H\033[K");
+	printf("Time Remaining: %d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
+	printf("\033[4;1H");
+	printf("LSDAC0 Value: %u   \n", LSDACVal);
+	printf("\033[5;1H");
+	printf("LSDAC1 Value: %u   \n", 4096 - LSDACVal);
+
+    //Display DRC LSDAC output values and remaining time
+	while(msRemaining > 0){
+
+		//Poll time remaining once per 10% change in LSDAC output value. Serial print is slow.
+		if(LSDACVal%115 == 0){
+
+			//Display Time Remaining
+			XTime_GetTime(&end);
+
+			uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
+
+			msRemaining = runTime*1000/*ms*/ - elapsedTime;
+
+			if (msRemaining < 0){
+				msRemaining = 0;
+			}
+
+			//Print stats
+			printf("\033[2;17H\033[K");
+			printf("%d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
+			printf("\033[4;15H");
+			printf("%04u     ", LSDACVal);
+			for(int i = 0; i < 4095/130; i++){
+				if(i*130 < LSDACVal){
+					printf("#");
+				}
+				else{
+					printf(" ");
+					break;
+				}
+			}
+			printf("\033[5;15H");
+			printf("%04u     ", 4096 - LSDACVal);
+			for(int i = 0; i < 4095/130; i++){
+				if(i*130 < (4096 - LSDACVal)){
+					printf("#");
+				}
+				else{
+					printf(" ");
+					break;
+				}
+			}
+
+		}
+
+		//Write values to LSDAC
+		LS_DAC_WriteAll(&LSDAC0, LSDACVal);
+		LS_DAC_WriteAll(&LSDAC1, 4096 - LSDACVal);
+
+		LSDACVal+=addVal;
+		if(LSDACVal > 4095 || LSDACVal <= 0){
+			addVal *= -1;
+		}
+
 	}
 	LS_DAC_WriteAll(&LSDAC0, 0);
 	LS_DAC_WriteAll(&LSDAC1, 0);
 
-    printf("Test Mode 4 End.\n.\n.\n.\n");
+    printf("Test Mode 4 End.\n");
 	// Test Mode 4 End
 	////////////////////////////////////////////////////////////////////
 }
@@ -264,7 +341,7 @@ void TestMode5(uint32_t runTime){
 	// Test Mode 5 Begin
 	// LSDAC Fast Square Wave Test
     printf("Test Mode 5: Low speed DAC square wave outputs. Transition time test.\n");
-    printf("Runtime: %u\n\n", runTime);
+    printf("Runtime: %.2u \n\n", runTime);
 
 	//Change Status to Mode 5
 	setLEDStatus(0x05);

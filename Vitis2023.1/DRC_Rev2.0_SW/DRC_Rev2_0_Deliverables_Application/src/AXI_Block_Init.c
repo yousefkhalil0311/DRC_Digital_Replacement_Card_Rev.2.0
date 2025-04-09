@@ -2,6 +2,7 @@
 
 //Standard C includes
 #include <stdbool.h>
+#include <stdio.h>
 
 //initializes AXI GPIO bus given XGpio ID with all connections and their default direction to the bus (if bidirectional, default is input)
 int GPIO_Init_Wrapper (const net_t** signals, int num_signals, uint16_t busID){

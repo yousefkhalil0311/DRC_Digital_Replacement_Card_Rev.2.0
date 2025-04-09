@@ -67,12 +67,12 @@ const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
 const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
-const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 0};
-const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 0};
-const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 0};
+const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
+const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
+const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 
 //AFE_CTRL XGpio pins
-const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 0};
 const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};//set to 1 for loopback mode
 const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};
 const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};
@@ -174,6 +174,11 @@ const net_t SE86 = {&GPIO10_DS, 20, 1, 0, 0, 86, &IOEXP_U19, 0x000001};
 const net_t SE85 = {&GPIO10_DS, 20, 2, 0, 0, 85, &IOEXP_U20, 0x000010};
 const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 0, 88, &IOEXP_U19, 0x000004};
 const net_t SE87 = {&GPIO10_DS, 21, 2, 0, 0, 87, &IOEXP_U19, 0x000080};
+
+//Store current output values on AXI GPIO blocks
+uint32_t GPIO9_SE_OUTPUT_cache[2] = {0, 0};
+uint32_t GPIO10_DS_OUTPUT_cache[2] = {0, 0};
+
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_LED[] = {
 	&LED1, &LED2, &LED3, &LED4
@@ -343,9 +348,9 @@ SWState_t Pin_Settings[] = {
 
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
-		P21_DIGIO21,
+		//P21_DIGIO21,
 		//P21_HS_ADC0B,
-		//P21_HS_DAC0A,
+		P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,

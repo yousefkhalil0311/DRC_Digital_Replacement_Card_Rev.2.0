@@ -182,6 +182,10 @@ extern const net_t SE85;
 extern const net_t SE88;
 extern const net_t SE87;
 
+//Store current output values on AXI GPIO blocks
+extern uint32_t GPIO9_SE_OUTPUT_cache[2];
+extern uint32_t GPIO10_DS_OUTPUT_cache[2];
+
 //Arrays used in initialization of GPIO AXI blocks
 extern const net_t* GPIO_LED[];
 extern const size_t GPIO_LED_LEN;
