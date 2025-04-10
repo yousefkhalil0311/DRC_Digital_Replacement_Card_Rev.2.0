@@ -3,6 +3,8 @@
 //Standard C includes
 #include <stdio.h>
 #include <inttypes.h>
+#include <stdarg.h>
+#include <string.h>
 
 //Xilinx specific includes
 #include "xuartps.h"
@@ -21,6 +23,55 @@
 
 
 XTime start, end;
+
+typedef struct{
+	int* arg1;
+	int* arg2;
+	int* arg3;
+} argsContext;
+
+
+/*
+ * function used within test cases to loop a function for a certain amount of time.
+ * If the callback function requires parameters, they can be passed in via an argsContext struct.
+ */
+void runTest(void (*testFunction)(argsContext* args), uint32_t runTime, argsContext* optArgs){
+
+    int msRemaining = runTime * 1000.0; //msRemaining in ms
+
+    //draw serial console static text
+	printf("\033[2;1H\033[K");
+	printf("Time Remaining: %02d.%02ds ", msRemaining/1000, (msRemaining%1000) / 10);
+
+    XTime_GetTime(&start);
+
+    //Display DRC LSDAC output values and remaining time
+	while(msRemaining > 0){
+
+		//Display Time Remaining
+		XTime_GetTime(&end);
+
+		uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
+
+		msRemaining = runTime*1000/*ms*/ - elapsedTime;
+
+		if (msRemaining < 0){
+			msRemaining = 0;
+		}
+
+		//Print time remaining every 50ms
+		if((msRemaining/10)%5 == 0){
+			printf("\033[2;17H\033[K");
+			printf("%02d.%02ds ", msRemaining/1000, (msRemaining%1000) / 10);
+		}
+
+		//Printing lots of serial data. Clear buffer to avoid unexpected blocking behavior
+		fflush(stdout);
+
+		testFunction(optArgs);
+
+	}
+}
 
 void TestMode1(){
 	////////////////////////////////////////////////////////////////////
@@ -142,9 +193,6 @@ void TestMode3(uint32_t runTime){
 	// Read IO Test
 	clearTerminal();
     printf("Test Mode 3: Read IO Pins and report state changes.\n");
-    printf("Time Remaining: %us  \n\n", runTime);
-
-    int msRemaining = runTime * 1000.0; //msRemaining in ms
 
 	//Change Status to Mode 3
 	setLEDStatus(0x03);
@@ -182,28 +230,15 @@ void TestMode3(uint32_t runTime){
     	return XST_FAILURE;
     }
 
-    XTime_GetTime(&start);
-
-    //Display DRC Input Data on pins
-	while(msRemaining > 0){
-
-		XTime_GetTime(&end);
-
-		uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
-
-		msRemaining = runTime*1000/*ms*/ - elapsedTime;
-
-		if (msRemaining < 0){
-			msRemaining = 0;
-		}
-
-		printf("\033[2;1H\033[K");
-		printf("Time Remaining: %d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
+    void testFunc3(argsContext* args){
 
 		for (int i = 0; i < ALL_GPIO_LEN; i++){
 			displayPinState(ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
 		}
-	}
+
+    }
+
+    runTest(testFunc3, runTime, NULL);
 
     printf("Test Mode 3 End.\n");
 	// Test Mode 3 End
@@ -217,9 +252,6 @@ void TestMode4(uint32_t runTime){
 
 	clearTerminal();
     printf("Test Mode 4: Low speed DAC triangle wave outputs. \n");
-    printf("Time Remaining: %us  \n\n", runTime);
-
-    int msRemaining = runTime * 1000.0; //msRemaining in ms
 
 	//Change Status to Mode 4
 	setLEDStatus(0x04);
@@ -257,46 +289,46 @@ void TestMode4(uint32_t runTime){
     	return XST_FAILURE;
     }
 
-    XTime_GetTime(&start);
+    //draw serial console static text
+	printf("\033[4;1H");
+	printf("LSDAC0 Value: ");
+	printf("\033[5;1H");
+	printf("LSDAC1 Value: ");
+	printf("\033[7;1H");
+	printf("P3  -> LSDAC0_CH7     P2  -> LSDAC1_CH4\n");
+	printf("P6  -> LSDAC0_CH6     P17 -> LSDAC1_CH0\n");
+	printf("P10 -> LSDAC0_CH1     P21 -> LSDAC1_CH2\n");
+	printf("P34 -> LSDAC0_CH5     P32 -> LSDAC1_CH5\n");
+	printf("P35 -> LSDAC0_CH4     P33 -> LSDAC1_CH6\n");
+	printf("P36 -> LSDAC0_CH0     P46 -> LSDAC1_CH7\n");
+	printf("P40 -> LSDAC0_CH2     P48 -> LSDAC1_CH1\n");
+	printf("P74 -> LSDAC0_CH3     P51 -> LSDAC1_CH3\n");
 
     //initial value to be loaded into LSDACs
-    uint32_t LSDACVal = 0;
+    int LSDACVal = 0;
 
     //LSDACVal will change by 1 per cycle
-    int addVal = 1;
+    int addVal = 10;
 
-    //draw serial console static text
-	printf("\033[2;1H\033[K");
-	printf("Time Remaining: %d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
-	printf("\033[4;1H");
-	printf("LSDAC0 Value: %u   \n", LSDACVal);
-	printf("\033[5;1H");
-	printf("LSDAC1 Value: %u   \n", 4096 - LSDACVal);
+    argsContext test4Args = {
+    		&LSDACVal,
+			&addVal,
+			NULL
+    };
 
-    //Display DRC LSDAC output values and remaining time
-	while(msRemaining > 0){
+    void testFunc4(argsContext* args){
 
-		//Poll time remaining once per 10% change in LSDAC output value. Serial print is slow.
-		if(LSDACVal%115 == 0){
+    	int* LSDACVal = args->arg1;
+    	int* addVal   = args->arg2;
 
-			//Display Time Remaining
-			XTime_GetTime(&end);
-
-			uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
-
-			msRemaining = runTime*1000/*ms*/ - elapsedTime;
-
-			if (msRemaining < 0){
-				msRemaining = 0;
-			}
+		//Poll time remaining once per 110 value change in LSDAC output value. Serial print is slow.
+		if(*LSDACVal%110 == 0){
 
 			//Print stats
-			printf("\033[2;17H\033[K");
-			printf("%d.%02ds   ", msRemaining/1000, (msRemaining%1000) / 10);
 			printf("\033[4;15H");
-			printf("%04u     ", LSDACVal);
-			for(int i = 0; i < 4095/130; i++){
-				if(i*130 < LSDACVal){
+			printf("%04u     ", *LSDACVal);
+			for(int i = 0; i < 4095/110; i++){
+				if(i*130 < *LSDACVal){
 					printf("#");
 				}
 				else{
@@ -305,9 +337,9 @@ void TestMode4(uint32_t runTime){
 				}
 			}
 			printf("\033[5;15H");
-			printf("%04u     ", 4096 - LSDACVal);
-			for(int i = 0; i < 4095/130; i++){
-				if(i*130 < (4096 - LSDACVal)){
+			printf("%04u     ", 4096 - *LSDACVal);
+			for(int i = 0; i < 4095/110; i++){
+				if(i*130 < (4096 - *LSDACVal)){
 					printf("#");
 				}
 				else{
@@ -319,15 +351,19 @@ void TestMode4(uint32_t runTime){
 		}
 
 		//Write values to LSDAC
-		LS_DAC_WriteAll(&LSDAC0, LSDACVal);
-		LS_DAC_WriteAll(&LSDAC1, 4096 - LSDACVal);
+		LS_DAC_WriteAll(&LSDAC0, *LSDACVal);
+		LS_DAC_WriteAll(&LSDAC1, 4095 - *LSDACVal);
 
-		LSDACVal+=addVal;
-		if(LSDACVal > 4095 || LSDACVal <= 0){
-			addVal *= -1;
+		*LSDACVal = *LSDACVal + *addVal;
+		if((*LSDACVal + *addVal > 4096) || (*LSDACVal + *addVal < 0)){
+			*addVal *= -1;
 		}
 
+
 	}
+
+    runTest(testFunc4, runTime, &test4Args);
+
 	LS_DAC_WriteAll(&LSDAC0, 0);
 	LS_DAC_WriteAll(&LSDAC1, 0);
 
@@ -340,8 +376,10 @@ void TestMode5(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 5 Begin
 	// LSDAC Fast Square Wave Test
+
+	clearTerminal();
+
     printf("Test Mode 5: Low speed DAC square wave outputs. Transition time test.\n");
-    printf("Runtime: %.2u \n\n", runTime);
 
 	//Change Status to Mode 5
 	setLEDStatus(0x05);
@@ -363,6 +401,8 @@ void TestMode5(uint32_t runTime){
 			P35_LS0_DAC04,
 			P36_LS0_DAC00,
 			P40_LS0_DAC02,
+			P50_HS_ADC3A,
+			P55_HS_ADC3B,
 			P74_LS0_DAC03,
 	};
 
@@ -372,50 +412,67 @@ void TestMode5(uint32_t runTime){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
 
-	//Cycling through LSDAC values
-	for(uint32_t i = 0; i < runTime; i+=4096){
-    	for(int j = 0; j < 4096; j++){
-        	LS_DAC_WriteAll(&LSDAC0, 4095);
-        	LS_DAC_WriteAll(&LSDAC0, 0);
-        	LS_DAC_WriteAll(&LSDAC0, 4095);
-        	LS_DAC_WriteAll(&LSDAC0, 0);
-        	LS_DAC_WriteAll(&LSDAC1, 4095);
-        	LS_DAC_WriteAll(&LSDAC1, 0);
-        	LS_DAC_WriteAll(&LSDAC1, 4095);
-        	LS_DAC_WriteAll(&LSDAC1, 0);
-    	}
-	}
+    //draw serial console static text
+	printf("\033[7;1H");
+	printf("P3  -> LSDAC0_CH7     P2  -> LSDAC1_CH4\n");
+	printf("P6  -> LSDAC0_CH6     P17 -> LSDAC1_CH0\n");
+	printf("P10 -> LSDAC0_CH1     P21 -> LSDAC1_CH2\n");
+	printf("P34 -> LSDAC0_CH5     P32 -> LSDAC1_CH5\n");
+	printf("P35 -> LSDAC0_CH4     P33 -> LSDAC1_CH6\n");
+	printf("P36 -> LSDAC0_CH0     P46 -> LSDAC1_CH7\n");
+	printf("P40 -> LSDAC0_CH2     P48 -> LSDAC1_CH1\n");
+	printf("P74 -> LSDAC0_CH3     P51 -> LSDAC1_CH3\n");
+
+    //Function to run for duration of the test
+    void testFunc5(argsContext* args){
+
+		//Write values to LSDAC
+		LS_DAC_WriteAll(&LSDAC0, 4095);
+		LS_DAC_WriteAll(&LSDAC0, 0);
+		LS_DAC_WriteAll(&LSDAC1, 4095);
+		LS_DAC_WriteAll(&LSDAC1, 0);
+
+    }
+
+    runTest(testFunc5, runTime, NULL);
+
 	LS_DAC_WriteAll(&LSDAC0, 0);
 	LS_DAC_WriteAll(&LSDAC1, 0);
 
-    printf("Test Mode 5 End.\n.\n.\n.\n");
+    printf("Test Mode 5 End.\n");
 	// Test Mode 5 End
 	////////////////////////////////////////////////////////////////////
 }
 
-void TestMode6(){
+void TestMode6(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 6 Begin
 	// HS ADC/DAC loopback test for channel A
-    printf("Test Mode 6: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
+
+	clearTerminal();
+
+    printf("Test Mode 6: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n\n\n");
     printf("Following pins used for loopback test.\n");
     printf("Pin 51 (ADC0A) to Pin 21 (DAC0A)\n");
     printf("Pin 48 (ADC1A) to Pin 17 (DAC1A)\n");
     printf("Pin 46 (ADC2A) to Pin 33 (DAC2A)\n");
-    printf("Pin 50 (ADC3A) to Pin 2  (DAC3A)\n\n\n");
+    printf("Pin 50 (ADC3A) to Pin 2  (DAC3A)\n");
 
 	setLEDStatus(0x06);
 
-	//Configure paths for High Speed ADC/DAC loopback mode
-	//NOTE: LSDAC and Channel B converter paths are here to keep structure of path configuration consistent
-	//in the case where a path is not necessary for this loopback test
+	/*
+	 *
+	 * Configure paths for High Speed ADC/DAC loopback mode
+	 * NOTE: LSDAC and Channel B converter paths are here to keep structure of path
+	 * configuration consistent in the case where a pin is used for this loopback test
+	 *
+	 */
 	SWState_t HSLoopbackA[] = {
-
 			P2_HS_DAC3A,
 			P17_HS_DAC1A,
 			P21_HS_DAC0A,
@@ -442,37 +499,51 @@ void TestMode6(){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
+
+    //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
         AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
     }
 
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06); //Enable all DAC FEs
+
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
+
     printf("System configured in channel A loopback mode.\n");
-    printf("Mode will persist until another test is selected.\n");
-    printf("\n.\n.\n.\n");
+
+	//empty function to pass into runTest
+    void test6Func(){}
+
+    runTest(test6Func, runTime, NULL);
+
 	// Test Mode 6 End
 	////////////////////////////////////////////////////////////////////
 }
 
-void TestMode7(){
+void TestMode7(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 7 Begin
 	// HS ADC/DAC loopback test for channel B
-    printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n");
+    printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n\n\n");
     printf("Following pins used for loopback test.\n");
     printf("Pin 21 (ADC0B) to Pin 51 (DAC0B)\n");
     printf("Pin 17 (ADC1B) to Pin 48 (DAC1B)\n");
     printf("Pin 33 (ADC2B) to Pin 46 (DAC2B)\n");
-    printf("Pin 55 (ADC3B) to Pin 32 (DAC3B)\n\n\n");
+    printf("Pin 55 (ADC3B) to Pin 32 (DAC3B)\n");
 
 	setLEDStatus(0x07);
 
-	//Configure paths for High Speed ADC/DAC loopback mode
-	//NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
-	//in the case where a path is not necessary for this loopback test
+	/*
+	 *
+	 * Configure paths for High Speed ADC/DAC loopback mode
+	 * NOTE: LSDAC and Channel B converter paths are here to keep structure of path
+	 * configuration consistent in the case where a pin is used for this loopback test
+	 *
+	 */
 	SWState_t HSLoopbackB[] = {
 			P2_HS_DAC3A,
 			P17_HS_ADC1B,
@@ -500,26 +571,39 @@ void TestMode7(){
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
+
+    //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
         AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
     }
 
-    printf("System configured in channel B loopback mode.\n");
-    printf("Mode will persist until another test is selected.\n");
-    printf("\n.\n.\n.\n");
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6); //Enable all DAC FEs
+
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
+
+    printf("System configured in channel A loopback mode.\n");
+
+	//empty function to pass into runTest
+    void test7Func(){}
+
+    runTest(test7Func, runTime, NULL);
+
 	// Test Mode 7 End
 	////////////////////////////////////////////////////////////////////
 }
 
-void TestMode8(uint32_t DACFrequency){
+void TestMode8(){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 8 Begin
 	// HS DAC output test
-    printf("Test Mode 8: High speed DAC output test\n");
+
+	clearTerminal();
+
+    printf("Test Mode 8: High speed DAC output test\n\n\n");
     printf("Following pins used for HS DACs\n");
     printf("Pin 21 (DAC0A)\n");
     printf("Pin 51 (DAC0B)\n");
@@ -528,14 +612,20 @@ void TestMode8(uint32_t DACFrequency){
     printf("Pin 33 (DAC2A)\n");
     printf("Pin 46 (DAC2B)\n");
     printf("Pin 2  (DAC3A)\n");
-    printf("Pin 32 (DAC3B)\n\n\n");
+    printf("Pin 32 (DAC3B)\n\n");
+    printf("Command List:\n"
+    		""
+    		""
+    		"");
 
-	setLEDStatus(0x07);
+	setLEDStatus(0x08);
 
-	//Configure paths for High Speed ADC/DAC loopback mode
-	//NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
-	//in the case where a path is not necessary for this loopback test
-	SWState_t HSLoopbackB[] = {
+	/*
+	 * Configure paths for High Speed ADC/DAC loopback mode
+	 * NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
+	 * in the case where a path is not necessary for this loopback test
+	 */
+	SWState_t HSDAC[] = {
 			P2_HS_DAC3A,
 			P17_HS_DAC1A,
 			P21_HS_DAC0A,
@@ -558,21 +648,93 @@ void TestMode8(uint32_t DACFrequency){
 
 	//Set Pin_Settings Array to desired Array settings
 	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = HSLoopbackB[i];
+		Pin_Settings[i] = HSDAC[i];
 	};
 
 	//Reinitialize Switch Settings For Desired States
-    /*Status = */IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-//    if(Status != XST_SUCCESS){
-//    	return XST_FAILURE;
-//    }
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
+    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+    if(Status != XST_SUCCESS){
+    	return XST_FAILURE;
+    }
+
+    //Sets all AFE7222 chips to operate in DAC only mode.
+    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
         AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
     }
 
-    printf("System configured in DAC Test mode.\n");
-    printf("Mode will persist until another test is selected.\n");
-    printf("\n.\n.\n.\n");
+
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0x0); //Set data path to connect DAC control block to AFE7222 pins
+
+    //Run test until exist is entered for a paramter
+    while(1){
+
+    	int AFEUnderTest;
+    	int digClkDivider;
+    	int sampleClkDivider;
+
+    	printf("\033[17;1H");
+    	printf("\nPlease enter the DAC to test (0-3): ");
+    	scanf("%d", &AFEUnderTest);
+
+    	//Print entered data otherwise
+    	printf("\n\033[K");
+    	printf("AFEUnderTest set to: %d\n", AFEUnderTest);
+
+    	printf("\nPlease enter clock divider for DAC data output control (1 -> 65MHz): ");
+    	scanf("%d", &digClkDivider);
+
+    	//exit test if "0" is entered
+    	if(digClkDivider == 0) return;
+
+    	//Print entered data otherwise
+    	printf("\n\033[K");
+    	printf("digClkDivider set to: %d\n", digClkDivider);
+
+    	printf("\nPlease enter sample clock divider (1 -> 130MHz): ");
+    	scanf("%d", &sampleClkDivider);
+
+    	//exit test if "0" is entered
+    	if(sampleClkDivider == 0) return;
+
+    	//Print entered data otherwise
+    	printf("\n\033[K");
+    	printf("sampleClkDivider set to: %d\n", sampleClkDivider);
+
+        XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ~(1 << (AFEUnderTest + 4)) & 0xF6); //Enable DAC FE for converter selected & disable rest
+    	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, digClkDivider);
+    	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, sampleClkDivider);
+
+    	//Raw stdin input string
+    	char inputString[10];
+
+    	//Extracted command string from inputString
+    	char cmdString[10];
+
+    	//extracted parameter value from inputString
+    	int enteredValue;
+
+    	printf("Enter Command> \033[K");
+
+    	//Read input string and echo back to terminal
+    	scanf("%s", inputString);
+    	printf("%s", inputString);
+
+//    	for(int i = 0; i < strlen(inputString); i++){
+//    		if(inputString[i] == '\b'){
+//
+//    		}
+//    	}
+
+    	//structure inputString into command string and value
+    	sscanf(inputString, "%3[A-Z]%d", cmdString, &enteredValue);
+
+    	printf("\n");
+    	printf("Command: \033[K%s\nValue:   \033[K%d\n", cmdString, enteredValue);
+
+    	usleep(500000);
+
+    }
+
 	// Test Mode 8 End
 	////////////////////////////////////////////////////////////////////
 }

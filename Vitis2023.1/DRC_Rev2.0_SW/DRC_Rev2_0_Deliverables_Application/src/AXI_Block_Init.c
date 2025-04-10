@@ -36,9 +36,7 @@ int GPIO_Init_Wrapper (const net_t** signals, int num_signals, uint16_t busID){
 				return XST_FAILURE;
 			}
 			break;
-		case 1: //Input -> fall through to case 2
-
-		case 2: //Bidirectional -> initialize as input
+		case 1: //Input
 			//All inputs/IO pins will not use the default_state param of the pins, as they are initially set up as inputs
 			if (channel == 1){
 				ch1_direction = ch1_direction | (1 << signals[i]->bit_num); //Set bit corresponding to GPIO desired to be input

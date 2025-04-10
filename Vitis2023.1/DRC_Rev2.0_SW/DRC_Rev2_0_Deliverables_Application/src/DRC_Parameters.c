@@ -66,13 +66,13 @@ const net_t INT_n   = {&GPIO8_CTRL, 0, 1, 1, 0};
 const net_t EXP_RST = {&GPIO8_CTRL, 1, 1, 0, 1};
 const net_t CLR_n   = {&GPIO8_CTRL, 2, 1, 0, 1};
 const net_t RESET   = {&GPIO8_CTRL, 3, 1, 0, 0};
-const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 0}; //Set to output low to enable the DAC FE
+const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the DAC FE
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 
 //AFE_CTRL XGpio pins
-const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 0};
+const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
 const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};//set to 1 for loopback mode
 const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};
 const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};

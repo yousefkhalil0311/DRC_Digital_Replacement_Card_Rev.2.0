@@ -63,236 +63,179 @@ int main()
     init_platform();
     int Status; 	//used to hold return status throughout the function.
 
-    //Initialize LED GPIO AXI device
-    printf("Initializing LED GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_LED, GPIO_LED_LEN, GPIO0_LEDS_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+  //Initialize LED GPIO AXI device
+   printf("Boot: Initializing LED control GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_LED, GPIO_LED_LEN, GPIO0_LEDS_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize CTRL GPIO AXI device
-    printf("Initializing CTRL GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_CTRL, GPIO_CTRL_LEN, GPIO8_CTRL_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize CTRL GPIO AXI device
+   printf("Boot: Initializing system control GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_CTRL, GPIO_CTRL_LEN, GPIO8_CTRL_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize SPDT GPIO AXI device
-    printf("Initializing SPDT GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_SPDT, GPIO_SPDT_LEN, GPIO7_SPDT_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize SPDT GPIO AXI device
+   printf("Boot: Initializing SPDT switch control GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_SPDT, GPIO_SPDT_LEN, GPIO7_SPDT_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize Single Ended GPIO AXI device
-    printf("Initializing Single Ended GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_SE, GPIO_SE_LEN, GPIO9_SE_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize Single Ended GPIO AXI device
+   printf("Boot: Initializing single-ended signal GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_SE, GPIO_SE_LEN, GPIO9_SE_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize Differential(In this app single ended) GPIO AXI device
-    printf("Initializing Differential(In this app single ended) GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_DS, GPIO_DS_LEN, GPIO10_DS_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize Differential (single-ended for this app) GPIO AXI device
+   printf("Boot: Initializing differential-mode (used as single-ended) GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_DS, GPIO_DS_LEN, GPIO10_DS_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize AFE Mode Control GPIO AXI device
-    printf("Initializing AFE Mode control GPIO AXI device.\n");
-    Status = GPIO_Init_Wrapper (GPIO_AFE_CTRL, GPIO_AFE_CTRL_LEN, GPIO14_AFE_CNTRL_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize AFE Mode Control GPIO AXI device
+   printf("Boot: Initializing AFE mode control GPIO device...\n");
+   Status = GPIO_Init_Wrapper(GPIO_AFE_CTRL, GPIO_AFE_CTRL_LEN, GPIO14_AFE_CNTRL_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize AFE7222 SPI devices
-    printf("Initializing AFE7222 SPI devices.\n");
-    Status = SPI_Init(&SPI0_AFE, SPI0_AFE_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize AFE7222 SPI device
+   printf("Boot: Initializing AFE7222 SPI device...\n");
+   Status = SPI_Init(&SPI0_AFE, SPI0_AFE_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    //Initialize LTC2666 SPI devices
-    printf("Initializing LTC2666 SPI devices.\n");
-    Status = SPI_Init(&SPI1_LSDAC, SPI1_LSDAC_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   // Initialize LTC2666 SPI device
+   printf("Boot: Initializing LTC2666 DAC SPI device...\n");
+   Status = SPI_Init(&SPI1_LSDAC, SPI1_LSDAC_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    XGpio_Initialize(&GPIO15_DAC0Const, GPIO15_DAC0Const_ID);
-    XGpio_Initialize(&GPIO16_DAC1Const, GPIO16_DAC1Const_ID);
-    XGpio_Initialize(&GPIO17_DAC2Const, GPIO17_DAC2Const_ID);
-    XGpio_Initialize(&GPIO18_DAC3Const, GPIO18_DAC3Const_ID);
-    XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0x700);
-    XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x700);
-    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0x000);
-    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x000);
-    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0x000);
-    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x000);
-    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0x000);
-    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x000);
-    printf("Writing registers to AFE chips.\n");
-//    for (int i = 0x01; i < (0x01 << 2); i = i << 1){//Initializes AFEs 0 and 1;
-//        Status = AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
-//        if(Status != XST_SUCCESS){
-//        	return XST_FAILURE;
-//        }
-//    }
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){//Initializes AFEs 2 and 3;
-        Status = AFE_Init(&SPI0_AFE, AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, i);
-        if(Status != XST_SUCCESS){
-        	return XST_FAILURE;
-        }
-    }
+   // Initialize and write constants to DAC GPIOs
+   printf("Boot: Initializing constant value DAC GPIO devices and writing default values...\n");
+   XGpio_Initialize(&GPIO15_DAC0Const, GPIO15_DAC0Const_ID);
+   XGpio_Initialize(&GPIO16_DAC1Const, GPIO16_DAC1Const_ID);
+   XGpio_Initialize(&GPIO17_DAC2Const, GPIO17_DAC2Const_ID);
+   XGpio_Initialize(&GPIO18_DAC3Const, GPIO18_DAC3Const_ID);
+   XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0x700);
+   XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x700);
+   XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0x000);
+   XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x000);
+   XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0x000);
+   XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x000);
+   XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0x000);
+   XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x000);
 
-    printf("Initializing IIC0.\n");
-    Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP_U19.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IIC for IOEXP_U19\n");
-    	return XST_FAILURE;
-    }
+   // Initialize AFEs
+   printf("Boot: Writing initial register values to AFE7222 devices...\n");
+   for (int i = 0x01; i < (0x01 << 4); i = i << 1){
+	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+	   if(Status != XST_SUCCESS) return XST_FAILURE;
+   }
 
-    printf("Initializing IOEXP_U19.\n");
-    Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IOEXP_U19\n");
-    	return XST_FAILURE;
-    }
+   // Initialize IIC and IO Expanders
+   printf("Boot: Initializing IIC0 and IO Expander U19...\n");
+   Status = IIC_Init(&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP_U19.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IIC for IOEXP_U19\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Configuring IOEXP_U19...\n");
+   Status = IOEXP_Init(&IIC0_IOEXP, IOEXP_U19.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IOEXP_U19\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Writing direction control to IOEXP_U19...\n");
+   IOEXP_Write(IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
 
-    printf("Writing to IOEXP_U19.\n");
-    IOEXP_Write (IOEXP_U19.instance, IOEXP_U19.address, IOEXP_U19.DIR_CTRL_STATE);
+   printf("Boot: Initializing IIC2 and IO Expander U20...\n");
+   Status = IIC_Init(IOEXP_U20.instance, IIC2_IOEXP_ID, IOEXP_U20.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IIC for IOEXP_U20\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Configuring IOEXP_U20...\n");
+   Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IOEXP_U20\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Writing direction control to IOEXP_U20...\n");
+   IOEXP_Write(IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
 
+   printf("Boot: Reinitializing IIC2 for IO Expander U21...\n");
+   Status = IIC_Init(IOEXP_U21.instance, IIC2_IOEXP_ID, IOEXP_U21.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IIC for IOEXP_U21\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Configuring IOEXP_U21...\n");
+   Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IOEXP_U21\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Writing direction control to IOEXP_U21...\n");
+   IOEXP_Write(IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
 
+   printf("Boot: Initializing IIC1 for IO Expander U18...\n");
+   Status = IIC_Init(IOEXP_U18.instance, IIC1_IOEXP_ID, IOEXP_U18.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IIC for IOEXP_U18\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Configuring IOEXP_U18...\n");
+   Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address);
+   if(Status != XST_SUCCESS){
+	   printf("Error: Failed to initialize IOEXP_U18\n");
+	   return XST_FAILURE;
+   }
+   printf("Boot: Writing direction control to IOEXP_U18...\n");
+   IOEXP_Write(IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
 
-    printf("Initializing IIC2.\n");
-    Status = IIC_Init (IOEXP_U20.instance, IIC2_IOEXP_ID, IOEXP_U20.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IIC for IOEXP_U20\n");
-    	return XST_FAILURE;
-    }
+   setLEDStatus(0x1);
 
-    printf("Initializing IOEXP_U20.\n");
-    Status = IOEXP_Init(IOEXP_U20.instance, IOEXP_U20.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IOEXP_U20\n");
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing IIC0 for general IO Expander...\n");
+   Status = IIC_Init(&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP0_ADDRESS);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Writing to IOEXP_U20.\n");
-    IOEXP_Write (IOEXP_U20.instance, IOEXP_U20.address, IOEXP_U20.DIR_CTRL_STATE);
+   printf("Boot: Configuring general IO Expander...\n");
+   Status = IOEXP_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
+   printf("Boot: Initializing multi-function IO pins...\n");
+   Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
+   // GPIO Input/Output Initializations
+   printf("Boot: Initializing GPIO1 for SPDCTRL...\n");
+   Status = XGpio_Initialize(&GPIO1_SPDCTRL, GPIO1_SPDCTRL_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Reinitializing IIC2.\n");
-    Status = IIC_Init (IOEXP_U21.instance, IIC2_IOEXP_ID, IOEXP_U21.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IIC for IOEXP_U21\n");
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing GPIO2 for DATA0A...\n");
+   Status = XGpio_Initialize(&GPIO2_DATA0A, GPIO2_DATA0A_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Initializing IOEXP_U21.\n");
-    Status = IOEXP_Init(IOEXP_U21.instance, IOEXP_U21.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IOEXP_U21\n");
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing GPIO3 for DATA0B...\n");
+   Status = XGpio_Initialize(&GPIO3_DATA0B, GPIO3_DATA0B_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Writing to IOEXP_U21.\n");
-    IOEXP_Write (IOEXP_U21.instance, IOEXP_U21.address, IOEXP_U21.DIR_CTRL_STATE);
+   printf("Boot: Initializing GPIO4 for DATA1A...\n");
+   Status = XGpio_Initialize(&GPIO4_DATA1A, GPIO4_DATA1A_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
+   printf("Boot: Initializing GPIO5 for DATA1B...\n");
+   Status = XGpio_Initialize(&GPIO5_DATA1B, GPIO5_DATA1B_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
+   printf("Boot: Initializing GPIO6 for DATA2A...\n");
+   Status = XGpio_Initialize(&GPIO6_DATA2A, GPIO6_DATA2A_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Initializing.\n");
-    Status = IIC_Init (IOEXP_U18.instance, IIC1_IOEXP_ID, IOEXP_U18.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IIC for IOEXP_U18\n");
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing GPIO11 for DATA2B...\n");
+   Status = XGpio_Initialize(&GPIO11_DATA2B, GPIO11_DATA2B_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Initializing.\n");
-    Status = IOEXP_Init(IOEXP_U18.instance, IOEXP_U18.address);
-    if(Status != XST_SUCCESS){
-    	printf("Failed to initialize IOEXP_U18\n");
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing GPIO12 for DATA3A...\n");
+   Status = XGpio_Initialize(&GPIO12_DATA3A, GPIO12_DATA3A_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
-    printf("Writing to IOEXP_U21.\n");
-    IOEXP_Write (IOEXP_U18.instance, IOEXP_U18.address, IOEXP_U18.DIR_CTRL_STATE);
-
-
-
-	setLEDStatus (0x1);
-    printf("Initializing.\n");
-    Status = IIC_Init (&IIC0_IOEXP, IIC0_IOEXP_ID, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = IOEXP_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO1_SPDCTRL,  GPIO1_SPDCTRL_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO2_DATA0A,  GPIO2_DATA0A_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO3_DATA0B,  GPIO3_DATA0B_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO4_DATA1A,  GPIO4_DATA1A_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO5_DATA1B,  GPIO5_DATA1B_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO6_DATA2A,  GPIO6_DATA2A_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO11_DATA2B,  GPIO11_DATA2B_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing.\n");
-    Status = XGpio_Initialize(&GPIO12_DATA3A,  GPIO12_DATA3A_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    printf("Initializing1.\n");
-    Status = XGpio_Initialize(&GPIO13_DATA3B,  GPIO13_DATA3B_ID);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
+   printf("Boot: Initializing GPIO13 for DATA3B...\n");
+   Status = XGpio_Initialize(&GPIO13_DATA3B, GPIO13_DATA3B_ID);
+   if(Status != XST_SUCCESS) return XST_FAILURE;
 
 
 	setLEDStatus (0x4);
@@ -368,7 +311,7 @@ int main()
 //        usleep(100000);
 //    }
 
-	        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1);
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1);
 	            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 1);
     uint32_t chvalmax;
     uint32_t chvalmin;
@@ -484,17 +427,39 @@ int main()
     	break;
 
     case 5:
-    	//TestMode5(runTime);
+        printf("\nEnter length of test in seconds: ");
+        scanf("%u", &runTime);
+
+        if(runTime < 0){
+        	goto parseCase;
+        }
+    	TestMode5(runTime);
     	break;
+
     case 6:
-    	TestMode6();
+        printf("\nEnter length of test in seconds: ");
+        scanf("%u", &runTime);
+
+        if(runTime < 0){
+        	goto parseCase;
+        }
+    	TestMode6(runTime);
     	break;
+
     case 7:
-    	TestMode7();
+        printf("\nEnter length of test in seconds: ");
+        scanf("%u", &runTime);
+
+        if(runTime < 0){
+        	goto parseCase;
+        }
+    	TestMode7(runTime);
     	break;
+
     case 8:
-    	//TestMode8(runTime);
+    	TestMode8(runTime);
     	break;
+
     default:
     	printf("Invalid Test\n");
     	break;

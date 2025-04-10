@@ -14,9 +14,6 @@
 //define GPIO IDs for controlling whether AFE pins are connected to DAC or ADC ctrl block
 #define GPIO14_AFE_CNTRL_ID	XPAR_AXI_GPIO_14_DEVICE_ID
 
-//define GPIO IDs for controlling DAC values(constant values)
-//#define GPIO15_AFE
-
 //define IIC IDs for IO expander's IIC bus
 #define IIC0_IOEXP_ID	XPAR_IIC_0_DEVICE_ID
 #define IIC1_IOEXP_ID	XPAR_IIC_1_DEVICE_ID
