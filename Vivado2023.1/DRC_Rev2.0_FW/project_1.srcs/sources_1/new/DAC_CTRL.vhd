@@ -35,8 +35,9 @@ use IEEE.numeric_std.ALL;
 
 entity DAC_CTRL is
     Port ( CLKIN : in STD_LOGIC;
-           DATA_INA : in STD_LOGIC_VECTOR (11 downto 0);
-           DATA_INB : in STD_LOGIC_VECTOR (11 downto 0);
+           CONSTMODE: in STD_LOGIC;
+           DATA_INA_MIN : in STD_LOGIC_VECTOR (11 downto 0);
+           DATA_INB_MAX : in STD_LOGIC_VECTOR (11 downto 0);
            DACDATA : out STD_LOGIC_VECTOR (11 downto 0);
            DCKOUT : out STD_LOGIC);
 end DAC_CTRL;
@@ -52,16 +53,20 @@ begin
     begin
         
         if (rising_edge(CLKIN)) then
-            if (channel = '0' and DATA_INA = "000000000000") then
-                DACVAL <= (not DACVAL);
+            if (channel = '0' and CONSTMODE = '0') then
+                DACVAL <= UNSIGNED(DATA_INA_MIN);
             end if;
             
-            if (channel = '0' and DATA_INA /= "000000000000") then
-                DACVAL <= UNSIGNED(DATA_INA); 
+            if (channel = '1' and CONSTMODE = '0') then
+                DACVAL <= UNSIGNED(DATA_INB_MAX);
             end if;
             
-            if (channel = '1' and DATA_INB /= "000000000000") then
-                DACVAL <= UNSIGNED(DATA_INB);
+            if (channel = '0' and CONSTMODE = '1') then
+                DACVAL <= UNSIGNED(DATA_INA_MIN); 
+            end if;
+            
+            if (channel = '1' and CONSTMODE = '1') then
+                DACVAL <= UNSIGNED(DATA_INB_MAX);
             end if;
             
             channel <= not channel;

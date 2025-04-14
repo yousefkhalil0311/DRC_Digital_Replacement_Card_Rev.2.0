@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Apr  3 01:13:49 2025
+// Date        : Mon Apr 14 00:58:55 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_DAC_CTRL_0_2/design_1_DAC_CTRL_0_2_sim_netlist.v
@@ -18,27 +18,29 @@
 (* NotValidForBitStream *)
 module design_1_DAC_CTRL_0_2
    (CLKIN,
-    DATA_INA,
-    DATA_INB,
+    CONSTMODE,
+    DATA_INA_MIN,
+    DATA_INB_MAX,
     DACDATA,
     DCKOUT);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLKIN CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLKIN, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input CLKIN;
-  input [11:0]DATA_INA;
-  input [11:0]DATA_INB;
+  input CONSTMODE;
+  input [11:0]DATA_INA_MIN;
+  input [11:0]DATA_INB_MAX;
   output [11:0]DACDATA;
   output DCKOUT;
 
   wire CLKIN;
   wire [11:0]DACDATA;
-  wire [11:0]DATA_INA;
-  wire [11:0]DATA_INB;
+  wire [11:0]DATA_INA_MIN;
+  wire [11:0]DATA_INB_MAX;
   wire DCKOUT;
 
   design_1_DAC_CTRL_0_2_DAC_CTRL inst
        (.CLKIN(CLKIN),
         .DACDATA(DACDATA),
-        .DATA_INA(DATA_INA),
-        .DATA_INB(DATA_INB),
+        .DATA_INA_MIN(DATA_INA_MIN),
+        .DATA_INB_MAX(DATA_INB_MAX),
         .DCKOUT(DCKOUT));
 endmodule
 
@@ -47,222 +49,125 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
    (DACDATA,
     DCKOUT,
     CLKIN,
-    DATA_INA,
-    DATA_INB);
+    DATA_INB_MAX,
+    DATA_INA_MIN);
   output [11:0]DACDATA;
   output DCKOUT;
   input CLKIN;
-  input [11:0]DATA_INA;
-  input [11:0]DATA_INB;
+  input [11:0]DATA_INB_MAX;
+  input [11:0]DATA_INA_MIN;
 
   wire CLKIN;
   wire [11:0]DACDATA;
-  wire DACVAL1;
-  wire DACVAL13_out;
-  wire DACVAL2;
-  wire \DACVAL[11]_i_1_n_0 ;
-  wire \DACVAL[11]_i_5_n_0 ;
-  wire \DACVAL[11]_i_6_n_0 ;
-  wire \DACVAL[11]_i_7_n_0 ;
-  wire \DACVAL[11]_i_8_n_0 ;
-  wire \DACVAL[11]_i_9_n_0 ;
-  wire [11:0]DATA_INA;
-  wire [11:0]DATA_INB;
+  wire DACVAL20_in;
+  wire [11:0]DATA_INA_MIN;
+  wire [11:0]DATA_INB_MAX;
   wire DCKOUT;
   wire channel;
   wire isDCLK1_i_1_n_0;
   wire [11:0]p_1_in;
 
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[0]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[0]),
-        .I3(DATA_INA[0]),
-        .I4(DATA_INB[0]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[0]),
+        .I2(DATA_INA_MIN[0]),
         .O(p_1_in[0]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[10]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[10]),
-        .I3(DATA_INA[10]),
-        .I4(DATA_INB[10]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[10]),
+        .I2(DATA_INA_MIN[10]),
         .O(p_1_in[10]));
-  LUT2 #(
-    .INIT(4'hD)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[11]_i_1 
        (.I0(channel),
-        .I1(DACVAL13_out),
-        .O(\DACVAL[11]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
-    \DACVAL[11]_i_2 
-       (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[11]),
-        .I3(DATA_INA[11]),
-        .I4(DATA_INB[11]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[11]),
+        .I2(DATA_INA_MIN[11]),
         .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'hAAA8)) 
-    \DACVAL[11]_i_3 
-       (.I0(channel),
-        .I1(\DACVAL[11]_i_5_n_0 ),
-        .I2(\DACVAL[11]_i_6_n_0 ),
-        .I3(\DACVAL[11]_i_7_n_0 ),
-        .O(DACVAL13_out));
-  LUT6 #(
-    .INIT(64'h0000000200000000)) 
-    \DACVAL[11]_i_4 
-       (.I0(\DACVAL[11]_i_8_n_0 ),
-        .I1(DATA_INA[11]),
-        .I2(DATA_INA[10]),
-        .I3(DATA_INA[9]),
-        .I4(DATA_INA[8]),
-        .I5(\DACVAL[11]_i_9_n_0 ),
-        .O(DACVAL1));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_5 
-       (.I0(DATA_INB[0]),
-        .I1(DATA_INB[1]),
-        .I2(DATA_INB[2]),
-        .I3(DATA_INB[3]),
-        .O(\DACVAL[11]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_6 
-       (.I0(DATA_INB[4]),
-        .I1(DATA_INB[5]),
-        .I2(DATA_INB[6]),
-        .I3(DATA_INB[7]),
-        .O(\DACVAL[11]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \DACVAL[11]_i_7 
-       (.I0(DATA_INB[8]),
-        .I1(DATA_INB[9]),
-        .I2(DATA_INB[11]),
-        .I3(DATA_INB[10]),
-        .O(\DACVAL[11]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \DACVAL[11]_i_8 
-       (.I0(DATA_INA[7]),
-        .I1(DATA_INA[6]),
-        .I2(DATA_INA[5]),
-        .I3(DATA_INA[4]),
-        .O(\DACVAL[11]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \DACVAL[11]_i_9 
-       (.I0(DATA_INA[1]),
-        .I1(DATA_INA[0]),
-        .I2(DATA_INA[3]),
-        .I3(DATA_INA[2]),
-        .O(\DACVAL[11]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[1]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[1]),
-        .I3(DATA_INA[1]),
-        .I4(DATA_INB[1]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[1]),
+        .I2(DATA_INA_MIN[1]),
         .O(p_1_in[1]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[2]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[2]),
-        .I3(DATA_INA[2]),
-        .I4(DATA_INB[2]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[2]),
+        .I2(DATA_INA_MIN[2]),
         .O(p_1_in[2]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[3]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[3]),
-        .I3(DATA_INA[3]),
-        .I4(DATA_INB[3]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[3]),
+        .I2(DATA_INA_MIN[3]),
         .O(p_1_in[3]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[4]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[4]),
-        .I3(DATA_INA[4]),
-        .I4(DATA_INB[4]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[4]),
+        .I2(DATA_INA_MIN[4]),
         .O(p_1_in[4]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[5]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[5]),
-        .I3(DATA_INA[5]),
-        .I4(DATA_INB[5]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[5]),
+        .I2(DATA_INA_MIN[5]),
         .O(p_1_in[5]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[6]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[6]),
-        .I3(DATA_INA[6]),
-        .I4(DATA_INB[6]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[6]),
+        .I2(DATA_INA_MIN[6]),
         .O(p_1_in[6]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[7]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[7]),
-        .I3(DATA_INA[7]),
-        .I4(DATA_INB[7]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[7]),
+        .I2(DATA_INA_MIN[7]),
         .O(p_1_in[7]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[8]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[8]),
-        .I3(DATA_INA[8]),
-        .I4(DATA_INB[8]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[8]),
+        .I2(DATA_INA_MIN[8]),
         .O(p_1_in[8]));
-  LUT6 #(
-    .INIT(64'hFFFF00001F0E1F0E)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hD8)) 
     \DACVAL[9]_i_1 
        (.I0(channel),
-        .I1(DACVAL1),
-        .I2(DACDATA[9]),
-        .I3(DATA_INA[9]),
-        .I4(DATA_INB[9]),
-        .I5(DACVAL13_out),
+        .I1(DATA_INB_MAX[9]),
+        .I2(DATA_INA_MIN[9]),
         .O(p_1_in[9]));
   FDRE #(
     .INIT(1'b0)) 
     \DACVAL_reg[0] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[0]),
         .Q(DACDATA[0]),
         .R(1'b0));
@@ -270,7 +175,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[10] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[10]),
         .Q(DACDATA[10]),
         .R(1'b0));
@@ -278,7 +183,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b1)) 
     \DACVAL_reg[11] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[11]),
         .Q(DACDATA[11]),
         .R(1'b0));
@@ -286,7 +191,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[1] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[1]),
         .Q(DACDATA[1]),
         .R(1'b0));
@@ -294,7 +199,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[2] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[2]),
         .Q(DACDATA[2]),
         .R(1'b0));
@@ -302,7 +207,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[3] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[3]),
         .Q(DACDATA[3]),
         .R(1'b0));
@@ -310,7 +215,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[4] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[4]),
         .Q(DACDATA[4]),
         .R(1'b0));
@@ -318,7 +223,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[5] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[5]),
         .Q(DACDATA[5]),
         .R(1'b0));
@@ -326,7 +231,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[6] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[6]),
         .Q(DACDATA[6]),
         .R(1'b0));
@@ -334,7 +239,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[7] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[7]),
         .Q(DACDATA[7]),
         .R(1'b0));
@@ -342,7 +247,7 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[8] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[8]),
         .Q(DACDATA[8]),
         .R(1'b0));
@@ -350,22 +255,21 @@ module design_1_DAC_CTRL_0_2_DAC_CTRL
     .INIT(1'b0)) 
     \DACVAL_reg[9] 
        (.C(CLKIN),
-        .CE(\DACVAL[11]_i_1_n_0 ),
+        .CE(1'b1),
         .D(p_1_in[9]),
         .Q(DACDATA[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT1 #(
     .INIT(2'h1)) 
     channel_i_1
        (.I0(channel),
-        .O(DACVAL2));
+        .O(DACVAL20_in));
   FDRE #(
     .INIT(1'b0)) 
     channel_reg
        (.C(CLKIN),
         .CE(1'b1),
-        .D(DACVAL2),
+        .D(DACVAL20_in),
         .Q(channel),
         .R(1'b0));
   LUT1 #(

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr  3 14:13:25 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 14 00:57:45 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-1"/>
 
@@ -782,12 +782,17 @@
             <CONNECTION INSTANCE="ClockDivider_0" PORT="CLKOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INA" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio_io_o">
+        <PORT DIR="I" NAME="CONSTMODE" SIGIS="undef" SIGNAME="axi_gpio_8_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_8" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="DATA_INA_MIN" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_15" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INB" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio2_io_o">
+        <PORT DIR="I" LEFT="11" NAME="DATA_INB_MAX" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_15" PORT="gpio2_io_o"/>
           </CONNECTIONS>
@@ -817,12 +822,17 @@
             <CONNECTION INSTANCE="ClockDivider_0" PORT="CLKOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INA" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio_io_o">
+        <PORT DIR="I" NAME="CONSTMODE" SIGIS="undef" SIGNAME="axi_gpio_8_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_8" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="DATA_INA_MIN" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_16" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INB" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio2_io_o">
+        <PORT DIR="I" LEFT="11" NAME="DATA_INB_MAX" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_16" PORT="gpio2_io_o"/>
           </CONNECTIONS>
@@ -852,12 +862,17 @@
             <CONNECTION INSTANCE="ClockDivider_0" PORT="CLKOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INA" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio_io_o">
+        <PORT DIR="I" NAME="CONSTMODE" SIGIS="undef" SIGNAME="axi_gpio_8_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_8" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="DATA_INA_MIN" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_17" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INB" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio2_io_o">
+        <PORT DIR="I" LEFT="11" NAME="DATA_INB_MAX" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_17" PORT="gpio2_io_o"/>
           </CONNECTIONS>
@@ -887,12 +902,17 @@
             <CONNECTION INSTANCE="ClockDivider_0" PORT="CLKOUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INA" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio_io_o">
+        <PORT DIR="I" NAME="CONSTMODE" SIGIS="undef" SIGNAME="axi_gpio_8_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_8" PORT="gpio2_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="DATA_INA_MIN" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_18" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="DATA_INB" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio2_io_o">
+        <PORT DIR="I" LEFT="11" NAME="DATA_INB_MAX" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio2_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_18" PORT="gpio2_io_o"/>
           </CONNECTIONS>
@@ -3771,12 +3791,12 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_0" PORT="DATA_INA"/>
+            <CONNECTION INSTANCE="DAC_CTRL_0" PORT="DATA_INA_MIN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_15_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_0" PORT="DATA_INB"/>
+            <CONNECTION INSTANCE="DAC_CTRL_0" PORT="DATA_INB_MAX"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4137,12 +4157,12 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_1" PORT="DATA_INA"/>
+            <CONNECTION INSTANCE="DAC_CTRL_1" PORT="DATA_INA_MIN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_16_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_1" PORT="DATA_INB"/>
+            <CONNECTION INSTANCE="DAC_CTRL_1" PORT="DATA_INB_MAX"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4503,12 +4523,12 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_2" PORT="DATA_INA"/>
+            <CONNECTION INSTANCE="DAC_CTRL_2" PORT="DATA_INA_MIN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_17_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_2" PORT="DATA_INB"/>
+            <CONNECTION INSTANCE="DAC_CTRL_2" PORT="DATA_INB_MAX"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4869,12 +4889,12 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_3" PORT="DATA_INA"/>
+            <CONNECTION INSTANCE="DAC_CTRL_3" PORT="DATA_INA_MIN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_18_gpio2_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DAC_CTRL_3" PORT="DATA_INB"/>
+            <CONNECTION INSTANCE="DAC_CTRL_3" PORT="DATA_INB_MAX"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -7179,7 +7199,7 @@
             <REGISTER NAME="GPIO2_DATA">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -7192,14 +7212,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="GPIO2_TRI">
               <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="SIZE" VALUE="1"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -7212,7 +7232,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -7304,15 +7324,15 @@
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_GPIO_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
         <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
-        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="1"/>
         <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
         <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="1"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_0_2"/>
@@ -7424,6 +7444,14 @@
             <CONNECTION INSTANCE="design_1_imp" PORT="ctrl_8bits_tri_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="0" NAME="gpio2_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_8_gpio2_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DAC_CTRL_1" PORT="CONSTMODE"/>
+            <CONNECTION INSTANCE="DAC_CTRL_3" PORT="CONSTMODE"/>
+            <CONNECTION INSTANCE="DAC_CTRL_2" PORT="CONSTMODE"/>
+            <CONNECTION INSTANCE="DAC_CTRL_0" PORT="CONSTMODE"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M08_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -7481,6 +7509,11 @@
         <BUSINTERFACE BUSNAME="axi_gpio_8_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio2_io_o"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -17219,6 +17252,16 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="M24_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M24_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="15" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp2_awid"/>
@@ -19494,29 +19537,12 @@
             <CONNECTION INSTANCE="axi_gpio_18" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M24_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="39" NAME="M24_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M24_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M24_AXI_awvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_awvalid"/>
@@ -19537,7 +19563,6 @@
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M24_AXI_wvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wvalid"/>
@@ -19568,14 +19593,7 @@
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M24_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M24_AXI_arvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_arvalid"/>
@@ -19596,7 +19614,6 @@
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M24_AXI_rvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rvalid"/>
@@ -20207,38 +20224,22 @@
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M24_AXI" DATAWIDTH="32" NAME="M24_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M24_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M24_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M24_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M24_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M24_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M24_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M24_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M24_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M24_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M24_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M24_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M24_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M24_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M24_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M24_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M24_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M24_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M24_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M24_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M24_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M24_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M24_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M24_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M24_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M24_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M24_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M24_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M24_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M24_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M24_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M24_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M24_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M24_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M24_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M24_AXI_rready"/>
           </PORTMAPS>

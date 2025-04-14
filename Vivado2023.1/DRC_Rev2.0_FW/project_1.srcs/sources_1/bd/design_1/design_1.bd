@@ -112,12 +112,12 @@
       "axi_gpio_17": "",
       "axi_gpio_18": "",
       "ClockDivider_1": "",
+      "ila_0": "",
+      "ADC_READ": "",
       "DAC_CTRL_0": "",
       "DAC_CTRL_1": "",
       "DAC_CTRL_2": "",
-      "DAC_CTRL_3": "",
-      "ila_0": "",
-      "ADC_READ": ""
+      "DAC_CTRL_3": ""
     },
     "interface_ports": {
       "ctrl_8bits": {
@@ -3365,8 +3365,17 @@
           "C_ALL_OUTPUTS": {
             "value": "1"
           },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "1"
+          },
           "C_GPIO_WIDTH": {
             "value": "8"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
           }
         }
       },
@@ -7905,6 +7914,34 @@
           }
         }
       },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip\\design_1_ila_0_0\\design_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "ADC_READ": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_1_axi_gpio_19_0",
+        "xci_path": "ip\\design_1_axi_gpio_19_0\\design_1_axi_gpio_19_0.xci",
+        "inst_hier_path": "ADC_READ",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
       "DAC_CTRL_0": {
         "vlnv": "xilinx.com:module_ref:DAC_CTRL:1.0",
         "xci_name": "design_1_DAC_CTRL_0_0",
@@ -7920,12 +7957,15 @@
             "type": "clk",
             "direction": "I"
           },
-          "DATA_INA": {
+          "CONSTMODE": {
+            "direction": "I"
+          },
+          "DATA_INA_MIN": {
             "direction": "I",
             "left": "11",
             "right": "0"
           },
-          "DATA_INB": {
+          "DATA_INB_MAX": {
             "direction": "I",
             "left": "11",
             "right": "0"
@@ -7955,12 +7995,15 @@
             "type": "clk",
             "direction": "I"
           },
-          "DATA_INA": {
+          "CONSTMODE": {
+            "direction": "I"
+          },
+          "DATA_INA_MIN": {
             "direction": "I",
             "left": "11",
             "right": "0"
           },
-          "DATA_INB": {
+          "DATA_INB_MAX": {
             "direction": "I",
             "left": "11",
             "right": "0"
@@ -7990,12 +8033,15 @@
             "type": "clk",
             "direction": "I"
           },
-          "DATA_INA": {
+          "CONSTMODE": {
+            "direction": "I"
+          },
+          "DATA_INA_MIN": {
             "direction": "I",
             "left": "11",
             "right": "0"
           },
-          "DATA_INB": {
+          "DATA_INB_MAX": {
             "direction": "I",
             "left": "11",
             "right": "0"
@@ -8025,12 +8071,15 @@
             "type": "clk",
             "direction": "I"
           },
-          "DATA_INA": {
+          "CONSTMODE": {
+            "direction": "I"
+          },
+          "DATA_INA_MIN": {
             "direction": "I",
             "left": "11",
             "right": "0"
           },
-          "DATA_INB": {
+          "DATA_INB_MAX": {
             "direction": "I",
             "left": "11",
             "right": "0"
@@ -8042,34 +8091,6 @@
           },
           "DCKOUT": {
             "direction": "O"
-          }
-        }
-      },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_0",
-        "xci_path": "ip\\design_1_ila_0_0\\design_1_ila_0_0.xci",
-        "inst_hier_path": "ila_0",
-        "parameters": {
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "12"
-          }
-        }
-      },
-      "ADC_READ": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_1_axi_gpio_19_0",
-        "xci_path": "ip\\design_1_axi_gpio_19_0\\design_1_axi_gpio_19_0.xci",
-        "inst_hier_path": "ADC_READ",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "12"
           }
         }
       }
@@ -8591,6 +8612,15 @@
           "util_vector_logic_0/Op1"
         ]
       },
+      "Net23": {
+        "ports": [
+          "axi_gpio_8/gpio2_io_o",
+          "DAC_CTRL_1/CONSTMODE",
+          "DAC_CTRL_3/CONSTMODE",
+          "DAC_CTRL_2/CONSTMODE",
+          "DAC_CTRL_0/CONSTMODE"
+        ]
+      },
       "axi_gpio_0_gpio_io_o": {
         "ports": [
           "axi_gpio_9/gpio_io_o",
@@ -8627,49 +8657,49 @@
       "axi_gpio_15_gpio2_io_o": {
         "ports": [
           "axi_gpio_15/gpio2_io_o",
-          "DAC_CTRL_0/DATA_INB"
+          "DAC_CTRL_0/DATA_INB_MAX"
         ]
       },
       "axi_gpio_15_gpio_io_o": {
         "ports": [
           "axi_gpio_15/gpio_io_o",
-          "DAC_CTRL_0/DATA_INA"
+          "DAC_CTRL_0/DATA_INA_MIN"
         ]
       },
       "axi_gpio_16_gpio2_io_o": {
         "ports": [
           "axi_gpio_16/gpio2_io_o",
-          "DAC_CTRL_1/DATA_INB"
+          "DAC_CTRL_1/DATA_INB_MAX"
         ]
       },
       "axi_gpio_16_gpio_io_o": {
         "ports": [
           "axi_gpio_16/gpio_io_o",
-          "DAC_CTRL_1/DATA_INA"
+          "DAC_CTRL_1/DATA_INA_MIN"
         ]
       },
       "axi_gpio_17_gpio2_io_o": {
         "ports": [
           "axi_gpio_17/gpio2_io_o",
-          "DAC_CTRL_2/DATA_INB"
+          "DAC_CTRL_2/DATA_INB_MAX"
         ]
       },
       "axi_gpio_17_gpio_io_o": {
         "ports": [
           "axi_gpio_17/gpio_io_o",
-          "DAC_CTRL_2/DATA_INA"
+          "DAC_CTRL_2/DATA_INA_MIN"
         ]
       },
       "axi_gpio_18_gpio2_io_o": {
         "ports": [
           "axi_gpio_18/gpio2_io_o",
-          "DAC_CTRL_3/DATA_INB"
+          "DAC_CTRL_3/DATA_INB_MAX"
         ]
       },
       "axi_gpio_18_gpio_io_o": {
         "ports": [
           "axi_gpio_18/gpio_io_o",
-          "DAC_CTRL_3/DATA_INA"
+          "DAC_CTRL_3/DATA_INA_MIN"
         ]
       },
       "axi_gpio_1_gpio2_io_o": {

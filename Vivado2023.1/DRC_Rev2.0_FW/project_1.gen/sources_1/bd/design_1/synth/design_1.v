@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Thu Apr  3 14:13:22 2025
+//Date        : Mon Apr 14 00:57:43 2025
 //Host        : OCP001 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -116,6 +116,7 @@ module design_1
   wire [0:0]Net20;
   wire [0:0]Net21;
   wire Net22;
+  wire [0:0]Net23;
   wire [21:0]Net3;
   wire [0:0]Net4;
   wire [11:0]Net5;
@@ -733,27 +734,31 @@ module design_1
         .counterVal(axi_gpio_1_gpio2_io_o));
   design_1_DAC_CTRL_0_0 DAC_CTRL_0
        (.CLKIN(ClockDivider_0_CLKOUT),
+        .CONSTMODE(Net23),
         .DACDATA(DAC_CTRL_0_DACDATA),
-        .DATA_INA(axi_gpio_15_gpio_io_o),
-        .DATA_INB(axi_gpio_15_gpio2_io_o),
+        .DATA_INA_MIN(axi_gpio_15_gpio_io_o),
+        .DATA_INB_MAX(axi_gpio_15_gpio2_io_o),
         .DCKOUT(DAC_CTRL_0_DCKOUT));
   design_1_DAC_CTRL_0_1 DAC_CTRL_1
        (.CLKIN(ClockDivider_0_CLKOUT),
+        .CONSTMODE(Net23),
         .DACDATA(DAC_CTRL_1_DACDATA),
-        .DATA_INA(axi_gpio_16_gpio_io_o),
-        .DATA_INB(axi_gpio_16_gpio2_io_o),
+        .DATA_INA_MIN(axi_gpio_16_gpio_io_o),
+        .DATA_INB_MAX(axi_gpio_16_gpio2_io_o),
         .DCKOUT(DAC_CTRL_1_DCKOUT));
   design_1_DAC_CTRL_0_2 DAC_CTRL_2
        (.CLKIN(ClockDivider_0_CLKOUT),
+        .CONSTMODE(Net23),
         .DACDATA(DAC_CTRL_2_DACDATA),
-        .DATA_INA(axi_gpio_17_gpio_io_o),
-        .DATA_INB(axi_gpio_17_gpio2_io_o),
+        .DATA_INA_MIN(axi_gpio_17_gpio_io_o),
+        .DATA_INB_MAX(axi_gpio_17_gpio2_io_o),
         .DCKOUT(DAC_CTRL_2_DCKOUT));
   design_1_DAC_CTRL_0_3 DAC_CTRL_3
        (.CLKIN(ClockDivider_0_CLKOUT),
+        .CONSTMODE(Net23),
         .DACDATA(DAC_CTRL_3_DACDATA),
-        .DATA_INA(axi_gpio_18_gpio_io_o),
-        .DATA_INB(axi_gpio_18_gpio2_io_o),
+        .DATA_INA_MIN(axi_gpio_18_gpio_io_o),
+        .DATA_INB_MAX(axi_gpio_18_gpio2_io_o),
         .DCKOUT(DAC_CTRL_3_DCKOUT));
   design_1_axi_gpio_0_1 axi_gpio_0
        (.gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -1131,7 +1136,8 @@ module design_1
         .s_axi_wstrb(ps8_0_axi_periph_M07_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M07_AXI_WVALID));
   design_1_axi_gpio_0_2 axi_gpio_8
-       (.gpio_io_o(axi_gpio_8_GPIO_TRI_O),
+       (.gpio2_io_o(Net23),
+        .gpio_io_o(axi_gpio_8_GPIO_TRI_O),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(ps8_0_axi_periph_M08_AXI_ARADDR[8:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),

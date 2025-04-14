@@ -3,6 +3,7 @@
 +===============================+===================+============================================================+
 | clk_out1_design_1_clk_wiz_0_0 | clk_pl_0          | design_1_i/ClockDivider_1/inst/clkstate_reg__0/D           |
 | clk_out3_design_1_clk_wiz_0_0 | clk_pl_0          | design_1_i/ClockDivider_0/inst/clkstate_reg__0/D           |
+| clk_out3_design_1_clk_wiz_0_0 | clk_pl_0          | design_1_i/ClockDivider_0/inst/clkstate_reg/D              |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_1/inst/clkstate_reg_lopt_replica/D |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_1/inst/clkstate_reg/D              |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_1/inst/counter_reg[4]/R            |
@@ -29,7 +30,6 @@
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[5]/R            |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[6]/R            |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[7]/R            |
-| clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/clkstate_reg/D              |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[0]/R            |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[1]/R            |
 | clk_pl_0                      | clk_pl_0          | design_1_i/ClockDivider_0/inst/counter_reg[2]/R            |

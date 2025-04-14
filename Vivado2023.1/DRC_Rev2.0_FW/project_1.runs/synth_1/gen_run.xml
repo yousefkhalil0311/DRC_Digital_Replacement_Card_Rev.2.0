@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1743704011">
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1744606671">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -46,6 +46,27 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/IQGen.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Driver90Pin.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/breakout90.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/breakout90_Final.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -108,7 +129,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_1"/>
@@ -131,6 +151,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_MinMax_0_0"/>
@@ -152,10 +173,9 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_14_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_17_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ClockDivider_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
 </GenRun>
