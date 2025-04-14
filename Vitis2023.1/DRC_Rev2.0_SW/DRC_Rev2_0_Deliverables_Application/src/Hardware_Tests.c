@@ -73,6 +73,41 @@ void runTest(void (*testFunction)(argsContext* args), uint32_t runTime, argsCont
 	}
 }
 
+//Function to delete characters based on backspaces in string .
+void handleBackspaces(char* stringWithBackspaces){
+
+	//keeps track of current character index of formatted string
+	int formattedStringLength = 0;
+
+	//iterate through input string and remove characters based on backspaces in the input string
+	int charIndex = 0;
+	while(stringWithBackspaces[charIndex] != '\0'){
+		if(stringWithBackspaces[charIndex] == '\b' && formattedStringLength > 0){
+			formattedStringLength--;
+		}
+		else if (stringWithBackspaces[charIndex] != '\b'){
+		    stringWithBackspaces[formattedStringLength] = stringWithBackspaces[charIndex];
+		    formattedStringLength++;
+		}
+		charIndex++;
+	}
+
+	//end string with null terminator
+	stringWithBackspaces[formattedStringLength] = '\0';
+}
+
+//validates that a given parameter is within the given range for test mode 8, and outputs an error on the terminal given a bad value
+int validateParam(int param, int RangeLow, int RangeHigh){
+	if(param < RangeLow || param > RangeHigh){
+    	printf("\033[14;80H");
+    	printf("Value:   \033[K%d INVALID (RANGE: %d - %d)", param, RangeLow, RangeHigh);
+		return 0;
+	}
+	return 1;
+}
+
+
+
 void TestMode1(){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 1 Begin
@@ -603,22 +638,72 @@ void TestMode8(){
 
 	clearTerminal();
 
-    printf("Test Mode 8: High speed DAC output test\n\n\n");
-    printf("Following pins used for HS DACs\n");
-    printf("Pin 21 (DAC0A)\n");
-    printf("Pin 51 (DAC0B)\n");
-    printf("Pin 17 (DAC1A)\n");
-    printf("Pin 48 (DAC1B)\n");
-    printf("Pin 33 (DAC2A)\n");
-    printf("Pin 46 (DAC2B)\n");
-    printf("Pin 2  (DAC3A)\n");
-    printf("Pin 32 (DAC3B)\n\n");
-    printf("Command List:\n"
-    		""
-    		""
-    		"");
+	//Print Test Information
+    printf( "==================================================\n"
+    		"        Test Mode 8: High Speed DAC Output\n"
+    		"==================================================\n\n"
+    		"High-Speed DAC Pin Assignments:\n"
+    		"DAC0A : Pin 21			DAC0B : Pin 51\n"
+    		"DAC1A : Pin 17			DAC1B : Pin 48\n"
+    		"DAC2A : Pin 33			DAC2B : Pin 46\n"
+    		"DAC3A : Pin 2			DAC3B : Pin 32\n\n"
+    		"--------------------------------------------------\n"
+    		"                  Command List:\n"
+    		"--------------------------------------------------\n\n"
+    		"DAC[DNUM]  -   Selects DAC to be enabled. DAC[0-3]\n"
+    		"               Example:\n"
+    		"                 DAC2 enables DAC2A/B and disables all other DACs\n\n"
+    		"DCLK[DIV]  -   Sets the digital data clock divider for the DAC output waveform.\n"
+    		"               DIV > 0\n"
+    		"               Example:\n"
+    		"                 DCLK1 => 65MHz / 1 = 65.0MHz\n"
+    		"                 DCLK2 => 65MHZ / 2 = 32.5MHz\n\n"
+    		"SCLK[DIV]  -   Sets the sample clock divider for the DACs.\n"
+    		"               DIV > 0\n"
+    		"               Example:\n"
+    		"                 SCLK1  => 130MHz / 1 = 130MHz\n"
+    		"                 SCLK10 => 130MHZ / 10 = 13MHz\n\n"
+    		"MIN[VAL]   -   Sets the LOW output value of the HSDACs.\n"
+    		"               Range : -2048 to 2047\n"
+    		"               Example:\n"
+    		"                 MIN[0]     =>  0V DAC output LOW voltage\n"
+    		"                 MIN[-2048] => -5V DAC output LOW voltage\n"
+    		"                 MIN[2047]  =>  5V DAC output LOW voltage\n\n"
+    		"MAX[VAL]   -   Sets the HIGH output value of the HSDACs.\n"
+    		"               Range : -2048 to 2047\n"
+    		"               Example:\n"
+    		"                 MAX[0]     =>  0V DAC output HIGH voltage\n"
+    		"                 MAX[-2048] => -5V DAC output HIGH voltage\n"
+    		"                 MAX[2047]  =>  5V DAC output HIGH voltage\n\n"
+    		"EXIT       -   Exit Test\n");
+
+    //Display static portion of current DAC parameters on Terminal
+    printf( "\033[1;80H==================================================\n"
+    		"\033[2;80H                Current Parameters\n"
+    		"\033[3;80H==================================================\n\n"
+    		"\033[4;80HDUT : 0(Default)\n"
+    		"\033[5;80HDigital Clock Divider : 1000(Default)\n"
+    		"\033[6;80HSample Clock Divider : 500(Default)\n"
+    		"\033[7;80HDAC MIN Value : -300(Default)\n"
+    		"\033[8;80HDAC MAX Value : 300(Default)\n");
 
 	setLEDStatus(0x08);
+
+	//Set Default HSDAC to enable: DAC0
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xE6);
+
+	//Set Default digital clock divider
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1000);
+
+	//Set Default sample clock divider
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 500);
+
+	//Set Default DAC Min Value
+	//TODO
+
+	//Set Default DAC Max Value
+	//TODO
+
 
 	/*
 	 * Configure paths for High Speed ADC/DAC loopback mode
@@ -668,41 +753,11 @@ void TestMode8(){
     //Run test until exist is entered for a paramter
     while(1){
 
-    	int AFEUnderTest;
-    	int digClkDivider;
-    	int sampleClkDivider;
-
-    	printf("\033[17;1H");
-    	printf("\nPlease enter the DAC to test (0-3): ");
-    	scanf("%d", &AFEUnderTest);
-
-    	//Print entered data otherwise
-    	printf("\n\033[K");
-    	printf("AFEUnderTest set to: %d\n", AFEUnderTest);
-
-    	printf("\nPlease enter clock divider for DAC data output control (1 -> 65MHz): ");
-    	scanf("%d", &digClkDivider);
-
-    	//exit test if "0" is entered
-    	if(digClkDivider == 0) return;
-
-    	//Print entered data otherwise
-    	printf("\n\033[K");
-    	printf("digClkDivider set to: %d\n", digClkDivider);
-
-    	printf("\nPlease enter sample clock divider (1 -> 130MHz): ");
-    	scanf("%d", &sampleClkDivider);
-
-    	//exit test if "0" is entered
-    	if(sampleClkDivider == 0) return;
-
-    	//Print entered data otherwise
-    	printf("\n\033[K");
-    	printf("sampleClkDivider set to: %d\n", sampleClkDivider);
-
-        XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ~(1 << (AFEUnderTest + 4)) & 0xF6); //Enable DAC FE for converter selected & disable rest
-    	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, digClkDivider);
-    	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, sampleClkDivider);
+    	int AFEUnderTest = 0;
+    	int digClkDivider = 1000;
+    	int sampleClkDivider = 500;
+    	int DACMinVal = -300;
+    	int DACMaxVal = 300;
 
     	//Raw stdin input string
     	char inputString[10];
@@ -711,26 +766,103 @@ void TestMode8(){
     	char cmdString[10];
 
     	//extracted parameter value from inputString
-    	int enteredValue;
+    	int enteredValue = 0;
 
+    	printf("\033[12;80H");
     	printf("Enter Command> \033[K");
 
     	//Read input string and echo back to terminal
     	scanf("%s", inputString);
     	printf("%s", inputString);
 
-//    	for(int i = 0; i < strlen(inputString); i++){
-//    		if(inputString[i] == '\b'){
-//
-//    		}
-//    	}
+    	//Format string to handle backspaces if present
+    	handleBackspaces(inputString);
 
     	//structure inputString into command string and value
-    	sscanf(inputString, "%3[A-Z]%d", cmdString, &enteredValue);
+    	sscanf(inputString, "%4[A-Z]%d", cmdString, &enteredValue);
 
-    	printf("\n");
-    	printf("Command: \033[K%s\nValue:   \033[K%d\n", cmdString, enteredValue);
+    	//print command string and value
+    	printf("\033[13;80H");
+    	printf("Command: \033[K%s", cmdString);
+    	printf("\033[14;80H");
+    	printf("Value:   \033[K%d", enteredValue);
 
+    	//Handle commands
+    	if(strcmp(cmdString, "DAC") == 0){
+
+    		if(!validateParam(enteredValue, 0, 3)) continue;
+
+			AFEUnderTest = enteredValue;
+
+			//Enable DAC FE for converter selected & disable rest
+			uint32_t gpio_mask = ~(1 << (AFEUnderTest + 4)) & 0xF6;
+			XGpio_DiscreteWrite(&GPIO8_CTRL, 1, gpio_mask);
+
+			//Update current parameters on terminal
+			printf("\033[4;80H");
+			printf("DUT : \033[K%d", enteredValue);
+
+    	}else if(strcmp(cmdString, "DCLK") == 0){
+
+    		if(!validateParam(enteredValue, 1, 65000000)) continue;
+
+    		digClkDivider = enteredValue;
+
+    		//set divider axi GPIO value
+    		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, digClkDivider);
+
+    		//Update current parameters on terminal
+			printf("\033[5;80H");
+			printf("Digital Clock Divider :\033[K%d", digClkDivider);
+
+    	}else if(strcmp(cmdString, "SCLK") == 0){
+
+    		if(!validateParam(enteredValue, 1, 65000000)) continue;
+
+    		sampleClkDivider = enteredValue;
+
+    		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, sampleClkDivider);
+
+    		//Update current parameters on terminal
+			printf("\033[6;80H");
+			printf("Sample Clock Divider :\033[K%d", sampleClkDivider);
+
+    	}else if(strcmp(cmdString, "MIN") == 0){
+
+    		if(!validateParam(enteredValue, -2048, 2047)) continue;
+
+    		DACMinVal = enteredValue;
+
+    		//write min value to DAC control block
+    		//TODO
+
+    		//Update current parameters on terminal
+			printf("\033[7;80H");
+			printf("DAC MIN Value : \033[K%d", DACMinVal);
+
+    	}else if(strcmp(cmdString, "MAX") == 0){
+
+    		if(!validateParam(enteredValue, -2048, 2047)) continue;
+
+    		DACMaxVal = enteredValue;
+
+    		//write max value to DAC control block
+    		//TODO
+
+    		//Update current parameters on terminal
+			printf("\033[8;80H");
+			printf("DAC MAX Value : \033[K%d", DACMaxVal);
+
+    	}else if(strcmp(cmdString, "EXIT") == 0){
+
+    		break;
+
+    	}else{
+
+        	printf("\033[13;80H");
+        	printf("Command : INVALID");
+
+    	}
     	usleep(500000);
 
     }
