@@ -685,3 +685,18 @@ timestamp=[2025-04-13 23:27:56], mode=BUILD, duration=0:00:03.492, duration_ms=3
 timestamp=[2025-04-13 23:35:42], mode=BUILD, duration=0:00:01.348, duration_ms=1348, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
 timestamp=[2025-04-13 23:36:40], mode=BUILD, duration=0:00:00.284, duration_ms=284, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
 timestamp=[2025-04-13 23:36:51], mode=BUILD, duration=0:00:10.342, duration_ms=10342, data={name=DRC_Rev2_0_Deliverables_Application_system, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 01:24:24], mode=WORKBENCH_START, duration=0:00:06.769, duration_ms=6769, data={}
+timestamp=[2025-04-14 01:24:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.156, duration_ms=156, data={editors_count=25, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=DRCPlatform,DRC_Rev2_0_Deliverables_Application,DRC_Rev2_0_Deliverables_Application_system,RemoteSystemsTempFiles}
+timestamp=[2025-04-14 01:24:25], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.821, duration_ms=821, data={}
+timestamp=[2025-04-14 01:26:13], mode=PLATFORM_GENERATION, duration=0:00:16.240, duration_ms=16240, data={name=DRCPlatform}
+timestamp=[2025-04-14 01:26:38], mode=BUILD, duration=0:00:15.040, duration_ms=15040, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 01:41:14], mode=BUILD, duration=0:00:12.275, duration_ms=12275, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 01:46:10], mode=BUILD, duration=0:00:06.516, duration_ms=6516, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 02:23:50], mode=PLATFORM_GENERATION, duration=0:00:17.608, duration_ms=17608, data={name=DRCPlatform}
+timestamp=[2025-04-14 02:24:51], mode=BUILD, duration=0:00:26.721, duration_ms=26721, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 02:29:16], mode=BUILD, duration=0:00:06.152, duration_ms=6152, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 02:36:06], mode=BUILD, duration=0:00:06.256, duration_ms=6256, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 03:35:47], mode=PLATFORM_GENERATION, duration=0:00:16.783, duration_ms=16783, data={name=DRCPlatform}
+timestamp=[2025-04-14 03:36:39], mode=BUILD, duration=0:00:27.355, duration_ms=27355, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-04-14 14:43:49], mode=PLATFORM_GENERATION, duration=0:00:18.305, duration_ms=18305, data={name=DRCPlatform}
+timestamp=[2025-04-14 14:46:32], mode=BUILD, duration=0:00:27.721, duration_ms=27721, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}

@@ -109,14 +109,6 @@ int main()
    XGpio_Initialize(&GPIO16_DAC1Const, GPIO16_DAC1Const_ID);
    XGpio_Initialize(&GPIO17_DAC2Const, GPIO17_DAC2Const_ID);
    XGpio_Initialize(&GPIO18_DAC3Const, GPIO18_DAC3Const_ID);
-   XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0x700);
-   XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x700);
-   XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0x000);
-   XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x000);
-   XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0x000);
-   XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x000);
-   XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0x000);
-   XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x000);
 
    // Initialize AFEs
    printf("Boot: Writing initial register values to AFE7222 devices...\n");

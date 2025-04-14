@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Apr 14 00:58:55 2025
+-- Date        : Mon Apr 14 14:16:29 2025
 -- Host        : OCP001 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_DAC_CTRL_0_2/design_1_DAC_CTRL_0_2_sim_netlist.vhdl
@@ -19,6 +19,7 @@ entity design_1_DAC_CTRL_0_2_DAC_CTRL is
   port (
     DACDATA : out STD_LOGIC_VECTOR ( 11 downto 0 );
     DCKOUT : out STD_LOGIC;
+    CONSTMODE : in STD_LOGIC;
     CLKIN : in STD_LOGIC;
     DATA_INB_MAX : in STD_LOGIC_VECTOR ( 11 downto 0 );
     DATA_INA_MIN : in STD_LOGIC_VECTOR ( 11 downto 0 )
@@ -28,145 +29,323 @@ entity design_1_DAC_CTRL_0_2_DAC_CTRL is
 end design_1_DAC_CTRL_0_2_DAC_CTRL;
 
 architecture STRUCTURE of design_1_DAC_CTRL_0_2_DAC_CTRL is
-  signal DACVAL20_in : STD_LOGIC;
+  signal \^dacdata\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal DACVAL1 : STD_LOGIC;
+  signal DACVAL10_out : STD_LOGIC;
+  signal \DACVAL[0]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[10]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_10_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_11_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_4_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_5_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_6_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_7_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_8_n_0\ : STD_LOGIC;
+  signal \DACVAL[11]_i_9_n_0\ : STD_LOGIC;
+  signal \DACVAL[1]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[2]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[3]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[4]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[5]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[6]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[7]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[8]_i_1_n_0\ : STD_LOGIC;
+  signal \DACVAL[9]_i_1_n_0\ : STD_LOGIC;
   signal \^dckout\ : STD_LOGIC;
   signal channel : STD_LOGIC;
-  signal isDCLK1_i_1_n_0 : STD_LOGIC;
-  signal p_1_in : STD_LOGIC_VECTOR ( 11 downto 0 );
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \DACVAL[0]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \DACVAL[10]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \DACVAL[11]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \DACVAL[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \DACVAL[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \DACVAL[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \DACVAL[4]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \DACVAL[5]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \DACVAL[6]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \DACVAL[7]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \DACVAL[8]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \DACVAL[9]_i_1\ : label is "soft_lutpair1";
+  signal isDCLK1_i_2_n_0 : STD_LOGIC;
+  signal isDCLK1_i_3_n_0 : STD_LOGIC;
+  signal p_0_in : STD_LOGIC;
+  signal p_2_in : STD_LOGIC;
+  attribute SYNTH_INFERRED : boolean;
+  attribute SYNTH_INFERRED of isDCLK1_reg : label is std.standard.true;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of isDCLK1_reg : label is "FDCP_1";
 begin
+  DACDATA(11 downto 0) <= \^dacdata\(11 downto 0);
   DCKOUT <= \^dckout\;
-\DACVAL[0]_i_1\: unisim.vcomponents.LUT3
+\DACVAL[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D8"
+      INIT => X"FF74FF778B008800"
     )
         port map (
       I0 => channel,
-      I1 => DATA_INB_MAX(0),
-      I2 => DATA_INA_MIN(0),
-      O => p_1_in(0)
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(0),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(0),
+      O => \DACVAL[0]_i_1_n_0\
     );
-\DACVAL[10]_i_1\: unisim.vcomponents.LUT3
+\DACVAL[10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D8"
+      INIT => X"FF74FF778B008800"
     )
         port map (
       I0 => channel,
-      I1 => DATA_INB_MAX(10),
-      I2 => DATA_INA_MIN(10),
-      O => p_1_in(10)
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(10),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(10),
+      O => \DACVAL[10]_i_1_n_0\
     );
-\DACVAL[11]_i_1\: unisim.vcomponents.LUT3
+\DACVAL[11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D8"
+      INIT => X"FF74FF778B008800"
     )
         port map (
       I0 => channel,
-      I1 => DATA_INB_MAX(11),
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(11),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(11),
+      O => \DACVAL[11]_i_1_n_0\
+    );
+\DACVAL[11]_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(9),
+      I1 => DATA_INA_MIN(9),
       I2 => DATA_INA_MIN(11),
-      O => p_1_in(11)
+      I3 => \^dacdata\(11),
+      I4 => DATA_INA_MIN(10),
+      I5 => \^dacdata\(10),
+      O => \DACVAL[11]_i_10_n_0\
     );
-\DACVAL[1]_i_1\: unisim.vcomponents.LUT3
+\DACVAL[11]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D8"
+      INIT => X"9009000000009009"
     )
         port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(1),
-      I2 => DATA_INA_MIN(1),
-      O => p_1_in(1)
-    );
-\DACVAL[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(2),
-      I2 => DATA_INA_MIN(2),
-      O => p_1_in(2)
-    );
-\DACVAL[3]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(3),
-      I2 => DATA_INA_MIN(3),
-      O => p_1_in(3)
-    );
-\DACVAL[4]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(4),
-      I2 => DATA_INA_MIN(4),
-      O => p_1_in(4)
-    );
-\DACVAL[5]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(5),
-      I2 => DATA_INA_MIN(5),
-      O => p_1_in(5)
-    );
-\DACVAL[6]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(6),
-      I2 => DATA_INA_MIN(6),
-      O => p_1_in(6)
-    );
-\DACVAL[7]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(7),
-      I2 => DATA_INA_MIN(7),
-      O => p_1_in(7)
-    );
-\DACVAL[8]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"D8"
-    )
-        port map (
-      I0 => channel,
-      I1 => DATA_INB_MAX(8),
+      I0 => \^dacdata\(6),
+      I1 => DATA_INA_MIN(6),
       I2 => DATA_INA_MIN(8),
-      O => p_1_in(8)
+      I3 => \^dacdata\(8),
+      I4 => DATA_INA_MIN(7),
+      I5 => \^dacdata\(7),
+      O => \DACVAL[11]_i_11_n_0\
     );
-\DACVAL[9]_i_1\: unisim.vcomponents.LUT3
+\DACVAL[11]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"D8"
+      INIT => X"8000"
+    )
+        port map (
+      I0 => \DACVAL[11]_i_4_n_0\,
+      I1 => \DACVAL[11]_i_5_n_0\,
+      I2 => \DACVAL[11]_i_6_n_0\,
+      I3 => \DACVAL[11]_i_7_n_0\,
+      O => DACVAL10_out
+    );
+\DACVAL[11]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => \DACVAL[11]_i_8_n_0\,
+      I1 => \DACVAL[11]_i_9_n_0\,
+      I2 => \DACVAL[11]_i_10_n_0\,
+      I3 => \DACVAL[11]_i_11_n_0\,
+      O => DACVAL1
+    );
+\DACVAL[11]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(3),
+      I1 => DATA_INB_MAX(3),
+      I2 => DATA_INB_MAX(5),
+      I3 => \^dacdata\(5),
+      I4 => DATA_INB_MAX(4),
+      I5 => \^dacdata\(4),
+      O => \DACVAL[11]_i_4_n_0\
+    );
+\DACVAL[11]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(0),
+      I1 => DATA_INB_MAX(0),
+      I2 => DATA_INB_MAX(2),
+      I3 => \^dacdata\(2),
+      I4 => DATA_INB_MAX(1),
+      I5 => \^dacdata\(1),
+      O => \DACVAL[11]_i_5_n_0\
+    );
+\DACVAL[11]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(9),
+      I1 => DATA_INB_MAX(9),
+      I2 => DATA_INB_MAX(11),
+      I3 => \^dacdata\(11),
+      I4 => DATA_INB_MAX(10),
+      I5 => \^dacdata\(10),
+      O => \DACVAL[11]_i_6_n_0\
+    );
+\DACVAL[11]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(6),
+      I1 => DATA_INB_MAX(6),
+      I2 => DATA_INB_MAX(8),
+      I3 => \^dacdata\(8),
+      I4 => DATA_INB_MAX(7),
+      I5 => \^dacdata\(7),
+      O => \DACVAL[11]_i_7_n_0\
+    );
+\DACVAL[11]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(3),
+      I1 => DATA_INA_MIN(3),
+      I2 => DATA_INA_MIN(5),
+      I3 => \^dacdata\(5),
+      I4 => DATA_INA_MIN(4),
+      I5 => \^dacdata\(4),
+      O => \DACVAL[11]_i_8_n_0\
+    );
+\DACVAL[11]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9009000000009009"
+    )
+        port map (
+      I0 => \^dacdata\(0),
+      I1 => DATA_INA_MIN(0),
+      I2 => DATA_INA_MIN(2),
+      I3 => \^dacdata\(2),
+      I4 => DATA_INA_MIN(1),
+      I5 => \^dacdata\(1),
+      O => \DACVAL[11]_i_9_n_0\
+    );
+\DACVAL[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
     )
         port map (
       I0 => channel,
-      I1 => DATA_INB_MAX(9),
-      I2 => DATA_INA_MIN(9),
-      O => p_1_in(9)
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(1),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(1),
+      O => \DACVAL[1]_i_1_n_0\
+    );
+\DACVAL[2]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(2),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(2),
+      O => \DACVAL[2]_i_1_n_0\
+    );
+\DACVAL[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(3),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(3),
+      O => \DACVAL[3]_i_1_n_0\
+    );
+\DACVAL[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(4),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(4),
+      O => \DACVAL[4]_i_1_n_0\
+    );
+\DACVAL[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(5),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(5),
+      O => \DACVAL[5]_i_1_n_0\
+    );
+\DACVAL[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(6),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(6),
+      O => \DACVAL[6]_i_1_n_0\
+    );
+\DACVAL[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(7),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(7),
+      O => \DACVAL[7]_i_1_n_0\
+    );
+\DACVAL[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(8),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(8),
+      O => \DACVAL[8]_i_1_n_0\
+    );
+\DACVAL[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF74FF778B008800"
+    )
+        port map (
+      I0 => channel,
+      I1 => CONSTMODE,
+      I2 => DACVAL10_out,
+      I3 => DATA_INB_MAX(9),
+      I4 => DACVAL1,
+      I5 => DATA_INA_MIN(9),
+      O => \DACVAL[9]_i_1_n_0\
     );
 \DACVAL_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -175,8 +354,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(0),
-      Q => DACDATA(0),
+      D => \DACVAL[0]_i_1_n_0\,
+      Q => \^dacdata\(0),
       R => '0'
     );
 \DACVAL_reg[10]\: unisim.vcomponents.FDRE
@@ -186,8 +365,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(10),
-      Q => DACDATA(10),
+      D => \DACVAL[10]_i_1_n_0\,
+      Q => \^dacdata\(10),
       R => '0'
     );
 \DACVAL_reg[11]\: unisim.vcomponents.FDRE
@@ -197,8 +376,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(11),
-      Q => DACDATA(11),
+      D => \DACVAL[11]_i_1_n_0\,
+      Q => \^dacdata\(11),
       R => '0'
     );
 \DACVAL_reg[1]\: unisim.vcomponents.FDRE
@@ -208,8 +387,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(1),
-      Q => DACDATA(1),
+      D => \DACVAL[1]_i_1_n_0\,
+      Q => \^dacdata\(1),
       R => '0'
     );
 \DACVAL_reg[2]\: unisim.vcomponents.FDRE
@@ -219,8 +398,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(2),
-      Q => DACDATA(2),
+      D => \DACVAL[2]_i_1_n_0\,
+      Q => \^dacdata\(2),
       R => '0'
     );
 \DACVAL_reg[3]\: unisim.vcomponents.FDRE
@@ -230,8 +409,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(3),
-      Q => DACDATA(3),
+      D => \DACVAL[3]_i_1_n_0\,
+      Q => \^dacdata\(3),
       R => '0'
     );
 \DACVAL_reg[4]\: unisim.vcomponents.FDRE
@@ -241,8 +420,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(4),
-      Q => DACDATA(4),
+      D => \DACVAL[4]_i_1_n_0\,
+      Q => \^dacdata\(4),
       R => '0'
     );
 \DACVAL_reg[5]\: unisim.vcomponents.FDRE
@@ -252,8 +431,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(5),
-      Q => DACDATA(5),
+      D => \DACVAL[5]_i_1_n_0\,
+      Q => \^dacdata\(5),
       R => '0'
     );
 \DACVAL_reg[6]\: unisim.vcomponents.FDRE
@@ -263,8 +442,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(6),
-      Q => DACDATA(6),
+      D => \DACVAL[6]_i_1_n_0\,
+      Q => \^dacdata\(6),
       R => '0'
     );
 \DACVAL_reg[7]\: unisim.vcomponents.FDRE
@@ -274,8 +453,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(7),
-      Q => DACDATA(7),
+      D => \DACVAL[7]_i_1_n_0\,
+      Q => \^dacdata\(7),
       R => '0'
     );
 \DACVAL_reg[8]\: unisim.vcomponents.FDRE
@@ -285,8 +464,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(8),
-      Q => DACDATA(8),
+      D => \DACVAL[8]_i_1_n_0\,
+      Q => \^dacdata\(8),
       R => '0'
     );
 \DACVAL_reg[9]\: unisim.vcomponents.FDRE
@@ -296,8 +475,8 @@ begin
         port map (
       C => CLKIN,
       CE => '1',
-      D => p_1_in(9),
-      Q => DACDATA(9),
+      D => \DACVAL[9]_i_1_n_0\,
+      Q => \^dacdata\(9),
       R => '0'
     );
 channel_i_1: unisim.vcomponents.LUT1
@@ -306,7 +485,7 @@ channel_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => channel,
-      O => DACVAL20_in
+      O => p_0_in
     );
 channel_reg: unisim.vcomponents.FDRE
     generic map(
@@ -315,7 +494,7 @@ channel_reg: unisim.vcomponents.FDRE
         port map (
       C => CLKIN,
       CE => '1',
-      D => DACVAL20_in,
+      D => p_0_in,
       Q => channel,
       R => '0'
     );
@@ -325,19 +504,37 @@ isDCLK1_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => \^dckout\,
-      O => isDCLK1_i_1_n_0
+      O => p_2_in
     );
-isDCLK1_reg: unisim.vcomponents.FDRE
+isDCLK1_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => CONSTMODE,
+      I1 => CLKIN,
+      O => isDCLK1_i_2_n_0
+    );
+isDCLK1_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => CLKIN,
+      I1 => CONSTMODE,
+      O => isDCLK1_i_3_n_0
+    );
+isDCLK1_reg: unisim.vcomponents.FDCP
     generic map(
       INIT => '0',
       IS_C_INVERTED => '1'
     )
         port map (
       C => CLKIN,
-      CE => '1',
-      D => isDCLK1_i_1_n_0,
-      Q => \^dckout\,
-      R => '0'
+      CLR => isDCLK1_i_2_n_0,
+      D => p_2_in,
+      PRE => isDCLK1_i_3_n_0,
+      Q => \^dckout\
     );
 end STRUCTURE;
 library IEEE;
@@ -374,6 +571,7 @@ begin
 inst: entity work.design_1_DAC_CTRL_0_2_DAC_CTRL
      port map (
       CLKIN => CLKIN,
+      CONSTMODE => CONSTMODE,
       DACDATA(11 downto 0) => DACDATA(11 downto 0),
       DATA_INA_MIN(11 downto 0) => DATA_INA_MIN(11 downto 0),
       DATA_INB_MAX(11 downto 0) => DATA_INB_MAX(11 downto 0),

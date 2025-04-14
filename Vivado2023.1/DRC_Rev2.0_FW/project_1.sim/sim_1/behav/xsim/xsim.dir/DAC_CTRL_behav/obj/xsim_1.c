@@ -64,20 +64,21 @@ IKI_DLLESPEC extern void execute_8(char*, char *);
 IKI_DLLESPEC extern void execute_9(char*, char *);
 IKI_DLLESPEC extern void execute_10(char*, char *);
 IKI_DLLESPEC extern void execute_11(char*, char *);
-IKI_DLLESPEC extern void execute_24(char*, char *);
-IKI_DLLESPEC extern void execute_25(char*, char *);
-IKI_DLLESPEC extern void execute_26(char*, char *);
+IKI_DLLESPEC extern void execute_27(char*, char *);
+IKI_DLLESPEC extern void execute_28(char*, char *);
+IKI_DLLESPEC extern void execute_29(char*, char *);
+IKI_DLLESPEC extern void execute_30(char*, char *);
 IKI_DLLESPEC extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 IKI_DLLESPEC extern void transaction_34(char*, char*, unsigned, unsigned, unsigned);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[16] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_10, (funcp)execute_11, (funcp)execute_24, (funcp)execute_25, (funcp)execute_26, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_34, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 16;
+funcp funcTab[17] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_10, (funcp)execute_11, (funcp)execute_27, (funcp)execute_28, (funcp)execute_29, (funcp)execute_30, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_34, (funcp)vhdl_transfunc_eventcallback};
+const int NumRelocateId= 17;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/DAC_CTRL_behav/xsim.reloc",  (void **)funcTab, 16);
-	iki_vhdl_file_variable_register(dp + 9400);
-	iki_vhdl_file_variable_register(dp + 9456);
+	iki_relocate(dp, "xsim.dir/DAC_CTRL_behav/xsim.reloc",  (void **)funcTab, 17);
+	iki_vhdl_file_variable_register(dp + 9968);
+	iki_vhdl_file_variable_register(dp + 10024);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

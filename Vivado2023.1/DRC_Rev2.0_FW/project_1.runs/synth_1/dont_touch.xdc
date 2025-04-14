@@ -199,6 +199,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_ClockDivider_0_1/design_1_ClockDivider_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ClockDivider_0_1 || ORIG_REF_NAME==design_1_ClockDivider_0_1} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_gpio_19_0/design_1_axi_gpio_19_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_19_0 || ORIG_REF_NAME==design_1_axi_gpio_19_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_DAC_CTRL_0_0/design_1_DAC_CTRL_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_DAC_CTRL_0_0 || ORIG_REF_NAME==design_1_DAC_CTRL_0_0} -quiet] -quiet
 
@@ -210,12 +216,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_DA
 
 # IP: bd/design_1/ip/design_1_DAC_CTRL_0_3/design_1_DAC_CTRL_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_DAC_CTRL_0_3 || ORIG_REF_NAME==design_1_DAC_CTRL_0_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_axi_gpio_19_0/design_1_axi_gpio_19_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_19_0 || ORIG_REF_NAME==design_1_axi_gpio_19_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tier2_xbar_0_0 || ORIG_REF_NAME==design_1_tier2_xbar_0_0} -quiet] -quiet

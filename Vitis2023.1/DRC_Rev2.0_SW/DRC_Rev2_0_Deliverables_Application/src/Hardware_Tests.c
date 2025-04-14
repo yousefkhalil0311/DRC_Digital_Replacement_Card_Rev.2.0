@@ -698,11 +698,20 @@ void TestMode8(){
 	//Set Default sample clock divider
 	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 500);
 
-	//Set Default DAC Min Value
-	//TODO
+	//Set DAC control block to not operate in const value mode
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 0);
 
-	//Set Default DAC Max Value
-	//TODO
+	//Set Default DAC Min Value (-300 in 2's comp)
+	XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0xED4);
+	XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0xED4);
+	XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0xED4);
+	XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0xED4);
+
+	//Set Default DAC Max Value (300)
+	XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x12C);
+    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x12C);
+    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x12C);
+    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x12C);
 
 
 	/*
@@ -834,7 +843,10 @@ void TestMode8(){
     		DACMinVal = enteredValue;
 
     		//write min value to DAC control block
-    		//TODO
+    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, DACMinVal);
+    		XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, DACMinVal);
+    		XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, DACMinVal);
+    		XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, DACMinVal);
 
     		//Update current parameters on terminal
 			printf("\033[7;80H");
@@ -847,7 +859,10 @@ void TestMode8(){
     		DACMaxVal = enteredValue;
 
     		//write max value to DAC control block
-    		//TODO
+    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, DACMaxVal);
+    	    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, DACMaxVal);
+    	    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, DACMaxVal);
+    	    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, DACMaxVal);
 
     		//Update current parameters on terminal
 			printf("\033[8;80H");

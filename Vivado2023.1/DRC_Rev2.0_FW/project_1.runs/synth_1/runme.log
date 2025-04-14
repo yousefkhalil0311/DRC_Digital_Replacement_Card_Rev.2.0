@@ -17,7 +17,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/youse/Downloads/IPBl
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.cache/ip 
-add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1583.598 ; gain = 67.520
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1589.926 ; gain = 69.152
 Command: synth_design -top design_1_wrapper -part xczu3eg-sfvc784-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
@@ -25,89 +25,89 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg
 INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18488
+INFO: [Synth 8-7075] Helper process launched with PID 65584
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2866.105 ; gain = 335.789
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2874.195 ; gain = 336.395
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_19_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_19_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_19_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_19_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ClockDivider_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ClockDivider_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_14_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_14_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_15_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_15_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_15_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_15_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_16_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_16_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_16_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_16_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_17_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_17_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_17_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_17_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_18_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_18_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_18_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_18_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_MinMax_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_MinMax_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ADC_MinMax_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_19_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_19_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_19_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_19_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ClockDivider_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ClockDivider_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ClockDivider_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ClockDivider_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ClockDivider_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DAC_CTRL_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DAC_CTRL_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_DAC_CTRL_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_14_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_14_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_14_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_15_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_15_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_15_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_16_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_16_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_16_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_16_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_17_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_17_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_17_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_17_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_18_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_18_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_18_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_18_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_2_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_2_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_2_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1186]
 WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1186]
 WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1186]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1212]
 WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_1' is unconnected for instance 'axi_iic_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1212]
 WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'design_1_axi_iic_0_1' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1212]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_iic_0_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1238]
 WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_2' is unconnected for instance 'axi_iic_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1238]
 WARNING: [Synth 8-7023] instance 'axi_iic_2' of module 'design_1_axi_iic_0_2' has 27 connections declared, but only 25 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1238]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
@@ -115,8 +115,8 @@ WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_0' is un
 WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'design_1_axi_quad_spi_0_0' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1264]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_axi_quad_spi_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
@@ -124,16 +124,16 @@ WARNING: [Synth 8-7071] port 'sck_t' of module 'design_1_axi_quad_spi_0_1' is un
 WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_1' is unconnected for instance 'axi_quad_spi_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'design_1_axi_quad_spi_0_1' has 33 connections declared, but only 27 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1292]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_clk_wiz_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'clk_out2' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1320]
 WARNING: [Synth 8-7071] port 'clk_out4' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1320]
 WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 5 connections declared, but only 3 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1320]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1324]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1327]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1327]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:1327]
@@ -199,74 +199,74 @@ INFO: [Synth 8-6155] done synthesizing module 'm23_couplers_imp_1HPTZLH' (0#1) [
 INFO: [Synth 8-6157] synthesizing module 'm24_couplers_imp_92NWUP' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:9776]
 INFO: [Synth 8-6155] done synthesizing module 'm24_couplers_imp_92NWUP' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:9776]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:9908]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:9908]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5825]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_0_0' is unconnected for instance 'tier2_xbar_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5825]
 WARNING: [Synth 8-7023] instance 'tier2_xbar_0' of module 'design_1_tier2_xbar_0_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5825]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_1_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5864]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_1_0' is unconnected for instance 'tier2_xbar_1' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5864]
 WARNING: [Synth 8-7023] instance 'tier2_xbar_1' of module 'design_1_tier2_xbar_1_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5864]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_2_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_2_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_2_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5903]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5903]
 WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'design_1_tier2_xbar_2_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5903]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_tier2_xbar_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tier2_xbar_3_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tier2_xbar_3_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_tier2_xbar_3_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_tier2_xbar_3_0' is unconnected for instance 'tier2_xbar_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5942]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_tier2_xbar_3_0' is unconnected for instance 'tier2_xbar_3' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5942]
 WARNING: [Synth 8-7023] instance 'tier2_xbar_3' of module 'design_1_tier2_xbar_3_0' has 40 connections declared, but only 38 given [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:5942]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_xbar_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/synth/design_1.v:2058]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_11_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_11_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_12_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_12_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_15_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_15_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_16_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_16_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_16_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_16_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_17_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_17_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_17_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_17_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_18_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_18_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_18_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_18_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_7_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_7_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_8_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_8_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_9_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_ds_buf_9_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-46064-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_10_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_11_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_11_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_11_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_12_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_12_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_12_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_10_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_10_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_15_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_15_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_15_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_16_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_16_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_16_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_16_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_17_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_17_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_17_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_17_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_18_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_18_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_18_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_18_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_2' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_2' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_3' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_3' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_1_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_1_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_6_1' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_6_1' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_6_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_7_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_7_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_8_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_8_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_9_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_9_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_ds_buf_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (0#1) [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/.Xil/Vivado-65856-OCP001/realtime/design_1_util_vector_logic_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
@@ -384,18 +384,18 @@ WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2985.312 ; gain = 454.996
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2992.699 ; gain = 454.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3003.223 ; gain = 472.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3010.633 ; gain = 472.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3003.223 ; gain = 472.906
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3010.633 ; gain = 472.832
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 3003.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 3010.633 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -647,15 +647,15 @@ Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Re
 Finished Parsing XDC File [C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3038.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3046.008 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3038.656 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3046.008 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/axi_quad_spi_1' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3038.656 ; gain = 508.340
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3046.008 ; gain = 508.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -663,7 +663,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3038.656 ; gain = 508.340
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3046.008 ; gain = 508.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1025,10 +1025,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/DAC_CTRL_1. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/DAC_CTRL_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/DAC_CTRL_3. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3038.656 ; gain = 508.340
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3046.008 ; gain = 508.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3038.656 ; gain = 508.340
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 3046.008 ; gain = 508.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1051,25 +1051,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3038.656 ; gain = 508.340
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 3046.008 ; gain = 508.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3508.902 ; gain = 978.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3516.184 ; gain = 978.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3510.715 ; gain = 980.398
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3517.992 ; gain = 980.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3522.742 ; gain = 992.426
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3530.023 ; gain = 992.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1087,37 +1087,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1245,18 +1245,18 @@ Report Cell Usage:
 |68    |OBUF                         |    34|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 3536.516 ; gain = 970.766
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3536.516 ; gain = 1006.199
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 3543.785 ; gain = 970.609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3543.785 ; gain = 1005.984
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3548.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 3555.871 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3581.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3588.336 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
@@ -1265,7 +1265,7 @@ Synth Design complete | Checksum: 294860c
 INFO: [Common 17-83] Releasing license: Synthesis
 328 Infos, 151 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 3581.129 ; gain = 1997.531
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3588.336 ; gain = 1998.410
 INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 01:00:04 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 14:17:43 2025...

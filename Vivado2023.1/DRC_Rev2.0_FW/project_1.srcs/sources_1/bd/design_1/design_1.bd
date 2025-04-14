@@ -8615,10 +8615,10 @@
       "Net23": {
         "ports": [
           "axi_gpio_8/gpio2_io_o",
+          "DAC_CTRL_0/CONSTMODE",
           "DAC_CTRL_1/CONSTMODE",
-          "DAC_CTRL_3/CONSTMODE",
           "DAC_CTRL_2/CONSTMODE",
-          "DAC_CTRL_0/CONSTMODE"
+          "DAC_CTRL_3/CONSTMODE"
         ]
       },
       "axi_gpio_0_gpio_io_o": {

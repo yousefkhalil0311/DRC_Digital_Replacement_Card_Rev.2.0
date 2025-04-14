@@ -53,26 +53,34 @@ begin
     begin
         
         if (rising_edge(CLKIN)) then
-            if (channel = '0' and CONSTMODE = '0') then
-                DACVAL <= UNSIGNED(DATA_INA_MIN);
-            end if;
-            
-            if (channel = '1' and CONSTMODE = '0') then
-                DACVAL <= UNSIGNED(DATA_INB_MAX);
-            end if;
-            
-            if (channel = '0' and CONSTMODE = '1') then
-                DACVAL <= UNSIGNED(DATA_INA_MIN); 
-            end if;
-            
-            if (channel = '1' and CONSTMODE = '1') then
-                DACVAL <= UNSIGNED(DATA_INB_MAX);
+            if (CONSTMODE = '0') then
+                if (DACVAL = UNSIGNED(DATA_INB_MAX)) then
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                elsif (DACVAL = UNSIGNED(DATA_INA_MIN)) then
+                    DACVAL <= UNSIGNED(DATA_INB_MAX);
+                else
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                end if;
+            else
+                if (channel = '0') then
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                elsif (channel = '1') then
+                    DACVAL <= UNSIGNED(DATA_INB_MAX);
+                end if;
             end if;
             
             channel <= not channel;
         end if;
-        if (falling_edge(CLKIN)) then
-            isDCLK1 <= not(isDCLK1);
+    end process;
+    
+    process(CLKIN)
+    begin
+        if (CONSTMODE = '0') then
+            isDCLK1 <= CLKIN;
+        else
+            if(falling_edge(CLKIN)) then
+                isDCLK1 <= not(isDCLK1);
+            end if;
         end if;
     end process;
 end Behavioral;
