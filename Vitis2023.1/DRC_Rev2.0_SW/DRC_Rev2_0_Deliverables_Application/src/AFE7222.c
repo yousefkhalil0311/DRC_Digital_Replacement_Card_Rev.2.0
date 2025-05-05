@@ -139,18 +139,34 @@ double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
     XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
 
 	XGpio* instance;
+	uint8_t AXIGPIO_channel;
 
-    if(converterNum == 0 || converterNum == 1){
+	//set ADC read block parameters
+    switch(converterNum){
+
+    case 0:
     	instance = &GPIO20_ADCDATA_0_1;
-    }
-    else if(converterNum == 2 || converterNum == 3){
+    	AXIGPIO_channel = 1;
+    	break;
+    case 1:
+    	instance = &GPIO20_ADCDATA_0_1;
+    	AXIGPIO_channel = 2;
+    	break;
+    case 2:
     	instance = &GPIO21_ADCDATA_2_3;
-    }
-    else{
-    	return 0.0;
+    	AXIGPIO_channel = 1;
+    	break;
+    case 3:
+    	instance = &GPIO21_ADCDATA_2_3;
+    	AXIGPIO_channel = 2;
+    	break;
+    default:
+    	break;
+
     }
 
-    int readValue = XGpio_DiscreteRead(instance, channel);
+    //read current ADC digital data
+    int readValue = XGpio_DiscreteRead(instance, AXIGPIO_channel);
 
     double voltage = ((double)readValue * 5.0) / 2047.0;
 
