@@ -30,13 +30,4 @@ void clearTerminal();
 //Prints the state of an IO pin in its corresponding terminal output location
 void displayPinState(uint8_t pinNum, uint8_t state);
 
-//Programs all AFE converters with the values in the regMap register map
-void programAFEConverters(uint8_t* regMap, int regMapSize);
-
-//Gets a register value from the regMap and register address specified
-uint8_t getRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum);
-
-//sets a value in the regMap and register address specified
-void setRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum, uint8_t regVal);
-
 #endif
