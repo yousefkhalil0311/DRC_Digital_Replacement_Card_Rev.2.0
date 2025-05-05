@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun May  4 21:54:07 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  5 02:38:07 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-1"/>
 
@@ -180,6 +180,206 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHA_Selector_0" HWVERSION="1.0" INSTANCE="ADC_CHA_Selector_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHA_Selector" VLNV="xilinx.com:module_ref:ADC_CHA_Selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHA_Selector_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_15_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_15" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_6" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_0_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_20" PORT="gpio_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHA_Selector_1" HWVERSION="1.0" INSTANCE="ADC_CHA_Selector_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHA_Selector" VLNV="xilinx.com:module_ref:ADC_CHA_Selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHA_Selector_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_16_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_16" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_7_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_7" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_1_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_21" PORT="gpio_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHA_Selector_2" HWVERSION="1.0" INSTANCE="ADC_CHA_Selector_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHA_Selector" VLNV="xilinx.com:module_ref:ADC_CHA_Selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHA_Selector_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_17_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_17" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_8_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_8" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_2_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="gpio_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHA_Selector_3" HWVERSION="1.0" INSTANCE="ADC_CHA_Selector_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHA_Selector" VLNV="xilinx.com:module_ref:ADC_CHA_Selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHA_Selector_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_18_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_18" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_9_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_9" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_3_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="gpio_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHB_selector_0" HWVERSION="1.0" INSTANCE="ADC_CHB_selector_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHB_selector" VLNV="xilinx.com:module_ref:ADC_CHB_selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHB_selector_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_15_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_15" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_6" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_0_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_20" PORT="gpio2_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHB_selector_1" HWVERSION="1.0" INSTANCE="ADC_CHB_selector_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHB_selector" VLNV="xilinx.com:module_ref:ADC_CHB_selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHB_selector_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_16_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_16" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_7_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_7" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_1_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_21" PORT="gpio2_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHB_selector_2" HWVERSION="1.0" INSTANCE="ADC_CHB_selector_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHB_selector" VLNV="xilinx.com:module_ref:ADC_CHB_selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHB_selector_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_17_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_17" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_8_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_8" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_2_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="gpio2_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_CHB_selector_3" HWVERSION="1.0" INSTANCE="ADC_CHB_selector_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_CHB_selector" VLNV="xilinx.com:module_ref:ADC_CHB_selector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ADC_CHB_selector_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clkin" SIGIS="clk" SIGNAME="util_ds_buf_18_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_18" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="ADC_DATA_IN" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_9_IOBUF_IO_O">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_ds_buf_9" PORT="IOBUF_IO_O"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="ADC_DATA_OUT" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_3_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="gpio2_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/ADC_MinMax_0" HWVERSION="1.0" INSTANCE="ADC_MinMax_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_MinMax" VLNV="xilinx.com:module_ref:ADC_MinMax:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -359,362 +559,6 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="30" FULLNAME="/ADC_READ" HWVERSION="2.0" INSTANCE="ADC_READ" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
-      </DOCUMENTS>
-      <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI" NAME="Reg" RANGE="4096" USAGE="register">
-          <REGISTERS>
-            <REGISTER NAME="GPIO_DATA">
-              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="12"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_1_GPIO_DATA">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="GPIO_TRI">
-              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="12"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_1_GPIO_TRI">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="GPIO2_DATA">
-              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_2_GPIO_DATA">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="GPIO2_TRI">
-              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_2_GPIO_TRI">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="GIER">
-              <PROPERTY NAME="DESCRIPTION" VALUE="Global_Interrupt_Enable register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x11C"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Global_Interrupt_Enable">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="Master enable for the device interrupt output&#xA;  0 - Disabled&#xA;  1 - Enabled&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="31"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="31"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="IP_IER">
-              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Enable register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x128"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_1_Interrupt_Enable">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 1 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
-                </FIELD>
-                <FIELD NAME="Channel_2_Interrupt_Enable">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 2 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-            <REGISTER NAME="IP_ISR">
-              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Status register"/>
-              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x120"/>
-              <PROPERTY NAME="SIZE" VALUE="32"/>
-              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
-              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
-              <FIELDS>
-                <FIELD NAME="Channel_1_Interrupt_Status">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 1 Interrupt Status&#xA;  0 - No Channel 1 input interrupt&#xA;  1 - Channel 1 input interrupt&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
-                </FIELD>
-                <FIELD NAME="Channel_2_Interrupt_Status">
-                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 2 Interrupt Status&#xA;  0 - No Channel 2 input interrupt&#xA;  1 - Channel 2 input interrupt&#xA;"/>
-                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
-                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
-                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
-                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
-                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
-                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
-                </FIELD>
-              </FIELDS>
-            </REGISTER>
-          </REGISTERS>
-        </ADDRESSBLOCK>
-      </ADDRESSBLOCKS>
-      <PARAMETERS>
-        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
-        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
-        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="12"/>
-        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_ALL_INPUTS" VALUE="1"/>
-        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
-        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
-        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
-        <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
-        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
-        <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_19_0"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
-        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x80180000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x8018FFFF"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="99999001" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="8" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_6" PORT="IOBUF_IO_O"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M24_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
-          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
-          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
-          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
-          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
-          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
-          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
-          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
-          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
-          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
-          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
-          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
-          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
-          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-      </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/ClockDivider_0" HWVERSION="1.0" INSTANCE="ClockDivider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ClockDivider" VLNV="xilinx.com:module_ref:ClockDivider:1.0">
       <DOCUMENTS/>
@@ -6015,14 +5859,14 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M26_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
+        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_0_ADC_DATA_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_6" PORT="IOBUF_IO_O"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_0" PORT="ADC_DATA_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_7_IOBUF_IO_O">
+        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_0_ADC_DATA_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_7" PORT="IOBUF_IO_O"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_0" PORT="ADC_DATA_OUT"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6381,19 +6225,751 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M27_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_8_IOBUF_IO_O">
+        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_1_ADC_DATA_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_8" PORT="IOBUF_IO_O"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_1" PORT="ADC_DATA_OUT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_9_IOBUF_IO_O">
+        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_1_ADC_DATA_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_9" PORT="IOBUF_IO_O"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_1" PORT="ADC_DATA_OUT"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M27_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="30" FULLNAME="/axi_gpio_22" HWVERSION="2.0" INSTANCE="axi_gpio_22" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
+      </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI" NAME="Reg" RANGE="4096" USAGE="register">
+          <REGISTERS>
+            <REGISTER NAME="GPIO_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_GPIO_DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_GPIO_TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_2_GPIO_DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_2_GPIO_TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GIER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Global_Interrupt_Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x11C"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Global_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Master enable for the device interrupt output&#xA;  0 - Disabled&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_IER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x128"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 1 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel_2_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 2 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_ISR">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Status register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x120"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_Interrupt_Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 1 Interrupt Status&#xA;  0 - No Channel 1 input interrupt&#xA;  1 - Channel 1 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel_2_Interrupt_Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 2 Interrupt Status&#xA;  0 - No Channel 2 input interrupt&#xA;  1 - Channel 2 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+          </REGISTERS>
+        </ADDRESSBLOCK>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_ALL_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="1"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_21_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x80180000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x8018FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="99999001" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_2_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_2" PORT="ADC_DATA_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_2_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_CHB_selector_2" PORT="ADC_DATA_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M24_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="30" FULLNAME="/axi_gpio_23" HWVERSION="2.0" INSTANCE="axi_gpio_23" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
+      </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI" NAME="Reg" RANGE="4096" USAGE="register">
+          <REGISTERS>
+            <REGISTER NAME="GPIO_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_GPIO_DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_GPIO_TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_2_GPIO_DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
+              <PROPERTY NAME="SIZE" VALUE="12"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_2_GPIO_TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="12"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GIER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Global_Interrupt_Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x11C"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Global_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Master enable for the device interrupt output&#xA;  0 - Disabled&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_IER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x128"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 1 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel_2_Interrupt_Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 2 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_ISR">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Status register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x120"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel_1_Interrupt_Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 1 Interrupt Status&#xA;  0 - No Channel 1 input interrupt&#xA;  1 - Channel 1 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel_2_Interrupt_Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 2 Interrupt Status&#xA;  0 - No Channel 2 input interrupt&#xA;  1 - Channel 2 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+          </REGISTERS>
+        </ADDRESSBLOCK>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_ALL_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="1"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_21_1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x801C0000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x801CFFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="99999001" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHA_Selector_3_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_3" PORT="ADC_DATA_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="ADC_CHB_selector_3_ADC_DATA_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_CHB_selector_3" PORT="ADC_DATA_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M28_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
@@ -17700,9 +18276,9 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
+        <PORT DIR="I" LEFT="11" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_8_IOBUF_IO_O">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_6" PORT="IOBUF_IO_O"/>
+            <CONNECTION INSTANCE="util_ds_buf_8" PORT="IOBUF_IO_O"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -17797,7 +18373,6 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M22_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_18" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M23_ARESETN"/>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M25_ARESETN"/>
@@ -17805,6 +18380,9 @@
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M26_ARESETN"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M27_ARESETN"/>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -17816,7 +18394,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
-        <PARAMETER NAME="NUM_MI" VALUE="28"/>
+        <PARAMETER NAME="NUM_MI" VALUE="29"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
@@ -18399,6 +18977,36 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M24_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M25_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M25_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M26_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M26_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M27_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M27_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -20678,101 +21286,91 @@
             <CONNECTION INSTANCE="axi_gpio_18" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M24_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awaddr">
+        <PORT DIR="O" LEFT="39" NAME="M24_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M24_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_awvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awvalid">
+        <PORT DIR="O" NAME="M24_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_awready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_awready">
+        <PORT DIR="I" NAME="M24_AXI_awready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M24_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M24_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M24_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="M24_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_wvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wvalid">
+        <PORT DIR="O" NAME="M24_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_wready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_wready">
+        <PORT DIR="I" NAME="M24_AXI_wready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M24_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M24_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_bvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bvalid">
+        <PORT DIR="I" NAME="M24_AXI_bvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_bready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_bready">
+        <PORT DIR="O" NAME="M24_AXI_bready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M24_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_araddr">
+        <PORT DIR="O" LEFT="39" NAME="M24_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M24_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M24_AXI_arvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_arvalid">
+        <PORT DIR="O" NAME="M24_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_arready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_arready">
+        <PORT DIR="I" NAME="M24_AXI_arready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M24_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M24_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M24_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M24_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M24_AXI_rvalid" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rvalid">
+        <PORT DIR="I" NAME="M24_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M24_AXI_rready" SIGIS="undef" SIGNAME="ADC_READ_s_axi_rready">
+        <PORT DIR="O" NAME="M24_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_22_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M25_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M25_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="39" NAME="M25_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_19_s_axi_awaddr">
@@ -20780,14 +21378,7 @@
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M25_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M25_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_awqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M25_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_19_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_awvalid"/>
@@ -20808,7 +21399,6 @@
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M25_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M25_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_19_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_wvalid"/>
@@ -20839,14 +21429,7 @@
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M25_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M25_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M25_AXI_arqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M25_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_19_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_arvalid"/>
@@ -20867,7 +21450,6 @@
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M25_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M25_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_19_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_rvalid"/>
@@ -20878,29 +21460,12 @@
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M26_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M26_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="39" NAME="M26_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_20_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M26_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M26_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_awqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M26_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_20_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_awvalid"/>
@@ -20921,7 +21486,6 @@
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M26_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M26_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_20_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_wvalid"/>
@@ -20952,14 +21516,7 @@
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M26_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M26_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M26_AXI_arqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M26_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_20_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_arvalid"/>
@@ -20980,7 +21537,6 @@
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M26_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M26_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_20_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_rvalid"/>
@@ -20991,29 +21547,12 @@
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M27_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M27_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="39" NAME="M27_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M27_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M27_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_awqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M27_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_awvalid"/>
@@ -21034,7 +21573,6 @@
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M27_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M27_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_wvalid"/>
@@ -21065,14 +21603,7 @@
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M27_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M27_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M27_AXI_arqos" SIGIS="undef"/>
         <PORT DIR="O" NAME="M27_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_arvalid"/>
@@ -21093,7 +21624,6 @@
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M27_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M27_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_rvalid"/>
@@ -21102,6 +21632,119 @@
         <PORT DIR="O" NAME="M27_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_21_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_21" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_ARESETN" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M28_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M28_AXI_awlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_AXI_awready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M28_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M28_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M28_AXI_wlast" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_AXI_wready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M28_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_AXI_bvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M28_AXI_bready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M28_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M28_AXI_arlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M28_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_AXI_arready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M28_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M28_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M28_AXI_rlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M28_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M28_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_23_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -21727,38 +22370,22 @@
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M25_AXI" DATAWIDTH="32" NAME="M25_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M25_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M25_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M25_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M25_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M25_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M25_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M25_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M25_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M25_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M25_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M25_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M25_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M25_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M25_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M25_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M25_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M25_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M25_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M25_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M25_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M25_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M25_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M25_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M25_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M25_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M25_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M25_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M25_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M25_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M25_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M25_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M25_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M25_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M25_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M25_AXI_rready"/>
           </PORTMAPS>
@@ -21766,38 +22393,22 @@
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M26_AXI" DATAWIDTH="32" NAME="M26_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M26_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M26_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M26_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M26_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M26_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M26_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M26_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M26_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M26_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M26_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M26_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M26_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M26_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M26_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M26_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M26_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M26_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M26_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M26_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M26_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M26_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M26_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M26_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M26_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M26_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M26_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M26_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M26_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M26_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M26_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M26_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M26_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M26_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M26_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M26_AXI_rready"/>
           </PORTMAPS>
@@ -21805,40 +22416,63 @@
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M27_AXI" DATAWIDTH="32" NAME="M27_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M27_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M27_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M27_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M27_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M27_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M27_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M27_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M27_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M27_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M27_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M27_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M27_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M27_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M27_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M27_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M27_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M27_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M27_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M27_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M27_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M27_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M27_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M27_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M27_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M27_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M27_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M27_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M27_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M27_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M27_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M27_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M27_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M27_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M27_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M27_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M28_AXI" DATAWIDTH="32" NAME="M28_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M28_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M28_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M28_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M28_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M28_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M28_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M28_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M28_AXI_awregion"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M28_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M28_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M28_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M28_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M28_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="M28_AXI_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M28_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M28_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M28_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M28_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M28_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M28_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M28_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M28_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M28_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M28_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M28_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M28_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M28_AXI_arregion"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M28_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M28_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M28_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M28_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M28_AXI_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="M28_AXI_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M28_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M28_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -22151,6 +22785,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_15_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_0" PORT="DCKIN"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_0" PORT="clkin"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_0" PORT="clkin"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="0" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_CLK0">
@@ -22192,6 +22828,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_16_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_1" PORT="DCKIN"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_1" PORT="clkin"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_1" PORT="clkin"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="0" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_CLK1">
@@ -22233,6 +22871,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_17_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_2" PORT="DCKIN"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_2" PORT="clkin"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_2" PORT="clkin"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="0" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_CLK2">
@@ -22274,6 +22914,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_18_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_3" PORT="DCKIN"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_3" PORT="clkin"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_3" PORT="clkin"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="0" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_CLK3">
@@ -22479,9 +23121,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="11" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_6_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_0" PORT="ADCDATA"/>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
-            <CONNECTION INSTANCE="ADC_READ" PORT="gpio_io_i"/>
-            <CONNECTION INSTANCE="axi_gpio_20" PORT="gpio_io_i"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_0" PORT="ADC_DATA_IN"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_0" PORT="ADC_DATA_IN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="11" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_DATA0">
@@ -22523,7 +23164,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="11" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_7_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_1" PORT="ADCDATA"/>
-            <CONNECTION INSTANCE="axi_gpio_20" PORT="gpio2_io_i"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_1" PORT="ADC_DATA_IN"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_1" PORT="ADC_DATA_IN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="11" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_DATA1">
@@ -22565,7 +23207,9 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="11" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_8_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_2" PORT="ADCDATA"/>
-            <CONNECTION INSTANCE="axi_gpio_21" PORT="gpio_io_i"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_2" PORT="ADC_DATA_IN"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_2" PORT="ADC_DATA_IN"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="11" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_DATA2">
@@ -22607,7 +23251,8 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="11" NAME="IOBUF_IO_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_9_IOBUF_IO_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ADC_MinMax_3" PORT="ADCDATA"/>
-            <CONNECTION INSTANCE="axi_gpio_21" PORT="gpio2_io_i"/>
+            <CONNECTION INSTANCE="ADC_CHA_Selector_3" PORT="ADC_DATA_IN"/>
+            <CONNECTION INSTANCE="ADC_CHB_selector_3" PORT="ADC_DATA_IN"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="11" NAME="IOBUF_IO_IO" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_IOBUF_DATA3">
@@ -26131,7 +26776,6 @@
             <CONNECTION INSTANCE="axi_gpio_18" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M23_ACLK"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
-            <CONNECTION INSTANCE="ADC_READ" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M24_ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_19" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M25_ACLK"/>
@@ -26139,6 +26783,9 @@
             <CONNECTION INSTANCE="axi_gpio_20" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M26_ACLK"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M27_ACLK"/>
+            <CONNECTION INSTANCE="axi_gpio_22" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_gpio_23" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M28_ACLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -26243,10 +26890,11 @@
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80150000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8015FFFF" INSTANCE="axi_gpio_16" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80160000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8016FFFF" INSTANCE="axi_gpio_17" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80170000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8017FFFF" INSTANCE="axi_gpio_18" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
-        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80180000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8018FFFF" INSTANCE="ADC_READ" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80180000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8018FFFF" INSTANCE="axi_gpio_22" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80190000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x8019FFFF" INSTANCE="axi_gpio_19" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x801A0000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x801AFFFF" INSTANCE="axi_gpio_20" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x801B0000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x801BFFFF" INSTANCE="axi_gpio_21" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x801C0000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x801CFFFF" INSTANCE="axi_gpio_23" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="axi_gpio_9"/>
@@ -26273,10 +26921,11 @@
         <PERIPHERAL INSTANCE="axi_gpio_16"/>
         <PERIPHERAL INSTANCE="axi_gpio_17"/>
         <PERIPHERAL INSTANCE="axi_gpio_18"/>
-        <PERIPHERAL INSTANCE="ADC_READ"/>
+        <PERIPHERAL INSTANCE="axi_gpio_22"/>
         <PERIPHERAL INSTANCE="axi_gpio_19"/>
         <PERIPHERAL INSTANCE="axi_gpio_20"/>
         <PERIPHERAL INSTANCE="axi_gpio_21"/>
+        <PERIPHERAL INSTANCE="axi_gpio_23"/>
       </PERIPHERALS>
     </MODULE>
   </MODULES>

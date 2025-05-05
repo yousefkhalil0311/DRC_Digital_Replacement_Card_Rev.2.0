@@ -629,9 +629,9 @@
                 "MA": "Data",
                 "MX": "/zynq_ultra_ps_e_0",
                 "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_ADC_READ_Reg",
+                "MS": "SEG_axi_gpio_22_Reg",
                 "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/ADC_READ",
+                "SX": "/axi_gpio_22",
                 "SI": "S_AXI",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
@@ -686,6 +686,24 @@
                 "MS": "SEG_axi_gpio_21_Reg",
                 "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
                 "SX": "/axi_gpio_21",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V31": {
+                "VT": "AC",
+                "BA": "0x00801C0000",
+                "HA": "0x00801CFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/zynq_ultra_ps_e_0",
+                "MI": "M_AXI_HPM0_LPD",
+                "MS": "SEG_axi_gpio_23_Reg",
+                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
+                "SX": "/axi_gpio_23",
                 "SI": "S_AXI",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
@@ -839,6 +857,11 @@
             },
             {
                 "src": "V30",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V31",
                 "trg": "V2",
                 "EH": "2"
             }

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Sun May  4 22:41:47 2025
+| Date             : Mon May  5 03:11:42 2025
 | Host             : OCP001 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.899        |
+| Total On-Chip Power (W)  | 1.908        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.590        |
+| Dynamic (W)              | 1.599        |
 | Device Static (W)        | 0.309        |
 | Effective TJA (C/W)      | 2.4          |
 | Max Ambient (C)          | 95.5         |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.053 |        8 |       --- |             --- |
-| CLB Logic                |     0.013 |    20253 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     6561 |     70560 |            9.30 |
-|   Register               |     0.001 |    10867 |    141120 |            7.70 |
+| Clocks                   |     0.060 |        8 |       --- |             --- |
+| CLB Logic                |     0.014 |    20809 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     6668 |     70560 |            9.45 |
+|   Register               |     0.002 |    11272 |    141120 |            7.99 |
 |   LUT as Shift Register  |    <0.001 |      172 |     28800 |            0.60 |
 |   CARRY8                 |    <0.001 |       74 |      8820 |            0.84 |
 |   LUT as Distributed RAM |    <0.001 |       88 |     28800 |            0.31 |
 |   BUFG                   |    <0.001 |        2 |        24 |            8.33 |
-|   Others                 |     0.000 |      783 |       --- |             --- |
+|   Others                 |     0.000 |      812 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       43 |     70560 |            0.06 |
-| Signals                  |     0.014 |    15451 |       --- |             --- |
+| Signals                  |     0.016 |    15906 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |       216 |            0.23 |
 | MMCM                     |     0.091 |        0 |       --- |             --- |
 | I/O                      |     0.060 |      176 |       252 |           69.84 |
@@ -70,7 +70,7 @@ Table of Contents
 | Static Power             |     0.309 |          |           |                 |
 |   PS Static              |     0.095 |          |           |                 |
 |   PL Static              |     0.214 |          |           |                 |
-| Total                    |     1.899 |          |           |                 |
+| Total                    |     1.908 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.148 |       0.096 |      0.052 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.158 |       0.106 |      0.052 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.029 |       0.002 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.098 |       0.050 |      0.048 |       NA    | Unspecified | NA         |
@@ -169,29 +169,29 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.590 |
+| design_1_wrapper         |     1.599 |
 |   dbg_hub                |     0.002 |
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
-|   design_1_i             |     1.577 |
-|     ADC_MinMax_0         |     0.004 |
-|       inst               |     0.004 |
-|     ADC_MinMax_1         |     0.004 |
-|       inst               |     0.004 |
-|     ADC_MinMax_2         |     0.004 |
-|       inst               |     0.004 |
-|     ADC_MinMax_3         |     0.004 |
-|       inst               |     0.004 |
+|   design_1_i             |     1.585 |
+|     ADC_MinMax_0         |     0.005 |
+|       inst               |     0.005 |
+|     ADC_MinMax_1         |     0.006 |
+|       inst               |     0.006 |
+|     ADC_MinMax_2         |     0.005 |
+|       inst               |     0.005 |
+|     ADC_MinMax_3         |     0.006 |
+|       inst               |     0.006 |
 |     ClockDivider_0       |     0.002 |
 |       inst               |     0.002 |
 |     ClockDivider_1       |     0.003 |
 |       inst               |     0.003 |
-|     SoftwareOverride_0   |     0.007 |
-|       inst               |     0.007 |
+|     SoftwareOverride_0   |     0.008 |
+|       inst               |     0.008 |
 |     axi_gpio_10          |     0.002 |
 |       U0                 |     0.002 |
-|     axi_gpio_9           |     0.002 |
-|       U0                 |     0.002 |
+|     axi_gpio_9           |     0.001 |
+|       U0                 |     0.001 |
 |     axi_iic_0            |     0.002 |
 |       U0                 |     0.002 |
 |     axi_iic_1            |     0.002 |

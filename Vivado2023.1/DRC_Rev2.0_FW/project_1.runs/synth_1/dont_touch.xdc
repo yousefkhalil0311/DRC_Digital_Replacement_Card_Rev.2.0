@@ -202,9 +202,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Cl
 # IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_19_0/design_1_axi_gpio_19_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_19_0 || ORIG_REF_NAME==design_1_axi_gpio_19_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_DAC_CTRL_0_0/design_1_DAC_CTRL_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_DAC_CTRL_0_0 || ORIG_REF_NAME==design_1_DAC_CTRL_0_0} -quiet] -quiet
 
@@ -273,6 +270,36 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 
 # IP: bd/design_1/ip/design_1_axi_gpio_20_0/design_1_axi_gpio_20_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_20_0 || ORIG_REF_NAME==design_1_axi_gpio_20_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_gpio_21_0/design_1_axi_gpio_21_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_21_0 || ORIG_REF_NAME==design_1_axi_gpio_21_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_axi_gpio_21_1/design_1_axi_gpio_21_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_21_1 || ORIG_REF_NAME==design_1_axi_gpio_21_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHA_Selector_0_0/design_1_ADC_CHA_Selector_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHA_Selector_0_0 || ORIG_REF_NAME==design_1_ADC_CHA_Selector_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHB_selector_0_0/design_1_ADC_CHB_selector_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHB_selector_0_0 || ORIG_REF_NAME==design_1_ADC_CHB_selector_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHA_Selector_0_1/design_1_ADC_CHA_Selector_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHA_Selector_0_1 || ORIG_REF_NAME==design_1_ADC_CHA_Selector_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHB_selector_0_1/design_1_ADC_CHB_selector_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHB_selector_0_1 || ORIG_REF_NAME==design_1_ADC_CHB_selector_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHA_Selector_0_2/design_1_ADC_CHA_Selector_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHA_Selector_0_2 || ORIG_REF_NAME==design_1_ADC_CHA_Selector_0_2} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHB_selector_0_2/design_1_ADC_CHB_selector_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHB_selector_0_2 || ORIG_REF_NAME==design_1_ADC_CHB_selector_0_2} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHA_Selector_0_3/design_1_ADC_CHA_Selector_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHA_Selector_0_3 || ORIG_REF_NAME==design_1_ADC_CHA_Selector_0_3} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ADC_CHB_selector_0_3/design_1_ADC_CHB_selector_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ADC_CHB_selector_0_3 || ORIG_REF_NAME==design_1_ADC_CHB_selector_0_3} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tier2_xbar_0_0 || ORIG_REF_NAME==design_1_tier2_xbar_0_0} -quiet] -quiet

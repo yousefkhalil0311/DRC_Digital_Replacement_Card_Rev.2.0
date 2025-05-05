@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1746410054">
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-1-e" LaunchTime="1746427095">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -30,6 +30,18 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../../Users/youse/Downloads/SoftwareOverride 1/SoftwareOverride 1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ADC_CHA_Selector.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ADC_CHB_selector.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -126,8 +138,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHB_selector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_19_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_17_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_MinMax_0_3"/>
@@ -136,8 +148,8 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_9_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_1"/>
@@ -146,9 +158,11 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_10_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHA_Selector_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHA_Selector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_8_0"/>
@@ -181,6 +195,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_14_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_17_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ClockDivider_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHB_selector_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DAC_CTRL_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_9_1"/>
@@ -188,8 +203,14 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_1_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_1_3"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_20_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHA_Selector_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_21_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_21_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHB_selector_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHA_Selector_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADC_CHB_selector_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_tier2_xbar_0_0"/>
 </GenRun>
