@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Apr  3 00:01:16 2025
+// Date        : Sun May  4 21:55:36 2025
 // Host        : OCP001 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/project_1.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
@@ -150,7 +150,7 @@ module design_1_clk_wiz_0_0_clk_wiz
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(80),
+    .CLKOUT3_DIVIDE(2),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(90.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),

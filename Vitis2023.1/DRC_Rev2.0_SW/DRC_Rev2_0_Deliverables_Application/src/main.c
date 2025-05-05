@@ -304,7 +304,7 @@ int main()
 //    }
 
 	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1);
-	            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 1);
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 1);
     uint32_t chvalmax;
     uint32_t chvalmin;
     printf("DRC ADC MinMax Test.\n");

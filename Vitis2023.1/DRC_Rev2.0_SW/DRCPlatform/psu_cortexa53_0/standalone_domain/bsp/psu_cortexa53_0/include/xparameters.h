@@ -821,7 +821,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 20
+#define XPAR_XGPIO_NUM_INSTANCES 23
 
 /* Definitions for peripheral AXI_GPIO_0 */
 #define XPAR_AXI_GPIO_0_BASEADDR 0x80060000
@@ -983,6 +983,30 @@
 #define XPAR_ADC_READ_IS_DUAL 0
 
 
+/* Definitions for peripheral AXI_GPIO_19 */
+#define XPAR_AXI_GPIO_19_BASEADDR 0x80190000
+#define XPAR_AXI_GPIO_19_HIGHADDR 0x8019FFFF
+#define XPAR_AXI_GPIO_19_DEVICE_ID 20
+#define XPAR_AXI_GPIO_19_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_19_IS_DUAL 1
+
+
+/* Definitions for peripheral AXI_GPIO_20 */
+#define XPAR_AXI_GPIO_20_BASEADDR 0x801A0000
+#define XPAR_AXI_GPIO_20_HIGHADDR 0x801AFFFF
+#define XPAR_AXI_GPIO_20_DEVICE_ID 21
+#define XPAR_AXI_GPIO_20_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_20_IS_DUAL 1
+
+
+/* Definitions for peripheral AXI_GPIO_21 */
+#define XPAR_AXI_GPIO_21_BASEADDR 0x801B0000
+#define XPAR_AXI_GPIO_21_HIGHADDR 0x801BFFFF
+#define XPAR_AXI_GPIO_21_DEVICE_ID 22
+#define XPAR_AXI_GPIO_21_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_21_IS_DUAL 1
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral AXI_GPIO_0 */
@@ -1124,6 +1148,27 @@
 #define XPAR_GPIO_19_DEVICE_ID XPAR_ADC_READ_DEVICE_ID
 #define XPAR_GPIO_19_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_19_IS_DUAL 0
+
+/* Canonical definitions for peripheral AXI_GPIO_19 */
+#define XPAR_GPIO_20_BASEADDR 0x80190000
+#define XPAR_GPIO_20_HIGHADDR 0x8019FFFF
+#define XPAR_GPIO_20_DEVICE_ID XPAR_AXI_GPIO_19_DEVICE_ID
+#define XPAR_GPIO_20_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_20_IS_DUAL 1
+
+/* Canonical definitions for peripheral AXI_GPIO_20 */
+#define XPAR_GPIO_21_BASEADDR 0x801A0000
+#define XPAR_GPIO_21_HIGHADDR 0x801AFFFF
+#define XPAR_GPIO_21_DEVICE_ID XPAR_AXI_GPIO_20_DEVICE_ID
+#define XPAR_GPIO_21_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_21_IS_DUAL 1
+
+/* Canonical definitions for peripheral AXI_GPIO_21 */
+#define XPAR_GPIO_22_BASEADDR 0x801B0000
+#define XPAR_GPIO_22_HIGHADDR 0x801BFFFF
+#define XPAR_GPIO_22_DEVICE_ID XPAR_AXI_GPIO_21_DEVICE_ID
+#define XPAR_GPIO_22_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_22_IS_DUAL 1
 
 
 /******************************************************************/

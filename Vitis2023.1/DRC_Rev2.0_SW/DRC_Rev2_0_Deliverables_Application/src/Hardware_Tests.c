@@ -539,14 +539,14 @@ void TestMode6(uint32_t runTime){
     	return XST_FAILURE;
     }
 
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06); //Enable all DAC FEs
+
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
+
     //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){
         AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
     }
-
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06); //Enable all DAC FEs
-
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
 
     printf("System configured in channel A loopback mode.\n");
 
@@ -563,6 +563,9 @@ void TestMode7(uint32_t runTime){
 	////////////////////////////////////////////////////////////////////
 	// Test Mode 7 Begin
 	// HS ADC/DAC loopback test for channel B
+
+	clearTerminal();
+
     printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n\n\n");
     printf("Following pins used for loopback test.\n");
     printf("Pin 21 (ADC0B) to Pin 51 (DAC0B)\n");
@@ -611,16 +614,18 @@ void TestMode7(uint32_t runTime){
     	return XST_FAILURE;
     }
 
+    //Enable all DAC FEs
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06);
+
+    //Set data path to connect ADC control block to AFE7222 pins
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
+
     //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){
         AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
     }
 
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6); //Enable all DAC FEs
-
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
-
-    printf("System configured in channel A loopback mode.\n");
+    printf("System configured in channel B loopback mode.\n");
 
 	//empty function to pass into runTest
     void test7Func(){}
@@ -779,7 +784,7 @@ void TestMode8(){
 
     //Sets all AFE7222 chips to operate in DAC only mode.
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-        AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+        AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
     }
 
     //Set data path to connect DAC control block to AFE7222 pins
@@ -995,8 +1000,10 @@ void TestMode8(){
     			//Max int value -> 100% sampling frequency/2 DAC output
     			int MAX_INT32 = 0x7FFFFFFF;
 
+    			int samplingFreq = 130000 / sampleClkDivider;
+
     			//Per khz increment of desired mixing freq, AFE 32bit val increments by this much
-    			int quantPerkHz = MAX_INT32/65000;
+    			int quantPerkHz = MAX_INT32 / samplingFreq;
 
     			//Value to program into AFE converter
     			int _32bitFreqWords = mixingFreqkHz * quantPerkHz;

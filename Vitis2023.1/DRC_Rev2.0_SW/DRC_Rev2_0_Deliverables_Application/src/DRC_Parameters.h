@@ -76,6 +76,8 @@ extern const net_t VC0;
 extern const net_t VC1;
 extern const net_t VC2;
 extern const net_t VC3;
+extern const net_t CONSTMODE;
+extern const net_t P89_clkEn;
 
 //AFE_CTRL XGpio pins
 extern const net_t AFE0_CTRL;

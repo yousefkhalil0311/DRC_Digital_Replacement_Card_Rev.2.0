@@ -71,6 +71,7 @@ const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
 const net_t CONSTMODE = {&GPIO8_CTRL, 0, 2, 0, 0};
+const net_t P89_clkEn = {&GPIO8_CTRL, 1, 2, 0, 1};
 
 //AFE_CTRL XGpio pins
 const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
@@ -189,7 +190,7 @@ const size_t GPIO_LED_LEN = sizeof(GPIO_LED)/sizeof(GPIO_LED[0]);
 
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_CTRL[] = {
-	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3, &CONSTMODE
+	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3, &CONSTMODE, &P89_clkEn
 };
 
 const size_t GPIO_CTRL_LEN = sizeof(GPIO_CTRL)/sizeof(GPIO_CTRL[0]);
