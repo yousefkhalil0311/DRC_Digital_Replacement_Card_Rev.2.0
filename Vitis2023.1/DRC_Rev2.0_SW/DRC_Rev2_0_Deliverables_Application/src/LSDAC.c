@@ -48,3 +48,12 @@ int LS_DAC_WriteAll(const LSDAC_t *LSDAC, uint16_t DATA){
 
 	return XST_SUCCESS;
 }
+
+//Wrapper for LS_DAC_Write. Writes voltage to LSDAC channel
+int LS_DAC_WriteVoltage(const LSDAC_t *LSDAC, uint8_t CHANNEL, double voltage){
+
+	int voltageValue = (int)((voltage * 2047) / 10);
+
+	return LS_DAC_Write(LSDAC, CHANNEL, voltageValue);
+
+}
