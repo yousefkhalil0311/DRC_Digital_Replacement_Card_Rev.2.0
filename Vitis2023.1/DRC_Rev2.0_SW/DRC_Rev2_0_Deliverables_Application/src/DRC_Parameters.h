@@ -30,6 +30,9 @@ extern XGpio GPIO15_DAC0Const;
 extern XGpio GPIO16_DAC1Const;
 extern XGpio GPIO17_DAC2Const;
 extern XGpio GPIO18_DAC3Const;
+extern XGpio GPIO20_ADCDATA_0_1;
+extern XGpio GPIO21_ADCDATA_2_3;
+extern XGpio GPIO19_PL_OUTPUT_FREQ;
 
 //IIC bus XIic instances
 extern XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)

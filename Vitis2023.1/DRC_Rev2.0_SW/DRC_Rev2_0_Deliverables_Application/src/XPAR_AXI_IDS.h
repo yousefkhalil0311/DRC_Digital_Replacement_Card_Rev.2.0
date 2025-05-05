@@ -33,6 +33,13 @@
 #define GPIO12_DATA3A_ID	XPAR_AXI_GPIO_12_DEVICE_ID
 #define GPIO13_DATA3B_ID	XPAR_AXI_GPIO_13_DEVICE_ID
 
+//define GPIO IDs for raw ADC samples
+#define GPIO20_ADCDATA_0_1_ID		XPAR_AXI_GPIO_20_DEVICE_ID
+#define GPIO21_ADCDATA_2_3_ID		XPAR_AXI_GPIO_21_DEVICE_ID
+
+//define GPIO ID for PL clock divider on and off counts
+#define GPIO19_PL_OUTPUT_FREQ_ID	XPAR_AXI_GPIO_19_DEVICE_ID
+
 
 //define GPIO IDs for Const values of the converters
 #define GPIO15_DAC0Const_ID		XPAR_AXI_GPIO_15_DEVICE_ID

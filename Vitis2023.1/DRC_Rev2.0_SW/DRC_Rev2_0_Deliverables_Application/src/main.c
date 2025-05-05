@@ -103,13 +103,23 @@ int main()
    Status = SPI_Init(&SPI1_LSDAC, SPI1_LSDAC_ID);
    if(Status != XST_SUCCESS) return XST_FAILURE;
 
-   // Initialize and write constants to DAC GPIOs
-   printf("Boot: Initializing constant value DAC GPIO devices and writing default values...\n");
+   // Initialize DAC AXI block
+   printf("Boot: Initializing constant value DAC GPIO devices...\n");
    XGpio_Initialize(&GPIO15_DAC0Const, GPIO15_DAC0Const_ID);
    XGpio_Initialize(&GPIO16_DAC1Const, GPIO16_DAC1Const_ID);
    XGpio_Initialize(&GPIO17_DAC2Const, GPIO17_DAC2Const_ID);
    XGpio_Initialize(&GPIO18_DAC3Const, GPIO18_DAC3Const_ID);
 
+   // Initialize ADC Data AXI blocks
+   printf("Boot: Initializing ADC probing AXI blocks...\n");
+   XGpio_Initialize(&GPIO20_ADCDATA_0_1, GPIO20_ADCDATA_0_1_ID);
+   XGpio_Initialize(&GPIO21_ADCDATA_2_3, GPIO21_ADCDATA_2_3_ID);
+
+   // Initialize PL frequency control AXI GPIO block
+   printf("Boot: Initializing PL frequency control AXI GPIO block...\n");
+   XGpio_Initialize(&GPIO19_PL_OUTPUT_FREQ, GPIO19_PL_OUTPUT_FREQ_ID);
+   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 0);
+   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 0);
    // Initialize AFEs
    printf("Boot: Writing initial register values to AFE7222 devices...\n");
    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
