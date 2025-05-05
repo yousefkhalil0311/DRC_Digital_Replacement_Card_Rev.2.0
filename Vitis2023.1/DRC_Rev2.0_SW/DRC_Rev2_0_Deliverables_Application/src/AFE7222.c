@@ -8,6 +8,7 @@
 
 //Project specific includes
 #include "DRC_Parameters.h"
+#include "RegisterMaps.h"
 
 int AFE_Init (XSpi *instance, uint8_t *data, int num_bytes, uint32_t CS){
 
@@ -31,12 +32,30 @@ int AFE_Init (XSpi *instance, uint8_t *data, int num_bytes, uint32_t CS){
 	return XST_SUCCESS;
 }
 
+//Programs an AFE7222 converter.  cs is the chip select bit 1 << AFE#
+int programAFEConverter(uint8_t cs, uint8_t* regMap, int regMapSize){
+
+	//Write register map to converter
+   int Status = AFE_Init(&SPI0_AFE, regMap, regMapSize, cs);
+
+   if(Status != XST_SUCCESS) return XST_FAILURE;
+   return XST_SUCCESS;
+
+}
+
 //Programs all AFE converters with the values in the regMap register map
-void programAFEConverters(uint8_t* regMap, int regMapSize){
+int programAFEConverters(uint8_t* regMap, int regMapSize){
+
 	for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-		   int Status = AFE_Init(&SPI0_AFE, regMap, regMapSize, i);
-		   if(Status != XST_SUCCESS) return XST_FAILURE;
+
+		//program individual converter
+	   int Status = programAFEConverter(i, regMap, regMapSize);
+
+	   if(Status != XST_SUCCESS) return XST_FAILURE;
+
 	}
+
+	return XST_SUCCESS;
 }
 
 //Gets a register value from the regMap and register address specified
@@ -73,4 +92,67 @@ void setRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum, uint8_t regV
 	}
 
 	printf("Error: setRegMapVal - Failed to find register. ");
+}
+
+//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
+void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage){
+
+	//set bounds for voltage input
+	if(voltage > 5.0) voltage = 5.0;
+	if(voltage < -5.0) voltage = -5.0;
+
+	//program converter to be in DAC only mode
+	programAFEConverter(1 << converterNum, AFE_REG_MAP, AFE_REG_MAP_SIZE);
+
+    //Set data path to connect DAC control block to AFE7222 pins
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, ~(1 << converterNum));
+
+	//set HSDAC controller to be in const voltage mode(this will set const mode for all converters)
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 1);
+
+	int voltageValue = (int)((voltage * 2047) / 5);
+
+	XGpio* xgpioInstanceTable[] = {&GPIO15_DAC0Const, &GPIO16_DAC1Const, &GPIO17_DAC2Const, &GPIO18_DAC3Const};
+
+	XGpio* instance;
+
+	instance = xgpioInstanceTable[converterNum];
+
+	//write voltage value to corresponding HSDAC controller
+	XGpio_DiscreteWrite(instance, channel, voltageValue);
+
+	//clear bit in control mask to enable FE output
+	uint8_t ctrlMask = (1 << (converterNum + 4)) & 0xF6;
+
+	//Enable DAC's Frontend
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ctrlMask);
+
+}
+
+//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
+double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
+
+	//program converter to be in reset mode (Loopback mode is equivalent to ADC only mode in this test case)
+	programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
+
+    //Set data path to connect ADC control block to AFE7222 pins
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
+
+	XGpio* instance;
+
+    if(converterNum == 0 || converterNum == 1){
+    	instance = &GPIO20_ADCDATA_0_1;
+    }
+    else if(converterNum == 2 || converterNum == 3){
+    	instance = &GPIO21_ADCDATA_2_3;
+    }
+    else{
+    	return 0.0;
+    }
+
+    int readValue = XGpio_DiscreteRead(instance, channel);
+
+    double voltage = ((double)readValue * 5.0) / 2047.0;
+
+	return voltage;
 }
