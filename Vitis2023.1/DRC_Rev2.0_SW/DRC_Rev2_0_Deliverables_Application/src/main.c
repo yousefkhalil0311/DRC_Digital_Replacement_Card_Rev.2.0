@@ -112,8 +112,10 @@ int main()
 
    // Initialize ADC Data AXI blocks
    printf("Boot: Initializing ADC probing AXI blocks...\n");
-   XGpio_Initialize(&GPIO20_ADCDATA_0_1, GPIO20_ADCDATA_0_1_ID);
-   XGpio_Initialize(&GPIO21_ADCDATA_2_3, GPIO21_ADCDATA_2_3_ID);
+   XGpio_Initialize(&GPIO20_ADCDATA_0, GPIO20_ADCDATA_0_ID);
+   XGpio_Initialize(&GPIO21_ADCDATA_1, GPIO21_ADCDATA_1_ID);
+   XGpio_Initialize(&GPIO22_ADCDATA_2, GPIO22_ADCDATA_2_ID);
+   XGpio_Initialize(&GPIO23_ADCDATA_3, GPIO23_ADCDATA_3_ID);
 
    // Initialize PL frequency control AXI GPIO block
    printf("Boot: Initializing PL frequency control AXI GPIO block...\n");
@@ -239,6 +241,7 @@ int main()
    printf("Boot: Initializing GPIO13 for DATA3B...\n");
    Status = XGpio_Initialize(&GPIO13_DATA3B, GPIO13_DATA3B_ID);
    if(Status != XST_SUCCESS) return XST_FAILURE;
+
 
 
 	setLEDStatus (0x4);

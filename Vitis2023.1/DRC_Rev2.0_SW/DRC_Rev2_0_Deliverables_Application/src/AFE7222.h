@@ -23,7 +23,7 @@ void setRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum, uint8_t regV
 void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage);
 
 //Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-double HSADC_getVoltage(uint8_t converterNum, uint8_t channel);
+double HSADC_getVoltage(uint8_t converterNum, char channel);
 
 #endif
 

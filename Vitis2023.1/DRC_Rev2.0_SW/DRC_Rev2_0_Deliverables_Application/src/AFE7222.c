@@ -130,7 +130,7 @@ void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage){
 }
 
 //Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
+double HSADC_getVoltage(uint8_t converterNum, char channel){
 
 	//program converter to be in reset mode (Loopback mode is equivalent to ADC only mode in this test case)
 	programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
@@ -141,24 +141,30 @@ double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
 	XGpio* instance;
 	uint8_t AXIGPIO_channel;
 
+	if(channel == 'A') {
+		AXIGPIO_channel = 1;
+	}
+	else if(channel == 'B') {
+		AXIGPIO_channel = 1;
+	}
+	else{
+		return -1;
+	}
+
 	//set ADC read block parameters
     switch(converterNum){
 
     case 0:
-    	instance = &GPIO20_ADCDATA_0_1;
-    	AXIGPIO_channel = 1;
+    	instance = &GPIO20_ADCDATA_0;
     	break;
     case 1:
-    	instance = &GPIO20_ADCDATA_0_1;
-    	AXIGPIO_channel = 2;
+    	instance = &GPIO21_ADCDATA_1;
     	break;
     case 2:
-    	instance = &GPIO21_ADCDATA_2_3;
-    	AXIGPIO_channel = 1;
+    	instance = &GPIO22_ADCDATA_2;
     	break;
     case 3:
-    	instance = &GPIO21_ADCDATA_2_3;
-    	AXIGPIO_channel = 2;
+    	instance = &GPIO23_ADCDATA_3;
     	break;
     default:
     	break;
