@@ -29,6 +29,32 @@ void setIODirection(const net_t* pin, pinMode mode){
 	return;
 }
 
+//change IO pin configuration for 1 Multifunction pin
+int setPath(SWState_t path){
+
+	int i = 0;
+
+	//iterate over Pin_Settings to change switch states.
+	while(i < PIN_SETTINGS_LEN){
+
+		//Replace the SWState_t in the array with the same pin_num field in Pin_Settings to the path variable
+		if(Pin_Settings[i].pin_num == path.pin_num){
+
+			Pin_Settings[path.pin_num] = path;
+
+			//Reinitialize Switch Settings For Desired States
+		    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
+		    if(Status != XST_SUCCESS){
+		    	return XST_FAILURE;
+		    }
+
+		}
+
+		i++;
+	}
+
+}
+
 //sets the State of an IO pin
 void setIOPin (const net_t* pin, uint8_t state){
 

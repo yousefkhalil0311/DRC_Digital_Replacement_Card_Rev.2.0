@@ -118,8 +118,9 @@ int main()
    // Initialize PL frequency control AXI GPIO block
    printf("Boot: Initializing PL frequency control AXI GPIO block...\n");
    XGpio_Initialize(&GPIO19_PL_OUTPUT_FREQ, GPIO19_PL_OUTPUT_FREQ_ID);
-   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 0);
-   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 0);
+   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 3);
+   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 5);
+
    // Initialize AFEs
    printf("Boot: Writing initial register values to AFE7222 devices...\n");
    for (int i = 0x01; i < (0x01 << 4); i = i << 1){

@@ -12,6 +12,9 @@
 //Sets the direction of an IO pin
 void setIODirection(const net_t* pin, pinMode mode);
 
+//change IO pin configuration for 1 Multifunction pin
+int setPath(SWState_t path);
+
 //sets the Status of the edge mounted LEDs.
 void setLEDStatus (uint8_t status);
 
