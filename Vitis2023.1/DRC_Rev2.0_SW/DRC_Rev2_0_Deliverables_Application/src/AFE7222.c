@@ -129,14 +129,20 @@ void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage){
 
 }
 
-//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-double HSADC_getVoltage(uint8_t converterNum, char channel){
+//Sets AFE7222 and FPGA data path to read ADC values. Returns a sample after being set up.
+double HSADC_Init(uint8_t converterNum, uint8_t channel){
 
 	//program converter to be in reset mode (Loopback mode is equivalent to ADC only mode in this test case)
 	programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
 
     //Set data path to connect ADC control block to AFE7222 pins
     XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
+
+	return HSADC_getVoltage(converterNum, channel);
+}
+
+//Returns a sample from a specified ADC channel.
+double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
 
 	XGpio* instance;
 	uint8_t AXIGPIO_channel;
@@ -145,7 +151,7 @@ double HSADC_getVoltage(uint8_t converterNum, char channel){
 		AXIGPIO_channel = 1;
 	}
 	else if(channel == 'B') {
-		AXIGPIO_channel = 1;
+		AXIGPIO_channel = 2;
 	}
 	else{
 		return -1;
@@ -169,7 +175,7 @@ double HSADC_getVoltage(uint8_t converterNum, char channel){
     default:
     	break;
 
-    }
+    };
 
     //read current ADC digital data
     int readValue = XGpio_DiscreteRead(instance, AXIGPIO_channel);

@@ -246,6 +246,12 @@ int main()
 
 	setLEDStatus (0x4);
 
+	setPath(P51_HS_ADC0A);
+
+	while(1){
+		printf("%lf", HSADC_getVoltage(0, 'A'));
+	}
+
 //	XSpi_SetSlaveSelect(instance, CS);
 //	uint8_t Rx_buffer[3];
 //	uint8_t Tx_buffer0[3] = {0x11, 0x72, 0x10};
