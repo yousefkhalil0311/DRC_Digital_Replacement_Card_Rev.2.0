@@ -1,0 +1,742 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF69062229B0549C4",
+      "device": "xczu3eg-sfvc784-1-e",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/FFT_Test",
+      "name": "FFT_Test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "c_addsub_0": "",
+      "complex_signal_gener_0": "",
+      "mult_gen_0": "",
+      "mult_gen_1": "",
+      "sim_clk_gen_0": "",
+      "xfft_0": "",
+      "xlconcat_5": "",
+      "xlslice_12": "",
+      "xlslice_13": "",
+      "fifo_generator_0": "",
+      "util_vector_logic_5": "",
+      "Latch_0": "",
+      "xlconstant_0": "",
+      "xlconcat_0": "",
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "xlslice_2": ""
+    },
+    "ports": {
+      "REAL_DATA": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "dout_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "Read_En": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "wr_en": {
+        "direction": "O",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "full": {
+        "direction": "O"
+      },
+      "PREFIFO": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": [
+              "xilinx.com:interface:datatypes:1.0 {",
+              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
+              "{} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
+              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 32",
+              "}"
+            ],
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "empty": {
+        "direction": "O"
+      },
+      "rd_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "FFT_Test_rd_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "MSB31": {
+        "direction": "O",
+        "left": "30",
+        "right": "0"
+      },
+      "TLAST": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "c_addsub_0": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "FFT_Test_c_addsub_0_0",
+        "xci_path": "ip\\FFT_Test_c_addsub_0_0\\FFT_Test_c_addsub_0_0.xci",
+        "inst_hier_path": "c_addsub_0",
+        "parameters": {
+          "A_Type": {
+            "value": "Signed"
+          },
+          "A_Width": {
+            "value": "32"
+          },
+          "B_Type": {
+            "value": "Signed"
+          },
+          "B_Value": {
+            "value": "00000000000000000000000000000000"
+          },
+          "B_Width": {
+            "value": "32"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "32"
+          }
+        }
+      },
+      "complex_signal_gener_0": {
+        "vlnv": "xilinx.com:module_ref:complex_signal_generator:1.0",
+        "xci_name": "FFT_Test_complex_signal_gener_0_0",
+        "xci_path": "ip\\FFT_Test_complex_signal_gener_0_0\\FFT_Test_complex_signal_gener_0_0.xci",
+        "inst_hier_path": "complex_signal_gener_0",
+        "parameters": {
+          "FFT_Size": {
+            "value": "2048"
+          },
+          "FUNC_TYPE": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "complex_signal_generator",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "interface_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_Test_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TLAST": {
+                "physical_name": "tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "tvalid",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "interface_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_Test_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "real_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "imagery_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "FFT_Test_mult_gen_0_0",
+        "xci_path": "ip\\FFT_Test_mult_gen_0_0\\FFT_Test_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
+        "parameters": {
+          "PortAType": {
+            "value": "Signed"
+          },
+          "PortAWidth": {
+            "value": "16"
+          },
+          "PortBType": {
+            "value": "Signed"
+          },
+          "PortBWidth": {
+            "value": "16"
+          }
+        }
+      },
+      "mult_gen_1": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "FFT_Test_mult_gen_1_0",
+        "xci_path": "ip\\FFT_Test_mult_gen_1_0\\FFT_Test_mult_gen_1_0.xci",
+        "inst_hier_path": "mult_gen_1",
+        "parameters": {
+          "PortAType": {
+            "value": "Signed"
+          },
+          "PortAWidth": {
+            "value": "16"
+          },
+          "PortBType": {
+            "value": "Signed"
+          },
+          "PortBWidth": {
+            "value": "16"
+          }
+        }
+      },
+      "sim_clk_gen_0": {
+        "vlnv": "xilinx.com:ip:sim_clk_gen:1.0",
+        "xci_name": "FFT_Test_sim_clk_gen_0_0",
+        "xci_path": "ip\\FFT_Test_sim_clk_gen_0_0\\FFT_Test_sim_clk_gen_0_0.xci",
+        "inst_hier_path": "sim_clk_gen_0"
+      },
+      "xfft_0": {
+        "vlnv": "xilinx.com:ip:xfft:9.1",
+        "xci_name": "FFT_Test_xfft_0_0",
+        "xci_path": "ip\\FFT_Test_xfft_0_0\\FFT_Test_xfft_0_0.xci",
+        "inst_hier_path": "xfft_0",
+        "parameters": {
+          "channels": {
+            "value": "1"
+          },
+          "implementation_options": {
+            "value": "automatically_select"
+          },
+          "input_width": {
+            "value": "16"
+          },
+          "number_of_stages_using_block_ram_for_data_and_phase_factors": {
+            "value": "4"
+          },
+          "output_ordering": {
+            "value": "natural_order"
+          },
+          "phase_factor_width": {
+            "value": "16"
+          },
+          "scaling_options": {
+            "value": "scaled"
+          },
+          "target_clock_frequency": {
+            "value": "100"
+          },
+          "target_data_throughput": {
+            "value": "100"
+          },
+          "transform_length": {
+            "value": "2048"
+          }
+        }
+      },
+      "xlconcat_5": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "FFT_Test_xlconcat_5_0",
+        "xci_path": "ip\\FFT_Test_xlconcat_5_0\\FFT_Test_xlconcat_5_0.xci",
+        "inst_hier_path": "xlconcat_5",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "16"
+          },
+          "IN1_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_12": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_Test_xlslice_12_0",
+        "xci_path": "ip\\FFT_Test_xlslice_12_0\\FFT_Test_xlslice_12_0.xci",
+        "inst_hier_path": "xlslice_12",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_13": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_Test_xlslice_13_0",
+        "xci_path": "ip\\FFT_Test_xlslice_13_0\\FFT_Test_xlslice_13_0.xci",
+        "inst_hier_path": "xlslice_13",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "0"
+          }
+        }
+      },
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "FFT_Test_fifo_generator_0_0",
+        "xci_path": "ip\\FFT_Test_fifo_generator_0_0\\FFT_Test_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Enable_ECC": {
+            "value": "false"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Builtin_FIFO"
+          },
+          "Input_Data_Width": {
+            "value": "32"
+          },
+          "Input_Depth": {
+            "value": "4096"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          },
+          "Read_Clock_Frequency": {
+            "value": "10"
+          },
+          "Write_Clock_Frequency": {
+            "value": "100"
+          },
+          "asymmetric_port_width": {
+            "value": "false"
+          },
+          "enable_low_latency": {
+            "value": "false"
+          }
+        }
+      },
+      "util_vector_logic_5": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "FFT_Test_util_vector_logic_4_1",
+        "xci_path": "ip\\FFT_Test_util_vector_logic_4_1\\FFT_Test_util_vector_logic_4_1.xci",
+        "inst_hier_path": "util_vector_logic_5",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "Latch_0": {
+        "vlnv": "xilinx.com:module_ref:Latch:1.0",
+        "xci_name": "FFT_Test_Latch_0_0",
+        "xci_path": "ip\\FFT_Test_Latch_0_0\\FFT_Test_Latch_0_0.xci",
+        "inst_hier_path": "Latch_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Latch",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_Test_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "set": {
+            "direction": "I"
+          },
+          "rset": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "FFT_Test_xlconstant_0_0",
+        "xci_path": "ip\\FFT_Test_xlconstant_0_0\\FFT_Test_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "FFT_Test_xlconcat_0_0",
+        "xci_path": "ip\\FFT_Test_xlconcat_0_0\\FFT_Test_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "31"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_Test_xlslice_0_0",
+        "xci_path": "ip\\FFT_Test_xlslice_0_0\\FFT_Test_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "1"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_Test_xlslice_0_1",
+        "xci_path": "ip\\FFT_Test_xlslice_0_1\\FFT_Test_xlslice_0_1.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "1"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_Test_xlslice_1_1",
+        "xci_path": "ip\\FFT_Test_xlslice_1_1\\FFT_Test_xlslice_1_1.xci",
+        "inst_hier_path": "xlslice_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "0"
+          },
+          "DIN_TO": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Latch_0_output": {
+        "ports": [
+          "Latch_0/Dout",
+          "fifo_generator_0/wr_en",
+          "util_vector_logic_5/Op1",
+          "wr_en"
+        ]
+      },
+      "Net27": {
+        "ports": [
+          "xfft_0/m_axis_data_tdata",
+          "xlslice_12/Din",
+          "xlslice_13/Din"
+        ]
+      },
+      "Net28": {
+        "ports": [
+          "xlslice_12/Dout",
+          "mult_gen_0/A",
+          "mult_gen_0/B"
+        ]
+      },
+      "Net29": {
+        "ports": [
+          "xlslice_13/Dout",
+          "mult_gen_1/A",
+          "mult_gen_1/B"
+        ]
+      },
+      "c_addsub_0_S": {
+        "ports": [
+          "c_addsub_0/S",
+          "PREFIFO",
+          "xlslice_0/Din"
+        ]
+      },
+      "complex_signal_gener_0_imagery_out": {
+        "ports": [
+          "complex_signal_gener_0/imagery_out",
+          "xlconcat_5/In0"
+        ]
+      },
+      "complex_signal_gener_0_real_out": {
+        "ports": [
+          "complex_signal_gener_0/real_out",
+          "xlconcat_5/In1",
+          "REAL_DATA"
+        ]
+      },
+      "complex_signal_gener_0_tlast": {
+        "ports": [
+          "complex_signal_gener_0/tlast",
+          "xfft_0/s_axis_data_tlast"
+        ]
+      },
+      "complex_signal_gener_0_tvalid": {
+        "ports": [
+          "complex_signal_gener_0/tvalid",
+          "xfft_0/s_axis_data_tvalid"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "dout_0",
+          "xlslice_1/Din",
+          "xlslice_2/Din"
+        ]
+      },
+      "fifo_generator_0_empty": {
+        "ports": [
+          "fifo_generator_0/empty",
+          "Latch_0/set",
+          "empty"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "Latch_0/rset",
+          "full"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "c_addsub_0/B"
+        ]
+      },
+      "mult_gen_1_P": {
+        "ports": [
+          "mult_gen_1/P",
+          "c_addsub_0/A"
+        ]
+      },
+      "rd_clk_0_1": {
+        "ports": [
+          "rd_clk_0",
+          "fifo_generator_0/rd_clk"
+        ]
+      },
+      "sim_clk_gen_0_clk": {
+        "ports": [
+          "sim_clk_gen_0/clk",
+          "complex_signal_gener_0/clk",
+          "xfft_0/aclk",
+          "mult_gen_0/CLK",
+          "mult_gen_1/CLK",
+          "c_addsub_0/CLK",
+          "Latch_0/clkin",
+          "fifo_generator_0/wr_clk"
+        ]
+      },
+      "sim_clk_gen_0_sync_rst": {
+        "ports": [
+          "sim_clk_gen_0/sync_rst",
+          "complex_signal_gener_0/reset"
+        ]
+      },
+      "util_vector_logic_5_Res": {
+        "ports": [
+          "util_vector_logic_5/Res",
+          "fifo_generator_0/rd_en",
+          "Read_En"
+        ]
+      },
+      "xfft_0_m_axis_data_tlast": {
+        "ports": [
+          "xfft_0/m_axis_data_tlast",
+          "xlconcat_0/In0"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "fifo_generator_0/din"
+        ]
+      },
+      "xlconcat_5_dout": {
+        "ports": [
+          "xlconcat_5/dout",
+          "xfft_0/s_axis_data_tdata"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xfft_0/m_axis_data_tready"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "MSB31"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "TLAST"
+        ]
+      }
+    }
+  }
+}

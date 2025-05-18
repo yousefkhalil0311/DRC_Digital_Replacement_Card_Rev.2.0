@@ -141,3 +141,48 @@ platform generate -domains
 platform active {DRCPlatform}
 platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
 platform generate -domains 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables_noFFT.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_ADCCLCK_to_FFT_with_ILAS.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables_noFFT.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_ADCCLCK_to_FFT_with_ILAS.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform generate
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables_noFFT.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables_noFFT.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables_noFFT.xsa}
+platform generate -domains 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Users/youse/Downloads/DRC_Rev2_0_Deliverables.xsa}
+platform generate
+platform config -updatehw {C:/Users/youse/Downloads/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains 

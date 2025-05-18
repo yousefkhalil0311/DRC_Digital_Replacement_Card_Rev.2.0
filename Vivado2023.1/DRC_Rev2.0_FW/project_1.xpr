@@ -60,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="osdzu3eg1_2g_1v8_sip"/>
-    <Option Name="WTXSimLaunchSim" Val="40"/>
+    <Option Name="WTXSimLaunchSim" Val="95"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="42"/>
+    <Option Name="WTModelSimExportSim" Val="42"/>
+    <Option Name="WTQuestaExportSim" Val="42"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="42"/>
+    <Option Name="WTRivieraExportSim" Val="42"/>
+    <Option Name="WTActivehdlExportSim" Val="42"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -115,6 +115,68 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/Latch.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/tlast_tvalid_handler.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/bram_writer.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/FFT_to_GPIO/FFT_to_GPIO.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_xfft_0_0/FFT_to_GPIO_xfft_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_xfft_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_c_addsub_0_0/FFT_to_GPIO_c_addsub_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_c_addsub_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_mult_gen_0_0/FFT_to_GPIO_mult_gen_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_mult_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_util_vector_logic_5_0/FFT_to_GPIO_util_vector_logic_5_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_util_vector_logic_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_fifo_generator_0_0/FFT_to_GPIO_fifo_generator_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_fifo_generator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_Latch_0_0/FFT_to_GPIO_Latch_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_Latch_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_c_shift_ram_0_0/FFT_to_GPIO_c_shift_ram_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_c_shift_ram_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_util_vector_logic_5_2/FFT_to_GPIO_util_vector_logic_5_2.xci">
+          <Proxy FileSetName="FFT_to_GPIO_util_vector_logic_5_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_bram_writer_0_0/FFT_to_GPIO_bram_writer_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_bram_writer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="FFT_to_GPIO.bd" FileRelPathName="ip/FFT_to_GPIO_tlast_tvalid_handler_0_0/FFT_to_GPIO_tlast_tvalid_handler_0_0.xci">
+          <Proxy FileSetName="FFT_to_GPIO_tlast_tvalid_handler_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/FFT_to_GPIO/hdl/FFT_to_GPIO_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/ADC_CHA_Selector.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -135,176 +197,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_8_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
-          <Proxy FileSetName="design_1_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.xci">
-          <Proxy FileSetName="design_1_util_vector_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci">
-          <Proxy FileSetName="design_1_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xci">
-          <Proxy FileSetName="design_1_axi_gpio_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0.xci">
-          <Proxy FileSetName="design_1_axi_iic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
-          <Proxy FileSetName="design_1_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="design_1_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_10_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_11_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_6_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="design_1_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1.xci">
-          <Proxy FileSetName="design_1_axi_quad_spi_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xci">
-          <Proxy FileSetName="design_1_axi_quad_spi_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1.xci">
-          <Proxy FileSetName="design_1_axi_gpio_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ClockDivider_0_0/design_1_ClockDivider_0_0.xci">
-          <Proxy FileSetName="design_1_ClockDivider_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_12_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_9_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1.xci">
-          <Proxy FileSetName="design_1_axi_gpio_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_1/design_1_ADC_MinMax_0_1.xci">
-          <Proxy FileSetName="design_1_ADC_MinMax_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1.xci">
-          <Proxy FileSetName="design_1_axi_gpio_3_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_17_0/design_1_util_ds_buf_17_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_17_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_3/design_1_ADC_MinMax_0_3.xci">
-          <Proxy FileSetName="design_1_ADC_MinMax_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_14_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_1/design_1_DAC_CTRL_0_1.xci">
-          <Proxy FileSetName="design_1_DAC_CTRL_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_8_0/design_1_util_ds_buf_8_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_8_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_15_0/design_1_axi_gpio_15_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_15_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_16_0/design_1_axi_gpio_16_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_16_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_0/design_1_ila_0_0.xci">
-          <Proxy FileSetName="design_1_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_18_0/design_1_axi_gpio_18_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_18_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2.xci">
-          <Proxy FileSetName="design_1_axi_gpio_2_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3.xci">
-          <Proxy FileSetName="design_1_axi_gpio_2_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_9_0/design_1_util_ds_buf_9_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_9_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_2/design_1_ADC_MinMax_0_2.xci">
-          <Proxy FileSetName="design_1_ADC_MinMax_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_18_0/design_1_util_ds_buf_18_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_18_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2.xci">
-          <Proxy FileSetName="design_1_axi_gpio_3_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_0/design_1_ADC_MinMax_0_0.xci">
-          <Proxy FileSetName="design_1_ADC_MinMax_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_6_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_16_0/design_1_util_ds_buf_16_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_16_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_15_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0.xci">
-          <Proxy FileSetName="design_1_util_ds_buf_7_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_17_0/design_1_axi_gpio_17_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_17_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ClockDivider_0_1/design_1_ClockDivider_0_1.xci">
-          <Proxy FileSetName="design_1_ClockDivider_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_0/design_1_DAC_CTRL_0_0.xci">
-          <Proxy FileSetName="design_1_DAC_CTRL_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_2/design_1_DAC_CTRL_0_2.xci">
-          <Proxy FileSetName="design_1_DAC_CTRL_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_3/design_1_DAC_CTRL_0_3.xci">
-          <Proxy FileSetName="design_1_DAC_CTRL_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_1/design_1_util_vector_logic_1_1.xci">
-          <Proxy FileSetName="design_1_util_vector_logic_1_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_2/design_1_util_vector_logic_1_2.xci">
           <Proxy FileSetName="design_1_util_vector_logic_1_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_3/design_1_util_vector_logic_1_3.xci">
           <Proxy FileSetName="design_1_util_vector_logic_1_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_0/design_1_util_vector_logic_1_0.xci">
-          <Proxy FileSetName="design_1_util_vector_logic_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SoftwareOverride_0_0/design_1_SoftwareOverride_0_0.xci">
           <Proxy FileSetName="design_1_SoftwareOverride_0_0"/>
@@ -318,32 +215,104 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_20_0/design_1_axi_gpio_20_0.xci">
           <Proxy FileSetName="design_1_axi_gpio_20_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_1/design_1_ADC_CHB_selector_0_1.xci">
-          <Proxy FileSetName="design_1_ADC_CHB_selector_0_1"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_21_0/design_1_axi_gpio_21_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_21_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_0/design_1_ADC_CHB_selector_0_0.xci">
-          <Proxy FileSetName="design_1_ADC_CHB_selector_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_1/design_1_util_vector_logic_1_1.xci">
+          <Proxy FileSetName="design_1_util_vector_logic_1_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_2/design_1_ADC_CHA_Selector_0_2.xci">
-          <Proxy FileSetName="design_1_ADC_CHA_Selector_0_2"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_1_0/design_1_util_vector_logic_1_0.xci">
+          <Proxy FileSetName="design_1_util_vector_logic_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_17_0/design_1_util_ds_buf_17_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_17_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_18_0/design_1_util_ds_buf_18_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_18_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_7_0/design_1_util_ds_buf_7_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_7_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_8_0/design_1_util_ds_buf_8_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_8_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_14_0/design_1_axi_gpio_14_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_14_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_6_1/design_1_util_ds_buf_6_1.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_6_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_15_0/design_1_util_ds_buf_15_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_15_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_16_0/design_1_util_ds_buf_16_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_16_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_9_0/design_1_util_ds_buf_9_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_9_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_0/design_1_ADC_MinMax_0_0.xci">
+          <Proxy FileSetName="design_1_ADC_MinMax_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_1/design_1_axi_gpio_2_1.xci">
+          <Proxy FileSetName="design_1_axi_gpio_2_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_3/design_1_axi_gpio_2_3.xci">
+          <Proxy FileSetName="design_1_axi_gpio_2_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_2_2/design_1_axi_gpio_2_2.xci">
+          <Proxy FileSetName="design_1_axi_gpio_2_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_1/design_1_axi_gpio_3_1.xci">
+          <Proxy FileSetName="design_1_axi_gpio_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_3_2/design_1_axi_gpio_3_2.xci">
+          <Proxy FileSetName="design_1_axi_gpio_3_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_2/design_1_ADC_MinMax_0_2.xci">
+          <Proxy FileSetName="design_1_ADC_MinMax_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_1/design_1_ADC_MinMax_0_1.xci">
+          <Proxy FileSetName="design_1_ADC_MinMax_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_MinMax_0_3/design_1_ADC_MinMax_0_3.xci">
+          <Proxy FileSetName="design_1_ADC_MinMax_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.xci">
+          <Proxy FileSetName="design_1_axi_bram_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_2/design_1_ADC_CHB_selector_0_2.xci">
+          <Proxy FileSetName="design_1_ADC_CHB_selector_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="design_1_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FFT_to_GPIO_wrapper_0_0/design_1_FFT_to_GPIO_wrapper_0_0.xci">
+          <Proxy FileSetName="design_1_FFT_to_GPIO_wrapper_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_1/design_1_ADC_CHA_Selector_0_1.xci">
           <Proxy FileSetName="design_1_ADC_CHA_Selector_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_pc_0/design_1_auto_pc_0.xci">
-          <Proxy FileSetName="design_1_auto_pc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_tier2_xbar_3_0/design_1_tier2_xbar_3_0.xci">
-          <Proxy FileSetName="design_1_tier2_xbar_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_ds_0/design_1_auto_ds_0.xci">
-          <Proxy FileSetName="design_1_auto_ds_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_0/design_1_ADC_CHA_Selector_0_0.xci">
           <Proxy FileSetName="design_1_ADC_CHA_Selector_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_21_0/design_1_axi_gpio_21_0.xci">
-          <Proxy FileSetName="design_1_axi_gpio_21_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_2/design_1_ADC_CHA_Selector_0_2.xci">
+          <Proxy FileSetName="design_1_ADC_CHA_Selector_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_3/design_1_ADC_CHA_Selector_0_3.xci">
+          <Proxy FileSetName="design_1_ADC_CHA_Selector_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_0/design_1_ADC_CHB_selector_0_0.xci">
+          <Proxy FileSetName="design_1_ADC_CHB_selector_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_1/design_1_ADC_CHB_selector_0_1.xci">
+          <Proxy FileSetName="design_1_ADC_CHB_selector_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_21_1/design_1_axi_gpio_21_1.xci">
           <Proxy FileSetName="design_1_axi_gpio_21_1"/>
@@ -351,11 +320,119 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_3/design_1_ADC_CHB_selector_0_3.xci">
           <Proxy FileSetName="design_1_ADC_CHB_selector_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHA_Selector_0_3/design_1_ADC_CHA_Selector_0_3.xci">
-          <Proxy FileSetName="design_1_ADC_CHA_Selector_0_3"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_1/design_1_ila_0_1.xci">
+          <Proxy FileSetName="design_1_ila_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ADC_CHB_selector_0_2/design_1_ADC_CHB_selector_0_2.xci">
-          <Proxy FileSetName="design_1_ADC_CHB_selector_0_2"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_2/design_1_ila_0_2.xci">
+          <Proxy FileSetName="design_1_ila_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_3/design_1_ila_0_3.xci">
+          <Proxy FileSetName="design_1_ila_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_16_0/design_1_axi_gpio_16_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_16_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ClockDivider_0_1/design_1_ClockDivider_0_1.xci">
+          <Proxy FileSetName="design_1_ClockDivider_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_3/design_1_DAC_CTRL_0_3.xci">
+          <Proxy FileSetName="design_1_DAC_CTRL_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_17_0/design_1_axi_gpio_17_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_17_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_0/design_1_DAC_CTRL_0_0.xci">
+          <Proxy FileSetName="design_1_DAC_CTRL_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_18_0/design_1_axi_gpio_18_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_18_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_15_0/design_1_axi_gpio_15_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_15_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ila_0_0/design_1_ila_0_0.xci">
+          <Proxy FileSetName="design_1_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_1/design_1_DAC_CTRL_0_1.xci">
+          <Proxy FileSetName="design_1_DAC_CTRL_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_DAC_CTRL_0_2/design_1_DAC_CTRL_0_2.xci">
+          <Proxy FileSetName="design_1_DAC_CTRL_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1.xci">
+          <Proxy FileSetName="design_1_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_9_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2.xci">
+          <Proxy FileSetName="design_1_axi_gpio_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_8_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="design_1_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_0_1/design_1_util_ds_buf_0_1.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="design_1_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0.xci">
+          <Proxy FileSetName="design_1_axi_iic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_quad_spi_0_1/design_1_axi_quad_spi_0_1.xci">
+          <Proxy FileSetName="design_1_axi_quad_spi_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0.xci">
+          <Proxy FileSetName="design_1_axi_quad_spi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
+          <Proxy FileSetName="design_1_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_10_0/design_1_util_ds_buf_10_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_xbar_0/design_1_xbar_0.xci">
+          <Proxy FileSetName="design_1_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci">
+          <Proxy FileSetName="design_1_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_6_0/design_1_util_ds_buf_6_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_6_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_axi_gpio_1_1/design_1_axi_gpio_1_1.xci">
+          <Proxy FileSetName="design_1_axi_gpio_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_12_0/design_1_util_ds_buf_12_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_12_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_10_1/design_1_util_ds_buf_10_1.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_10_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="design_1_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ClockDivider_0_0/design_1_ClockDivider_0_0.xci">
+          <Proxy FileSetName="design_1_ClockDivider_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_util_ds_buf_11_0/design_1_util_ds_buf_11_0.xci">
+          <Proxy FileSetName="design_1_util_ds_buf_11_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_pc_2/design_1_auto_pc_2.xci">
+          <Proxy FileSetName="design_1_auto_pc_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_ds_0/design_1_auto_ds_0.xci">
+          <Proxy FileSetName="design_1_auto_ds_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_tier2_xbar_0_0/design_1_tier2_xbar_0_0.xci">
           <Proxy FileSetName="design_1_tier2_xbar_0_0"/>
@@ -365,6 +442,13 @@
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/IQ_signal_gen.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -390,6 +474,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/breakout90_Final.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Pulse_Trigger.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -435,6 +526,28 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PGENDIR/sources_1/bd/FFT_to_GPIO/hdl/FFT_to_GPIO_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/FFT_Test/hdl/FFT_Test_wrapper.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/new/fftgpiosim.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/IQTest.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -449,12 +562,15 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/FFT_Test_wrapper_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="DAC_CTRL"/>
+        <Option Name="TopModule" Val="FFT_to_GPIO_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopArchitecture" Val="Behavioral"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/DAC_CTRL.vhd"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
@@ -463,6 +579,8 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/FFT_Test_wrapper_behav.wcfg"/>
+        <Option Name="xsim.simulate.log_all_signals" Val="true"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -844,54 +962,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_ADC_CHB_selector_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_1" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_1">
-      <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_ADC_CHB_selector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_0" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_ADC_CHA_Selector_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_2" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_2">
-      <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_ADC_CHA_Selector_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_1" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_1">
-      <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_auto_pc_0" RelGenDir="$PGENDIR/design_1_auto_pc_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_auto_pc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_tier2_xbar_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_tier2_xbar_3_0" RelGenDir="$PGENDIR/design_1_tier2_xbar_3_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_tier2_xbar_3_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_auto_ds_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_auto_ds_0" RelGenDir="$PGENDIR/design_1_auto_ds_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_auto_ds_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_ADC_CHA_Selector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_0" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_axi_gpio_21_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_axi_gpio_21_0" RelGenDir="$PGENDIR/design_1_axi_gpio_21_0">
       <Config>
         <Option Name="TopModule" Val="design_1_axi_gpio_21_0"/>
@@ -904,9 +974,93 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_ADC_CHB_selector_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_3" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_3">
+    <FileSet Name="design_1_axi_bram_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_axi_bram_ctrl_0_0" RelGenDir="$PGENDIR/design_1_axi_bram_ctrl_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_3"/>
+        <Option Name="TopModule" Val="design_1_axi_bram_ctrl_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_fifo_generator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_fifo_generator_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_fifo_generator_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_fifo_generator_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_Latch_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_Latch_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_Latch_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_Latch_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_util_vector_logic_5_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_util_vector_logic_5_0" RelGenDir="$PGENDIR/FFT_to_GPIO_util_vector_logic_5_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_util_vector_logic_5_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_util_vector_logic_5_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_util_vector_logic_5_2" RelGenDir="$PGENDIR/FFT_to_GPIO_util_vector_logic_5_2">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_util_vector_logic_5_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_c_shift_ram_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_c_shift_ram_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_c_shift_ram_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_c_shift_ram_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_tlast_tvalid_handler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_tlast_tvalid_handler_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_tlast_tvalid_handler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_tlast_tvalid_handler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_mult_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_mult_gen_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_mult_gen_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_mult_gen_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_c_addsub_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_c_addsub_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_c_addsub_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_c_addsub_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_xfft_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_xfft_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_xfft_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_xfft_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="FFT_to_GPIO_bram_writer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/FFT_to_GPIO_bram_writer_0_0" RelGenDir="$PGENDIR/FFT_to_GPIO_bram_writer_0_0">
+      <Config>
+        <Option Name="TopModule" Val="FFT_to_GPIO_bram_writer_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_blk_mem_gen_0_0" RelGenDir="$PGENDIR/design_1_blk_mem_gen_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_blk_mem_gen_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_FFT_to_GPIO_wrapper_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_FFT_to_GPIO_wrapper_0_0" RelGenDir="$PGENDIR/design_1_FFT_to_GPIO_wrapper_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_FFT_to_GPIO_wrapper_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHA_Selector_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_1" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHB_selector_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_2" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_2">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -916,9 +1070,63 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_ADC_CHB_selector_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_2" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_2">
+    <FileSet Name="design_1_ADC_CHB_selector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_0" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_2"/>
+        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHB_selector_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_3" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_3">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHA_Selector_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_2" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_2">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHB_selector_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHB_selector_0_1" RelGenDir="$PGENDIR/design_1_ADC_CHB_selector_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHB_selector_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ADC_CHA_Selector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ADC_CHA_Selector_0_0" RelGenDir="$PGENDIR/design_1_ADC_CHA_Selector_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ADC_CHA_Selector_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ila_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ila_0_1" RelGenDir="$PGENDIR/design_1_ila_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ila_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ila_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ila_0_2" RelGenDir="$PGENDIR/design_1_ila_0_2">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ila_0_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_ila_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ila_0_3" RelGenDir="$PGENDIR/design_1_ila_0_3">
+      <Config>
+        <Option Name="TopModule" Val="design_1_ila_0_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_auto_pc_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_auto_pc_2" RelGenDir="$PGENDIR/design_1_auto_pc_2">
+      <Config>
+        <Option Name="TopModule" Val="design_1_auto_pc_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_auto_ds_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_auto_ds_0" RelGenDir="$PGENDIR/design_1_auto_ds_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_auto_ds_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1568,11 +1776,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_synth_1">
+    <Run Id="design_1_axi_gpio_21_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_axi_gpio_21_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_axi_gpio_21_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1580,11 +1786,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_synth_1">
+    <Run Id="design_1_axi_gpio_21_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_axi_gpio_21_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_axi_gpio_21_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1592,11 +1796,129 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_synth_1">
+    <Run Id="design_1_axi_bram_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_axi_bram_ctrl_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_bram_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_bram_ctrl_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_bram_ctrl_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_fifo_generator_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_fifo_generator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_fifo_generator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_fifo_generator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_fifo_generator_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_Latch_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_Latch_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_Latch_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_Latch_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_Latch_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_Latch_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_util_vector_logic_5_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_util_vector_logic_5_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_util_vector_logic_5_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_util_vector_logic_5_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_util_vector_logic_5_2_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_util_vector_logic_5_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_util_vector_logic_5_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_util_vector_logic_5_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_c_shift_ram_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_c_shift_ram_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_c_shift_ram_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_c_shift_ram_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_shift_ram_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_shift_ram_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_tlast_tvalid_handler_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_tlast_tvalid_handler_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_tlast_tvalid_handler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_tlast_tvalid_handler_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_tlast_tvalid_handler_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_tlast_tvalid_handler_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_mult_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_mult_gen_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_mult_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_mult_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_mult_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_mult_gen_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_c_addsub_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_c_addsub_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_c_addsub_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_c_addsub_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_addsub_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_addsub_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_xfft_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_xfft_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_xfft_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_xfft_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_xfft_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_xfft_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_bram_writer_0_0_synth_1" Type="Ft3:Synth" SrcSet="FFT_to_GPIO_bram_writer_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_bram_writer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/FFT_to_GPIO_bram_writer_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_bram_writer_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_bram_writer_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_blk_mem_gen_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_blk_mem_gen_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_FFT_to_GPIO_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_FFT_to_GPIO_wrapper_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_FFT_to_GPIO_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_FFT_to_GPIO_wrapper_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_FFT_to_GPIO_wrapper_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_FFT_to_GPIO_wrapper_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1606,9 +1928,7 @@
     </Run>
     <Run Id="design_1_ADC_CHA_Selector_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1616,11 +1936,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_auto_pc_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_auto_pc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_0_synth_1">
+    <Run Id="design_1_ADC_CHB_selector_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1628,7 +1946,97 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_tier2_xbar_3_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_tier2_xbar_3_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_tier2_xbar_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_tier2_xbar_3_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_tier2_xbar_3_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_tier2_xbar_3_0_synth_1">
+    <Run Id="design_1_ADC_CHA_Selector_0_3_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_3" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_3_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_3" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHA_Selector_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHA_Selector_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_ila_0_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ila_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_ila_0_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ila_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_3_synth_1" Type="Ft3:Synth" SrcSet="design_1_ila_0_3" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ila_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_3_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_auto_pc_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_auto_pc_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_pc_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_auto_pc_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -1641,78 +2049,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="design_1_auto_ds_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_auto_ds_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_ds_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_auto_ds_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_ds_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_ds_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_axi_gpio_21_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_axi_gpio_21_0" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_axi_gpio_21_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_axi_gpio_21_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_axi_gpio_21_1" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_axi_gpio_21_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_3_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_3" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_3_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHA_Selector_0_3" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHA_Selector_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_ADC_CHB_selector_0_2" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ADC_CHB_selector_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -2791,11 +3127,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_impl_1">
+    <Run Id="design_1_axi_gpio_21_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_axi_gpio_21_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -2810,11 +3144,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_impl_1">
+    <Run Id="design_1_axi_gpio_21_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_axi_gpio_21_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -2829,11 +3161,213 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_impl_1">
+    <Run Id="design_1_axi_bram_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_bram_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_bram_ctrl_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_bram_ctrl_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_fifo_generator_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_Latch_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_Latch_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_Latch_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_Latch_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_Latch_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_util_vector_logic_5_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_util_vector_logic_5_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_util_vector_logic_5_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_util_vector_logic_5_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_util_vector_logic_5_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_util_vector_logic_5_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_util_vector_logic_5_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_c_shift_ram_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_c_shift_ram_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_c_shift_ram_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_shift_ram_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_shift_ram_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_tlast_tvalid_handler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_tlast_tvalid_handler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_tlast_tvalid_handler_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_tlast_tvalid_handler_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_tlast_tvalid_handler_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_mult_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_mult_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_mult_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_mult_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_mult_gen_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_c_addsub_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_c_addsub_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_c_addsub_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_addsub_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_c_addsub_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_xfft_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_xfft_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_xfft_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_xfft_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_xfft_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="FFT_to_GPIO_bram_writer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="FFT_to_GPIO_bram_writer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="FFT_to_GPIO_bram_writer_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_bram_writer_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/FFT_to_GPIO_bram_writer_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_blk_mem_gen_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_FFT_to_GPIO_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_FFT_to_GPIO_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_FFT_to_GPIO_wrapper_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_FFT_to_GPIO_wrapper_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_FFT_to_GPIO_wrapper_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -2850,9 +3384,7 @@
     </Run>
     <Run Id="design_1_ADC_CHA_Selector_0_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_1_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -2867,11 +3399,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_auto_pc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_0_impl_1">
+    <Run Id="design_1_ADC_CHB_selector_0_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -2886,7 +3416,160 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_tier2_xbar_3_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_tier2_xbar_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_tier2_xbar_3_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_tier2_xbar_3_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_tier2_xbar_3_0_impl_1">
+    <Run Id="design_1_ADC_CHA_Selector_0_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHA_Selector_0_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHB_selector_0_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ADC_CHA_Selector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ila_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ila_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_ila_0_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ila_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ila_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ila_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ila_0_3_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_auto_pc_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_pc_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_auto_pc_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_pc_2_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -2906,120 +3589,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="design_1_auto_ds_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_auto_ds_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_auto_ds_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_auto_ds_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_auto_ds_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_axi_gpio_21_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_axi_gpio_21_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_axi_gpio_21_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_axi_gpio_21_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_axi_gpio_21_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_axi_gpio_21_1_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHA_Selector_0_3_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHA_Selector_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHA_Selector_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHA_Selector_0_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_ADC_CHB_selector_0_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sfvc784-1-e" ConstrsSet="design_1_ADC_CHB_selector_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ADC_CHB_selector_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_ADC_CHB_selector_0_2_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

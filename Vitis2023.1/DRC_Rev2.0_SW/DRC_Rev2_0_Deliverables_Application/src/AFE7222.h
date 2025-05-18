@@ -19,14 +19,17 @@ uint8_t getRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum);
 //sets a value in the regMap and register address specified
 void setRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum, uint8_t regVal);
 
+//Initializes AFE7222 DAC and FPGA data path to write DAC values. outputs voltage value given.
+void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value);
+
 //Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage);
+void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value);
 
 //Sets AFE7222 and FPGA data path to read ADC values. Returns a sample after being set up.
-double HSADC_Init(uint8_t converterNum, uint8_t channel);
+int HSADC_Init(uint8_t converterNum, uint8_t channel);
 
 //Returns a sample from a specified ADC channel.
-double HSADC_getVoltage(uint8_t converterNum, uint8_t channel);
+int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel);
 
 #endif
 

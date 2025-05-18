@@ -112,18 +112,31 @@ int main()
 
    // Initialize ADC Data AXI blocks
    printf("Boot: Initializing ADC probing AXI blocks...\n");
-   XGpio_Initialize(&GPIO20_ADCDATA_0, GPIO20_ADCDATA_0_ID);
-   XGpio_Initialize(&GPIO21_ADCDATA_1, GPIO21_ADCDATA_1_ID);
-   XGpio_Initialize(&GPIO22_ADCDATA_2, GPIO22_ADCDATA_2_ID);
-   XGpio_Initialize(&GPIO23_ADCDATA_3, GPIO23_ADCDATA_3_ID);
+   //XGpio_Initialize(&GPIO20_ADCDATA_0, GPIO20_ADCDATA_0_ID);
+   //XGpio_Initialize(&GPIO21_ADCDATA_1, GPIO21_ADCDATA_1_ID);
+   //XGpio_Initialize(&GPIO22_ADCDATA_2, GPIO22_ADCDATA_2_ID);
+   //XGpio_Initialize(&GPIO23_ADCDATA_3, GPIO23_ADCDATA_3_ID);
+//   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 1, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 1, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 1, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 1, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 2, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 2, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 2, 0xFFF);
+//   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 2, 0xFFF);
 
    // Initialize PL frequency control AXI GPIO block
    printf("Boot: Initializing PL frequency control AXI GPIO block...\n");
-   XGpio_Initialize(&GPIO19_PL_OUTPUT_FREQ, GPIO19_PL_OUTPUT_FREQ_ID);
-   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 3);
-   XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 5);
+   //XGpio_Initialize(&GPIO19_PL_OUTPUT_FREQ, GPIO19_PL_OUTPUT_FREQ_ID);
+   //XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 3);
+   //XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 5);
 
    // Initialize AFEs
+   printf("Boot: Writing initial register values to AFE7222 devices...\n");
+   for (int i = 0x01; i < (0x01 << 4); i = i << 1){
+	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+	   if(Status != XST_SUCCESS) return XST_FAILURE;
+   }
    printf("Boot: Writing initial register values to AFE7222 devices...\n");
    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
 	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
@@ -246,117 +259,53 @@ int main()
 
 	setLEDStatus (0x4);
 
-	setPath(P51_HS_ADC0A);
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 40);
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 40);
 
-	while(1){
-		printf("%lf", HSADC_getVoltage(0, 'A'));
+
+
+	//setPath(P51_HS_ADC0A);
+	//setPath(P21_HS_ADC0B);
+	//setPath(P17_HS_ADC1B);
+	//setPath(P48_HS_ADC1A);
+	//setPath(P46_HS_ADC2A);
+	//setPath(P33_HS_ADC2B);
+	//setPath(P50_HS_ADC3A);
+	//setPath(P55_HS_ADC3B);
+
+	//HSADC_Init(0, 'A');
+	//HSADC_Init(0, 'B');
+	//HSADC_Init(1, 'A');
+	//HSADC_Init(1, 'B');
+	//HSADC_Init(2, 'A');
+	//HSADC_Init(2, 'B');
+	//HSADC_Init(3, 'A');
+	//HSADC_Init(3, 'B');
+
+	while(0){
+//		int a = HSADC_getVoltage_mV(0, 'A');
+//		int b = HSADC_getVoltage_mV(0, 'B');
+//		int c = HSADC_getVoltage_mV(1, 'A');
+//		int d = HSADC_getVoltage_mV(1, 'B');
+//		int e = HSADC_getVoltage_mV(2, 'A');
+//		int f = HSADC_getVoltage_mV(2, 'B');
+//		int g = HSADC_getVoltage_mV(3, 'A');
+//		int h = HSADC_getVoltage_mV(3, 'B');
+
+		usleep(100000);
+		//printf("				%dmV	%dmV	%dmV	%dmV	%dmV	%dmV	%dmV	%dmV\n", a, b, c, d, e, f, g, h);
+
+		//uint32_t FFToutput[128];
+
+		for (int i = 0; i < 128; i++){
+			//FFToutput[i] = Xil_In32(BRAM_BASE_ADDRESS + i * 4);
+		}
+
+		for (int i = 0; i < 128; i++){
+			//printf("%d : %d\n", i, FFToutput[i]);
+		}
+
 	}
-
-//	XSpi_SetSlaveSelect(instance, CS);
-//	uint8_t Rx_buffer[3];
-//	uint8_t Tx_buffer0[3] = {0x11, 0x72, 0x10};
-//	uint8_t Tx_buffer1[3] = {0x11, 0x80, 0x00};
-//	uint8_t Tx_buffer2[3] = {0x11, 0x90, 0x00};
-//	uint8_t Tx_buffer3[3] = {0x11, 0xA0, 0x00};
-//
-//	for(uint32_t i = 0; i < 1 << 12; i++){
-//
-//		Tx_buffer0[1] = ((Tx_buffer0[1] >> 4) << 4) | (i >> 28);
-//		Tx_buffer0[2] = i >> 20 & 0xF0;
-//		Tx_buffer1[1] = ((Tx_buffer1[1] >> 4) << 4) | (0x0F & (i >> 20));
-//		Tx_buffer1[2] = i >> 16 & 0xF0;
-//		Tx_buffer2[1] = ((Tx_buffer2[1] >> 4) << 4) | (0x0F & (i >> 16));
-//		Tx_buffer2[2] = i >> 12 & 0xF0;
-//		Tx_buffer3[1] = ((Tx_buffer3[1] >> 4) << 4) | (0x0F & (i >> 12));
-//		Tx_buffer3[2] = i >> 8 & 0xF0;
-//
-//		XSpi_Transfer(SPI0_AFE, )
-//	}
-
-//For DAC Control application
-//    printf("Initializing.\n");
-//    while(1){
-//        printf("Please enter SPDCTRL value: ");
-//        int readValue;
-//        usleep(100000);
-//        fflush(stdin);
-//        scanf("%d", &readValue);
-//        fflush(stdin);
-//        printf("\n");
-//        if(readValue == 4097){
-//            printf("Please enter sleep time\n");
-//            int sleeptime;
-//            fflush(stdin);
-//            scanf("%d", &sleeptime);
-//            fflush(stdin);
-//        	for(int i = 0; i < 4096; i++){
-//        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
-//        		printf("Current Value: %d\n", i);
-//        		usleep(sleeptime);
-//        	}
-//    		usleep(100000);
-//        }else{
-//            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, readValue);
-//        }
-//        usleep(100000);
-//        printf("Please enter SMPLCTRL value: ");
-//        usleep(100000);
-//        fflush(stdin);
-//        scanf("%d", &readValue);
-//        fflush(stdin);
-//        printf("\n");
-//        if(readValue == 4097){
-//            printf("Please enter sleep time\n");
-//            int sleeptime;
-//            fflush(stdin);
-//            scanf("%d", &sleeptime);
-//            fflush(stdin);
-//        	for(int i = 0; i < 4096; i++){
-//        		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, i);
-//        		printf("Current Value: %d\n", i);
-//        		usleep(sleeptime);
-//        	}
-//    		usleep(100000);
-//        }else{
-//            XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, readValue);
-//        }
-//        usleep(100000);
-//    }
-
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1);
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 1);
-    uint32_t chvalmax;
-    uint32_t chvalmin;
-    printf("DRC ADC MinMax Test.\n");
-    while(0){
-    	chvalmax = XGpio_DiscreteRead(&GPIO2_DATA0A, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO2_DATA0A, 2);
-    	printf("Pin 51:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	chvalmax = XGpio_DiscreteRead(&GPIO3_DATA0B, 1);
-    	chvalmin = XGpio_DiscreteRead(&GPIO3_DATA0B, 2);
-    	printf("Pin 21:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO4_DATA1A, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO4_DATA1A, 2);
-//    	printf("Pin 48:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO5_DATA1B, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO5_DATA1B, 2);
-//    	printf("Pin 17:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO6_DATA2A, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO6_DATA2A, 2);
-//    	printf("Pin 46:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO11_DATA2B, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO11_DATA2B, 2);
-//    	printf("Pin 33:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO12_DATA3A, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO12_DATA3A, 2);
-//    	printf("Pin 50:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-//    	chvalmax = XGpio_DiscreteRead(&GPIO13_DATA3B, 1);
-//    	chvalmin = XGpio_DiscreteRead(&GPIO13_DATA3B, 2);
-//    	printf("Pin 55:\nMax: %X, \nMin: %X\n\n", chvalmax, chvalmin);
-    	usleep(50000);
-    	printf("\033[2J\033[H");
-    	usleep(50000);
-    }
 
 	////////////////////////////////////////////////////////////////////
 	// Test Procedure Begin

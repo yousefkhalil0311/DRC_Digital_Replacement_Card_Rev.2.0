@@ -17,18 +17,19 @@ after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS3 210299BBCD36" && level==0 && jtag_device_ctx=="jsn-JTAG-HS3-210299BBCD36-14710093-0"}
 fpga -file C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/_ide/bitstream/DRC_Rev2_0_Deliverables.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/DRC_Rev2_0_Deliverables.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+loadhw -hw C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/hw/DRC_Rev2_0_Deliverables_noFFT.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/boot/fsbl.elf
-set bp_18_38_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_20_26_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_18_38_fsbl_bp
+bpremove $bp_20_26_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/Debug/DRC_Rev2_0_Deliverables_Application.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con

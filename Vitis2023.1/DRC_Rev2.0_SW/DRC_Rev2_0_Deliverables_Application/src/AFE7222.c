@@ -10,6 +10,11 @@
 #include "DRC_Parameters.h"
 #include "RegisterMaps.h"
 
+
+//store current state of DAC/ADC control data path within the FPGA
+
+static uint8_t GPIO14_AFE_CTRL_CACHE = 0x0F;
+
 int AFE_Init (XSpi *instance, uint8_t *data, int num_bytes, uint32_t CS){
 
 	int Status;
@@ -94,23 +99,39 @@ void setRegMapVal(uint8_t* regMap, int regMapSize, uint16_t regNum, uint8_t regV
 	printf("Error: setRegMapVal - Failed to find register. ");
 }
 
-//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage){
-
-	//set bounds for voltage input
-	if(voltage > 5.0) voltage = 5.0;
-	if(voltage < -5.0) voltage = -5.0;
+//Initializes AFE7222 DAC.
+void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value){
 
 	//program converter to be in DAC only mode
 	programAFEConverter(1 << converterNum, AFE_REG_MAP, AFE_REG_MAP_SIZE);
 
+	//Reset cache bit corresponding to this converter
+	GPIO14_AFE_CTRL_CACHE &= ~(0x08 >> converterNum);
+
     //Set data path to connect DAC control block to AFE7222 pins
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, ~(1 << converterNum));
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, GPIO14_AFE_CTRL_CACHE);
 
 	//set HSDAC controller to be in const voltage mode(this will set const mode for all converters)
 	XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 1);
 
-	int voltageValue = (int)((voltage * 2047) / 5);
+	HSDAC_setVoltage(converterNum, channel, mV_Value);
+
+	//clear bit in control mask to enable FE output
+	uint8_t ctrlMask = (1 << (converterNum + 4)) & 0xF6;
+
+	//Enable DAC's Frontend
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ctrlMask);
+
+}
+
+//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
+void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value){
+
+	//set bounds for voltage input
+	if(mV_Value > 5.0) mV_Value = 5.0;
+	if(mV_Value < -5.0) mV_Value = -5.0;
+
+	int voltageValue = (mV_Value * 2047) / 5;
 
 	XGpio* xgpioInstanceTable[] = {&GPIO15_DAC0Const, &GPIO16_DAC1Const, &GPIO17_DAC2Const, &GPIO18_DAC3Const};
 
@@ -121,28 +142,25 @@ void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, double voltage){
 	//write voltage value to corresponding HSDAC controller
 	XGpio_DiscreteWrite(instance, channel, voltageValue);
 
-	//clear bit in control mask to enable FE output
-	uint8_t ctrlMask = (1 << (converterNum + 4)) & 0xF6;
-
-	//Enable DAC's Frontend
-	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ctrlMask);
-
 }
 
 //Sets AFE7222 and FPGA data path to read ADC values. Returns a sample after being set up.
-double HSADC_Init(uint8_t converterNum, uint8_t channel){
+int HSADC_Init(uint8_t converterNum, uint8_t channel){
 
 	//program converter to be in reset mode (Loopback mode is equivalent to ADC only mode in this test case)
 	programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
 
-    //Set data path to connect ADC control block to AFE7222 pins
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
+	//Set cache bit corresponding to this converter
+	GPIO14_AFE_CTRL_CACHE = 0xF;//|= (0x08 >> converterNum);
 
-	return HSADC_getVoltage(converterNum, channel);
+    //Set data path to connect ADC control block to AFE7222 pins
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, GPIO14_AFE_CTRL_CACHE);
+
+	return HSADC_getVoltage_mV(converterNum, channel);
 }
 
 //Returns a sample from a specified ADC channel.
-double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
+int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel){
 
 	XGpio* instance;
 	uint8_t AXIGPIO_channel;
@@ -180,7 +198,10 @@ double HSADC_getVoltage(uint8_t converterNum, uint8_t channel){
     //read current ADC digital data
     int readValue = XGpio_DiscreteRead(instance, AXIGPIO_channel);
 
-    double voltage = ((double)readValue * 5.0) / 2047.0;
+	//convert 12 bit signed value from ADC to unsigned value (0-10V mapping)
+	int unsignedADCVal = readValue ^ 0x800;
+
+    int voltage = (unsignedADCVal * 5000) / 2047;
 
 	return voltage;
 }

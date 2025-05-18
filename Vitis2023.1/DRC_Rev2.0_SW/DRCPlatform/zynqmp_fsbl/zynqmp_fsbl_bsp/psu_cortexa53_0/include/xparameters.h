@@ -821,7 +821,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 20
+#define XPAR_XGPIO_NUM_INSTANCES 19
 
 /* Definitions for peripheral AXI_GPIO_0 */
 #define XPAR_AXI_GPIO_0_BASEADDR 0x80060000
@@ -836,7 +836,7 @@
 #define XPAR_AXI_GPIO_1_HIGHADDR 0x8001FFFF
 #define XPAR_AXI_GPIO_1_DEVICE_ID 1
 #define XPAR_AXI_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_1_IS_DUAL 1
+#define XPAR_AXI_GPIO_1_IS_DUAL 0
 
 
 /* Definitions for peripheral AXI_GPIO_10 */
@@ -924,7 +924,7 @@
 #define XPAR_AXI_GPIO_8_HIGHADDR 0x8008FFFF
 #define XPAR_AXI_GPIO_8_DEVICE_ID 12
 #define XPAR_AXI_GPIO_8_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_8_IS_DUAL 1
+#define XPAR_AXI_GPIO_8_IS_DUAL 0
 
 
 /* Definitions for peripheral AXI_GPIO_9 */
@@ -975,14 +975,6 @@
 #define XPAR_AXI_GPIO_18_IS_DUAL 1
 
 
-/* Definitions for peripheral ADC_READ */
-#define XPAR_ADC_READ_BASEADDR 0x80180000
-#define XPAR_ADC_READ_HIGHADDR 0x8018FFFF
-#define XPAR_ADC_READ_DEVICE_ID 19
-#define XPAR_ADC_READ_INTERRUPT_PRESENT 0
-#define XPAR_ADC_READ_IS_DUAL 0
-
-
 /******************************************************************/
 
 /* Canonical definitions for peripheral AXI_GPIO_0 */
@@ -997,7 +989,7 @@
 #define XPAR_GPIO_1_HIGHADDR 0x8001FFFF
 #define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_1_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 1
+#define XPAR_GPIO_1_IS_DUAL 0
 
 /* Canonical definitions for peripheral AXI_GPIO_10 */
 #define XPAR_GPIO_2_BASEADDR 0x80050000
@@ -1074,7 +1066,7 @@
 #define XPAR_GPIO_12_HIGHADDR 0x8008FFFF
 #define XPAR_GPIO_12_DEVICE_ID XPAR_AXI_GPIO_8_DEVICE_ID
 #define XPAR_GPIO_12_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_12_IS_DUAL 1
+#define XPAR_GPIO_12_IS_DUAL 0
 
 /* Canonical definitions for peripheral AXI_GPIO_9 */
 #define XPAR_GPIO_13_BASEADDR 0x80000000
@@ -1117,13 +1109,6 @@
 #define XPAR_GPIO_18_DEVICE_ID XPAR_AXI_GPIO_18_DEVICE_ID
 #define XPAR_GPIO_18_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_18_IS_DUAL 1
-
-/* Canonical definitions for peripheral ADC_READ */
-#define XPAR_GPIO_19_BASEADDR 0x80180000
-#define XPAR_GPIO_19_HIGHADDR 0x8018FFFF
-#define XPAR_GPIO_19_DEVICE_ID XPAR_ADC_READ_DEVICE_ID
-#define XPAR_GPIO_19_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_19_IS_DUAL 0
 
 
 /******************************************************************/
