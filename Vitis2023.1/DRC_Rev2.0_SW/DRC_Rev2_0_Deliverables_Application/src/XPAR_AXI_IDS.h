@@ -14,9 +14,6 @@
 //define GPIO IDs for controlling whether AFE pins are connected to DAC or ADC ctrl block
 #define GPIO14_AFE_CNTRL_ID	XPAR_AXI_GPIO_14_DEVICE_ID
 
-//define GPIO IDs for controlling DAC values(constant values)
-//#define GPIO15_AFE
-
 //define IIC IDs for IO expander's IIC bus
 #define IIC0_IOEXP_ID	XPAR_IIC_0_DEVICE_ID
 #define IIC1_IOEXP_ID	XPAR_IIC_1_DEVICE_ID
@@ -36,11 +33,24 @@
 #define GPIO12_DATA3A_ID	XPAR_AXI_GPIO_12_DEVICE_ID
 #define GPIO13_DATA3B_ID	XPAR_AXI_GPIO_13_DEVICE_ID
 
+//define GPIO IDs for raw ADC samples
+//#define GPIO20_ADCDATA_0_ID		XPAR_AXI_GPIO_20_DEVICE_ID
+//#define GPIO21_ADCDATA_1_ID		XPAR_AXI_GPIO_21_DEVICE_ID
+//#define GPIO22_ADCDATA_2_ID		XPAR_AXI_GPIO_22_DEVICE_ID
+//#define GPIO23_ADCDATA_3_ID		XPAR_AXI_GPIO_23_DEVICE_ID
+
+//define GPIO ID for PL clock divider on and off counts
+//#define GPIO19_PL_OUTPUT_FREQ_ID	XPAR_AXI_GPIO_19_DEVICE_ID
+
 
 //define GPIO IDs for Const values of the converters
 #define GPIO15_DAC0Const_ID		XPAR_AXI_GPIO_15_DEVICE_ID
 #define GPIO16_DAC1Const_ID		XPAR_AXI_GPIO_16_DEVICE_ID
 #define GPIO17_DAC2Const_ID		XPAR_AXI_GPIO_17_DEVICE_ID
 #define GPIO18_DAC3Const_ID		XPAR_AXI_GPIO_18_DEVICE_ID
+
+//BRAM base address
+//#define BRAM_BASE_ADDRESS XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+
 
 #endif

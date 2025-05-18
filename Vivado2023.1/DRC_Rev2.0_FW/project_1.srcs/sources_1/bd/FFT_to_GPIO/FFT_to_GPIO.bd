@@ -1,0 +1,864 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xEA50124A3F70B55C",
+      "device": "xczu3eg-sfvc784-1-e",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/FFT_to_GPIO",
+      "name": "FFT_to_GPIO",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "c_addsub_0": "",
+      "mult_gen_0": "",
+      "mult_gen_1": "",
+      "xfft_0": "",
+      "xlconcat_5": "",
+      "xlslice_12": "",
+      "xlslice_13": "",
+      "fifo_generator_0": "",
+      "util_vector_logic_5": "",
+      "Latch_0": "",
+      "xlconstant_0": "",
+      "xlconcat_0": "",
+      "xlslice_0": "",
+      "tlast_tvalid_handler_0": "",
+      "xlconstant_1": "",
+      "xlconstant_2": "",
+      "c_shift_ram_0": "",
+      "util_vector_logic_6": "",
+      "bram_writer_0": ""
+    },
+    "ports": {
+      "rd_clk_10mhz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "nrst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "FFT_to_GPIO_rd_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "nrst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "sample_clk_65mhz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "nrst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "FFT_to_GPIO_clkin_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "65000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "realDataIn": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
+      },
+      "ImgnDataIn": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
+      },
+      "BRAM_addr": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "BRAM_ena": {
+        "direction": "O"
+      },
+      "BRAM_wea": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "BRAM_data": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "c_addsub_0": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "xci_name": "FFT_to_GPIO_c_addsub_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_c_addsub_0_0\\FFT_to_GPIO_c_addsub_0_0.xci",
+        "inst_hier_path": "c_addsub_0",
+        "parameters": {
+          "A_Type": {
+            "value": "Signed"
+          },
+          "A_Width": {
+            "value": "24"
+          },
+          "B_Type": {
+            "value": "Signed"
+          },
+          "B_Value": {
+            "value": "000000000000000000000000"
+          },
+          "B_Width": {
+            "value": "24"
+          },
+          "CE": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "24"
+          }
+        }
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "FFT_to_GPIO_mult_gen_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_mult_gen_0_0\\FFT_to_GPIO_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
+        "parameters": {
+          "PortAType": {
+            "value": "Signed"
+          },
+          "PortAWidth": {
+            "value": "12"
+          },
+          "PortBType": {
+            "value": "Signed"
+          },
+          "PortBWidth": {
+            "value": "12"
+          }
+        }
+      },
+      "mult_gen_1": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "FFT_to_GPIO_mult_gen_1_0",
+        "xci_path": "ip\\FFT_to_GPIO_mult_gen_1_0\\FFT_to_GPIO_mult_gen_1_0.xci",
+        "inst_hier_path": "mult_gen_1",
+        "parameters": {
+          "PortAType": {
+            "value": "Signed"
+          },
+          "PortAWidth": {
+            "value": "12"
+          },
+          "PortBType": {
+            "value": "Signed"
+          },
+          "PortBWidth": {
+            "value": "12"
+          }
+        }
+      },
+      "xfft_0": {
+        "vlnv": "xilinx.com:ip:xfft:9.1",
+        "xci_name": "FFT_to_GPIO_xfft_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_xfft_0_0\\FFT_to_GPIO_xfft_0_0.xci",
+        "inst_hier_path": "xfft_0",
+        "parameters": {
+          "channels": {
+            "value": "1"
+          },
+          "implementation_options": {
+            "value": "automatically_select"
+          },
+          "input_width": {
+            "value": "12"
+          },
+          "number_of_stages_using_block_ram_for_data_and_phase_factors": {
+            "value": "0"
+          },
+          "output_ordering": {
+            "value": "natural_order"
+          },
+          "phase_factor_width": {
+            "value": "16"
+          },
+          "scaling_options": {
+            "value": "scaled"
+          },
+          "target_clock_frequency": {
+            "value": "65"
+          },
+          "target_data_throughput": {
+            "value": "65"
+          },
+          "transform_length": {
+            "value": "128"
+          }
+        }
+      },
+      "xlconcat_5": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "FFT_to_GPIO_xlconcat_5_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlconcat_5_0\\FFT_to_GPIO_xlconcat_5_0.xci",
+        "inst_hier_path": "xlconcat_5",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "12"
+          },
+          "IN1_WIDTH": {
+            "value": "4"
+          },
+          "IN2_WIDTH": {
+            "value": "12"
+          },
+          "IN3_WIDTH": {
+            "value": "4"
+          },
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_12": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_to_GPIO_xlslice_12_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlslice_12_0\\FFT_to_GPIO_xlslice_12_0.xci",
+        "inst_hier_path": "xlslice_12",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "27"
+          },
+          "DIN_TO": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_13": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_to_GPIO_xlslice_13_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlslice_13_0\\FFT_to_GPIO_xlslice_13_0.xci",
+        "inst_hier_path": "xlslice_13",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "11"
+          },
+          "DIN_TO": {
+            "value": "0"
+          }
+        }
+      },
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "FFT_to_GPIO_fifo_generator_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_fifo_generator_0_0\\FFT_to_GPIO_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Enable_ECC": {
+            "value": "false"
+          },
+          "Fifo_Implementation": {
+            "value": "Independent_Clocks_Builtin_FIFO"
+          },
+          "Input_Data_Width": {
+            "value": "24"
+          },
+          "Input_Depth": {
+            "value": "512"
+          },
+          "Performance_Options": {
+            "value": "Standard_FIFO"
+          },
+          "Read_Clock_Frequency": {
+            "value": "10"
+          },
+          "Write_Clock_Frequency": {
+            "value": "65"
+          },
+          "asymmetric_port_width": {
+            "value": "false"
+          }
+        }
+      },
+      "util_vector_logic_5": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "FFT_to_GPIO_util_vector_logic_5_0",
+        "xci_path": "ip\\FFT_to_GPIO_util_vector_logic_5_0\\FFT_to_GPIO_util_vector_logic_5_0.xci",
+        "inst_hier_path": "util_vector_logic_5",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "Latch_0": {
+        "vlnv": "xilinx.com:module_ref:Latch:1.0",
+        "xci_name": "FFT_to_GPIO_Latch_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_Latch_0_0\\FFT_to_GPIO_Latch_0_0.xci",
+        "inst_hier_path": "Latch_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Latch",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "65000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_to_GPIO_clkin_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "set": {
+            "direction": "I"
+          },
+          "rset": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "FFT_to_GPIO_xlconstant_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlconstant_0_0\\FFT_to_GPIO_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "FFT_to_GPIO_xlconcat_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlconcat_0_0\\FFT_to_GPIO_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "23"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "FFT_to_GPIO_xlslice_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlslice_0_0\\FFT_to_GPIO_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "23"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "24"
+          }
+        }
+      },
+      "tlast_tvalid_handler_0": {
+        "vlnv": "xilinx.com:module_ref:tlast_tvalid_handler:1.0",
+        "xci_name": "FFT_to_GPIO_tlast_tvalid_handler_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_tlast_tvalid_handler_0_0\\FFT_to_GPIO_tlast_tvalid_handler_0_0.xci",
+        "inst_hier_path": "tlast_tvalid_handler_0",
+        "parameters": {
+          "numSamples": {
+            "value": "128"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tlast_tvalid_handler",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "interface_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "65000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_to_GPIO_clkin_0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TLAST": {
+                "physical_name": "tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "tvalid",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "interface_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "65000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_to_GPIO_clkin_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "FFT_to_GPIO_xlconstant_1_0",
+        "xci_path": "ip\\FFT_to_GPIO_xlconstant_1_0\\FFT_to_GPIO_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "FFT_to_GPIO_xlconstant_1_1",
+        "xci_path": "ip\\FFT_to_GPIO_xlconstant_1_1\\FFT_to_GPIO_xlconstant_1_1.xci",
+        "inst_hier_path": "xlconstant_2",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "c_shift_ram_0": {
+        "vlnv": "xilinx.com:ip:c_shift_ram:12.0",
+        "xci_name": "FFT_to_GPIO_c_shift_ram_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_c_shift_ram_0_0\\FFT_to_GPIO_c_shift_ram_0_0.xci",
+        "inst_hier_path": "c_shift_ram_0",
+        "parameters": {
+          "Depth": {
+            "value": "2"
+          },
+          "SCLR": {
+            "value": "false"
+          },
+          "SSET": {
+            "value": "false"
+          },
+          "Width": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_6": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "FFT_to_GPIO_util_vector_logic_5_2",
+        "xci_path": "ip\\FFT_to_GPIO_util_vector_logic_5_2\\FFT_to_GPIO_util_vector_logic_5_2.xci",
+        "inst_hier_path": "util_vector_logic_6",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "bram_writer_0": {
+        "vlnv": "xilinx.com:module_ref:bram_writer:1.0",
+        "xci_name": "FFT_to_GPIO_bram_writer_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_bram_writer_0_0\\FFT_to_GPIO_bram_writer_0_0.xci",
+        "inst_hier_path": "bram_writer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bram_writer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_to_GPIO_rd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "indata": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "addra": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ena": {
+            "direction": "O"
+          },
+          "wea": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "BRAMdin": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ImgnDataIn_1": {
+        "ports": [
+          "ImgnDataIn",
+          "xlconcat_5/In0"
+        ]
+      },
+      "Latch_0_output": {
+        "ports": [
+          "Latch_0/Dout",
+          "fifo_generator_0/wr_en",
+          "util_vector_logic_5/Op1",
+          "util_vector_logic_6/Op1"
+        ]
+      },
+      "Net27": {
+        "ports": [
+          "xfft_0/m_axis_data_tdata",
+          "xlslice_12/Din",
+          "xlslice_13/Din"
+        ]
+      },
+      "Net28": {
+        "ports": [
+          "xlslice_12/Dout",
+          "mult_gen_0/A",
+          "mult_gen_0/B"
+        ]
+      },
+      "Net29": {
+        "ports": [
+          "xlslice_13/Dout",
+          "mult_gen_1/A",
+          "mult_gen_1/B"
+        ]
+      },
+      "bram_writer_0_BRAMdin": {
+        "ports": [
+          "bram_writer_0/BRAMdin",
+          "BRAM_data"
+        ]
+      },
+      "bram_writer_0_addra": {
+        "ports": [
+          "bram_writer_0/addra",
+          "BRAM_addr"
+        ]
+      },
+      "bram_writer_0_ena": {
+        "ports": [
+          "bram_writer_0/ena",
+          "BRAM_ena"
+        ]
+      },
+      "bram_writer_0_wea": {
+        "ports": [
+          "bram_writer_0/wea",
+          "BRAM_wea"
+        ]
+      },
+      "c_addsub_0_S": {
+        "ports": [
+          "c_addsub_0/S",
+          "xlslice_0/Din"
+        ]
+      },
+      "c_shift_ram_0_Q": {
+        "ports": [
+          "c_shift_ram_0/Q",
+          "xlconcat_0/In0"
+        ]
+      },
+      "clkin_0_1": {
+        "ports": [
+          "sample_clk_65mhz",
+          "tlast_tvalid_handler_0/clkin",
+          "xfft_0/aclk",
+          "mult_gen_0/CLK",
+          "mult_gen_1/CLK",
+          "c_addsub_0/CLK",
+          "Latch_0/clkin",
+          "fifo_generator_0/wr_clk",
+          "c_shift_ram_0/CLK"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "bram_writer_0/indata"
+        ]
+      },
+      "fifo_generator_0_empty": {
+        "ports": [
+          "fifo_generator_0/empty",
+          "Latch_0/set"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "Latch_0/rset"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "c_addsub_0/B"
+        ]
+      },
+      "mult_gen_1_P": {
+        "ports": [
+          "mult_gen_1/P",
+          "c_addsub_0/A"
+        ]
+      },
+      "rd_clk_0_1": {
+        "ports": [
+          "rd_clk_10mhz",
+          "fifo_generator_0/rd_clk",
+          "bram_writer_0/clk"
+        ]
+      },
+      "realDataIn_1": {
+        "ports": [
+          "realDataIn",
+          "xlconcat_5/In2"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "nrst",
+          "tlast_tvalid_handler_0/rst",
+          "bram_writer_0/rst"
+        ]
+      },
+      "tlast_tvalid_handler_0_tlast": {
+        "ports": [
+          "tlast_tvalid_handler_0/tlast",
+          "xfft_0/s_axis_data_tlast"
+        ]
+      },
+      "tlast_tvalid_handler_0_tvalid": {
+        "ports": [
+          "tlast_tvalid_handler_0/tvalid",
+          "xfft_0/s_axis_data_tvalid"
+        ]
+      },
+      "util_vector_logic_5_Res": {
+        "ports": [
+          "util_vector_logic_5/Res",
+          "fifo_generator_0/rd_en"
+        ]
+      },
+      "util_vector_logic_6_Res": {
+        "ports": [
+          "util_vector_logic_6/Res",
+          "bram_writer_0/en"
+        ]
+      },
+      "xfft_0_m_axis_data_tlast": {
+        "ports": [
+          "xfft_0/m_axis_data_tlast",
+          "c_shift_ram_0/D"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "fifo_generator_0/din"
+        ]
+      },
+      "xlconcat_5_dout": {
+        "ports": [
+          "xlconcat_5/dout",
+          "xfft_0/s_axis_data_tdata"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xfft_0/m_axis_data_tready"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "xlconcat_5/In1"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "xlconcat_5/In3"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "xlconcat_0/In1"
+        ]
+      }
+    }
+  }
+}

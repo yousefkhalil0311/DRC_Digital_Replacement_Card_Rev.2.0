@@ -35,8 +35,9 @@ use IEEE.numeric_std.ALL;
 
 entity DAC_CTRL is
     Port ( CLKIN : in STD_LOGIC;
-           DATA_INA : in STD_LOGIC_VECTOR (11 downto 0);
-           DATA_INB : in STD_LOGIC_VECTOR (11 downto 0);
+           CONSTMODE: in STD_LOGIC;
+           DATA_INA_MIN : in STD_LOGIC_VECTOR (11 downto 0);
+           DATA_INB_MAX : in STD_LOGIC_VECTOR (11 downto 0);
            DACDATA : out STD_LOGIC_VECTOR (11 downto 0);
            DCKOUT : out STD_LOGIC);
 end DAC_CTRL;
@@ -52,20 +53,34 @@ begin
     begin
         
         if (rising_edge(CLKIN)) then
-            if channel = '0' and DATA_INA = "000000000000" then
-                DACVAL <= (not DACVAL);
+            if (CONSTMODE = '0') then
+                if (DACVAL = UNSIGNED(DATA_INB_MAX)) then
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                elsif (DACVAL = UNSIGNED(DATA_INA_MIN)) then
+                    DACVAL <= UNSIGNED(DATA_INB_MAX);
+                else
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                end if;
             else
-                DACVAL <= UNSIGNED(DATA_INA); 
-            end if;
-            
-            if channel = '1' and DATA_INB /= "000000000000" then
-                DACVAL <= UNSIGNED(DATA_INB);
+                if (channel = '0') then
+                    DACVAL <= UNSIGNED(DATA_INA_MIN);
+                elsif (channel = '1') then
+                    DACVAL <= UNSIGNED(DATA_INB_MAX);
+                end if;
             end if;
             
             channel <= not channel;
         end if;
-        if (falling_edge(CLKIN)) then
-            isDCLK1 <= not(isDCLK1);
+    end process;
+    
+    process(CLKIN)
+    begin
+        if (CONSTMODE = '0') then
+            isDCLK1 <= CLKIN;
+        else
+            if(falling_edge(CLKIN)) then
+                isDCLK1 <= not(isDCLK1);
+            end if;
         end if;
     end process;
 end Behavioral;
