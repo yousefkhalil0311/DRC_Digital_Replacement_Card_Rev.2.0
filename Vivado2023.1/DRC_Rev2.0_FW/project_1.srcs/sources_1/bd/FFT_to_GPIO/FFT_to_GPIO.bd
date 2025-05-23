@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEA50124A3F70B55C",
+      "boundary_crc": "0xF67B017EC86810DB",
       "device": "xczu3eg-sfvc784-1-e",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/FFT_to_GPIO",
       "name": "FFT_to_GPIO",
@@ -20,7 +20,6 @@
       "xlslice_13": "",
       "fifo_generator_0": "",
       "util_vector_logic_5": "",
-      "Latch_0": "",
       "xlconstant_0": "",
       "xlconcat_0": "",
       "xlslice_0": "",
@@ -29,6 +28,9 @@
       "xlconstant_2": "",
       "c_shift_ram_0": "",
       "util_vector_logic_6": "",
+      "ila_0": "",
+      "ila_1": "",
+      "Latch_0": "",
       "bram_writer_0": ""
     },
     "ports": {
@@ -41,7 +43,7 @@
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "FFT_to_GPIO_rd_clk_0",
+            "value": "FFT_to_GPIO_rd_clk_10mhz",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -85,7 +87,7 @@
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "FFT_to_GPIO_clkin_0",
+            "value": "FFT_to_GPIO_sample_clk_65mhz",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -132,6 +134,31 @@
         "direction": "O",
         "left": "31",
         "right": "0"
+      },
+      "ILA_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "FFT_to_GPIO_ILA_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "65000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -342,52 +369,6 @@
           }
         }
       },
-      "Latch_0": {
-        "vlnv": "xilinx.com:module_ref:Latch:1.0",
-        "xci_name": "FFT_to_GPIO_Latch_0_0",
-        "xci_path": "ip\\FFT_to_GPIO_Latch_0_0\\FFT_to_GPIO_Latch_0_0.xci",
-        "inst_hier_path": "Latch_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Latch",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clkin": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "65000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "FFT_to_GPIO_clkin_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "set": {
-            "direction": "I"
-          },
-          "rset": {
-            "direction": "I"
-          },
-          "Dout": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          }
-        }
-      },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "FFT_to_GPIO_xlconstant_0_0",
@@ -483,7 +464,7 @@
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "FFT_to_GPIO_clkin_0",
+                "value": "FFT_to_GPIO_sample_clk_65mhz",
                 "value_src": "default_prop"
               }
             },
@@ -517,7 +498,7 @@
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "FFT_to_GPIO_clkin_0",
+                "value": "FFT_to_GPIO_sample_clk_65mhz",
                 "value_src": "default_prop"
               }
             }
@@ -590,11 +571,132 @@
           }
         }
       },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "FFT_to_GPIO_ila_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_ila_0_0\\FFT_to_GPIO_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "16384"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "8"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "12"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "12"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "12"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "12"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "24"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "23"
+          }
+        }
+      },
+      "ila_1": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "FFT_to_GPIO_ila_0_1",
+        "xci_path": "ip\\FFT_to_GPIO_ila_0_1\\FFT_to_GPIO_ila_0_1.xci",
+        "inst_hier_path": "ila_1",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "16384"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "8"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "24"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "24"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "Latch_0": {
+        "vlnv": "xilinx.com:module_ref:Latch:1.0",
+        "xci_name": "FFT_to_GPIO_Latch_0_0",
+        "xci_path": "ip\\FFT_to_GPIO_Latch_0_0\\FFT_to_GPIO_Latch_0_0.xci",
+        "inst_hier_path": "Latch_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Latch",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "65000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "FFT_to_GPIO_sample_clk_65mhz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "set": {
+            "direction": "I"
+          },
+          "rset": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
       "bram_writer_0": {
         "vlnv": "xilinx.com:module_ref:bram_writer:1.0",
         "xci_name": "FFT_to_GPIO_bram_writer_0_0",
         "xci_path": "ip\\FFT_to_GPIO_bram_writer_0_0\\FFT_to_GPIO_bram_writer_0_0.xci",
         "inst_hier_path": "bram_writer_0",
+        "parameters": {
+          "ramDepth": {
+            "value": "1024"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "bram_writer",
@@ -610,7 +712,7 @@
                 "value_src": "constant"
               },
               "CLK_DOMAIN": {
-                "value": "FFT_to_GPIO_rd_clk_0",
+                "value": "FFT_to_GPIO_rd_clk_10mhz",
                 "value_src": "default_prop"
               }
             }
@@ -662,7 +764,8 @@
       "ImgnDataIn_1": {
         "ports": [
           "ImgnDataIn",
-          "xlconcat_5/In0"
+          "xlconcat_5/In0",
+          "ila_0/probe2"
         ]
       },
       "Latch_0_output": {
@@ -670,7 +773,15 @@
           "Latch_0/Dout",
           "fifo_generator_0/wr_en",
           "util_vector_logic_5/Op1",
-          "util_vector_logic_6/Op1"
+          "util_vector_logic_6/Op1",
+          "ila_1/probe2"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "ILA_clk",
+          "ila_1/clk",
+          "ila_0/clk"
         ]
       },
       "Net27": {
@@ -684,14 +795,16 @@
         "ports": [
           "xlslice_12/Dout",
           "mult_gen_0/A",
-          "mult_gen_0/B"
+          "mult_gen_0/B",
+          "ila_0/probe4"
         ]
       },
       "Net29": {
         "ports": [
           "xlslice_13/Dout",
           "mult_gen_1/A",
-          "mult_gen_1/B"
+          "mult_gen_1/B",
+          "ila_0/probe3"
         ]
       },
       "bram_writer_0_BRAMdin": {
@@ -721,13 +834,15 @@
       "c_addsub_0_S": {
         "ports": [
           "c_addsub_0/S",
-          "xlslice_0/Din"
+          "xlslice_0/Din",
+          "ila_0/probe5"
         ]
       },
       "c_shift_ram_0_Q": {
         "ports": [
           "c_shift_ram_0/Q",
-          "xlconcat_0/In0"
+          "xlconcat_0/In0",
+          "ila_0/probe7"
         ]
       },
       "clkin_0_1": {
@@ -738,26 +853,31 @@
           "mult_gen_0/CLK",
           "mult_gen_1/CLK",
           "c_addsub_0/CLK",
-          "Latch_0/clkin",
           "fifo_generator_0/wr_clk",
-          "c_shift_ram_0/CLK"
+          "c_shift_ram_0/CLK",
+          "ila_0/probe0",
+          "ila_1/probe0",
+          "Latch_0/clkin"
         ]
       },
       "fifo_generator_0_dout": {
         "ports": [
           "fifo_generator_0/dout",
+          "ila_1/probe5",
           "bram_writer_0/indata"
         ]
       },
       "fifo_generator_0_empty": {
         "ports": [
           "fifo_generator_0/empty",
+          "ila_1/probe7",
           "Latch_0/set"
         ]
       },
       "fifo_generator_0_full": {
         "ports": [
           "fifo_generator_0/full",
+          "ila_1/probe3",
           "Latch_0/rset"
         ]
       },
@@ -777,13 +897,15 @@
         "ports": [
           "rd_clk_10mhz",
           "fifo_generator_0/rd_clk",
+          "ila_1/probe4",
           "bram_writer_0/clk"
         ]
       },
       "realDataIn_1": {
         "ports": [
           "realDataIn",
-          "xlconcat_5/In2"
+          "xlconcat_5/In2",
+          "ila_0/probe1"
         ]
       },
       "rst_0_1": {
@@ -808,7 +930,8 @@
       "util_vector_logic_5_Res": {
         "ports": [
           "util_vector_logic_5/Res",
-          "fifo_generator_0/rd_en"
+          "fifo_generator_0/rd_en",
+          "ila_1/probe6"
         ]
       },
       "util_vector_logic_6_Res": {
@@ -826,7 +949,8 @@
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
-          "fifo_generator_0/din"
+          "fifo_generator_0/din",
+          "ila_1/probe1"
         ]
       },
       "xlconcat_5_dout": {
@@ -856,7 +980,8 @@
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
-          "xlconcat_0/In1"
+          "xlconcat_0/In1",
+          "ila_0/probe6"
         ]
       }
     }

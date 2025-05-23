@@ -34,14 +34,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity bram_writer is
     generic (
-        ramDepth : integer := 512
+        ramDepth : integer := 1024
     );
       Port ( 
       
-            clk     : in std_logic; 
-            indata  : in std_logic_vector (23 downto 0);
-            rst     : in std_logic;
-            en      : in std_logic;
+            clk                     : in std_logic; 
+            indata                  : in std_logic_vector (23 downto 0);
+            rst                     : in std_logic;
+            en                      : in std_logic;
             
             --BRAM signals
             addra   : out std_logic_vector (31 downto 0);
@@ -78,19 +78,17 @@ begin
             addra <= std_logic_vector(address_cntr);
             wea <= "1111";
             BRAMdin <= x"00" & indata;
-        
-            if(endOperation = '1') then                 --don't do anything if endOperation bit set.
             
-            elsif(tlast_captured = '0') then
+            if(endOperation = '0' and tlast_captured = '0') then
             
                 if(indata(0) = '1') then                --if first tlast event occurs
                     
                     tlast_captured <= '1';              --set tlast_captured flag
-                    address_cntr <= address_cntr + 1;   --increment address since this value will be the first FFT bin value
+                    address_cntr <= address_cntr + 4;   --increment address since this value will be the first FFT bin value
                     
                 end if;
             
-            else
+            elsif(endOperation = '0') then
           
                 if(indata(0) = '1') then                --on second tlast_captured event
                     address_cntr <= (others => '0');    --reset address
@@ -102,7 +100,7 @@ begin
                     tlast_captured <= '0';
                     
                 else
-                    address_cntr <= address_cntr + 1;
+                    address_cntr <= address_cntr + 4;
                     
                 end if;
                 

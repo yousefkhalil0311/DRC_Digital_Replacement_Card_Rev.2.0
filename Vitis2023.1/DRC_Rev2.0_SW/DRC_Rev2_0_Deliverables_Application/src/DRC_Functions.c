@@ -53,6 +53,7 @@ int setPath(SWState_t path){
 		i++;
 	}
 
+	return XST_SUCCESS;
 }
 
 //sets the State of an IO pin

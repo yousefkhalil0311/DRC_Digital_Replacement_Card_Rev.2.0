@@ -11,19 +11,6 @@ XGpio GPIO10_DS;
 XGpio GPIO7_SPDT;
 XGpio GPIO11_CLKP;
 XGpio GPIO1_SPDCTRL;
-XGpio GPIO2_DATA0A;
-XGpio GPIO3_DATA0B;
-XGpio GPIO4_DATA1A;
-XGpio GPIO5_DATA1B;
-XGpio GPIO6_DATA2A;
-XGpio GPIO11_DATA2B;
-XGpio GPIO12_DATA3A;
-XGpio GPIO13_DATA3B;
-XGpio GPIO14_AFE_CTRL;
-XGpio GPIO15_DAC0Const;
-XGpio GPIO16_DAC1Const;
-XGpio GPIO17_DAC2Const;
-XGpio GPIO18_DAC3Const;
 XGpio GPIO20_ADCDATA_0;
 XGpio GPIO21_ADCDATA_1;
 XGpio GPIO22_ADCDATA_2;
@@ -38,6 +25,9 @@ XIic IIC2_IOEXP; //(U20:0x22, U21:0x23)
 //SPI bus XSpi instances
 XSpi SPI0_AFE;
 XSpi SPI1_LSDAC;
+
+//PS UART interface
+XUartPs UART_PS;
 
 //Direction Control IO Expander structs
 DIRCTRL_IOEXP IOEXP_U18 = {&IIC1_IOEXP, 0x22, 0x00000000};
@@ -75,14 +65,8 @@ const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
-const net_t CONSTMODE = {&GPIO8_CTRL, 0, 2, 0, 0};
+//const net_t CONSTMODE = {&GPIO8_CTRL, 0, 2, 0, 0};
 //const net_t P89_clkEn = {&GPIO8_CTRL, 1, 2, 0, 0};
-
-//AFE_CTRL XGpio pins
-const net_t AFE0_CTRL = {&GPIO14_AFE_CTRL, 3, 1, 0, 1};
-const net_t AFE1_CTRL = {&GPIO14_AFE_CTRL, 2, 1, 0, 1};//set to 1 for loopback mode
-const net_t AFE2_CTRL = {&GPIO14_AFE_CTRL, 1, 1, 0, 1};
-const net_t AFE3_CTRL = {&GPIO14_AFE_CTRL, 0, 1, 0, 1};
 
 //SPDT control XGpio pins
 const net_t SPDT3_CTRL  = {&GPIO7_SPDT, 0, 1, 0, 1}; //Path_Select will override default_state here
@@ -195,17 +179,10 @@ const size_t GPIO_LED_LEN = sizeof(GPIO_LED)/sizeof(GPIO_LED[0]);
 
 //Arrays used in initialization of GPIO AXI blocks
 const net_t* GPIO_CTRL[] = {
-	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3, &CONSTMODE, /*&P89_clkEn*/
+	&INT_n, &EXP_RST, &CLR_n, &RESET, &VC0, &VC1, &VC2, &VC3, /*&CONSTMODE, &P89_clkEn*/
 };
 
 const size_t GPIO_CTRL_LEN = sizeof(GPIO_CTRL)/sizeof(GPIO_CTRL[0]);
-
-//Arrays used in initialization of GPIO AXI blocks
-const net_t* GPIO_AFE_CTRL[] = {
-		&AFE0_CTRL, &AFE1_CTRL, &AFE2_CTRL, &AFE3_CTRL
-};
-
-const size_t GPIO_AFE_CTRL_LEN = sizeof(GPIO_AFE_CTRL)/sizeof(GPIO_AFE_CTRL[0]);
 
 //Arrays used in initialization of GPIO AXI blocks
 

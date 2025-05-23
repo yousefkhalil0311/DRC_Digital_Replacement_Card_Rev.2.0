@@ -45,12 +45,15 @@ begin
     Dout <= outState;
     process(clkin)
     begin
-        if(set = '1') then
-            outState <= '1';
-        end if;
-        if(rset = '1') then
-            outState <= '0';
+        if rising_edge(clkin) then
+            if(set = '1') then
+                outState <= '1';
+            elsif(rset = '1') then
+                outState <= '0';
+            end if;
         end if;
     end process;
+
+
 
 end Behavioral;

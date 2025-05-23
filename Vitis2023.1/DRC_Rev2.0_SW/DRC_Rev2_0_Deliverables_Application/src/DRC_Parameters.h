@@ -5,6 +5,7 @@
 #include "XGpio.h"
 #include "XIic.h"
 #include "XSpi.h"
+#include "xuartps.h"
 
 //Project specific includes
 #include "StructDefinitions.h"
@@ -17,19 +18,6 @@ extern XGpio GPIO10_DS;
 extern XGpio GPIO7_SPDT;
 extern XGpio GPIO11_CLKP;
 extern XGpio GPIO1_SPDCTRL;
-extern XGpio GPIO2_DATA0A;
-extern XGpio GPIO3_DATA0B;
-extern XGpio GPIO4_DATA1A;
-extern XGpio GPIO5_DATA1B;
-extern XGpio GPIO6_DATA2A;
-extern XGpio GPIO11_DATA2B;
-extern XGpio GPIO12_DATA3A;
-extern XGpio GPIO13_DATA3B;
-extern XGpio GPIO14_AFE_CTRL;
-extern XGpio GPIO15_DAC0Const;
-extern XGpio GPIO16_DAC1Const;
-extern XGpio GPIO17_DAC2Const;
-extern XGpio GPIO18_DAC3Const;
 extern XGpio GPIO20_ADCDATA_0;
 extern XGpio GPIO21_ADCDATA_1;
 extern XGpio GPIO22_ADCDATA_2;
@@ -44,6 +32,9 @@ extern XIic IIC2_IOEXP; //(U20:0x22, U21:0x23)
 //SPI bus XSpi instances
 extern XSpi SPI0_AFE;
 extern XSpi SPI1_LSDAC;
+
+//PS UART interface
+extern XUartPs UART_PS;
 
 //Direction Control IO Expander structs
 extern DIRCTRL_IOEXP IOEXP_U18;
@@ -81,14 +72,6 @@ extern const net_t VC0;
 extern const net_t VC1;
 extern const net_t VC2;
 extern const net_t VC3;
-extern const net_t CONSTMODE;
-extern const net_t P89_clkEn;
-
-//AFE_CTRL XGpio pins
-extern const net_t AFE0_CTRL;
-extern const net_t AFE1_CTRL;
-extern const net_t AFE2_CTRL;
-extern const net_t AFE3_CTRL;
 
 //SPDT control XGpio pins
 extern const net_t SPDT3_CTRL;
@@ -199,9 +182,6 @@ extern const size_t GPIO_LED_LEN;
 
 extern const net_t* GPIO_CTRL[];
 extern const size_t GPIO_CTRL_LEN;
-
-extern const net_t* GPIO_AFE_CTRL[];
-extern const size_t GPIO_AFE_CTRL_LEN;
 
 extern const net_t* GPIO_SPDT[];
 extern const size_t GPIO_SPDT_LEN;

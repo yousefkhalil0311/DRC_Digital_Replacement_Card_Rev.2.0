@@ -226,60 +226,6 @@
             },
             "V5": {
                 "VT": "AC",
-                "BA": "0x0080020000",
-                "HA": "0x008002FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_2_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_2",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V6": {
-                "VT": "AC",
-                "BA": "0x0080030000",
-                "HA": "0x008003FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_3_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_3",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V7": {
-                "VT": "AC",
-                "BA": "0x0080040000",
-                "HA": "0x008004FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_4_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_4",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V8": {
-                "VT": "AC",
                 "BA": "0x0080050000",
                 "HA": "0x008005FFFF",
                 "BP": "C_BASEADDR",
@@ -296,7 +242,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V9": {
+            "V6": {
                 "VT": "AC",
                 "BA": "0x0080060000",
                 "HA": "0x008006FFFF",
@@ -314,7 +260,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V10": {
+            "V7": {
                 "VT": "AC",
                 "BA": "0x0080070000",
                 "HA": "0x008007FFFF",
@@ -332,7 +278,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V11": {
+            "V8": {
                 "VT": "AC",
                 "BA": "0x0080080000",
                 "HA": "0x008008FFFF",
@@ -350,7 +296,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V12": {
+            "V9": {
                 "VT": "AC",
                 "BA": "0x0080090000",
                 "HA": "0x008009FFFF",
@@ -368,7 +314,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V13": {
+            "V10": {
                 "VT": "AC",
                 "BA": "0x00800A0000",
                 "HA": "0x00800AFFFF",
@@ -386,7 +332,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V14": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x00800B0000",
                 "HA": "0x00800BFFFF",
@@ -404,97 +350,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V15": {
-                "VT": "AC",
-                "BA": "0x00800C0000",
-                "HA": "0x00800CFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_5_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_5",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V16": {
-                "VT": "AC",
-                "BA": "0x00800D0000",
-                "HA": "0x00800DFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_6_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_6",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V17": {
-                "VT": "AC",
-                "BA": "0x00800E0000",
-                "HA": "0x00800EFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_11_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_11",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V18": {
-                "VT": "AC",
-                "BA": "0x00800F0000",
-                "HA": "0x00800FFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_12_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_12",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V19": {
-                "VT": "AC",
-                "BA": "0x0080100000",
-                "HA": "0x008010FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_13_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_13",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V20": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x0080110000",
                 "HA": "0x008011FFFF",
@@ -512,7 +368,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V21": {
+            "V13": {
                 "VT": "AC",
                 "BA": "0x0080120000",
                 "HA": "0x008012FFFF",
@@ -530,97 +386,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V22": {
-                "VT": "AC",
-                "BA": "0x0080130000",
-                "HA": "0x008013FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_14_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_14",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V23": {
-                "VT": "AC",
-                "BA": "0x0080140000",
-                "HA": "0x008014FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_15_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_15",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V24": {
-                "VT": "AC",
-                "BA": "0x0080150000",
-                "HA": "0x008015FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_16_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_16",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V25": {
-                "VT": "AC",
-                "BA": "0x0080160000",
-                "HA": "0x008016FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_17_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_17",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V26": {
-                "VT": "AC",
-                "BA": "0x0080170000",
-                "HA": "0x008017FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_18_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_18",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V27": {
+            "V14": {
                 "VT": "AC",
                 "BA": "0x0080180000",
                 "HA": "0x008018FFFF",
@@ -638,25 +404,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V28": {
-                "VT": "AC",
-                "BA": "0x0080190000",
-                "HA": "0x008019FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/zynq_ultra_ps_e_0",
-                "MI": "M_AXI_HPM0_LPD",
-                "MS": "SEG_axi_gpio_19_Reg",
-                "MV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "SX": "/axi_gpio_19",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V29": {
+            "V15": {
                 "VT": "AC",
                 "BA": "0x00801A0000",
                 "HA": "0x00801AFFFF",
@@ -674,7 +422,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V30": {
+            "V16": {
                 "VT": "AC",
                 "BA": "0x00801B0000",
                 "HA": "0x00801BFFFF",
@@ -692,7 +440,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V31": {
+            "V17": {
                 "VT": "AC",
                 "BA": "0x00801C0000",
                 "HA": "0x00801CFFFF",
@@ -710,7 +458,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V32": {
+            "V18": {
                 "VT": "AC",
                 "BA": "0x0082000000",
                 "HA": "0x0082001FFF",
@@ -728,7 +476,7 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V33": {
+            "V19": {
                 "VT": "AC",
                 "BA": "0x0084000000",
                 "HA": "0x0084001FFF",
@@ -838,76 +586,6 @@
             },
             {
                 "src": "V19",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V20",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V21",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V22",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V23",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V24",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V25",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V26",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V27",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V28",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V29",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V30",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V31",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V32",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V33",
                 "trg": "V2",
                 "EH": "2"
             }

@@ -11,6 +11,5 @@ void TestMode4(uint32_t runTime);
 void TestMode5(uint32_t runTime);
 void TestMode6(uint32_t runTime);
 void TestMode7(uint32_t runTime);
-void TestMode8();
 
 #endif
