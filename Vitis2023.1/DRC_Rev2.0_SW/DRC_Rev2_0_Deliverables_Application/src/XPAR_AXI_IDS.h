@@ -40,7 +40,7 @@
 //#define GPIO23_ADCDATA_3_ID		XPAR_AXI_GPIO_23_DEVICE_ID
 
 //define GPIO ID for PL clock divider on and off counts
-//#define GPIO19_PL_OUTPUT_FREQ_ID	XPAR_AXI_GPIO_19_DEVICE_ID
+#define GPIO19_PL_OUTPUT_FREQ_ID	XPAR_AXI_GPIO_19_DEVICE_ID
 
 
 //define GPIO IDs for Const values of the converters

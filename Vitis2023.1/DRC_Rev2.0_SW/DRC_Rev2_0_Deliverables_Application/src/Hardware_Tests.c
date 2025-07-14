@@ -539,9 +539,18 @@ void TestMode6(uint32_t runTime){
     	return XST_FAILURE;
     }
 
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06); //Enable all DAC FEs
+	//Set Default sample clock divider
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 2);
 
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF); //Set data path to connect ADC control block to AFE7222 pins
+	//Reset AFE7222 Converters
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xFE);
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6);
+
+    //Enable all DAC FEs
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06);
+
+    //Set data path to connect ADC control block to AFE7222 pins
+    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
 
     //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
     for (int i = 0x01; i < (0x01 << 4); i = i << 1){
@@ -613,6 +622,13 @@ void TestMode7(uint32_t runTime){
     if(Status != XST_SUCCESS){
     	return XST_FAILURE;
     }
+
+	//Set Default sample clock divider
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 2);
+
+	//Reset AFE7222 Converters
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xFE);
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6);
 
     //Enable all DAC FEs
     XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06);

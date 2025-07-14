@@ -137,11 +137,6 @@ int main()
 	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
 	   if(Status != XST_SUCCESS) return XST_FAILURE;
    }
-   printf("Boot: Writing initial register values to AFE7222 devices...\n");
-   for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
-	   if(Status != XST_SUCCESS) return XST_FAILURE;
-   }
 
    // Initialize IIC and IO Expanders
    printf("Boot: Initializing IIC0 and IO Expander U19...\n");
@@ -258,54 +253,6 @@ int main()
 
 
 	setLEDStatus (0x4);
-
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 40);
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 40);
-
-
-
-	//setPath(P51_HS_ADC0A);
-	//setPath(P21_HS_ADC0B);
-	//setPath(P17_HS_ADC1B);
-	//setPath(P48_HS_ADC1A);
-	//setPath(P46_HS_ADC2A);
-	//setPath(P33_HS_ADC2B);
-	//setPath(P50_HS_ADC3A);
-	//setPath(P55_HS_ADC3B);
-
-	//HSADC_Init(0, 'A');
-	//HSADC_Init(0, 'B');
-	//HSADC_Init(1, 'A');
-	//HSADC_Init(1, 'B');
-	//HSADC_Init(2, 'A');
-	//HSADC_Init(2, 'B');
-	//HSADC_Init(3, 'A');
-	//HSADC_Init(3, 'B');
-
-	while(0){
-//		int a = HSADC_getVoltage_mV(0, 'A');
-//		int b = HSADC_getVoltage_mV(0, 'B');
-//		int c = HSADC_getVoltage_mV(1, 'A');
-//		int d = HSADC_getVoltage_mV(1, 'B');
-//		int e = HSADC_getVoltage_mV(2, 'A');
-//		int f = HSADC_getVoltage_mV(2, 'B');
-//		int g = HSADC_getVoltage_mV(3, 'A');
-//		int h = HSADC_getVoltage_mV(3, 'B');
-
-		usleep(100000);
-		//printf("				%dmV	%dmV	%dmV	%dmV	%dmV	%dmV	%dmV	%dmV\n", a, b, c, d, e, f, g, h);
-
-		//uint32_t FFToutput[128];
-
-		for (int i = 0; i < 128; i++){
-			//FFToutput[i] = Xil_In32(BRAM_BASE_ADDRESS + i * 4);
-		}
-
-		for (int i = 0; i < 128; i++){
-			//printf("%d : %d\n", i, FFToutput[i]);
-		}
-
-	}
 
 	////////////////////////////////////////////////////////////////////
 	// Test Procedure Begin

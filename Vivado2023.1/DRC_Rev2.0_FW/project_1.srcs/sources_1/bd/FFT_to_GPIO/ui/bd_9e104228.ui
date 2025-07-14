@@ -8,64 +8,64 @@
 preplace port port-id_rd_clk_10mhz -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
 preplace port port-id_nrst -pg 1 -lvl 0 -x 0 -y 830 -defaultsOSRD
 preplace port port-id_sample_clk_65mhz -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
-preplace port port-id_BRAM_ena -pg 1 -lvl 10 -x 2390 -y 800 -defaultsOSRD
+preplace port port-id_BRAM_ena -pg 1 -lvl 10 -x 2470 -y 800 -defaultsOSRD
 preplace portBus realDataIn -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
 preplace portBus ImgnDataIn -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
-preplace portBus BRAM_addr -pg 1 -lvl 10 -x 2390 -y 780 -defaultsOSRD
-preplace portBus BRAM_wea -pg 1 -lvl 10 -x 2390 -y 820 -defaultsOSRD
-preplace portBus BRAM_data -pg 1 -lvl 10 -x 2390 -y 840 -defaultsOSRD
-preplace inst c_addsub_0 -pg 1 -lvl 6 -x 1350 -y 910 -defaultsOSRD
-preplace inst mult_gen_0 -pg 1 -lvl 5 -x 1160 -y 910 -defaultsOSRD
-preplace inst mult_gen_1 -pg 1 -lvl 5 -x 1160 -y 510 -defaultsOSRD
-preplace inst xfft_0 -pg 1 -lvl 3 -x 650 -y 650 -defaultsOSRD
-preplace inst xlconcat_5 -pg 1 -lvl 2 -x 310 -y 620 -defaultsOSRD
-preplace inst xlslice_12 -pg 1 -lvl 4 -x 950 -y 530 -defaultsOSRD
-preplace inst xlslice_13 -pg 1 -lvl 4 -x 950 -y 430 -defaultsOSRD
-preplace inst fifo_generator_0 -pg 1 -lvl 9 -x 2190 -y 160 -defaultsOSRD
-preplace inst util_vector_logic_5 -pg 1 -lvl 8 -x 1810 -y 200 -defaultsOSRD
-preplace inst Latch_0 -pg 1 -lvl 7 -x 1560 -y 220 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 8 -x 1810 -y 670 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 8 -x 1810 -y 540 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 7 -x 1560 -y 550 -defaultsOSRD
-preplace inst tlast_tvalid_handler_0 -pg 1 -lvl 2 -x 310 -y 900 -defaultsOSRD
+preplace portBus BRAM_addr -pg 1 -lvl 10 -x 2470 -y 780 -defaultsOSRD
+preplace portBus BRAM_wea -pg 1 -lvl 10 -x 2470 -y 820 -defaultsOSRD
+preplace portBus BRAM_data -pg 1 -lvl 10 -x 2470 -y 840 -defaultsOSRD
+preplace inst xlconcat_5 -pg 1 -lvl 2 -x 320 -y 620 -defaultsOSRD
+preplace inst xlslice_12 -pg 1 -lvl 4 -x 1000 -y 530 -defaultsOSRD
+preplace inst xlslice_13 -pg 1 -lvl 4 -x 1000 -y 430 -defaultsOSRD
+preplace inst util_vector_logic_5 -pg 1 -lvl 8 -x 1890 -y 200 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 8 -x 1890 -y 670 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 8 -x 1890 -y 540 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 7 -x 1630 -y 550 -defaultsOSRD
+preplace inst tlast_tvalid_handler_0 -pg 1 -lvl 2 -x 320 -y 900 -defaultsOSRD
 preplace inst xlconstant_1 -pg 1 -lvl 1 -x 100 -y 570 -defaultsOSRD
 preplace inst xlconstant_2 -pg 1 -lvl 1 -x 100 -y 690 -defaultsOSRD
-preplace inst c_shift_ram_0 -pg 1 -lvl 7 -x 1560 -y 440 -defaultsOSRD
-preplace inst util_vector_logic_6 -pg 1 -lvl 8 -x 1810 -y 300 -defaultsOSRD
-preplace inst bram_writer_0 -pg 1 -lvl 9 -x 2190 -y 810 -defaultsOSRD
-preplace netloc Latch_0_output 1 7 2 1660 120 NJ
-preplace netloc Net27 1 3 1 850 430n
-preplace netloc Net28 1 4 1 1050 530n
-preplace netloc Net29 1 4 1 1060 430n
-preplace netloc c_addsub_0_S 1 6 1 1460 550n
-preplace netloc clkin_0_1 1 0 9 NJ 810 180 810 450 810 NJ 810 1070 830 1260 830 1440 360 NJ 360 1990J
-preplace netloc fifo_generator_0_full 1 6 3 1450 80 NJ 80 NJ
-preplace netloc mult_gen_0_P 1 5 1 N 910
-preplace netloc mult_gen_1_P 1 5 1 1250 510n
-preplace netloc rd_clk_0_1 1 0 9 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 2000
-preplace netloc rst_0_1 1 0 9 NJ 830 190 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 N
-preplace netloc tlast_tvalid_handler_0_tlast 1 2 1 430 640n
-preplace netloc tlast_tvalid_handler_0_tvalid 1 2 1 440 660n
-preplace netloc xlconcat_0_dout 1 8 1 1980 100n
-preplace netloc xlconcat_5_dout 1 2 1 N 620
-preplace netloc xlconstant_0_dout 1 3 6 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 1960
-preplace netloc xlslice_0_Dout 1 7 1 NJ 550
-preplace netloc xlconstant_2_dout 1 1 1 190J 650n
-preplace netloc xlconstant_1_dout 1 1 1 180J 570n
-preplace netloc c_shift_ram_0_Q 1 7 1 1660 440n
-preplace netloc xfft_0_m_axis_data_tlast 1 3 4 NJ 590 NJ 590 NJ 590 1450
-preplace netloc fifo_generator_0_empty 1 6 3 1460 140 NJ 140 2010J
-preplace netloc util_vector_logic_5_Res 1 8 1 NJ 200
-preplace netloc fifo_generator_0_dout 1 8 1 2010 180n
-preplace netloc util_vector_logic_6_Res 1 8 1 1970 300n
+preplace inst util_vector_logic_6 -pg 1 -lvl 8 -x 1890 -y 300 -defaultsOSRD
+preplace inst Latch_0 -pg 1 -lvl 7 -x 1630 -y 220 -defaultsOSRD
+preplace inst bram_writer_0 -pg 1 -lvl 9 -x 2270 -y 810 -defaultsOSRD
+preplace inst c_addsub_0 -pg 1 -lvl 6 -x 1410 -y 910 -defaultsOSRD
+preplace inst c_shift_ram_0 -pg 1 -lvl 7 -x 1630 -y 440 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 9 -x 2270 -y 160 -defaultsOSRD
+preplace inst mult_gen_0 -pg 1 -lvl 5 -x 1220 -y 910 -defaultsOSRD
+preplace inst mult_gen_1 -pg 1 -lvl 5 -x 1220 -y 510 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 3 -x 680 -y 650 -defaultsOSRD
+preplace netloc ImgnDataIn_1 1 0 2 NJ 510 190J
+preplace netloc Latch_0_output 1 7 2 1740 120 NJ
+preplace netloc Net27 1 3 1 900 430n
+preplace netloc Net28 1 4 1 1110 530n
+preplace netloc Net29 1 4 1 1120 430n
+preplace netloc bram_writer_0_BRAMdin 1 9 1 NJ 840
 preplace netloc bram_writer_0_addra 1 9 1 NJ 780
 preplace netloc bram_writer_0_ena 1 9 1 NJ 800
 preplace netloc bram_writer_0_wea 1 9 1 NJ 820
-preplace netloc bram_writer_0_BRAMdin 1 9 1 NJ 840
+preplace netloc c_addsub_0_S 1 6 1 1520 550n
+preplace netloc c_shift_ram_0_Q 1 7 1 1730 440n
+preplace netloc clkin_0_1 1 0 9 NJ 810 190 710 460 500 880J 590 1130 430 1320 430 1510 130 NJ 130 2080J
+preplace netloc fifo_generator_0_dout 1 8 1 2090 180n
+preplace netloc fifo_generator_0_empty 1 6 3 1530 140 NJ 140 2070J
+preplace netloc fifo_generator_0_full 1 6 3 1520 80 NJ 80 NJ
+preplace netloc mult_gen_0_P 1 5 1 N 910
+preplace netloc mult_gen_1_P 1 5 1 1310 510n
+preplace netloc rd_clk_0_1 1 0 9 20J 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 2070
 preplace netloc realDataIn_1 1 0 2 NJ 630 NJ
-preplace netloc ImgnDataIn_1 1 0 2 NJ 510 190J
-levelinfo -pg 1 0 100 310 650 950 1160 1350 1560 1810 2190 2390
-pagesize -pg 1 -db -bbox -sgen -180 0 2560 990
+preplace netloc rst_0_1 1 0 9 NJ 830 200 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 N
+preplace netloc tlast_tvalid_handler_0_tlast 1 2 1 470 640n
+preplace netloc tlast_tvalid_handler_0_tvalid 1 2 1 480 660n
+preplace netloc util_vector_logic_5_Res 1 8 1 NJ 200
+preplace netloc util_vector_logic_6_Res 1 8 1 2050 300n
+preplace netloc xfft_0_m_axis_data_tlast 1 3 4 890J 370 NJ 370 NJ 370 1530
+preplace netloc xlconcat_0_dout 1 8 1 2060 100n
+preplace netloc xlconcat_5_dout 1 2 1 N 620
+preplace netloc xlconstant_0_dout 1 3 6 NJ 620 NJ 620 NJ 620 1500J 730 NJ 730 2040
+preplace netloc xlconstant_1_dout 1 1 1 180J 570n
+preplace netloc xlconstant_2_dout 1 1 1 190J 650n
+preplace netloc xlslice_0_Dout 1 7 1 NJ 550
+levelinfo -pg 1 0 100 320 680 1000 1220 1410 1630 1890 2270 2470
+pagesize -pg 1 -db -bbox -sgen -180 0 2640 990
 "
 }
 0
