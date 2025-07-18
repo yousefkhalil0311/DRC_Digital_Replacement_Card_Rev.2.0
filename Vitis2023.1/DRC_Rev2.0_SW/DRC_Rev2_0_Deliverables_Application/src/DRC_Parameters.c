@@ -11,14 +11,6 @@ XGpio GPIO10_DS;
 XGpio GPIO7_SPDT;
 XGpio GPIO11_CLKP;
 XGpio GPIO1_SPDCTRL;
-XGpio GPIO2_DATA0A;
-XGpio GPIO3_DATA0B;
-XGpio GPIO4_DATA1A;
-XGpio GPIO5_DATA1B;
-XGpio GPIO6_DATA2A;
-XGpio GPIO11_DATA2B;
-XGpio GPIO12_DATA3A;
-XGpio GPIO13_DATA3B;
 XGpio GPIO14_AFE_CTRL;
 XGpio GPIO15_DAC0Const;
 XGpio GPIO16_DAC1Const;
@@ -28,7 +20,6 @@ XGpio GPIO20_ADCDATA_0;
 XGpio GPIO21_ADCDATA_1;
 XGpio GPIO22_ADCDATA_2;
 XGpio GPIO23_ADCDATA_3;
-XGpio GPIO19_PL_OUTPUT_FREQ;
 
 //IIC bus XIic instances
 XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)
@@ -41,13 +32,13 @@ XSpi SPI1_LSDAC;
 
 //Direction Control IO Expander structs
 DIRCTRL_IOEXP IOEXP_U18 = {&IIC1_IOEXP, 0x22, 0x00000000};
-DIRCTRL_IOEXP IOEXP_U19 = {&IIC0_IOEXP, 0x23, 0x00000000};
+DIRCTRL_IOEXP IOEXP_U19 = {&IIC0_IOEXP, 0x23, 0x00000004};
 DIRCTRL_IOEXP IOEXP_U20 = {&IIC2_IOEXP, 0x22, 0x00000000};
 DIRCTRL_IOEXP IOEXP_U21 = {&IIC2_IOEXP, 0x23, 0x00000000};
 
 //LSDAC structs
-const LSDAC_t LSDAC0 = {&SPI1_LSDAC, 0x01};
-const LSDAC_t LSDAC1 = {&SPI1_LSDAC, 0x02};
+const LSDAC_t LSDAC0 = {&SPI1_LSDAC, 0x02};
+const LSDAC_t LSDAC1 = {&SPI1_LSDAC, 0x01};
 
 //SP4T switch structs. Maps SP4T switch control pins to IO expander pins
 const SP4T_t SP4T0 = {0x000080, 0x010000, 0x000100};
@@ -75,7 +66,7 @@ const net_t VC0  	= {&GPIO8_CTRL, 4, 1, 0, 1}; //Set to output low to enable the
 const net_t VC1 	= {&GPIO8_CTRL, 5, 1, 0, 1};
 const net_t VC2   	= {&GPIO8_CTRL, 6, 1, 0, 1};
 const net_t VC3   	= {&GPIO8_CTRL, 7, 1, 0, 1};
-const net_t CONSTMODE = {&GPIO8_CTRL, 0, 2, 0, 0};
+const net_t CONSTMODE = {&GPIO8_CTRL, 0, 2, 0, 1};
 const net_t P89_clkEn = {&GPIO8_CTRL, 1, 2, 0, 0};
 
 //AFE_CTRL XGpio pins
@@ -179,7 +170,7 @@ const net_t SE84 = {&GPIO10_DS, 19, 1, 0, 0, 84, &IOEXP_U20, 0x000040};
 const net_t SE83 = {&GPIO10_DS, 19, 2, 0, 0, 83, &IOEXP_U20, 0x004000};
 const net_t SE86 = {&GPIO10_DS, 20, 1, 0, 0, 86, &IOEXP_U19, 0x000001};
 const net_t SE85 = {&GPIO10_DS, 20, 2, 0, 0, 85, &IOEXP_U20, 0x000010};
-const net_t SE88 = {&GPIO10_DS, 21, 1, 0, 0, 88, &IOEXP_U19, 0x000004};
+const net_t SE88 = {&GPIO10_DS, 21, 1, 1, 0, 88, &IOEXP_U19, 0x000004};
 const net_t SE87 = {&GPIO10_DS, 21, 2, 0, 0, 87, &IOEXP_U19, 0x000080};
 
 //Store current output values on AXI GPIO blocks
@@ -231,7 +222,7 @@ const net_t* GPIO_DS[] = {
     &SE18, &SE16, &SE34, &SE19, &SE45, &SE35, &SE53, &SE47, &SE62, &SE54,
     &SE64, &SE63, &SE66, &SE65, &SE68, &SE67, &SE70, &SE69, &SE72, &SE71,
     &SE75, &SE73, &SE77, &SE76, &SE79, &SE78, &SE82, &SE80, &SE84, &SE83,
-    &SE86, &SE85, &SE88, &SE87
+    &SE86, &SE85
 };
 
 const size_t GPIO_DS_LEN = sizeof(GPIO_DS)/sizeof(GPIO_DS[0]);
@@ -244,8 +235,7 @@ const net_t* ALL_GPIO[] = {
 	&SE46, &SE47, &SE48, &SE49, &SE50, &SE51, &SE52, &SE53, &SE54, &SE55,
 	&SE56, &SE57, &SE58, &SE59, &SE62, &SE63, &SE64, &SE65, &SE66, &SE67,
 	&SE68, &SE69, &SE70, &SE71, &SE72, &SE73, &SE74, &SE75, &SE76, &SE77,
-	&SE78, &SE79, &SE80, &SE81, &SE82, &SE83, &SE84, &SE85, &SE86, &SE87,
-	&SE88, &SE89
+	&SE78, &SE79, &SE80, &SE81, &SE82, &SE83, &SE84, &SE85, &SE86, &SE89
 };
 
 const size_t ALL_GPIO_LEN = sizeof(ALL_GPIO)/sizeof(ALL_GPIO[0]);

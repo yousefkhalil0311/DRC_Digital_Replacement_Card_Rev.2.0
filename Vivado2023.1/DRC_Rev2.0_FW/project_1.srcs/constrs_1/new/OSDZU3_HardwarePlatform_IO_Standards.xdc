@@ -48,6 +48,9 @@ set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_SE_32_37[*]}]
 #Temp set diff IO as single ended for testing
 set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_DS_0_21_p[*]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {IOBUF_DS_0_21_n[*]}]
+
+set_property IOSTANDARD LVCMOS18 [get_ports {emio_uart0_txd_0}]
+set_property IOSTANDARD LVCMOS18 [get_ports {emio_uart0_rxd_0}]
  
 #Differential Signal IO Standards
 #set_property IOSTANDARD LVDS_18 [get_ports {IOBUF_DS_0_21_p[*]}]

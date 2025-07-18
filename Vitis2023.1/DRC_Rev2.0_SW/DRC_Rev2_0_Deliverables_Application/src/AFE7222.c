@@ -117,7 +117,7 @@ void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value){
 	HSDAC_setVoltage(converterNum, channel, mV_Value);
 
 	//clear bit in control mask to enable FE output
-	uint8_t ctrlMask = (1 << (converterNum + 4)) & 0xF6;
+	uint8_t ctrlMask = ~(1 << (converterNum + 4)) & 0xF6;
 
 	//Enable DAC's Frontend
 	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ctrlMask);
@@ -125,13 +125,13 @@ void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value){
 }
 
 //Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value){
+void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int V_Value){
 
 	//set bounds for voltage input
-	if(mV_Value > 5.0) mV_Value = 5.0;
-	if(mV_Value < -5.0) mV_Value = -5.0;
+	if(V_Value > 5.0) V_Value = 5.0;
+	if(V_Value < -5.0) V_Value = -5.0;
 
-	int voltageValue = (mV_Value * 2047) / 5;
+	int mvoltageValue = (V_Value * 2047) / 5;
 
 	XGpio* xgpioInstanceTable[] = {&GPIO15_DAC0Const, &GPIO16_DAC1Const, &GPIO17_DAC2Const, &GPIO18_DAC3Const};
 
@@ -140,15 +140,15 @@ void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value){
 	instance = xgpioInstanceTable[converterNum];
 
 	//write voltage value to corresponding HSDAC controller
-	XGpio_DiscreteWrite(instance, channel, voltageValue);
+	XGpio_DiscreteWrite(instance, channel, mvoltageValue);
 
 }
 
 //Sets AFE7222 and FPGA data path to read ADC values. Returns a sample after being set up.
-int HSADC_Init(uint8_t converterNum, uint8_t channel){
+u32 HSADC_Init(uint8_t converterNum, uint8_t channel){
 
 	//program converter to be in reset mode (Loopback mode is equivalent to ADC only mode in this test case)
-	programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
+	//programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
 
 	//Set cache bit corresponding to this converter
 	GPIO14_AFE_CTRL_CACHE = 0xF;//|= (0x08 >> converterNum);
@@ -160,7 +160,7 @@ int HSADC_Init(uint8_t converterNum, uint8_t channel){
 }
 
 //Returns a sample from a specified ADC channel.
-int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel){
+u32 HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel){
 
 	XGpio* instance;
 	uint8_t AXIGPIO_channel;
@@ -172,7 +172,7 @@ int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel){
 		AXIGPIO_channel = 2;
 	}
 	else{
-		return -1;
+		return printf("bad channel\n");
 	}
 
 	//set ADC read block parameters
@@ -199,9 +199,9 @@ int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel){
     int readValue = XGpio_DiscreteRead(instance, AXIGPIO_channel);
 
 	//convert 12 bit signed value from ADC to unsigned value (0-10V mapping)
-	int unsignedADCVal = readValue ^ 0x800;
+	u32 unsignedADCVal = readValue ^ 0x800;
 
-    int voltage = (unsignedADCVal * 5000) / 2047;
+    u32 voltage = (unsignedADCVal * 5000) / 2047;
 
 	return voltage;
 }

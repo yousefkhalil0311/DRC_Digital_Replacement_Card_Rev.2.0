@@ -21,137 +21,17 @@
 #include "LSDAC.h"
 #include "AFE7222.h"
 
+#define NUM_PASSES 20
 
-XTime start, end;
+void TestMode1(){}
 
-//Parameter used to pass arguments into the *testFunction passed to runTest
-typedef struct{
-	int* arg1;
-	int* arg2;
-	int* arg3;
-} argsContext;
-
-
-/*
- * function used within test cases to loop a function for a certain amount of time.
- * If the callback function requires parameters, they can be passed in via an argsContext struct.
- */
-void runTest(void (*testFunction)(argsContext* args), uint32_t runTime, argsContext* optArgs){
-
-    int msRemaining = runTime * 1000.0; //msRemaining in ms
-
-    //draw serial console static text
-	printf("\033[2;1H\033[K");
-	printf("Time Remaining: %02d.%02ds ", msRemaining/1000, (msRemaining%1000) / 10);
-
-    XTime_GetTime(&start);
-
-    //Display DRC LSDAC output values and remaining time
-	while(msRemaining > 0){
-
-		//Display Time Remaining
-		XTime_GetTime(&end);
-
-		uint64_t elapsedTime = (end - start) / (COUNTS_PER_SECOND/1000); //#of ticks elapsed over time in miliseconds
-
-		msRemaining = runTime*1000/*ms*/ - elapsedTime;
-
-		if (msRemaining < 0){
-			msRemaining = 0;
-		}
-
-		//Print time remaining every 50ms
-		if((msRemaining/10)%5 == 0){
-			printf("\033[2;17H\033[K");
-			printf("%02d.%02ds ", msRemaining/1000, (msRemaining%1000) / 10);
-		}
-
-		//Printing lots of serial data. Clear buffer to avoid unexpected blocking behavior
-		fflush(stdout);
-
-		testFunction(optArgs);
-
-	}
-}
-
-//Function to delete characters based on backspaces in string .
-void handleBackspaces(char* stringWithBackspaces){
-
-	//keeps track of current character index of formatted string
-	int formattedStringLength = 0;
-
-	//iterate through input string and remove characters based on backspaces in the input string
-	int charIndex = 0;
-	while(stringWithBackspaces[charIndex] != '\0'){
-		if(stringWithBackspaces[charIndex] == '\b' && formattedStringLength > 0){
-			formattedStringLength--;
-		}
-		else if (stringWithBackspaces[charIndex] != '\b'){
-		    stringWithBackspaces[formattedStringLength] = stringWithBackspaces[charIndex];
-		    formattedStringLength++;
-		}
-		charIndex++;
-	}
-
-	//end string with null terminator
-	stringWithBackspaces[formattedStringLength] = '\0';
-}
-
-//validates that a given parameter is within the given range for test mode 8, and outputs an error on the terminal given a bad value
-int validateParam(int param, int RangeLow, int RangeHigh){
-	if(param < RangeLow || param > RangeHigh){
-    	printf("\033[14;80H");
-    	printf("Value:   \033[K%d INVALID (RANGE: %d - %d)", param, RangeLow, RangeHigh);
-		return 0;
-	}
-	return 1;
-}
-
-
-void TestMode1(){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 1 Begin
-	// Edge mounted LEDs will cycle
-    clearTerminal();
-    printf("Test Mode 1: Cycle Status LEDs.\n\n");
-
-	for(int i = 1; i <= 0x8; i <<= 1){
-		setLEDStatus(i);
-		printf("\033[3;1H");
-		printf("LED 1: %s\n", i == 0x1 ? "ON " : "OFF");
-		printf("LED 2: %s\n", i == 0x2 ? "ON " : "OFF");
-		printf("LED 3: %s\n", i == 0x4 ? "ON " : "OFF");
-		printf("LED 4: %s\n", i == 0x8 ? "ON " : "OFF");
-		sleep(1);
-	}
-	for(int i = 8; i >= 0x1; i >>= 1){
-		setLEDStatus(i);
-		printf("\033[3;1H");
-		printf("LED 1: %s\n", i == 0x1 ? "ON " : "OFF");
-		printf("LED 2: %s\n", i == 0x2 ? "ON " : "OFF");
-		printf("LED 3: %s\n", i == 0x4 ? "ON " : "OFF");
-		printf("LED 4: %s\n", i == 0x8 ? "ON " : "OFF");
-		sleep(1);
-	}
-
-    printf("Test Mode 1 End.\n");
-	// Test Mode 1 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode2(uint32_t delay){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 2 Begin
-	// Set all pins to digital mode, and cycle each pin between ON and OFF
-    //
+void TestMode2(){
 	clearTerminal();
-    printf("Test Mode 2: Digital Output Test.\n");
-    printf("Set all multifunction pins to digital mode and cycles IO pins.\n");
-    printf("Delay: %u milliseconds\n\n", delay);
+    printf("Test Mode 1");
 
-	//Change Status to Mode 2
-	setLEDStatus(0x02);
-
+    int pass = 0;
+    int fail = 0;
+    /*
 	// Array with all digital paths
 	const SWState_t AllDigitalPaths[] = {
 			P2_DIGIO2,
@@ -185,920 +65,550 @@ void TestMode2(uint32_t delay){
     	return XST_FAILURE;
     }
 
-    int numIOPins = ALL_GPIO_LEN;
+    //loop digital IO bit test 20 times
 
-    for(int pin = 0; pin < numIOPins; pin++){
-    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
+    //GPIO set 1. Will initially be inputs, then outputs
+    const net_t* GPIO_SINGLE_SET_1[] = {
+    		&SE4,  &SE7,  &SE8,  &SE9,  &SE11, &SE12, &SE14, &SE16,
+			&SE18, &SE20, &SE22, &SE23, &SE24, &SE25, &SE26, &SE27,
+			&SE28, &SE29, &SE43, &SE47, &SE62, &SE64, &SE66, &SE68,
+			&SE70, &SE72, &SE76, &SE79, &SE81, &SE83,
+    };
+
+    const size_t GPIO_S1_LEN = sizeof(GPIO_SINGLE_SET_1)/sizeof(GPIO_SINGLE_SET_1[0]);
+
+    //GPIO set 2. Will initially be outputs, then inputs
+    const net_t* GPIO_SINGLE_SET_2[] = {
+    		&SE5,  &SE37, &SE38, &SE39, &SE41, &SE42, &SE44, &SE45,
+			&SE19, &SE49, &SE52, &SE53, &SE54, &SE85, &SE56, &SE57,
+			&SE58, &SE59, &SE73, &SE77, &SE63, &SE65, &SE67, &SE69,
+			&SE71, &SE75, &SE78, &SE80, &SE82, &SE84,
+    };
+
+    const size_t GPIO_S2_LEN = sizeof(GPIO_SINGLE_SET_2)/sizeof(GPIO_SINGLE_SET_2[0]);
+
+    for(int run = 0; run < NUM_PASSES; run++){
+        for(int pin = 0; pin < GPIO_S1_LEN; pin++){
+        	readIOPin(GPIO_SINGLE_SET_1[pin]);
+        	setIOPin(GPIO_SINGLE_SET_2[pin], 1);
+        	if(readIOPin(GPIO_SINGLE_SET_1[pin]) == 1){
+        		printf("Pass");
+        		pass++;
+        	}
+        	else{
+        		printf("\nPin %d Fail\n", pin);
+        		fail++;
+        	}
+        	setIOPin(GPIO_SINGLE_SET_2[pin], 0);
+        	if(readIOPin(GPIO_SINGLE_SET_1[pin]) == 0){
+        		printf("Pass");
+        		pass++;
+        	}
+        	else{
+        		printf("\nPin %d Fail\n", pin);
+        		fail++;
+        	}
+        }
+    }
+    for(int run = 0; run < NUM_PASSES; run++){
+        for(int pin = 0; pin < GPIO_S2_LEN; pin++){
+        	readIOPin(GPIO_SINGLE_SET_2[pin]);
+        	setIOPin(GPIO_SINGLE_SET_1[pin], 1);
+        	if(readIOPin(GPIO_SINGLE_SET_2[pin]) == 1){
+        		printf("Pass");
+        		pass++;
+        	}
+        	else{
+        		printf("\nPin %d Fail\n", pin);
+        		fail++;
+        	}
+        	setIOPin(GPIO_SINGLE_SET_1[pin], 0);
+        	if(readIOPin(GPIO_SINGLE_SET_2[pin]) == 0){
+        		printf("Pass");
+        		pass++;
+        	}
+        	else{
+        		printf("\nPin %d Fail\n", pin);
+        		fail++;
+        	}
+        }
     }
 
-    //Cascade LEDs
-	for (int pin = 0; pin < numIOPins; pin++){
-		setIOPin(ALL_GPIO[pin], 1);
-    	displayPinState(ALL_GPIO[pin]->IOpinNum, 1);
-		usleep(delay*1000);
-		setIOPin(ALL_GPIO[pin], 0);
-    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
+    //Will set 1 at a time as output and rest as input
+    const net_t* GPIO_MULTI_SET_1[] = {
+    		&SE2,  &SE3,  &SE10, &SE17, &SE21, &SE33, &SE40, &SE55, &SE74,
+    };
+
+    const size_t GPIO_M1_LEN = sizeof(GPIO_MULTI_SET_1)/sizeof(GPIO_MULTI_SET_1[0]);
+
+    for(int run = 0; run < NUM_PASSES; run++){
+        for(int pin = 0; pin < GPIO_M1_LEN; pin++){
+        	readIOPin(GPIO_MULTI_SET_1[pin]);
+        }
+        for(int outPin = 0; outPin < GPIO_M1_LEN; outPin++){
+            for(int inPin = 0; inPin < GPIO_M1_LEN; inPin++){
+            	if(inPin == outPin){
+            		continue;
+            	}else{
+                	setIOPin(GPIO_MULTI_SET_1[outPin], 1);
+                	if(readIOPin(GPIO_MULTI_SET_1[inPin]) == 1){
+                		printf("Pass");
+                		pass++;
+                	}
+                	else{
+                		printf("\nM1 out 1, outPin %d and inPin %d Fail\n", outPin, inPin);
+                		fail++;
+                	}
+                	setIOPin(GPIO_MULTI_SET_1[outPin], 0);
+                	if(readIOPin(GPIO_MULTI_SET_1[inPin]) == 0){
+                		printf("Pass");
+                		pass++;
+                	}
+                	else{
+                		printf("\nM1 out 0, outPin %d and inPin %d Fail\n", outPin, inPin);
+                		fail++;
+                	}
+                	readIOPin(GPIO_MULTI_SET_1[outPin]);
+            	}
+            }
+        }
     }
 
-	//Turn all LEDs ON
-	for (int pin = 0; pin < numIOPins; pin++){
-		setIOPin(ALL_GPIO[pin], 1);
-    	displayPinState(ALL_GPIO[pin]->IOpinNum, 1);
-		usleep(delay * 1000);
+    //Will set 1 at a time as output and rest as input
+    const net_t* GPIO_MULTI_SET_2[] = {
+    		&SE36, &SE48, &SE46, &SE51, &SE32, &SE34, &SE6, &SE50, &SE35
+    };
+
+    const size_t GPIO_M2_LEN = sizeof(GPIO_MULTI_SET_2)/sizeof(GPIO_MULTI_SET_2[0]);
+
+    for(int run = 0; run < NUM_PASSES; run++){
+        for(int pin = 0; pin < GPIO_M2_LEN; pin++){
+        	readIOPin(GPIO_MULTI_SET_2[pin]);
+        }
+        for(int outPin = 0; outPin < GPIO_M2_LEN; outPin++){
+            for(int inPin = 0; inPin < GPIO_M2_LEN; inPin++){
+            	if(inPin == outPin){
+            		continue;
+            	}else{
+                	setIOPin(GPIO_MULTI_SET_2[outPin], 1);
+                	if(readIOPin(GPIO_MULTI_SET_2[inPin]) == 1){
+                		printf("Pass");
+                		pass++;
+                	}
+                	else{
+                		printf("\nM2 out 1, outPin %d and inPin %d Fail\n", outPin, inPin);
+                		fail++;
+                	}
+                	setIOPin(GPIO_MULTI_SET_2[outPin], 0);
+                	if(readIOPin(GPIO_MULTI_SET_2[inPin]) == 0){
+                		printf("Pass");
+                		pass++;
+                	}
+                	else{
+                		printf("\nM2 out 0, outPin %d and inPin %d Fail\n", outPin, inPin);
+                		fail++;
+                	}
+                	readIOPin(GPIO_MULTI_SET_2[outPin]);
+            	}
+            }
+        }
     }
 
-	sleep(2);
+    //GPIO connected to UART
+    const net_t* REST_GPIO[] = {
+    	&SE86, &SE89
+    };
+*/
+    ////////////////////////////
+    //phase 2 - LSDAC & HSADC
+    ////////////////////////////
 
-	//Turn all LEDs OFF
-	for (int pin = 0; pin < numIOPins; pin++){
-		setIOPin(ALL_GPIO[pin], 0);
-    	displayPinState(ALL_GPIO[pin]->IOpinNum, 0);
-		usleep(delay * 1000);
+    printf("Starting LSDAC Test\n");
+
+    XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 1000);
+	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1000);
+
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xFE);
+    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6);
+
+    int LSDAC_voltage_low = 0;
+    int LSDAC_voltage_high = 10;
+    int LSDAC_voltage_avg = 5;
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P55_HS_ADC3B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P33_LS1_DAC06);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P74_LS0_DAC03);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P50_HS_ADC3A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P35_LS0_DAC04);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P51_LS1_DAC03);
+
+    HSADC_Init(3,  'B');
+    HSADC_Init(3,  'A');
+
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_low);
+		printf("ADC 3B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_high);
+		printf("ADC 3B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_low);
+		printf("ADC 3B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_avg);
+		printf("ADC 3B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_high);
+		printf("ADC 3B Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 6, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_low);
+		printf("ADC 3A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_high);
+		printf("ADC 3A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_low);
+		printf("ADC 3A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_avg);
+		printf("ADC 3A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_high);
+		printf("ADC 3A Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 3, LSDAC_voltage_low);
     }
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P33_HS_ADC2B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P17_LS1_DAC00);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P40_LS0_DAC02);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P51_HS_ADC0A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P6_LS0_DAC06);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P48_LS1_DAC01);
+
+    HSADC_Init(2,  'B');
+    HSADC_Init(0,  'A');
+
+
+    for(int run = 0; run < NUM_PASSES * 100; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_low);
+		printf("ADC 2B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_high);
+		printf("ADC 2B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_low);
+		printf("ADC 2B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_avg);
+		printf("ADC 2B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_high);
+		printf("ADC 2B Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 0, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_low);
+		printf("ADC 0A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_high);
+		printf("ADC 0A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_low);
+		printf("ADC 0A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_avg);
+		printf("ADC 0A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_high);
+		printf("ADC 0A Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 1, LSDAC_voltage_low);
+    }
+
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P17_HS_ADC1B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P21_LS1_DAC02);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P10_LS0_DAC01);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P48_HS_ADC1A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P46_LS1_DAC07);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P36_LS0_DAC00);
+
+    HSADC_Init(1,  'B');
+    HSADC_Init(1,  'A');
+
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_low);
+		printf("ADC 1B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_high);
+		printf("ADC 1B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_low);
+		printf("ADC 1B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_avg);
+		printf("ADC 1B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_high);
+		printf("ADC 1B Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 2, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_low);
+		printf("ADC 1A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_high);
+		printf("ADC 1A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_low);
+		printf("ADC 1A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_avg);
+		printf("ADC 1A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_high);
+		printf("ADC 1A Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 7, LSDAC_voltage_low);
+    }
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P21_HS_ADC0B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P3_LS0_DAC07);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P2_LS1_DAC04);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P46_HS_ADC2A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P34_LS0_DAC05);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P32_LS1_DAC05);
+
+    HSADC_Init(0,  'B');
+    HSADC_Init(2,  'A');
+
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_low);
+		printf("ADC 0B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_high);
+		printf("ADC 0B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_low);
+		printf("ADC 0B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_avg);
+		printf("ADC 0B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_high);
+		printf("ADC 0B Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 4, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_low);
+		printf("ADC 2A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_high);
+		printf("ADC 2A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_low);
+		printf("ADC 2A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_avg);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_avg);
+		printf("ADC 2A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_high);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_high);
+		printf("ADC 2A Expected: 10000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_low);
+		LS_DAC_WriteVoltage(&LSDAC1, 5, LSDAC_voltage_low);
+    }
+
+	printf("LSDAC and HSADC test End\n");
+
+/*
+	///////////////////////////////////////
+	//PHASE 3: HSDAC Test
+	//////////////////////////////////////
+
+	printf("Begin HSDAC Test\n");
+
+    LSDAC_voltage_low = 0;
+    LSDAC_voltage_high = 5;
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P74_LS0_DAC03);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P35_LS0_DAC04);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P6_LS0_DAC06);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P40_LS0_DAC02);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P36_LS0_DAC00);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P10_LS0_DAC01);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P34_LS0_DAC05);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P3_LS0_DAC07);
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P55_HS_ADC3B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P33_HS_DAC2A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P50_HS_ADC3A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P51_HS_DAC0B);
+
+    HSADC_Init(3,  'B');
+    HSADC_Init(3,  'A');
+
+    HSDAC_Init(2,  1, 0);
+    HSDAC_Init(0,  2, 0);
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_low);
+		HSDAC_setVoltage(2,  1, 0);
+		printf("ADC 3B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_high);
+		HSDAC_setVoltage(2,  1, -5);
+		printf("ADC 3B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_high);
+		HSDAC_setVoltage(2,  1, 5);
+		printf("ADC 3B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 3, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_low);
+		HSDAC_setVoltage(0,  2, 0);
+		printf("ADC 3A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_high);
+		HSDAC_setVoltage(0,  2, -5);
+		printf("ADC 3A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_high);
+		HSDAC_setVoltage(0,  2, 5);
+		printf("ADC 3A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(3, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 4, LSDAC_voltage_low);
+		HSDAC_setVoltage(2,  1, 0);
+		HSDAC_setVoltage(0,  2, 0);
+    }
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P33_HS_ADC2B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P17_HS_DAC1A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P51_HS_ADC0A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P48_HS_DAC1B);
+
+    HSADC_Init(2,  'B');
+    HSADC_Init(0,  'A');
+
+    HSDAC_Init(1,  1, 0);
+    HSDAC_Init(1,  2, 0);
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_low);
+		HSDAC_setVoltage(1,  1, 0);
+		printf("ADC 2B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_high);
+		HSDAC_setVoltage(1,  1, -5);
+		printf("ADC 2B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_high);
+		HSDAC_setVoltage(1,  1, 5);
+		printf("ADC 2B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 2, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_low);
+		HSDAC_setVoltage(1,  2, 0);
+		printf("ADC 0A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_high);
+		HSDAC_setVoltage(1,  2, -5);
+		printf("ADC 0A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_high);
+		HSDAC_setVoltage(1,  2, 5);
+		printf("ADC 0A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 6, LSDAC_voltage_low);
+		HSDAC_setVoltage(1,  1, 0);
+		HSDAC_setVoltage(1,  2, 0);
+    }
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P17_HS_ADC1B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P21_HS_DAC0A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P48_HS_ADC1A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P46_HS_DAC2B);
+
+    HSADC_Init(1,  'B');
+    HSADC_Init(1,  'A');
+
+    HSDAC_Init(0,  1, 0);
+    HSDAC_Init(2,  2, 0);
+
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_low);
+		HSDAC_setVoltage(0,  1, 0);
+		printf("ADC 1B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_high);
+		HSDAC_setVoltage(0,  1, -5);
+		printf("ADC 1B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_high);
+		HSDAC_setVoltage(0,  1, 5);
+		printf("ADC 1B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 1, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_low);
+		HSDAC_setVoltage(2,  2, 0);
+		printf("ADC 1A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_high);
+		HSDAC_setVoltage(2,  2, -5);
+		printf("ADC 1A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_high);
+		HSDAC_setVoltage(2,  2, 5);
+		printf("ADC 1A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(1, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 0, LSDAC_voltage_low);
+		HSDAC_setVoltage(0,  1, 0);
+		HSDAC_setVoltage(2,  2, 0);
+    }
+
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P21_HS_ADC0B);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P2_HS_DAC3A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P46_HS_ADC2A);
+    IOEXP_Path_Select(&IIC0_IOEXP, IOEXP0_ADDRESS, P32_HS_DAC3B);
+
+    HSADC_Init(0,  'B');
+    HSADC_Init(2,  'A');
+
+    HSDAC_Init(3,  1, 0);
+    HSDAC_Init(3,  2, 0);
+
+
+    for(int run = 0; run < NUM_PASSES; run++){
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_low);
+		HSDAC_setVoltage(3,  1, 0);
+		printf("ADC 0B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_high);
+		HSDAC_setVoltage(3,  1, -5);
+		printf("ADC 0B Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_high);
+		HSDAC_setVoltage(3,  1, 5);
+		printf("ADC 0B Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(0, 'B'));
+		LS_DAC_WriteVoltage(&LSDAC0, 7, LSDAC_voltage_low);
+
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_low);
+		HSDAC_setVoltage(3,  2, 0);
+		printf("ADC 2A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_high);
+		HSDAC_setVoltage(3,  2, -5);
+		printf("ADC 2A Expected: 0mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_high);
+		HSDAC_setVoltage(3,  2, 5);
+		printf("ADC 2A Expected: 5000mV, Received: %d mV\n", HSADC_getVoltage_mV(2, 'A'));
+		LS_DAC_WriteVoltage(&LSDAC0, 5, LSDAC_voltage_low);
+		HSDAC_setVoltage(3,  1, 0);
+		HSDAC_setVoltage(3,  2, 0);
+    }
+
+*/
+
+
 
     printf("Test Mode 2 End.\n");
     sleep(1);
 	// Test Mode 2 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode3(uint32_t runTime){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 3 Begin
-	// Read IO Test
-	clearTerminal();
-    printf("Test Mode 3: Read IO Pins and report state changes.\n");
-
-	//Change Status to Mode 3
-	setLEDStatus(0x03);
-
-	// Array with all digital paths
-	const SWState_t AllDigitalPaths[] = {
-			P2_DIGIO2,
-			P17_DIGIO17,
-			P21_DIGIO21,
-			P32_DIGIO32,
-			P33_DIGIO33,
-			P46_DIGIO46,
-			P48_DIGIO48,
-			P51_DIGIO51,
-			P3_DIGIO3,
-			P6_DIGIO6,
-			P10_DIGIO10,
-			P34_DIGIO34,
-			P35_DIGIO35,
-			P36_DIGIO36,
-			P40_DIGIO40,
-			P50_DIGIO50,
-			P55_DIGIO55,
-			P74_DIGIO74
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = AllDigitalPaths[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    void testFunc3(argsContext* args){
-
-		for (int i = 0; i < ALL_GPIO_LEN; i++){
-			displayPinState(ALL_GPIO[i]->IOpinNum, readIOPin(ALL_GPIO[i]));
-		}
-
-    }
-
-    runTest(testFunc3, runTime, NULL);
-
-    printf("Test Mode 3 End.\n");
-	// Test Mode 3 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode4(uint32_t runTime){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 4 Begin
-	// LSDAC Triangle Wave Test
-
-	clearTerminal();
-    printf("Test Mode 4: Low speed DAC triangle wave outputs. \n");
-
-	//Change Status to Mode 4
-	setLEDStatus(0x04);
-
-	//Configure Switches for all Low Speed DAC Paths
-	const SWState_t AllLSDACPaths[] = {
-			P2_LS1_DAC04,
-			P17_LS1_DAC00,
-			P21_LS1_DAC02,
-			P32_LS1_DAC05,
-			P33_LS1_DAC06,
-			P46_LS1_DAC07,
-			P48_LS1_DAC01,
-			P51_LS1_DAC03,
-			P3_LS0_DAC07,
-			P6_LS0_DAC06,
-			P10_LS0_DAC01,
-			P34_LS0_DAC05,
-			P35_LS0_DAC04,
-			P36_LS0_DAC00,
-			P40_LS0_DAC02,
-			P50_HS_ADC3A,
-			P55_HS_ADC3B,
-			P74_LS0_DAC03,
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = AllLSDACPaths[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //draw serial console static text
-	printf("\033[4;1H");
-	printf("LSDAC0 Value: ");
-	printf("\033[5;1H");
-	printf("LSDAC1 Value: ");
-	printf("\033[7;1H");
-	printf("P3  -> LSDAC0_CH7     P2  -> LSDAC1_CH4\n");
-	printf("P6  -> LSDAC0_CH6     P17 -> LSDAC1_CH0\n");
-	printf("P10 -> LSDAC0_CH1     P21 -> LSDAC1_CH2\n");
-	printf("P34 -> LSDAC0_CH5     P32 -> LSDAC1_CH5\n");
-	printf("P35 -> LSDAC0_CH4     P33 -> LSDAC1_CH6\n");
-	printf("P36 -> LSDAC0_CH0     P46 -> LSDAC1_CH7\n");
-	printf("P40 -> LSDAC0_CH2     P48 -> LSDAC1_CH1\n");
-	printf("P74 -> LSDAC0_CH3     P51 -> LSDAC1_CH3\n");
-
-    //initial value to be loaded into LSDACs
-    int LSDACVal = 0;
-
-    //LSDACVal will change by 1 per cycle
-    int addVal = 10;
-
-    argsContext test4Args = {
-    		&LSDACVal,
-			&addVal,
-			NULL
-    };
-
-    void testFunc4(argsContext* args){
-
-    	int* LSDACVal = args->arg1;
-    	int* addVal   = args->arg2;
-
-		//Poll time remaining once per 110 value change in LSDAC output value. Serial print is slow.
-		if(*LSDACVal%110 == 0){
-
-			//Print stats
-			printf("\033[4;15H");
-			printf("%04u     ", *LSDACVal);
-			for(int i = 0; i < 4095/110; i++){
-				if(i*130 < *LSDACVal){
-					printf("#");
-				}
-				else{
-					printf(" ");
-					break;
-				}
-			}
-			printf("\033[5;15H");
-			printf("%04u     ", 4096 - *LSDACVal);
-			for(int i = 0; i < 4095/110; i++){
-				if(i*130 < (4096 - *LSDACVal)){
-					printf("#");
-				}
-				else{
-					printf(" ");
-					break;
-				}
-			}
-
-		}
-
-		//Write values to LSDAC
-		LS_DAC_WriteAll(&LSDAC0, *LSDACVal);
-		LS_DAC_WriteAll(&LSDAC1, 4095 - *LSDACVal);
-
-		*LSDACVal = *LSDACVal + *addVal;
-		if((*LSDACVal + *addVal > 4096) || (*LSDACVal + *addVal < 0)){
-			*addVal *= -1;
-		}
-
-
-	}
-
-    runTest(testFunc4, runTime, &test4Args);
-
-	LS_DAC_WriteAll(&LSDAC0, 0);
-	LS_DAC_WriteAll(&LSDAC1, 0);
-
-    printf("Test Mode 4 End.\n");
-	// Test Mode 4 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode5(uint32_t runTime){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 5 Begin
-	// LSDAC Fast Square Wave Test
-
-	clearTerminal();
-
-    printf("Test Mode 5: Low speed DAC square wave outputs. Transition time test.\n");
-
-	//Change Status to Mode 5
-	setLEDStatus(0x05);
-
-	//Configure Switches for all Low Speed DAC Paths
-	const SWState_t AllLSDACPaths[] = {
-			P2_LS1_DAC04,
-			P17_LS1_DAC00,
-			P21_LS1_DAC02,
-			P32_LS1_DAC05,
-			P33_LS1_DAC06,
-			P46_LS1_DAC07,
-			P48_LS1_DAC01,
-			P51_LS1_DAC03,
-			P3_LS0_DAC07,
-			P6_LS0_DAC06,
-			P10_LS0_DAC01,
-			P34_LS0_DAC05,
-			P35_LS0_DAC04,
-			P36_LS0_DAC00,
-			P40_LS0_DAC02,
-			P50_HS_ADC3A,
-			P55_HS_ADC3B,
-			P74_LS0_DAC03,
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = AllLSDACPaths[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //draw serial console static text
-	printf("\033[7;1H");
-	printf("P3  -> LSDAC0_CH7     P2  -> LSDAC1_CH4\n");
-	printf("P6  -> LSDAC0_CH6     P17 -> LSDAC1_CH0\n");
-	printf("P10 -> LSDAC0_CH1     P21 -> LSDAC1_CH2\n");
-	printf("P34 -> LSDAC0_CH5     P32 -> LSDAC1_CH5\n");
-	printf("P35 -> LSDAC0_CH4     P33 -> LSDAC1_CH6\n");
-	printf("P36 -> LSDAC0_CH0     P46 -> LSDAC1_CH7\n");
-	printf("P40 -> LSDAC0_CH2     P48 -> LSDAC1_CH1\n");
-	printf("P74 -> LSDAC0_CH3     P51 -> LSDAC1_CH3\n");
-
-    //Function to run for duration of the test
-    void testFunc5(argsContext* args){
-
-		//Write values to LSDAC
-		LS_DAC_WriteAll(&LSDAC0, 4095);
-		LS_DAC_WriteAll(&LSDAC0, 0);
-		LS_DAC_WriteAll(&LSDAC1, 4095);
-		LS_DAC_WriteAll(&LSDAC1, 0);
-
-    }
-
-    runTest(testFunc5, runTime, NULL);
-
-	LS_DAC_WriteAll(&LSDAC0, 0);
-	LS_DAC_WriteAll(&LSDAC1, 0);
-
-    printf("Test Mode 5 End.\n");
-	// Test Mode 5 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode6(uint32_t runTime){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 6 Begin
-	// HS ADC/DAC loopback test for channel A
-
-	clearTerminal();
-
-    printf("Test Mode 6: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n\n\n");
-    printf("Following pins used for loopback test.\n");
-    printf("Pin 51 (ADC0A) to Pin 21 (DAC0A)\n");
-    printf("Pin 48 (ADC1A) to Pin 17 (DAC1A)\n");
-    printf("Pin 46 (ADC2A) to Pin 33 (DAC2A)\n");
-    printf("Pin 50 (ADC3A) to Pin 2  (DAC3A)\n");
-
-	setLEDStatus(0x06);
-
-	/*
-	 *
-	 * Configure paths for High Speed ADC/DAC loopback mode
-	 * NOTE: LSDAC and Channel B converter paths are here to keep structure of path
-	 * configuration consistent in the case where a pin is used for this loopback test
-	 *
-	 */
-	SWState_t HSLoopbackA[] = {
-			P2_HS_DAC3A,
-			P17_HS_DAC1A,
-			P21_HS_DAC0A,
-			P32_HS_DAC3B,
-			P33_HS_DAC2A,
-			P46_HS_ADC2A,
-			P48_HS_ADC1A,
-			P51_HS_ADC0A,
-			P3_LS0_DAC07,
-			P6_LS0_DAC06,
-			P10_LS0_DAC01,
-			P34_LS0_DAC05,
-			P35_LS0_DAC04,
-			P36_LS0_DAC00,
-			P40_LS0_DAC02,
-			P50_HS_ADC3A,
-			P55_HS_ADC3B,
-			P74_LS0_DAC03
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = HSLoopbackA[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-	//Set Default sample clock divider
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 2);
-
-	//Reset AFE7222 Converters
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xFE);
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6);
-
-    //Enable all DAC FEs
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06);
-
-    //Set data path to connect ADC control block to AFE7222 pins
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
-
-    //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
-    }
-
-    printf("System configured in channel A loopback mode.\n");
-
-	//empty function to pass into runTest
-    void test6Func(){}
-
-    runTest(test6Func, runTime, NULL);
-
-	// Test Mode 6 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode7(uint32_t runTime){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 7 Begin
-	// HS ADC/DAC loopback test for channel B
-
-	clearTerminal();
-
-    printf("Test Mode 7: High speed ADC/DAC loopback mode A. Tests channel A on each ADC/DAC pair.\n\n\n");
-    printf("Following pins used for loopback test.\n");
-    printf("Pin 21 (ADC0B) to Pin 51 (DAC0B)\n");
-    printf("Pin 17 (ADC1B) to Pin 48 (DAC1B)\n");
-    printf("Pin 33 (ADC2B) to Pin 46 (DAC2B)\n");
-    printf("Pin 55 (ADC3B) to Pin 32 (DAC3B)\n");
-
-	setLEDStatus(0x07);
-
-	/*
-	 *
-	 * Configure paths for High Speed ADC/DAC loopback mode
-	 * NOTE: LSDAC and Channel B converter paths are here to keep structure of path
-	 * configuration consistent in the case where a pin is used for this loopback test
-	 *
-	 */
-	SWState_t HSLoopbackB[] = {
-			P2_HS_DAC3A,
-			P17_HS_ADC1B,
-			P21_HS_ADC0B,
-			P32_HS_DAC3B,
-			P33_HS_ADC2B,
-			P46_HS_DAC2B,
-			P48_HS_DAC1B,
-			P51_HS_DAC0B,
-			P3_LS0_DAC07,
-			P6_LS0_DAC06,
-			P10_LS0_DAC01,
-			P34_LS0_DAC05,
-			P35_LS0_DAC04,
-			P36_LS0_DAC00,
-			P40_LS0_DAC02,
-			P50_HS_ADC3A,
-			P55_HS_ADC3B,
-			P74_LS0_DAC03
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = HSLoopbackB[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-	//Set Default sample clock divider
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 2);
-
-	//Reset AFE7222 Converters
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xFE);
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xF6);
-
-    //Enable all DAC FEs
-    XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0x06);
-
-    //Set data path to connect ADC control block to AFE7222 pins
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0xF);
-
-    //Program AFE7222s to operate in full duplex mode (Default registers, loopback handled on hardware level)
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-        AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
-    }
-
-    printf("System configured in channel B loopback mode.\n");
-
-	//empty function to pass into runTest
-    void test7Func(){}
-
-    runTest(test7Func, runTime, NULL);
-
-	// Test Mode 7 End
-	////////////////////////////////////////////////////////////////////
-}
-
-void TestMode8(){
-	////////////////////////////////////////////////////////////////////
-	// Test Mode 8 Begin
-	// HS DAC output test
-
-	clearTerminal();
-
-	//Print Test Information
-    printf( "==================================================\n"
-    		"        Test Mode 8: High Speed DAC Output\n"
-    		"==================================================\n"
-    		"--------------------------------------------------\n"
-    		"                  Command List:\n"
-    		"--------------------------------------------------\n"
-    		"DAC[DNUM]  -   Selects DAC to be enabled. DAC[0-3]\n"
-    		"               Example:\n"
-    		"                 DAC2 enables DAC2A/B and disables all other DACs\n\n"
-    		"DCLK[DIV]  -   Sets dig. clk divider for DAC data(deprecated).\n"
-    		"               DIV > 0\n"
-    		"               Example:\n"
-    		"                 DCLK2 => 65MHZ / 2 = 32.5MHz\n\n"
-    		"SCLK[DIV]  -   Sets the sample clock divider for the DACs.\n"
-    		"               DIV > 0\n"
-    		"               Example:\n"
-    		"                 SCLK10 => 130MHZ / 10 = 13MHz\n\n"
-    		"MINA[VAL]  -   Sets the LOW output value of the HSDACs/A Data in Mixing Mode\n"
-    		"               Range : -2048 to 2047\n"
-    		"               Example:\n"
-    		"                 MIN0     =>  0V DAC output LOW/A voltage\n"
-    		"                 MIN-2048 => -5V DAC output LOW/A voltage\n\n"
-    		"MAXB[VAL]  -   Sets the HIGH output value of the HSDACs/B Data in Mixing Mode\n"
-    		"               Range : -2048 to 2047\n"
-    		"               Example:\n"
-    		"                 MAX0     =>  0V DAC output HIGH/B voltage\n"
-    		"                 MAX2047  =>  5V DAC output HIGH/B voltage\n\n"
-    		"CNST[VAL]  -   Sets the HSDAC to output a constant value.\n"
-    		"               Range : -2048 to 2047\n"
-    		"               Example:\n"
-    		"                 CNST0     =>  0V DAC\n"
-    		"                 CNST2047  =>  5V DAC\n\n"
-    		"QMOD[VAL]  -   Sets the Mixing Mode of the AFE converter -> Disable for normal operation\n"
-    		"               VALUE | MIXING MODE\n"
-    		"                -1   | Disable Mixing\n"
-    		"                 0   | Normal(Low pass)\n"
-    		"                 1   | Fs /2 (High Pass) - real mixing mode\n"
-    		"                 2   | +Fs/4 - complex mixing mode\n"
-    		"                 3   | -Fs/4 - complex mixing mode\n\n"
-    		"MIXF[FkHz] -   Sets the frequency of the coarse mixer (if not in Normal mixing mode)\n"
-    		"               CHA data set by MIN\n"
-    		"               CHB data set by MAX\n"
-    		"               Example:\n"
-    		"                 MIXF6500 => 6.5MHz DAC output\n\n"
-    		"MIXP[VAL]  -   Sets the phase offset of the coarse mixer\n"
-    		"               Range : -32,768 to 32,767"
-    		"               Example:\n"
-    		"                 MIXP100  => 100kHz DAC output\n"
-    		"                 MIXP6500 => 6.5MHz DAC output\n\n"
-    		"EXIT       -   Exit Test\n");
-
-    //Display Pin assignments for HSDACs
-    printf( "\033[1;80H==================================================\n"
-    		"\033[2;80H         High-Speed DAC Pin Assignments:\n"
-    		"\033[3;80H==================================================\n"
-			"\033[4;80HDAC0A : Pin 21			DAC0B : Pin 51\n"
-			"\033[5;80HDAC1A : Pin 17			DAC1B : Pin 48\n"
-			"\033[6;80HDAC2A : Pin 33			DAC2B : Pin 46\n"
-			"\033[7;80HDAC3A : Pin 2			DAC3B : Pin 32\n\n");
-
-    //Display static portion of current DAC parameters on Terminal
-    printf( "\033[9;80H==================================================\n"
-    		"\033[10;80H                Current Parameters\n"
-    		"\033[11;80H==================================================\n\n"
-    		"\033[12;80HDUT                   : 0(Default)\n"
-    		"\033[13;80HDigital Clock Divider : 1000(Default)\n"
-    		"\033[14;80HSample Clock Divider  : 500(Default)\n"
-    		"\033[15;80HDAC MIN Value         : -300(Default)\n"
-    		"\033[16;80HDAC MAX Value         : 300(Default)\n"
-    		"\033[17;80HConst Value           : DISABLED\n"
-	        "\033[18;80HMixing Mode           : -1 (default)\n"
-	        "\033[19;80HMixing Frequency(kHz) : 0 (default)\n"
-	        "\033[20;80HMixing Phase          : 0 (default)\n");
-
-	setLEDStatus(0x08);
-
-	//Set Default HSDAC to enable: DAC0
-	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, 0xE6);
-
-	//Set Default digital clock divider
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, 1000);
-
-	//Set Default sample clock divider
-	XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, 500);
-
-	//Set DAC control block to not operate in const value mode
-	XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 0);
-
-	//Set Default DAC Min Value (-300 in 2's comp)
-	XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, 0xED4);
-	XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, 0xED4);
-	XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, 0xED4);
-	XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, 0xED4);
-
-	//Set Default DAC Max Value (300)
-	XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, 0x12C);
-    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, 0x12C);
-    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, 0x12C);
-    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, 0x12C);
-
-
-	/*
-	 * Configure paths for High Speed ADC/DAC loopback mode
-	 * NOTE: LSDAC and Channel A converter paths are here to keep structure of path configuration consistent
-	 * in the case where a path is not necessary for this loopback test
-	 */
-	SWState_t HSDAC[] = {
-			P2_HS_DAC3A,
-			P17_HS_DAC1A,
-			P21_HS_DAC0A,
-			P32_HS_DAC3B,
-			P33_HS_DAC2A,
-			P46_HS_DAC2B,
-			P48_HS_DAC1B,
-			P51_HS_DAC0B,
-			P3_LS0_DAC07,
-			P6_LS0_DAC06,
-			P10_LS0_DAC01,
-			P34_LS0_DAC05,
-			P35_LS0_DAC04,
-			P36_LS0_DAC00,
-			P40_LS0_DAC02,
-			P50_HS_ADC3A,
-			P55_HS_ADC3B,
-			P74_LS0_DAC03
-	};
-
-	//Set Pin_Settings Array to desired Array settings
-	for(int i = 0; i < PIN_SETTINGS_LEN; i++){
-		Pin_Settings[i] = HSDAC[i];
-	};
-
-	//Reinitialize Switch Settings For Desired States
-    int Status = IOEXP_MultiFuntion_Pin_Init(&IIC0_IOEXP, IOEXP0_ADDRESS);
-    if(Status != XST_SUCCESS){
-    	return XST_FAILURE;
-    }
-
-    //Sets all AFE7222 chips to operate in DAC only mode.
-    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-        AFE_Init(&SPI0_AFE, AFE_REG_MAP, AFE_REG_MAP_SIZE, i);
-    }
-
-    //Set data path to connect DAC control block to AFE7222 pins
-    XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, 0x0);
-
-    //Parameters used for test
-	int AFEUnderTest = 0;
-	int digClkDivider = 1000;
-	int sampleClkDivider = 500;
-	int DACMinVal = -300;
-	int DACMaxVal = 300;
-	int constVal = 0;
-	int mixingMode = -1;
-	int mixingFreqkHz = 0;
-	int mixingPhaseDeg = 0;
-
-    //Run test until exist is entered for a paramter
-    while(1){
-
-    	//Raw stdin input string
-    	char inputString[10];
-
-    	//Extracted command string from inputString
-    	char cmdString[10];
-    	cmdString[0] = '\0';
-
-    	//extracted parameter value from inputString
-    	int enteredValue = 0;
-
-    	printf("\033[22;80H");
-    	printf("Enter Command> \033[K");
-
-    	//Read input string and echo back to terminal
-    	scanf("%s", inputString);
-    	printf("%s", inputString);
-
-    	//Format string to handle backspaces if present
-    	handleBackspaces(inputString);
-
-    	//structure inputString into command string and value
-    	sscanf(inputString, "%4[A-Z]%d", cmdString, &enteredValue);
-
-    	int badInput = 0;
-
-    	//check if cmdString is valid
-    	if(strlen(cmdString) == 0){
-    		badInput = 1;
-        	printf("\033[23;80H");
-        	printf("Command : INVALID");
-    	}
-
-    	//Re-query for command if input is bad
-    	if(badInput) continue;
-
-    	//print command string and value
-    	printf("\033[23;80H");
-    	printf("Command: \033[K%s", cmdString);
-    	printf("\033[24;80H");
-    	printf("Value:   \033[K%d", enteredValue);
-
-    	//Set DACs to output MINA and MAXB values if CNST mode not entered
-    	if(strcmp(cmdString, "CNST") != 0){
-
-    		//const mode bit reset => DAC outputs Min-Max output or IQ output
-    		XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 0);
-
-    		//Update current parameters on terminal
-    		printf("\033[17;80H");
-			printf("Const Value           : \033[KDISABLED");
-
-    	}
-
-    	//Handle commands
-    	if(strcmp(cmdString, "DAC") == 0){
-
-    		if(!validateParam(enteredValue, 0, 3)) continue;
-
-			AFEUnderTest = enteredValue;
-
-			//Enable DAC FE for converter selected & disable rest
-			uint32_t gpio_mask = ~(1 << (AFEUnderTest + 4)) & 0xF6;
-			XGpio_DiscreteWrite(&GPIO8_CTRL, 1, gpio_mask);
-
-			//Update current parameters on terminal
-			printf("\033[12;80H");
-			printf("DUT                   : \033[K%d", enteredValue);
-
-    	}else if(strcmp(cmdString, "DCLK") == 0){
-
-    		if(!validateParam(enteredValue, 1, 65000000)) continue;
-
-    		digClkDivider = enteredValue;
-
-    		//set divider axi GPIO value
-    		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 1, digClkDivider);
-
-    		//Update current parameters on terminal
-			printf("\033[13;80H");
-			printf("Digital Clock Divider : \033[K%d", digClkDivider);
-
-    	}else if(strcmp(cmdString, "SCLK") == 0){
-
-    		if(!validateParam(enteredValue, 1, 65000000)) continue;
-
-    		sampleClkDivider = enteredValue;
-
-    		XGpio_DiscreteWrite(&GPIO1_SPDCTRL, 2, sampleClkDivider);
-
-    		//Update current parameters on terminal
-			printf("\033[14;80H");
-			printf("Sample Clock Divider  : \033[K%d", sampleClkDivider);
-
-    	}else if(strcmp(cmdString, "MINA") == 0){
-
-    		if(!validateParam(enteredValue, -2048, 2047)) continue;
-
-    		DACMinVal = enteredValue;
-
-    		//write min value to DAC control block
-    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, DACMinVal);
-    		XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, DACMinVal);
-    		XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, DACMinVal);
-    		XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, DACMinVal);
-
-    		//Update current parameters on terminal
-			printf("\033[15;80H");
-			printf("DAC MIN Value         : \033[K%d", DACMinVal);
-
-    	}else if(strcmp(cmdString, "MAXB") == 0){
-
-    		if(!validateParam(enteredValue, -2048, 2047)) continue;
-
-    		DACMaxVal = enteredValue;
-
-    		//write max value to DAC control block
-    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, DACMaxVal);
-    	    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, DACMaxVal);
-    	    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, DACMaxVal);
-    	    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, DACMaxVal);
-
-    		//Update current parameters on terminal
-			printf("\033[16;80H");
-			printf("DAC MAX Value         : \033[K%d", DACMaxVal);
-
-    	}else if(strcmp(cmdString, "CNST") == 0){
-
-    		if(!validateParam(enteredValue, -2048, 2047)) continue;
-
-    		//const mode bit set => DAC outputs const voltage
-    		XGpio_DiscreteWrite(&GPIO8_CTRL, 2, 1);
-
-    		constVal = enteredValue;
-
-    		//write max value to DAC control block
-    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 1, constVal);
-    		XGpio_DiscreteWrite(&GPIO15_DAC0Const, 2, constVal);
-    		XGpio_DiscreteWrite(&GPIO16_DAC1Const, 1, constVal);
-    	    XGpio_DiscreteWrite(&GPIO16_DAC1Const, 2, constVal);
-    		XGpio_DiscreteWrite(&GPIO17_DAC2Const, 1, constVal);
-    	    XGpio_DiscreteWrite(&GPIO17_DAC2Const, 2, constVal);
-    		XGpio_DiscreteWrite(&GPIO18_DAC3Const, 1, constVal);
-    	    XGpio_DiscreteWrite(&GPIO18_DAC3Const, 2, constVal);
-
-    		//Update current parameters on terminal
-			printf("\033[17;80H");
-			printf("Const Value           : \033[K%d", constVal);
-
-			//These parameters should be the same when outputting const value
-			DACMaxVal = constVal;
-			printf("\033[16;80H");
-			printf("DAC MAX Value         : \033[K%d", DACMaxVal);
-
-			DACMinVal = constVal;
-			printf("\033[15;80H");
-			printf("DAC MIN Value         : \033[K%d", DACMinVal);
-
-    	}else if(strcmp(cmdString, "QMOD") == 0){
-
-    		if(!validateParam(enteredValue, -1, 3)) continue;
-
-    		mixingMode = enteredValue;
-
-    		//Reset AFE converters to non-mixing DAC only mode if mixingMode == -1
-    		if(mixingMode == -1){
-    			programAFEConverters(AFE_REG_MAP, AFE_REG_MAP_SIZE);
-    		}
-    		else{
-
-    			uint8_t newRegVal = (mixingMode << 1) | 0x01;
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x107, newRegVal);
-    			programAFEConverters(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE);
-
-    		}
-
-    		//Update current parameters on terminal
-			printf("\033[18;80H");
-			printf("Mixing Mode           : \033[K%d", mixingMode);
-
-    	}else if(strcmp(cmdString, "MIXF") == 0){
-
-    		if(!validateParam(enteredValue, -65000, 65000)) continue;
-
-    		//DACs must not be in mixing mode -1. Warn on Terminal if so
-    		if(mixingMode == -1){
-    			printf("\033[18;80H");
-    			printf("Mixing Mode           : WARNING : Mixing Mode cannot be -1 to use MIXF");
-    			continue;
-    		}
-    		else{
-
-    			mixingFreqkHz = enteredValue;
-
-    			//Max int value -> 100% sampling frequency/2 DAC output
-    			int MAX_INT32 = 0x7FFFFFFF;
-
-    			int samplingFreq = 130000 / sampleClkDivider;
-
-    			//Per khz increment of desired mixing freq, AFE 32bit val increments by this much
-    			int quantPerkHz = MAX_INT32 / samplingFreq;
-
-    			//Value to program into AFE converter
-    			int _32bitFreqWords = mixingFreqkHz * quantPerkHz;
-
-    			//Deconstruct 32 bit val to 4 bytes for converter programming
-    			uint8_t byte31_24 = (_32bitFreqWords >> 24) & 0xFF;
-    			uint8_t byte23_16 = (_32bitFreqWords >> 16) & 0xFF;
-    			uint8_t byte15_8 = (_32bitFreqWords >> 8) & 0xFF;
-    			uint8_t byte7_0 = (_32bitFreqWords) & 0xFF;
-
-    			//Set new values in regMap to be programmed into AFE converters
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x117, byte31_24);
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x118, byte23_16);
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x119, byte15_8);
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x11A, byte7_0);
-
-    			//program new mixing frequency in converters
-    			programAFEConverters(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE);
-
-    		}
-
-    		//Update current parameters on terminal
-			printf("\033[19;80H");
-			printf("Mixing Frequency(kHz) : \033[K%d", mixingFreqkHz);
-
-    	}else if(strcmp(cmdString, "MIXP") == 0){
-
-    		if(!validateParam(enteredValue, -65000, 65000)) continue;
-
-    		//DACs must not be in mixing mode -1. Warn on Terminal if so
-    		if(mixingMode == -1){
-    			printf("\033[18;80H");
-    			printf("Mixing Mode           : WARNING : Mixing Mode cannot be -1 to use MIXP");
-    			continue;
-    		}
-    		else{
-
-    			mixingPhaseDeg = enteredValue;
-
-    			//Max int value -> 180deg phase offset
-    			int16_t MAX_INT16 = 0x7FFF;
-
-    			//Per degree increment of desired mixing phase, AFE 16bit val increments by this much
-    			int quantPerDeg = MAX_INT16/180;
-
-    			//Value to program into AFE converter
-    			int _16bitPhaseWords = mixingPhaseDeg * quantPerDeg;
-
-    			//Deconstruct 16 bit val to 2 bytes for converter programming
-    			uint8_t byte15_8 = (_16bitPhaseWords >> 8) & 0xFF;
-    			uint8_t byte7_0 = (_16bitPhaseWords) & 0xFF;
-
-    			//Set new values in regMap to be programmed into AFE converters
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x11B, byte15_8);
-    			setRegMapVal(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE, 0x11C, byte7_0);
-
-    			//program new coarse mixer phase offset in converters
-    			programAFEConverters(AFE_QUAD_REG_MAP, AFE_QUAD_REG_MAP_SIZE);
-
-    		}
-
-    		//Update current parameters on terminal
-			printf("\033[20;80H");
-			printf("Mixing Phase          : \033[K%d", mixingFreqkHz);
-
-    	}else if(strcmp(cmdString, "EXIT") == 0){
-
-    		break;
-
-    	}else{
-
-        	printf("\033[23;80H");
-        	printf("Command : INVALID");
-
-    	}
-    	usleep(500000);
-
-    }
-
-	// Test Mode 8 End
 	////////////////////////////////////////////////////////////////////
 }

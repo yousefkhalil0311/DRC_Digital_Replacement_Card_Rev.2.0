@@ -17,14 +17,6 @@ extern XGpio GPIO10_DS;
 extern XGpio GPIO7_SPDT;
 extern XGpio GPIO11_CLKP;
 extern XGpio GPIO1_SPDCTRL;
-extern XGpio GPIO2_DATA0A;
-extern XGpio GPIO3_DATA0B;
-extern XGpio GPIO4_DATA1A;
-extern XGpio GPIO5_DATA1B;
-extern XGpio GPIO6_DATA2A;
-extern XGpio GPIO11_DATA2B;
-extern XGpio GPIO12_DATA3A;
-extern XGpio GPIO13_DATA3B;
 extern XGpio GPIO14_AFE_CTRL;
 extern XGpio GPIO15_DAC0Const;
 extern XGpio GPIO16_DAC1Const;
@@ -34,7 +26,6 @@ extern XGpio GPIO20_ADCDATA_0;
 extern XGpio GPIO21_ADCDATA_1;
 extern XGpio GPIO22_ADCDATA_2;
 extern XGpio GPIO23_ADCDATA_3;
-extern XGpio GPIO19_PL_OUTPUT_FREQ;
 
 //IIC bus XIic instances
 extern XIic IIC0_IOEXP; //(U17:0x22, U19:0x23)

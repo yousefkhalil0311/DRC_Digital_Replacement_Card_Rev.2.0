@@ -112,29 +112,27 @@ int main()
 
    // Initialize ADC Data AXI blocks
    printf("Boot: Initializing ADC probing AXI blocks...\n");
-   //XGpio_Initialize(&GPIO20_ADCDATA_0, GPIO20_ADCDATA_0_ID);
-   //XGpio_Initialize(&GPIO21_ADCDATA_1, GPIO21_ADCDATA_1_ID);
-   //XGpio_Initialize(&GPIO22_ADCDATA_2, GPIO22_ADCDATA_2_ID);
-   //XGpio_Initialize(&GPIO23_ADCDATA_3, GPIO23_ADCDATA_3_ID);
-//   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 1, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 1, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 1, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 1, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 2, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 2, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 2, 0xFFF);
-//   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 2, 0xFFF);
+   XGpio_Initialize(&GPIO20_ADCDATA_0, GPIO20_ADCDATA_0_ID);
+   XGpio_Initialize(&GPIO21_ADCDATA_1, GPIO21_ADCDATA_1_ID);
+   XGpio_Initialize(&GPIO22_ADCDATA_2, GPIO22_ADCDATA_2_ID);
+   XGpio_Initialize(&GPIO23_ADCDATA_3, GPIO23_ADCDATA_3_ID);
+   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 1, 0xFFF);
+   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 1, 0xFFF);
+   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 1, 0xFFF);
+   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 1, 0xFFF);
+   XGpio_SetDataDirection(&GPIO20_ADCDATA_0, 2, 0xFFF);
+   XGpio_SetDataDirection(&GPIO21_ADCDATA_1, 2, 0xFFF);
+   XGpio_SetDataDirection(&GPIO22_ADCDATA_2, 2, 0xFFF);
+   XGpio_SetDataDirection(&GPIO23_ADCDATA_3, 2, 0xFFF);
 
-   // Initialize PL frequency control AXI GPIO block
-   printf("Boot: Initializing PL frequency control AXI GPIO block...\n");
-   //XGpio_Initialize(&GPIO19_PL_OUTPUT_FREQ, GPIO19_PL_OUTPUT_FREQ_ID);
-   //XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 1, 3);
-   //XGpio_DiscreteWrite(&GPIO19_PL_OUTPUT_FREQ, 2, 5);
+
+
+
 
    // Initialize AFEs
    printf("Boot: Writing initial register values to AFE7222 devices...\n");
    for (int i = 0x01; i < (0x01 << 4); i = i << 1){
-	   Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
+	   //Status = AFE_Init(&SPI0_AFE, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE, i);
 	   if(Status != XST_SUCCESS) return XST_FAILURE;
    }
 
@@ -218,40 +216,6 @@ int main()
    Status = XGpio_Initialize(&GPIO1_SPDCTRL, GPIO1_SPDCTRL_ID);
    if(Status != XST_SUCCESS) return XST_FAILURE;
 
-   printf("Boot: Initializing GPIO2 for DATA0A...\n");
-   Status = XGpio_Initialize(&GPIO2_DATA0A, GPIO2_DATA0A_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO3 for DATA0B...\n");
-   Status = XGpio_Initialize(&GPIO3_DATA0B, GPIO3_DATA0B_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO4 for DATA1A...\n");
-   Status = XGpio_Initialize(&GPIO4_DATA1A, GPIO4_DATA1A_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO5 for DATA1B...\n");
-   Status = XGpio_Initialize(&GPIO5_DATA1B, GPIO5_DATA1B_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO6 for DATA2A...\n");
-   Status = XGpio_Initialize(&GPIO6_DATA2A, GPIO6_DATA2A_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO11 for DATA2B...\n");
-   Status = XGpio_Initialize(&GPIO11_DATA2B, GPIO11_DATA2B_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO12 for DATA3A...\n");
-   Status = XGpio_Initialize(&GPIO12_DATA3A, GPIO12_DATA3A_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-   printf("Boot: Initializing GPIO13 for DATA3B...\n");
-   Status = XGpio_Initialize(&GPIO13_DATA3B, GPIO13_DATA3B_ID);
-   if(Status != XST_SUCCESS) return XST_FAILURE;
-
-
-
 	setLEDStatus (0x4);
 
 	////////////////////////////////////////////////////////////////////
@@ -261,17 +225,10 @@ int main()
     // Print out testing options
     QueryTest:
 	printf("\033[2J\033[H");
-    printf("DRC Rev. 2.0 Device Verification Test.\n");
+    printf("DRC Rev. 2.0 Quals Test.\n");
     printf("Please Select a Test.\n");
-    printf("1) LED Test.\n");
-    printf("2) Digital Output Test.\n");
-    printf("3) Digital Input Test.\n");
-    printf("4) Low Speed DAC Ramp.\n");
-    printf("5) Low Speed DAC Square Wave.\n");
-    printf("6) High Speed ADC/DAC Loopback Mode A.\n");
-    printf("7) High Speed ADC/DAC Loopback Mode B.\n");
-    printf("8) High Speed DAC output mode. Tests High speed DAC to FPGA communication bus.\n");
-    printf("9) High speed DAC Quadrature mode. Tests High speed DAC on board quadrature generation.\n");
+    printf("1) Bit Test\n");
+    printf("2) Acceptance Test\n");
 
     //store user selected value
     int readValue;
@@ -282,7 +239,7 @@ int main()
     	goto QueryTest;
     }
 
-    if(readValue < 1 || readValue > 9){
+    if(readValue < 1 || readValue > 2){
     	printf("Invalid input.\n");
     	usleep(100000);
     	clearBuffer();
@@ -292,9 +249,6 @@ int main()
     printf("%d\n", readValue);
 
     clearBuffer();
-    parseCase:
-
-    uint32_t runTime = 0;
 
     switch(readValue){
     case 1:
@@ -302,70 +256,7 @@ int main()
     	break;
 
     case 2:
-        uint32_t delay;
-
-        printf("\nEnter delay between state changes (in ms): ");
-        scanf("%u", &delay);
-
-        if(delay < 0){
-        	goto parseCase;
-        }
-
-    	TestMode2(delay);
-    	break;
-
-    case 3:
-        printf("\nEnter length of test in seconds: ");
-        scanf("%u", &runTime);
-
-        if(runTime < 0){
-        	goto parseCase;
-        }
-    	TestMode3(runTime);
-    	break;
-
-    case 4:
-        printf("\nEnter length of test in seconds: ");
-        scanf("%u", &runTime);
-
-        if(runTime < 0){
-        	goto parseCase;
-        }
-    	TestMode4(runTime);
-    	break;
-
-    case 5:
-        printf("\nEnter length of test in seconds: ");
-        scanf("%u", &runTime);
-
-        if(runTime < 0){
-        	goto parseCase;
-        }
-    	TestMode5(runTime);
-    	break;
-
-    case 6:
-        printf("\nEnter length of test in seconds: ");
-        scanf("%u", &runTime);
-
-        if(runTime < 0){
-        	goto parseCase;
-        }
-    	TestMode6(runTime);
-    	break;
-
-    case 7:
-        printf("\nEnter length of test in seconds: ");
-        scanf("%u", &runTime);
-
-        if(runTime < 0){
-        	goto parseCase;
-        }
-    	TestMode7(runTime);
-    	break;
-
-    case 8:
-    	TestMode8(runTime);
+    	TestMode2();
     	break;
 
     default:

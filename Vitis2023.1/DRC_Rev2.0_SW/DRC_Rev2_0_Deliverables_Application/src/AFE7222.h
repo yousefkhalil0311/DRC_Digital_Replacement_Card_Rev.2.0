@@ -26,10 +26,10 @@ void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value);
 void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value);
 
 //Sets AFE7222 and FPGA data path to read ADC values. Returns a sample after being set up.
-int HSADC_Init(uint8_t converterNum, uint8_t channel);
+u32 HSADC_Init(uint8_t converterNum, uint8_t channel);
 
 //Returns a sample from a specified ADC channel.
-int HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel);
+u32 HSADC_getVoltage_mV(uint8_t converterNum, uint8_t channel);
 
 #endif
 
