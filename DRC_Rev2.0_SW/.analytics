@@ -35,3 +35,12 @@ timestamp=[2025-07-14 11:22:12], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00
 timestamp=[2025-07-16 13:30:38], mode=WORKBENCH_START, duration=0:00:08.015, duration_ms=8015, data={}
 timestamp=[2025-07-16 13:30:38], mode=WORKBENCH_UI_INIT, duration=0:00:00.304, duration_ms=304, data={editors_count=6, platform_editors_count=1, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=DRCPlatform,DRC_Rev2_0_Deliverables_Application,DRC_Rev2_0_Deliverables_Application_system,Deliverable_FSBL,Deliverable_FSBL_system,RemoteSystemsTempFiles}
 timestamp=[2025-07-16 13:30:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.860, duration_ms=860, data={}
+timestamp=[2025-07-17 21:20:48], mode=WORKBENCH_START, duration=0:00:13.460, duration_ms=13460, data={}
+timestamp=[2025-07-17 21:20:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.572, duration_ms=572, data={editors_count=9, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-07-17 21:20:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.876, duration_ms=876, data={}
+timestamp=[2025-07-17 21:26:11], mode=WORKBENCH_START, duration=0:00:05.045, duration_ms=5045, data={}
+timestamp=[2025-07-17 21:26:12], mode=WORKBENCH_UI_INIT, duration=0:00:00.542, duration_ms=542, data={editors_count=9, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2025-07-17 21:26:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.736, duration_ms=736, data={}
+timestamp=[2025-07-17 21:30:17], mode=WORKBENCH_START, duration=0:00:07.344, duration_ms=7344, data={}
+timestamp=[2025-07-17 21:30:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.510, duration_ms=510, data={editors_count=9, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2025-07-17 21:30:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.746, duration_ms=746, data={}

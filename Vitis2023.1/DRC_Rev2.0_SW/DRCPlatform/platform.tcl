@@ -214,3 +214,6 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_domain 
+platform active {DRCPlatform}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev2_0_Deliverables.xsa}
+platform generate -domains fsbl_domain,standalone_domain,zynqmp_fsbl,zynqmp_pmufw 

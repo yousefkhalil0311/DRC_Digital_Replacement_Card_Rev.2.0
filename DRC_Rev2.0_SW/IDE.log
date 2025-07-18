@@ -1445,3 +1445,30 @@ con
 13:30:38 INFO  : Registering command handlers for Vitis TCF services
 13:30:39 INFO  : Successfully done query RDI_DATADIR 
 13:30:39 INFO  : Platform repository initialization has completed.
+21:20:37 DEBUG : Logs will be stored at 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/DRC_Rev2.0_SW/IDE.log'.
+21:20:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\DRC_Rev2.0_SW\temp_xsdb_launch_script.tcl
+21:20:48 INFO  : Registering command handlers for Vitis TCF services
+21:20:49 INFO  : Platform repository initialization has completed.
+21:20:49 INFO  : XSCT server has started successfully.
+21:20:49 INFO  : Successfully done setting XSCT server connection channel  
+21:20:49 INFO  : plnx-install-location is set to ''
+21:20:50 INFO  : Successfully done setting workspace for the tool. 
+21:20:50 INFO  : Successfully done query RDI_DATADIR 
+21:26:09 DEBUG : Logs will be stored at 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/DRC_Rev2.0_SW/IDE.log'.
+21:26:11 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\DRC_Rev2.0_SW\temp_xsdb_launch_script.tcl
+21:26:12 INFO  : Registering command handlers for Vitis TCF services
+21:26:13 INFO  : Platform repository initialization has completed.
+21:26:13 INFO  : XSCT server has started successfully.
+21:26:13 INFO  : plnx-install-location is set to ''
+21:26:13 INFO  : Successfully done setting XSCT server connection channel  
+21:26:13 INFO  : Successfully done setting workspace for the tool. 
+21:26:13 INFO  : Successfully done query RDI_DATADIR 
+21:30:13 DEBUG : Logs will be stored at 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/DRC_Rev2.0_SW/IDE.log'.
+21:30:16 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\DRC_Rev2.0_SW\temp_xsdb_launch_script.tcl
+21:30:18 INFO  : Registering command handlers for Vitis TCF services
+21:30:18 INFO  : Platform repository initialization has completed.
+21:30:19 INFO  : XSCT server has started successfully.
+21:30:19 INFO  : Successfully done setting XSCT server connection channel  
+21:30:19 INFO  : plnx-install-location is set to ''
+21:30:19 INFO  : Successfully done setting workspace for the tool. 
+21:30:19 INFO  : Successfully done query RDI_DATADIR 

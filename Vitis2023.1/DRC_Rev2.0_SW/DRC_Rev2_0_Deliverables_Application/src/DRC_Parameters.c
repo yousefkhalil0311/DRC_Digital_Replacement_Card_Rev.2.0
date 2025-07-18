@@ -356,8 +356,8 @@ SWState_t Pin_Settings[] = {
 		//Pin 21 path setting (uncomment 1)
 		//P21_LS1_DAC02,
 		//P21_DIGIO21,
-		P21_HS_ADC0B,
-		//P21_HS_DAC0A,
+		//P21_HS_ADC0B,
+		P21_HS_DAC0A,
 
 		//Pin 32 path setting (uncomment 1)
 		//P32_LS1_DAC05,
