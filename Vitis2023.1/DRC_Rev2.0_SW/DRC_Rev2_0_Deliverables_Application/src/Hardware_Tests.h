@@ -4,7 +4,6 @@
 //Standard C includes
 #include <stdint.h>
 
-void TestMode1();
-void TestMode2();
+void TestMode(uint8_t verbosityLevel);
 
 #endif

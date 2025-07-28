@@ -12,8 +12,10 @@
 
 
 //store current state of DAC/ADC control data path within the FPGA
-
 static uint8_t GPIO14_AFE_CTRL_CACHE = 0x0F;
+
+//Store the state of the Active DAC FEs
+static uint8_t GPIO8_CTRL_CACHE = 0xF6;
 
 int AFE_Init (XSpi *instance, uint8_t *data, int num_bytes, uint32_t CS){
 
@@ -117,21 +119,23 @@ void HSDAC_Init(uint8_t converterNum, uint8_t channel, int mV_Value){
 	HSDAC_setVoltage(converterNum, channel, mV_Value);
 
 	//clear bit in control mask to enable FE output
-	uint8_t ctrlMask = ~(1 << (converterNum + 4)) & 0xF6;
+	GPIO8_CTRL_CACHE &= ~(1 << (converterNum + 4));
 
 	//Enable DAC's Frontend
-	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, ctrlMask);
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, GPIO8_CTRL_CACHE);
 
 }
 
-//Sets a constant output voltage on the specified AFE7222 DAC. -5.0V <= voltage <= 5.0V
-void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int V_Value){
+//Sets a constant output voltage on the specified AFE7222 DAC. -5000mV <= mV_Value <= 5000mV
+void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int mV_Value){
 
 	//set bounds for voltage input
-	if(V_Value > 5.0) V_Value = 5.0;
-	if(V_Value < -5.0) V_Value = -5.0;
+	if(mV_Value > 5000) mV_Value = 5000;
+	if(mV_Value < -5000) mV_Value = -5000;
 
-	int mvoltageValue = (V_Value * 2047) / 5;
+	int mvoltageValue = (mV_Value * 2047) / 5000;
+
+	uint32_t DACVAL = (uint32_t)(mvoltageValue & 0x00000FFF);
 
 	XGpio* xgpioInstanceTable[] = {&GPIO15_DAC0Const, &GPIO16_DAC1Const, &GPIO17_DAC2Const, &GPIO18_DAC3Const};
 
@@ -140,7 +144,8 @@ void HSDAC_setVoltage(uint8_t converterNum, uint8_t channel, int V_Value){
 	instance = xgpioInstanceTable[converterNum];
 
 	//write voltage value to corresponding HSDAC controller
-	XGpio_DiscreteWrite(instance, channel, mvoltageValue);
+
+	XGpio_DiscreteWrite(instance, channel, DACVAL);
 
 }
 
@@ -151,10 +156,16 @@ u32 HSADC_Init(uint8_t converterNum, uint8_t channel){
 	//programAFEConverter(1 << converterNum, AFE_LPBK_REG_MAP, AFE_LPBK_REG_MAP_SIZE);
 
 	//Set cache bit corresponding to this converter
-	GPIO14_AFE_CTRL_CACHE = 0xF;//|= (0x08 >> converterNum);
+	GPIO14_AFE_CTRL_CACHE |= (0x08 >> converterNum);
 
     //Set data path to connect ADC control block to AFE7222 pins
     XGpio_DiscreteWrite(&GPIO14_AFE_CTRL, 1, GPIO14_AFE_CTRL_CACHE);
+
+	//set bit in control mask to disable FE output (DAC not used when in ADC mode)
+	GPIO8_CTRL_CACHE |= (1 << (converterNum + 4));
+
+	//Disable DAC's Frontend
+	XGpio_DiscreteWrite(&GPIO8_CTRL, 1, GPIO8_CTRL_CACHE);
 
 	return HSADC_getVoltage_mV(converterNum, channel);
 }

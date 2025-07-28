@@ -3,7 +3,7 @@
 	<name>DRC_Rev2_0_Deliverables_Application</name>
 	<comment>Created by Vitis v2023.1</comment>
 	<projects>
-		<project>DRCPlatform</project>
+		<project>DRCPlatform2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

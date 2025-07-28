@@ -146,7 +146,7 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin V16 [get_ports {IOBUF_SE_32_37[1]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V17 [get_ports {IOBUF_SE_32_37[2]}]; #90P-59
 tclapp::octavo::osdzu3::set_osdzu3_package_pin A14 [get_ports {IOBUF_SE_32_37[3]}]; #90P-74 /SPDT_8 /22/74DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U8  [get_ports {IOBUF_SE_32_37[4]}]; #90P-81
-tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {IOBUF_SE_32_37[5]}]; #90P-89
+tclapp::octavo::osdzu3::set_osdzu3_package_pin W17 [get_ports {IOBUF_SE_32_37[5]}]; #temp
 
 #Differential Signal IO pin location constraints (Single ended temporarily)
 tclapp::octavo::osdzu3::set_osdzu3_package_pin D17 [get_ports {IOBUF_DS_0_21_p[0]}] ; #90P-3  /3/5DP   /N /SPDT_1
@@ -190,9 +190,13 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin R10 [get_ports {IOBUF_DS_0_21_n[1
 tclapp::octavo::osdzu3::set_osdzu3_package_pin T10 [get_ports {IOBUF_DS_0_21_p[19]}]; #90P-83 /82/83DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U12 [get_ports {IOBUF_DS_0_21_n[19]}]; #90P-84 /84/85DP /P
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U13 [get_ports {IOBUF_DS_0_21_p[20]}]; #90P-85 /84/85DP /N
-tclapp::octavo::osdzu3::set_osdzu3_package_pin W19 [get_ports {IOBUF_DS_0_21_n[20]}]; #90P-86 /76/86DP /N
+tclapp::octavo::osdzu3::set_osdzu3_package_pin Y17 [get_ports {IOBUF_DS_0_21_n[20]}]; #temp
+tclapp::octavo::osdzu3::set_osdzu3_package_pin W16 [get_ports {IOBUF_DS_0_21_p[21]}]; #temp
+tclapp::octavo::osdzu3::set_osdzu3_package_pin Y16 [get_ports {IOBUF_DS_0_21_n[21]}]; #temp
 
 
 
+tclapp::octavo::osdzu3::set_osdzu3_package_pin W19 [get_ports {emio_uart1_txd_0}]; #90P-86 /76/86DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V19 [get_ports {emio_uart0_txd_0}]; #90P-87 /16/87DP /N
-tclapp::octavo::osdzu3::set_osdzu3_package_pin Y18 [get_ports {emio_uart0_rxd_0}]; #90P-88 /78/88DP /P
+tclapp::octavo::osdzu3::set_osdzu3_package_pin Y18 [get_ports {emio_uart1_rxd_0}]; #90P-88 /78/88DP /P
+tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {emio_uart0_rxd_0}]; #90P-89
