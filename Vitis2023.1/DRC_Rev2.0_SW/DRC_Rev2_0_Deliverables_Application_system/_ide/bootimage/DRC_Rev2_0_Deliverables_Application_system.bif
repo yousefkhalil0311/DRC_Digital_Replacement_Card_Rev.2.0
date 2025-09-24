@@ -1,12 +1,7 @@
-/* C:/Users/youse/AppData/Local/Temp/bootgen_DRC_Rev2_0_Deliverables_Application_system5191892053080264075/sd_card_temp/boot.bif */
-/* Command to create bitstream .bin file:       */
-/*   bootgen -image <bif_file> -split bin -w    */
-/* Command to create BOOT.BIN file:             */
-/*   bootgen -arch zynqmp -image <bif_file> -w -o i BOOT.BIN */
-/*DRCPlatform*/
+//arch = zynqmp; split = false; format = BIN
 the_ROM_image:
 {
- [bootloader, destination_cpu=a53-0] C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/sw/DRCPlatform/boot/fsbl.elf
- [destination_device=pl] C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/_ide/bitstream/DRC_Rev2_0_Deliverables.bit
- [destination_cpu=a53-0, exception_level=el-3] C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/Debug/DRC_Rev2_0_Deliverables_Application.elf
+	[bootloader, destination_cpu = a53-0]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\fsbl_3v3\Debug\fsbl_3v3.elf
+	[destination_device = pl]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRC_Rev2_0_Deliverables_Application\_ide\bitstream\design_1_wrapper_3V3_SiP_x2_FLASH.bit
+	[destination_cpu = a53-0]C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/Debug/DRC_Rev2_0_Deliverables_Application.elf
 }

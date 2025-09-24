@@ -23,12 +23,14 @@
 
 #include "xparameters_ps.h"
 
+#define XPS_BOARD_OSDZU3EG1_2G_3V3_SIP
+
 
 /* Number of Fabric Resets */
 #define XPAR_NUM_FABRIC_RESETS 1
 
-#define STDIN_BASEADDRESS 0xFF000000
-#define STDOUT_BASEADDRESS 0xFF000000
+#define STDIN_BASEADDRESS 0xFF010000
+#define STDOUT_BASEADDRESS 0xFF010000
 
 /******************************************************************/
 
@@ -1218,7 +1220,7 @@
 #define XPAR_PSU_QSPI_0_HIGHADDR 0xFF0FFFFF
 #define XPAR_PSU_QSPI_0_QSPI_CLK_FREQ_HZ 124998749
 #define XPAR_PSU_QSPI_0_QSPI_MODE 0
-#define XPAR_PSU_QSPI_0_QSPI_BUS_WIDTH 2
+#define XPAR_PSU_QSPI_0_QSPI_BUS_WIDTH 1
 
 
 /******************************************************************/
@@ -1231,7 +1233,7 @@
 #define XPAR_XQSPIPSU_0_HIGHADDR 0xFF0FFFFF
 #define XPAR_XQSPIPSU_0_QSPI_CLK_FREQ_HZ 124998749
 #define XPAR_XQSPIPSU_0_QSPI_MODE 0
-#define XPAR_XQSPIPSU_0_QSPI_BUS_WIDTH 2
+#define XPAR_XQSPIPSU_0_QSPI_BUS_WIDTH 1
 #define XPAR_XQSPIPSU_0_IS_CACHE_COHERENT 0
 
 

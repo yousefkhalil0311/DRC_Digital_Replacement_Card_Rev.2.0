@@ -11,6 +11,8 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin B10 [get_ports {IOBUF_SCL_1}]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin A10 [get_ports {IOBUF_SDA_1}]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin H6  [get_ports {IOBUF_SCL_2}]
 tclapp::octavo::osdzu3::set_osdzu3_package_pin F5  [get_ports {IOBUF_SDA_2}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin R18  [get_ports {IOBUF_SCL_3}]
+tclapp::octavo::osdzu3::set_osdzu3_package_pin T18  [get_ports {IOBUF_SDA_3}]
 
 #AFE7222 SPI IO pin location constraints
 tclapp::octavo::osdzu3::set_osdzu3_package_pin Y3  [get_ports {MISO_0}]
@@ -196,7 +198,5 @@ tclapp::octavo::osdzu3::set_osdzu3_package_pin Y16 [get_ports {IOBUF_DS_0_21_n[2
 
 
 
-tclapp::octavo::osdzu3::set_osdzu3_package_pin W19 [get_ports {emio_uart1_txd_0}]; #90P-86 /76/86DP /N
 tclapp::octavo::osdzu3::set_osdzu3_package_pin V19 [get_ports {emio_uart0_txd_0}]; #90P-87 /16/87DP /N
-tclapp::octavo::osdzu3::set_osdzu3_package_pin Y18 [get_ports {emio_uart1_rxd_0}]; #90P-88 /78/88DP /P
 tclapp::octavo::osdzu3::set_osdzu3_package_pin U19 [get_ports {emio_uart0_rxd_0}]; #90P-89

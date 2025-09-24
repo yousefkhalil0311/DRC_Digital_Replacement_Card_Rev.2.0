@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="3V3_SiP_FSBL" location="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW_3V3_SiP/3V3_SiP_FSBL" platform="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW_3V3_SiP/DRC_Platform_3V3_SiP/export/DRC_Platform_3V3_SiP/DRC_Platform_3V3_SiP.xpfm" platformUID="xilinx:osdzu3eg1_2g_1v8_sip::0.0(custom)" systemProject="3V3_SiP_FSBL_system" sysConfig="DRC_Platform_3V3_SiP" runtime="cpp" cpu="fsbl_3V3_SiP" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f360303cbcebf7abbac0eb27c6ebc839">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1709342636">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.2012813300" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="zynqmp_fsbl" hasBspSettings="true"/>
+</sdkproject:SdkProject>

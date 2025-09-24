@@ -1,0 +1,8 @@
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_cpu = a53-0]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Platform_3V3_SiP\export\DRC_Platform_3V3_SiP\sw\DRC_Platform_3V3_SiP\boot\fsbl.elf
+	[pmufw_image]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Platform_3V3_SiP\export\DRC_Platform_3V3_SiP\sw\DRC_Platform_3V3_SiP\boot\pmufw.elf
+	[destination_device = pl]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Rev2_0_Deliverables_3V3_SiP\_ide\bitstream\DRC_Rev_2_0_QualTest_Wrapper_3V3_QSPI.bit
+	[destination_cpu = a53-0]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Rev2_0_Deliverables_3V3_SiP\Debug\DRC_Rev2_0_Deliverables_3V3_SiP.elf
+}

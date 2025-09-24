@@ -7,3 +7,12 @@
 02:43:54 INFO  : plnx-install-location is set to ''
 02:43:54 INFO  : Successfully done query RDI_DATADIR 
 02:43:54 INFO  : Successfully done setting workspace for the tool. 
+15:39:38 DEBUG : Logs will be stored at 'C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/DRC_Rev2.0_SW/IDE.log'.
+15:39:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\DRC_Rev2.0_SW\temp_xsdb_launch_script.tcl
+15:39:43 INFO  : Registering command handlers for Vitis TCF services
+15:39:44 INFO  : Platform repository initialization has completed.
+15:39:45 INFO  : XSCT server has started successfully.
+15:39:45 INFO  : Successfully done setting XSCT server connection channel  
+15:39:45 INFO  : plnx-install-location is set to ''
+15:39:45 INFO  : Successfully done setting workspace for the tool. 
+15:39:45 INFO  : Successfully done query RDI_DATADIR 

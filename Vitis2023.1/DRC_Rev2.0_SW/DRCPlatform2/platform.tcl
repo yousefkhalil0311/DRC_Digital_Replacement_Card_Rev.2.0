@@ -128,3 +128,219 @@ platform generate -quick
 domain active {standalone_domain}
 bsp write
 platform generate -domains standalone_psu_cortexa53_0 
+platform generate
+platform active {DRCPlatform2}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev_2_0_QualTest_Wrapper_3V3_QSPI.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform clean
+platform generate
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev_2_0_QualTest_Wrapper_3V3_QSPI.xsa}
+platform generate -domains 
+platform active {DRCPlatform2}
+domain create -name {fsbl_3v3_domain} -display-name {fsbl_3v3_domain} -os {standalone} -proc {psu_cortexa53_0} -runtime {cpp} -arch {64-bit} -support-app {zynqmp_fsbl}
+platform generate -domains 
+platform write
+domain active {zynqmp_fsbl}
+domain active {zynqmp_pmufw}
+domain active {standalone_domain}
+domain active {FSBL_DOMAIN}
+domain active {standalone_psu_cortexa53_0}
+domain active {fsbl_3v3_domain}
+platform generate -quick
+platform generate -domains fsbl_3v3_domain 
+bsp reload
+platform active {DRCPlatform2}
+bsp reload
+bsp reload
+domain active {standalone_domain}
+bsp reload
+bsp reload
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+bsp reload
+domain active {zynqmp_fsbl}
+bsp reload
+bsp config stdin "psu_coresight_0"
+bsp config stdout "psu_coresight_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_domain}
+bsp reload
+bsp config stdin "psu_coresight_0"
+bsp config stdout "psu_coresight_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {FSBL_DOMAIN}
+bsp reload
+bsp config stdin "psu_coresight_0"
+bsp config stdout "psu_coresight_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+bsp config stdin "psu_coresight_0"
+bsp config stdout "psu_coresight_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {fsbl_3v3_domain}
+bsp reload
+bsp config stdin "psu_coresight_0"
+bsp config stdout "psu_coresight_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynqmp_pmufw}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp write
+platform generate -domains FSBL_DOMAIN,fsbl_3v3_domain,standalone_domain,standalone_psu_cortexa53_0,zynqmp_fsbl,zynqmp_pmufw 
+platform active {DRCPlatform2}
+platform active {DRCPlatform2}
+domain active {zynqmp_fsbl}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_domain}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {FSBL_DOMAIN}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {fsbl_3v3_domain}
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains FSBL_DOMAIN,fsbl_3v3_domain,standalone_domain,standalone_psu_cortexa53_0,zynqmp_fsbl 
+platform active {DRCPlatform2}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/design_1_wrapper_3V3_SiP_x2_FLASH.xsa}
+domain active {standalone_domain}
+bsp reload
+platform generate
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/design_1_wrapper_3V3_SiP_x2_FLASH.xsa}
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+bsp reload
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+domain active {fsbl_3v3_domain}
+bsp reload
+bsp reload
+domain active {zynqmp_fsbl}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate
+platform active {DRCPlatform2}
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_psu_cortexa53_0 
+bsp reload
+domain active {zynqmp_fsbl}
+bsp reload
+bsp write
+domain active {standalone_domain}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config sleep_timer "none"
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {FSBL_DOMAIN}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_psu_cortexa53_0}
+bsp config stdin "psu_uart_0"
+bsp config stdout "psu_uart_0"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {fsbl_3v3_domain}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {zynqmp_pmufw}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_0"
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains FSBL_DOMAIN,fsbl_3v3_domain,standalone_domain,standalone_psu_cortexa53_0,zynqmp_pmufw 
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev_2_0_QualTest_Wrapper.xsa}
+platform generate -domains 
+platform active {DRCPlatform2}
+platform active {DRCPlatform2}
+domain active {standalone_domain}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+domain active {standalone_psu_cortexa53_0}
+bsp reload
+bsp config stdin "psu_uart_1"
+bsp config stdout "psu_uart_1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain,standalone_psu_cortexa53_0 
+platform active {DRCPlatform2}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev_2_0_QualTest_Wrapper_3V3_QSPI.xsa}
+platform config -updatehw {C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vivado2023.1/DRC_Rev2.0_FW/DRC_Rev_2_0_QualTest_Wrapper.xsa}
+platform generate -domains 
+platform generate -domains 
