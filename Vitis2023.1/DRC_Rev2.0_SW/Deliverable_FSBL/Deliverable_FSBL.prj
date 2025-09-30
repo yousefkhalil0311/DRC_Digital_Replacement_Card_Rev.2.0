@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Deliverable_FSBL" location="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/Deliverable_FSBL" platform="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform2/export/DRCPlatform2/DRCPlatform2.xpfm" platformUID="xilinx:osdzu3eg1_2g_1v8_sip::0.0(custom)" systemProject="Deliverable_FSBL_system" sysConfig="DRCPlatform2" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f360303cbcebf7abbac0eb27c6ebc839">
-  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1980545900">
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Deliverable_FSBL" location="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/Deliverable_FSBL" platform="C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRCPlatform/export/DRCPlatform/DRCPlatform.xpfm" platformUID="xilinx:osdzu3eg1_2g_1v8_sip::0.0(custom)" systemProject="Deliverable_FSBL_system" sysConfig="DRCPlatform" runtime="cpp" cpu="FSBL_Domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f360303cbcebf7abbac0eb27c6ebc839">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1333651311">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
-  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.851703652" dirty="true">
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1741250475" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <template appTemplateName="zynqmp_fsbl" hasBspSettings="true"/>

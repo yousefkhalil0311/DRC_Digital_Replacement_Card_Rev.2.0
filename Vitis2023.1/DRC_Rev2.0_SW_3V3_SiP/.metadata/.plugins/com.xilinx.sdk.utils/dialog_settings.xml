@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item key="scw_hwspec" value="C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vivado2023.1\DRC_Rev2.0_FW"/>
-	<item key="bootgen_files_selection" value="C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Platform_3V3_SiP\export\DRC_Platform_3V3_SiP\sw\DRC_Platform_3V3_SiP\boot"/>
-	<item key="soc_flash_files_selection" value="C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW_3V3_SiP\DRC_Rev2_0_Deliverables_3V3_SiP_system\_ide\bootimage"/>
-</section>

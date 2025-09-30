@@ -9837,7 +9837,7 @@ set psu_mio_init_data {
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi2- (QSPI
     #  Databus) 1= qspi, Output, qspi_mo2- (QSPI Databus)
-		# PSU_IOU_SLCR_MIO_PIN_2_L0_SEL                                                   1
+		# PSU_IOU_SLCR_MIO_PIN_2_L0_SEL                                                   0
 
 		# Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
 		# PSU_IOU_SLCR_MIO_PIN_2_L1_SEL                                                   0
@@ -9857,13 +9857,13 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_PIN_2_L3_SEL                                                   0
 
 		# Configures MIO Pin 2 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x00000002U)  */
-    mask_write 0XFF180008 0x000000FE 0x00000002
+		#(OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF180008 0x000000FE 0x00000000
 		# Register : MIO_PIN_3 @ 0XFF18000C</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi3- (QSPI
     #  Databus) 1= qspi, Output, qspi_mo3- (QSPI Databus)
-		# PSU_IOU_SLCR_MIO_PIN_3_L0_SEL                                                   1
+		# PSU_IOU_SLCR_MIO_PIN_3_L0_SEL                                                   0
 
 		# Level 1 Mux Select 0= Level 2 Mux Output 1= Not Used
 		# PSU_IOU_SLCR_MIO_PIN_3_L1_SEL                                                   0
@@ -9884,8 +9884,8 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_PIN_3_L3_SEL                                                   0
 
 		# Configures MIO Pin 3 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x00000002U)  */
-    mask_write 0XFF18000C 0x000000FE 0x00000002
+		#(OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF18000C 0x000000FE 0x00000000
 		# Register : MIO_PIN_4 @ 0XFF180010</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Output, qspi_mo_mo0- (
@@ -10468,11 +10468,11 @@ set psu_mio_init_data {
     # Watch Dog Timer Input clock) 4= Not Used 5= ttc3, Input, ttc3_clk_in- (T
     # TC Clock) 6= ua1, Output, ua1_txd- (UART transmitter serial output) 7= N
     # ot Used
-		# PSU_IOU_SLCR_MIO_PIN_24_L3_SEL                                                  2
+		# PSU_IOU_SLCR_MIO_PIN_24_L3_SEL                                                  0
 
 		# Configures MIO Pin 24 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180060, 0x000000FEU ,0x00000040U)  */
-    mask_write 0XFF180060 0x000000FE 0x00000040
+		#(OFFSET, MASK, VALUE)      (0XFF180060, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF180060 0x000000FE 0x00000000
 		# Register : MIO_PIN_25 @ 0XFF180064</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= Not Used
@@ -10495,11 +10495,11 @@ set psu_mio_init_data {
     # (Watch Dog Timer Output clock) 4= Not Used 5= ttc3, Output, ttc3_wave_ou
     # t- (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART receiver serial in
     # put) 7= Not Used
-		# PSU_IOU_SLCR_MIO_PIN_25_L3_SEL                                                  2
+		# PSU_IOU_SLCR_MIO_PIN_25_L3_SEL                                                  0
 
 		# Configures MIO Pin 25 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180064, 0x000000FEU ,0x00000040U)  */
-    mask_write 0XFF180064 0x000000FE 0x00000040
+		#(OFFSET, MASK, VALUE)      (0XFF180064, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF180064 0x000000FE 0x00000000
 		# Register : MIO_PIN_26 @ 0XFF180068</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Output, gem0_rgmii_tx_
@@ -10697,11 +10697,11 @@ set psu_mio_init_data {
     # spi1, Output, spi1_sclk_out- (SPI Clock) 5= ttc3, Input, ttc3_clk_in- (T
     # TC Clock) 6= ua1, Output, ua1_txd- (UART transmitter serial output) 7= t
     # race, Output, tracedq[10]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_32_L3_SEL                                                  0
+		# PSU_IOU_SLCR_MIO_PIN_32_L3_SEL                                                  6
 
 		# Configures MIO Pin 32 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180080, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF180080 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF180080, 0x000000FEU ,0x000000C0U)  */
+    mask_write 0XFF180080 0x000000FE 0x000000C0
 		# Register : MIO_PIN_33 @ 0XFF180084</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Input, gem0_rgmii_rxd[
@@ -10726,11 +10726,11 @@ set psu_mio_init_data {
     # ter Selects) 5= ttc3, Output, ttc3_wave_out- (TTC Waveform Clock) 6= ua1
     # , Input, ua1_rxd- (UART receiver serial input) 7= trace, Output, tracedq
     # [11]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_33_L3_SEL                                                  0
+		# PSU_IOU_SLCR_MIO_PIN_33_L3_SEL                                                  6
 
 		# Configures MIO Pin 33 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180084, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF180084 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF180084, 0x000000FEU ,0x000000C0U)  */
+    mask_write 0XFF180084 0x000000FE 0x000000C0
 		# Register : MIO_PIN_34 @ 0XFF180088</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Input, gem0_rgmii_rxd[
@@ -11333,7 +11333,7 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI1_PIN_32_TRI                                            0
 
 		# Master Tri-state Enable for pin 33, active high
-		# PSU_IOU_SLCR_MIO_MST_TRI1_PIN_33_TRI                                            0
+		# PSU_IOU_SLCR_MIO_MST_TRI1_PIN_33_TRI                                            1
 
 		# Master Tri-state Enable for pin 34, active high
 		# PSU_IOU_SLCR_MIO_MST_TRI1_PIN_34_TRI                                            0
@@ -11390,8 +11390,8 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI1_PIN_51_TRI                                            0
 
 		# MIO pin Tri-state Enables, 63:32
-		#(OFFSET, MASK, VALUE)      (0XFF180208, 0x000FFFFFU ,0x00003000U)  */
-    mask_write 0XFF180208 0x000FFFFF 0x00003000
+		#(OFFSET, MASK, VALUE)      (0XFF180208, 0x000FFFFFU ,0x00003002U)  */
+    mask_write 0XFF180208 0x000FFFFF 0x00003002
 		# Register : MIO_MST_TRI2 @ 0XFF18020C</p>
 
 		# Master Tri-state Enable for pin 76, active high

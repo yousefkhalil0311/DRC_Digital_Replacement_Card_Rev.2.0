@@ -3,7 +3,7 @@
 	<name>Deliverable_FSBL</name>
 	<comment>Created by Vitis v2023.1</comment>
 	<projects>
-		<project>DRCPlatform2</project>
+		<project>DRCPlatform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

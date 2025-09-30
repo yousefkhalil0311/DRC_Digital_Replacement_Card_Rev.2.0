@@ -1,7 +1,7 @@
 //arch = zynqmp; split = false; format = BIN
 the_ROM_image:
 {
-	[bootloader, destination_cpu = a53-0]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\fsbl_3v3\Debug\fsbl_3v3.elf
+	[bootloader, destination_cpu = a53-0]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\Deliverable_FSBL\Debug\Deliverable_FSBL.elf
 	[destination_device = pl]C:\Xilinx\Projects\DRC_Rev2.0_Deliverables\Vitis2023.1\DRC_Rev2.0_SW\DRC_Rev2_0_Deliverables_Application\_ide\bitstream\design_1_wrapper_3V3_SiP_x2_FLASH.bit
 	[destination_cpu = a53-0]C:/Xilinx/Projects/DRC_Rev2.0_Deliverables/Vitis2023.1/DRC_Rev2.0_SW/DRC_Rev2_0_Deliverables_Application/Debug/DRC_Rev2_0_Deliverables_Application.elf
 }
