@@ -1439,3 +1439,6 @@ timestamp=[2025-09-30 14:27:11], mode=BUILD, duration=0:00:09.353, duration_ms=9
 timestamp=[2025-09-30 14:27:11], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=Deliverable_FSBL, configuration=Debug, clean_build=false}
 timestamp=[2025-09-30 14:48:47], mode=PLATFORM_GENERATION, duration=0:00:13.017, duration_ms=13017, data={name=DRCPlatform}
 timestamp=[2025-09-30 14:49:13], mode=BUILD, duration=0:00:07.260, duration_ms=7260, data={name=DRC_Rev2_0_Deliverables_Application, configuration=Debug, clean_build=false}
+timestamp=[2025-10-06 12:44:14], mode=WORKBENCH_START, duration=0:00:06.226, duration_ms=6226, data={}
+timestamp=[2025-10-06 12:44:15], mode=WORKBENCH_UI_INIT, duration=0:00:00.312, duration_ms=312, data={editors_count=3, platform_editors_count=1, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=DRCPlatform,DRC_Rev2_0_Deliverables_Application,DRC_Rev2_0_Deliverables_Application_system,Deliverable_FSBL,Deliverable_FSBL_system,RemoteSystemsTempFiles}
+timestamp=[2025-10-06 12:44:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.853, duration_ms=853, data={}

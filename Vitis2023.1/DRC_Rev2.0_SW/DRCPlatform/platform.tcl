@@ -38,3 +38,4 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_domain 
+platform active {DRCPlatform}
